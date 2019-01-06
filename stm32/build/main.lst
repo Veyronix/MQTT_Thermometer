@@ -1,0 +1,4573 @@
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.MX_GPIO_Init,"ax",%progbits
+  18              		.align	1
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu fpv5-sp-d16
+  24              	MX_GPIO_Init:
+  25              	.LFB169:
+  26              		.file 1 "Src/main.c"
+   1:Src/main.c    **** 
+   2:Src/main.c    **** /**
+   3:Src/main.c    ****   ******************************************************************************
+   4:Src/main.c    ****   * @file           : main.c
+   5:Src/main.c    ****   * @brief          : Main program body
+   6:Src/main.c    ****   ******************************************************************************
+   7:Src/main.c    ****   * This notice applies to any and all portions of this file
+   8:Src/main.c    ****   * that are not between comment pairs USER CODE BEGIN and
+   9:Src/main.c    ****   * USER CODE END. Other portions of this file, whether
+  10:Src/main.c    ****   * inserted by the user or by software development tools
+  11:Src/main.c    ****   * are owned by their respective copyright owners.
+  12:Src/main.c    ****   *
+  13:Src/main.c    ****   * Copyright (c) 2018 STMicroelectronics International N.V.
+  14:Src/main.c    ****   * All rights reserved.
+  15:Src/main.c    ****   *
+  16:Src/main.c    ****   * Redistribution and use in source and binary forms, with or without
+  17:Src/main.c    ****   * modification, are permitted, provided that the following conditions are met:
+  18:Src/main.c    ****   *
+  19:Src/main.c    ****   * 1. Redistribution of source code must retain the above copyright notice,
+  20:Src/main.c    ****   *    this list of conditions and the following disclaimer.
+  21:Src/main.c    ****   * 2. Redistributions in binary form must reproduce the above copyright notice,
+  22:Src/main.c    ****   *    this list of conditions and the following disclaimer in the documentation
+  23:Src/main.c    ****   *    and/or other materials provided with the distribution.
+  24:Src/main.c    ****   * 3. Neither the name of STMicroelectronics nor the names of other
+  25:Src/main.c    ****   *    contributors to this software may be used to endorse or promote products
+  26:Src/main.c    ****   *    derived from this software without specific written permission.
+  27:Src/main.c    ****   * 4. This software, including modifications and/or derivative works of this
+  28:Src/main.c    ****   *    software, must execute solely and exclusively on microcontroller or
+  29:Src/main.c    ****   *    microprocessor devices manufactured by or for STMicroelectronics.
+  30:Src/main.c    ****   * 5. Redistribution and use of this software other than as permitted under
+  31:Src/main.c    ****   *    this license is void and will automatically terminate your rights under
+  32:Src/main.c    ****   *    this license.
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 2
+
+
+  33:Src/main.c    ****   *
+  34:Src/main.c    ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS"
+  35:Src/main.c    ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT
+  36:Src/main.c    ****   * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+  37:Src/main.c    ****   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
+  38:Src/main.c    ****   * RIGHTS ARE DISCLAIMED TO THE FULLEST EXTENT PERMITTED BY LAW. IN NO EVENT
+  39:Src/main.c    ****   * SHALL STMICROELECTRONICS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+  40:Src/main.c    ****   * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  41:Src/main.c    ****   * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
+  42:Src/main.c    ****   * OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  43:Src/main.c    ****   * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  44:Src/main.c    ****   * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+  45:Src/main.c    ****   * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  46:Src/main.c    ****   *
+  47:Src/main.c    ****   ******************************************************************************
+  48:Src/main.c    ****   */
+  49:Src/main.c    **** /* Includes ------------------------------------------------------------------*/
+  50:Src/main.c    **** #include "main.h"
+  51:Src/main.c    **** #include "stm32f7xx_hal.h"
+  52:Src/main.c    **** #include "cmsis_os.h"
+  53:Src/main.c    **** #include "lwip.h"
+  54:Src/main.c    **** 
+  55:Src/main.c    **** /* USER CODE BEGIN Includes */
+  56:Src/main.c    **** #include  <errno.h>
+  57:Src/main.c    **** #include  <sys/unistd.h>
+  58:Src/main.c    **** 
+  59:Src/main.c    **** #include "stm32746g_discovery_lcd.h"
+  60:Src/main.c    **** #include "Utilities/Fonts/fonts.h"
+  61:Src/main.c    **** #include "stm32746g_discovery_ts.h"
+  62:Src/main.c    **** #include "term_io.h"
+  63:Src/main.c    **** #include "dbgu.h"
+  64:Src/main.c    **** #include "ansi.h"
+  65:Src/main.c    **** 
+  66:Src/main.c    **** #include "FreeRTOS.h"
+  67:Src/main.c    **** #include "task.h"
+  68:Src/main.c    **** #include "queue.h"
+  69:Src/main.c    **** 
+  70:Src/main.c    **** #include "lwip/opt.h"
+  71:Src/main.c    **** #include "lwip/api.h"
+  72:Src/main.c    **** #include "lwip/apps/fs.h"
+  73:Src/main.c    **** #include "lwip/dhcp.h"
+  74:Src/main.c    **** #include "lwip/tcpip.h"
+  75:Src/main.c    **** #include "lwip/netdb.h"
+  76:Src/main.c    **** #include "lwip/sockets.h"
+  77:Src/main.c    **** 
+  78:Src/main.c    **** #include "lwip.h"
+  79:Src/main.c    **** 
+  80:Src/main.c    **** #include "wm8994/wm8994.h"
+  81:Src/main.c    **** 
+  82:Src/main.c    **** //
+  83:Src/main.c    **** #include "lwip/apps/mqtt.h"
+  84:Src/main.c    **** 
+  85:Src/main.c    **** 
+  86:Src/main.c    **** /* USER CODE END Includes */
+  87:Src/main.c    **** 
+  88:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+  89:Src/main.c    **** ADC_HandleTypeDef hadc3;
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 3
+
+
+  90:Src/main.c    **** 
+  91:Src/main.c    **** CRC_HandleTypeDef hcrc;
+  92:Src/main.c    **** 
+  93:Src/main.c    **** DCMI_HandleTypeDef hdcmi;
+  94:Src/main.c    **** 
+  95:Src/main.c    **** DMA2D_HandleTypeDef hdma2d;
+  96:Src/main.c    **** 
+  97:Src/main.c    **** I2C_HandleTypeDef hi2c1;
+  98:Src/main.c    **** I2C_HandleTypeDef hi2c3;
+  99:Src/main.c    **** 
+ 100:Src/main.c    **** LTDC_HandleTypeDef hltdc;
+ 101:Src/main.c    **** 
+ 102:Src/main.c    **** QSPI_HandleTypeDef hqspi;
+ 103:Src/main.c    **** 
+ 104:Src/main.c    **** RTC_HandleTypeDef hrtc;
+ 105:Src/main.c    **** 
+ 106:Src/main.c    **** SAI_HandleTypeDef hsai_BlockA2;
+ 107:Src/main.c    **** SAI_HandleTypeDef hsai_BlockB2;
+ 108:Src/main.c    **** 
+ 109:Src/main.c    **** SD_HandleTypeDef hsd1;
+ 110:Src/main.c    **** 
+ 111:Src/main.c    **** SPDIFRX_HandleTypeDef hspdif;
+ 112:Src/main.c    **** 
+ 113:Src/main.c    **** SPI_HandleTypeDef hspi2;
+ 114:Src/main.c    **** 
+ 115:Src/main.c    **** TIM_HandleTypeDef htim1;
+ 116:Src/main.c    **** TIM_HandleTypeDef htim2;
+ 117:Src/main.c    **** TIM_HandleTypeDef htim3;
+ 118:Src/main.c    **** TIM_HandleTypeDef htim5;
+ 119:Src/main.c    **** TIM_HandleTypeDef htim7;
+ 120:Src/main.c    **** TIM_HandleTypeDef htim8;
+ 121:Src/main.c    **** TIM_HandleTypeDef htim12;
+ 122:Src/main.c    **** 
+ 123:Src/main.c    **** UART_HandleTypeDef huart1;
+ 124:Src/main.c    **** UART_HandleTypeDef huart6;
+ 125:Src/main.c    **** 
+ 126:Src/main.c    **** SDRAM_HandleTypeDef hsdram1;
+ 127:Src/main.c    **** 
+ 128:Src/main.c    **** osThreadId defaultTaskHandle;
+ 129:Src/main.c    **** 
+ 130:Src/main.c    **** /* USER CODE BEGIN PV */
+ 131:Src/main.c    **** /* Private variables ---------------------------------------------------------*/
+ 132:Src/main.c    **** 
+ 133:Src/main.c    **** /* USER CODE END PV */
+ 134:Src/main.c    **** 
+ 135:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+ 136:Src/main.c    **** void SystemClock_Config(void);
+ 137:Src/main.c    **** static void MX_GPIO_Init(void);
+ 138:Src/main.c    **** static void MX_I2C1_Init(void);
+ 139:Src/main.c    **** static void MX_USART1_UART_Init(void);
+ 140:Src/main.c    **** static void MX_USART6_UART_Init(void);
+ 141:Src/main.c    **** void StartDefaultTask(void const * argument);
+ 142:Src/main.c    **** 
+ 143:Src/main.c    **** void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
+ 144:Src/main.c    **** 
+ 145:Src/main.c    **** 
+ 146:Src/main.c    **** 
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 4
+
+
+ 147:Src/main.c    **** 
+ 148:Src/main.c    **** 
+ 149:Src/main.c    **** /* USER CODE BEGIN PFP */
+ 150:Src/main.c    **** /* Private function prototypes -----------------------------------------------*/
+ 151:Src/main.c    **** 
+ 152:Src/main.c    **** /* USER CODE END PFP */
+ 153:Src/main.c    **** 
+ 154:Src/main.c    **** /* USER CODE BEGIN 0 */
+ 155:Src/main.c    **** void mainTask(void* p);
+ 156:Src/main.c    **** 
+ 157:Src/main.c    **** osThreadId netconn_thread_handle;
+ 158:Src/main.c    **** 
+ 159:Src/main.c    **** #define LCD_X_SIZE			RK043FN48H_WIDTH
+ 160:Src/main.c    **** #define LCD_Y_SIZE			RK043FN48H_HEIGHT
+ 161:Src/main.c    **** 
+ 162:Src/main.c    **** #define PRINTF_USES_HAL_TX		0
+ 163:Src/main.c    **** 
+ 164:Src/main.c    **** int __io_putchar(int ch)
+ 165:Src/main.c    **** {
+ 166:Src/main.c    **** 	uint8_t data = ch;
+ 167:Src/main.c    **** 	#if PRINTF_USES_HAL_TX
+ 168:Src/main.c    **** 		HAL_StatusTypeDef status = HAL_UART_Transmit(&huart1, (uint8_t*)&data, len, 100);
+ 169:Src/main.c    **** 	#else
+ 170:Src/main.c    **** 		while(__HAL_UART_GET_FLAG(&huart1, UART_FLAG_TXE) == RESET) { ; }
+ 171:Src/main.c    **** 		huart1.Instance->TDR = (uint16_t)data;
+ 172:Src/main.c    **** 	#endif
+ 173:Src/main.c    **** 	return 0;
+ 174:Src/main.c    **** }
+ 175:Src/main.c    **** 
+ 176:Src/main.c    **** char inkey(void)
+ 177:Src/main.c    **** {
+ 178:Src/main.c    **** 	uint32_t flags = huart1.Instance->ISR;
+ 179:Src/main.c    **** 
+ 180:Src/main.c    **** 	if((flags & UART_FLAG_RXNE) || (flags & UART_FLAG_ORE))
+ 181:Src/main.c    **** 	{
+ 182:Src/main.c    **** 		__HAL_UART_CLEAR_OREFLAG(&huart1);
+ 183:Src/main.c    **** 		return (huart1.Instance->RDR);
+ 184:Src/main.c    **** 	}
+ 185:Src/main.c    **** 	else
+ 186:Src/main.c    **** 		return 0;
+ 187:Src/main.c    **** }
+ 188:Src/main.c    **** 
+ 189:Src/main.c    **** //partially based on available code examples
+ 190:Src/main.c    **** static void lcd_start(void)
+ 191:Src/main.c    **** {
+ 192:Src/main.c    ****   /* LCD Initialization */
+ 193:Src/main.c    ****   BSP_LCD_Init();
+ 194:Src/main.c    **** 
+ 195:Src/main.c    ****   /* LCD Initialization */
+ 196:Src/main.c    ****   BSP_LCD_LayerDefaultInit(0, (unsigned int)0xC0000000);
+ 197:Src/main.c    ****   //BSP_LCD_LayerDefaultInit(1, (unsigned int)lcd_image_bg+(LCD_X_SIZE*LCD_Y_SIZE*4));
+ 198:Src/main.c    ****   BSP_LCD_LayerDefaultInit(1, (unsigned int)0xC0000000+(LCD_X_SIZE*LCD_Y_SIZE*4));
+ 199:Src/main.c    **** 
+ 200:Src/main.c    ****   /* Enable the LCD */
+ 201:Src/main.c    ****   BSP_LCD_DisplayOn();
+ 202:Src/main.c    **** 
+ 203:Src/main.c    ****   /* Select the LCD Background Layer  */
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 5
+
+
+ 204:Src/main.c    ****   BSP_LCD_SelectLayer(0);
+ 205:Src/main.c    **** 
+ 206:Src/main.c    ****   /* Clear the Background Layer */
+ 207:Src/main.c    ****   BSP_LCD_Clear(LCD_COLOR_WHITE);
+ 208:Src/main.c    ****   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+ 209:Src/main.c    **** 
+ 210:Src/main.c    ****   BSP_LCD_SetColorKeying(1,LCD_COLOR_WHITE);
+ 211:Src/main.c    **** 
+ 212:Src/main.c    ****   /* Select the LCD Foreground Layer  */
+ 213:Src/main.c    ****   BSP_LCD_SelectLayer(1);
+ 214:Src/main.c    **** 
+ 215:Src/main.c    ****   /* Clear the Foreground Layer */
+ 216:Src/main.c    ****   BSP_LCD_Clear(LCD_COLOR_WHITE);
+ 217:Src/main.c    ****   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+ 218:Src/main.c    **** 
+ 219:Src/main.c    ****   /* Configure the transparency for foreground and background :
+ 220:Src/main.c    ****      Increase the transparency */
+ 221:Src/main.c    ****   BSP_LCD_SetTransparency(0, 255);
+ 222:Src/main.c    ****   BSP_LCD_SetTransparency(1, 255);
+ 223:Src/main.c    **** }
+ 224:Src/main.c    **** 
+ 225:Src/main.c    **** //[rmv]
+ 226:Src/main.c    **** void draw_button(int xPos, int yPos, int width, int height, uint32_t color, uint8_t* text);
+ 227:Src/main.c    **** void draw_background(void)
+ 228:Src/main.c    **** {
+ 229:Src/main.c    **** 	/* Select the LCD Background Layer  */
+ 230:Src/main.c    **** 	BSP_LCD_SelectLayer(0);
+ 231:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+ 232:Src/main.c    **** 	BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
+ 233:Src/main.c    **** 
+ 234:Src/main.c    **** 	//select Foreground Layer
+ 235:Src/main.c    **** 	BSP_LCD_SelectLayer(1);
+ 236:Src/main.c    **** 	char greeting[] = "Hello";
+ 237:Src/main.c    **** 	draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
+ 238:Src/main.c    **** }
+ 239:Src/main.c    **** 
+ 240:Src/main.c    **** void draw_button(int xPos, int yPos, int width, int height, uint32_t color, uint8_t* text){
+ 241:Src/main.c    **** 
+ 242:Src/main.c    **** 	BSP_LCD_SelectLayer(0);
+ 243:Src/main.c    **** 	BSP_LCD_SetTextColor(color);
+ 244:Src/main.c    **** 	BSP_LCD_FillRect(xPos,yPos,width,height);
+ 245:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 246:Src/main.c    **** 	BSP_LCD_DisplayStringAt(xPos+5, yPos+5, text, 0);
+ 247:Src/main.c    **** 
+ 248:Src/main.c    **** }
+ 249:Src/main.c    **** 
+ 250:Src/main.c    **** void draw_chart(float* data){
+ 251:Src/main.c    **** 
+ 252:Src/main.c    ****     int chart_height = 200;
+ 253:Src/main.c    **** 	int chart_height_coord = 230;
+ 254:Src/main.c    ****     int chart_length = 450;
+ 255:Src/main.c    ****     int chart_y_pos = 250;
+ 256:Src/main.c    ****     int chart_x_pos = 20;
+ 257:Src/main.c    **** 	int chart_y_pos_coord = 20;
+ 258:Src/main.c    **** 
+ 259:Src/main.c    **** //drawing coordinates system
+ 260:Src/main.c    ****     BSP_LCD_SelectLayer(0);
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 6
+
+
+ 261:Src/main.c    ****     BSP_LCD_Clear(LCD_COLOR_WHITE);
+ 262:Src/main.c    ****     BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+ 263:Src/main.c    ****     BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos,chart_length);
+ 264:Src/main.c    ****     BSP_LCD_DrawVLine(chart_x_pos,chart_y_pos_coord,chart_height_coord);
+ 265:Src/main.c    ****     
+ 266:Src/main.c    **** //    BSP_LCD_FillTriangle(chart_length-10,chart_length-10,chart_length,chart_y_pos+5,chart_y_pos-5
+ 267:Src/main.c    ****     int n = 90; //sizeof(data)/sizeof(data[0]);
+ 268:Src/main.c    ****     float max = data[0];
+ 269:Src/main.c    ****     float min = data[0];//0;//data[0];
+ 270:Src/main.c    **** 
+ 271:Src/main.c    ****     for(int i=1; i<n; i++){
+ 272:Src/main.c    ****       if(data[i] < min)
+ 273:Src/main.c    ****           min = data[i];
+ 274:Src/main.c    ****       if(data[i] > max)
+ 275:Src/main.c    ****           max = data[i];
+ 276:Src/main.c    ****     }
+ 277:Src/main.c    ****     int min_i = min;//0;//min;
+ 278:Src/main.c    ****     int max_i = max;
+ 279:Src/main.c    ****     float coordinates_scale = chart_height/(max_i - min_i);
+ 280:Src/main.c    ****     float amplitude = max - min; // ?
+ 281:Src/main.c    ****     float scale = chart_height/amplitude; // ?
+ 282:Src/main.c    **** 
+ 283:Src/main.c    **** // draw scale
+ 284:Src/main.c    ****     int y = chart_y_pos;
+ 285:Src/main.c    ****     BSP_LCD_SetTextColor(LCD_COLOR_LIGHTGRAY);
+ 286:Src/main.c    ****     for(int i=1;i<amplitude;i++){
+ 287:Src/main.c    ****       BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos-i*coordinates_scale,chart_length);
+ 288:Src/main.c    ****     }
+ 289:Src/main.c    **** 
+ 290:Src/main.c    **** // draw data
+ 291:Src/main.c    ****   BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 292:Src/main.c    **** 
+ 293:Src/main.c    ****   int sample_len = chart_length/n;
+ 294:Src/main.c    ****   for(int i=0; i<n-1; i++){
+ 295:Src/main.c    ****     int x1,y1,x2,y2;
+ 296:Src/main.c    ****     x1 = chart_x_pos + i * sample_len;
+ 297:Src/main.c    ****     x2 = chart_x_pos + (i+1) * sample_len;
+ 298:Src/main.c    ****     y1 = chart_y_pos - (data[i] - min_i)*coordinates_scale;
+ 299:Src/main.c    ****     y2 = chart_y_pos - (data[i+1] - min_i)*coordinates_scale;
+ 300:Src/main.c    **** 
+ 301:Src/main.c    ****     BSP_LCD_DrawLine(x1,y1,x2,y2);
+ 302:Src/main.c    **** 
+ 303:Src/main.c    ****   }
+ 304:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+ 305:Src/main.c    **** 	Point points[3];
+ 306:Src/main.c    **** 	points[0].X=chart_x_pos+5;
+ 307:Src/main.c    **** 	points[1].X=chart_x_pos-5;
+ 308:Src/main.c    **** 	points[2].X=chart_x_pos;
+ 309:Src/main.c    **** 	
+ 310:Src/main.c    **** 	points[0].Y=chart_y_pos_coord+10;
+ 311:Src/main.c    **** 	points[1].Y=chart_y_pos_coord+10;
+ 312:Src/main.c    **** 	points[2].Y=chart_y_pos_coord;
+ 313:Src/main.c    **** 	BSP_LCD_FillPolygon(points,3);
+ 314:Src/main.c    **** 
+ 315:Src/main.c    **** 	points[0].X=chart_x_pos+chart_length-10;
+ 316:Src/main.c    **** 	points[1].X=chart_x_pos+chart_length;
+ 317:Src/main.c    **** 	points[2].X=chart_x_pos+chart_length-10;
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 7
+
+
+ 318:Src/main.c    **** 
+ 319:Src/main.c    **** 	points[0].Y=chart_y_pos-5;
+ 320:Src/main.c    **** 	points[1].Y=chart_y_pos;
+ 321:Src/main.c    **** 	points[2].Y=chart_y_pos+5;
+ 322:Src/main.c    **** 	BSP_LCD_FillPolygon(points,3);
+ 323:Src/main.c    **** 	//BSP_LCD_FillPolygon(chart_x_pos-5,chart_x_pos-5,chart_x_pos+5,chart_height-10,chart_height,chart
+ 324:Src/main.c    **** 
+ 325:Src/main.c    **** 
+ 326:Src/main.c    **** 	BSP_LCD_SetFont(&Font12);
+ 327:Src/main.c    **** 	
+ 328:Src/main.c    **** 	int j = 0;
+ 329:Src/main.c    **** 	for(int i = min; i <=max ; i+=5){
+ 330:Src/main.c    **** 		int someInt = i;
+ 331:Src/main.c    **** 		char str[3];
+ 332:Src/main.c    **** 		sprintf(str, "%d", someInt);
+ 333:Src/main.c    **** 		BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-j*coordinates_scale, (uint8_t*)str, LEFT_MOD
+ 334:Src/main.c    **** 		j+=5;
+ 335:Src/main.c    **** 	}
+ 336:Src/main.c    **** 	/*
+ 337:Src/main.c    **** 	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5, (uint8_t*)"0", LEFT_MODE);
+ 338:Src/main.c    **** 	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-5*coordinates_scale, (uint8_t*)"5", LEFT_MODE
+ 339:Src/main.c    **** 	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-10*coordinates_scale, (uint8_t*)"10", LEFT_MO
+ 340:Src/main.c    **** 	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-15*coordinates_scale, (uint8_t*)"15", LEFT_MO
+ 341:Src/main.c    **** 	*/
+ 342:Src/main.c    **** 	}
+ 343:Src/main.c    **** 
+ 344:Src/main.c    **** static TS_StateTypeDef  TS_State;
+ 345:Src/main.c    **** 
+ 346:Src/main.c    **** 
+ 347:Src/main.c    **** int initialize_touchscreen(void)
+ 348:Src/main.c    **** {
+ 349:Src/main.c    **** 	uint8_t  status = 0;
+ 350:Src/main.c    **** 	status = BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
+ 351:Src/main.c    **** 	if(status != TS_OK) return -1;
+ 352:Src/main.c    **** 	return 0;
+ 353:Src/main.c    **** }
+ 354:Src/main.c    **** 
+ 355:Src/main.c    ****  int print_data(char* data, int client_id, int len){
+ 356:Src/main.c    **** 	BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
+ 357:Src/main.c    **** 	BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+ 358:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 359:Src/main.c    **** 	if(client_id == 1){
+ 360:Src/main.c    **** 		printf("%s\n",data);
+ 361:Src/main.c    **** 		int i;
+ 362:Src/main.c    **** 		for(i = 10; i < 70;i++)
+ 363:Src/main.c    **** 			BSP_LCD_ClearStringLine(i);
+ 364:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+ 365:Src/main.c    **** 		BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+ 366:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 367:Src/main.c    **** 		BSP_LCD_ClearStringLine(10);
+ 368:Src/main.c    **** 		BSP_LCD_ClearStringLine(50);
+ 369:Src/main.c    **** 		char target[100];
+ 370:Src/main.c    **** 
+ 371:Src/main.c    **** 		strncpy(target, data, len);
+ 372:Src/main.c    **** 		target[len] = '\0';
+ 373:Src/main.c    **** 		BSP_LCD_DisplayStringAt(0, 10, (uint8_t*)"Temperature1 is:", CENTER_MODE);
+ 374:Src/main.c    **** 		BSP_LCD_DisplayStringAt(0, 50, (uint8_t*)target, CENTER_MODE);
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 8
+
+
+ 375:Src/main.c    **** 	}
+ 376:Src/main.c    **** 	else{
+ 377:Src/main.c    **** 	printf("%s\n",data);
+ 378:Src/main.c    **** 	char target[100];
+ 379:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+ 380:Src/main.c    **** 		BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+ 381:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 382:Src/main.c    **** 	strncpy(target, data, len);
+ 383:Src/main.c    **** 	target[len] = '\0';
+ 384:Src/main.c    **** 	BSP_LCD_DisplayStringAt(0, 70, (uint8_t*)"Temperature2 is:", CENTER_MODE);
+ 385:Src/main.c    **** 	BSP_LCD_DisplayStringAt(0, 110, (uint8_t*)target, CENTER_MODE);
+ 386:Src/main.c    **** 	}
+ 387:Src/main.c    **** }
+ 388:Src/main.c    **** 
+ 389:Src/main.c    **** 
+ 390:Src/main.c    **** /* USER CODE END 0 */
+ 391:Src/main.c    **** 
+ 392:Src/main.c    **** /**
+ 393:Src/main.c    ****   * @brief  The application entry point.
+ 394:Src/main.c    ****   *
+ 395:Src/main.c    ****   * @retval None
+ 396:Src/main.c    ****   */
+ 397:Src/main.c    **** int main(void)
+ 398:Src/main.c    **** {
+ 399:Src/main.c    **** 
+ 400:Src/main.c    **** 
+ 401:Src/main.c    ****   float data[90] = {20.34,21.39,20.05,25.07,21.97,24.27,26.34,26.39,26.32,22.01,20.34,27.39,22.05,2
+ 402:Src/main.c    **** 
+ 403:Src/main.c    ****   /* USER CODE BEGIN 1 */
+ 404:Src/main.c    **** 
+ 405:Src/main.c    ****   /* USER CODE END 1 */
+ 406:Src/main.c    **** 
+ 407:Src/main.c    ****   /* MCU Configuration----------------------------------------------------------*/
+ 408:Src/main.c    **** 
+ 409:Src/main.c    ****   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+ 410:Src/main.c    ****   HAL_Init();
+ 411:Src/main.c    **** 
+ 412:Src/main.c    ****   /* USER CODE BEGIN Init */
+ 413:Src/main.c    **** 
+ 414:Src/main.c    ****   /* USER CODE END Init */
+ 415:Src/main.c    **** 
+ 416:Src/main.c    ****   /* Configure the system clock */
+ 417:Src/main.c    ****   SystemClock_Config();
+ 418:Src/main.c    **** 
+ 419:Src/main.c    ****   /* USER CODE BEGIN SysInit */
+ 420:Src/main.c    **** 
+ 421:Src/main.c    ****   /* USER CODE END SysInit */
+ 422:Src/main.c    **** 
+ 423:Src/main.c    ****   /* Initialize all configured peripherals */
+ 424:Src/main.c    ****   MX_GPIO_Init();
+ 425:Src/main.c    ****   MX_USART1_UART_Init();
+ 426:Src/main.c    ****   MX_USART6_UART_Init();
+ 427:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 428:Src/main.c    ****   debug_init(&huart1);
+ 429:Src/main.c    **** 
+ 430:Src/main.c    ****   xprintf(ANSI_FG_GREEN "STM32F746 Discovery Project" ANSI_FG_DEFAULT "\n");
+ 431:Src/main.c    **** 
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 9
+
+
+ 432:Src/main.c    ****   printf("Regular printf\n");
+ 433:Src/main.c    **** 
+ 434:Src/main.c    **** lcd_start();
+ 435:Src/main.c    **** draw_background();
+ 436:Src/main.c    **** initialize_touchscreen();
+ 437:Src/main.c    **** draw_chart(data);
+ 438:Src/main.c    **** 
+ 439:Src/main.c    ****   /* Create the thread(s) */
+ 440:Src/main.c    ****   /* definition and creation of defaultTask */
+ 441:Src/main.c    ****   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
+ 442:Src/main.c    ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+ 443:Src/main.c    **** 
+ 444:Src/main.c    **** 
+ 445:Src/main.c    ****   /* Start scheduler */
+ 446:Src/main.c    ****   osKernelStart();
+ 447:Src/main.c    **** 
+ 448:Src/main.c    ****   /* We should never get here as control is now taken by the scheduler */
+ 449:Src/main.c    **** 
+ 450:Src/main.c    ****   /* Infinite loop */
+ 451:Src/main.c    ****   /* USER CODE BEGIN WHILE */
+ 452:Src/main.c    ****   while (1)
+ 453:Src/main.c    ****   {
+ 454:Src/main.c    **** 
+ 455:Src/main.c    ****   }
+ 456:Src/main.c    **** 
+ 457:Src/main.c    **** }
+ 458:Src/main.c    **** 
+ 459:Src/main.c    **** /**
+ 460:Src/main.c    ****   * @brief System Clock Configuration
+ 461:Src/main.c    ****   * @retval None
+ 462:Src/main.c    ****   */
+ 463:Src/main.c    **** void SystemClock_Config(void)
+ 464:Src/main.c    **** {
+ 465:Src/main.c    **** 
+ 466:Src/main.c    ****   RCC_OscInitTypeDef RCC_OscInitStruct;
+ 467:Src/main.c    ****   RCC_ClkInitTypeDef RCC_ClkInitStruct;
+ 468:Src/main.c    ****   RCC_PeriphCLKInitTypeDef PeriphClkInitStruct;
+ 469:Src/main.c    **** 
+ 470:Src/main.c    ****     /**Configure the main internal regulator output voltage
+ 471:Src/main.c    ****     */
+ 472:Src/main.c    ****   __HAL_RCC_PWR_CLK_ENABLE();
+ 473:Src/main.c    **** 
+ 474:Src/main.c    ****   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+ 475:Src/main.c    **** 
+ 476:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks
+ 477:Src/main.c    ****     */
+ 478:Src/main.c    ****   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
+ 479:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 480:Src/main.c    ****   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
+ 481:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 482:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 483:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLM = 25;
+ 484:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLN = 400;
+ 485:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 486:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLQ = 8;
+ 487:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 488:Src/main.c    ****   {
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 10
+
+
+ 489:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 490:Src/main.c    ****   }
+ 491:Src/main.c    **** 
+ 492:Src/main.c    ****     /**Activate the Over-Drive mode
+ 493:Src/main.c    ****     */
+ 494:Src/main.c    ****   if (HAL_PWREx_EnableOverDrive() != HAL_OK)
+ 495:Src/main.c    ****   {
+ 496:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 497:Src/main.c    ****   }
+ 498:Src/main.c    **** 
+ 499:Src/main.c    ****     /**Initializes the CPU, AHB and APB busses clocks
+ 500:Src/main.c    ****     */
+ 501:Src/main.c    ****   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+ 502:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 503:Src/main.c    ****   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+ 504:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 505:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+ 506:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+ 507:Src/main.c    **** 
+ 508:Src/main.c    ****   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_6) != HAL_OK)
+ 509:Src/main.c    ****   {
+ 510:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 511:Src/main.c    ****   }
+ 512:Src/main.c    **** 
+ 513:Src/main.c    ****   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SPDIFRX|RCC_PERIPHCLK_LTDC
+ 514:Src/main.c    ****                               |RCC_PERIPHCLK_RTC|RCC_PERIPHCLK_USART1
+ 515:Src/main.c    ****                               |RCC_PERIPHCLK_USART6|RCC_PERIPHCLK_SAI2
+ 516:Src/main.c    ****                               |RCC_PERIPHCLK_I2C1|RCC_PERIPHCLK_I2C3
+ 517:Src/main.c    ****                               |RCC_PERIPHCLK_SDMMC1|RCC_PERIPHCLK_CLK48;
+ 518:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SN = 100;
+ 519:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SP = RCC_PLLP_DIV2;
+ 520:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SR = 2;
+ 521:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SQ = 2;
+ 522:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIN = 192;
+ 523:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIR = 4;
+ 524:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIQ = 4;
+ 525:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIP = RCC_PLLSAIP_DIV4;
+ 526:Src/main.c    ****   PeriphClkInitStruct.PLLI2SDivQ = 1;
+ 527:Src/main.c    ****   PeriphClkInitStruct.PLLSAIDivQ = 1;
+ 528:Src/main.c    ****   PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_8;
+ 529:Src/main.c    ****   PeriphClkInitStruct.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+ 530:Src/main.c    ****   PeriphClkInitStruct.Sai2ClockSelection = RCC_SAI2CLKSOURCE_PLLSAI;
+ 531:Src/main.c    ****   PeriphClkInitStruct.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
+ 532:Src/main.c    ****   PeriphClkInitStruct.Usart6ClockSelection = RCC_USART6CLKSOURCE_PCLK2;
+ 533:Src/main.c    ****   PeriphClkInitStruct.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
+ 534:Src/main.c    ****   PeriphClkInitStruct.I2c3ClockSelection = RCC_I2C3CLKSOURCE_PCLK1;
+ 535:Src/main.c    ****   PeriphClkInitStruct.Clk48ClockSelection = RCC_CLK48SOURCE_PLLSAIP;
+ 536:Src/main.c    ****   PeriphClkInitStruct.Sdmmc1ClockSelection = RCC_SDMMC1CLKSOURCE_CLK48;
+ 537:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+ 538:Src/main.c    ****   {
+ 539:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 540:Src/main.c    ****   }
+ 541:Src/main.c    **** 
+ 542:Src/main.c    ****     /**Configure the Systick interrupt time
+ 543:Src/main.c    ****     */
+ 544:Src/main.c    ****   HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
+ 545:Src/main.c    **** 
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 11
+
+
+ 546:Src/main.c    ****     /**Configure the Systick
+ 547:Src/main.c    ****     */
+ 548:Src/main.c    ****   HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+ 549:Src/main.c    **** 
+ 550:Src/main.c    ****   /* SysTick_IRQn interrupt configuration */
+ 551:Src/main.c    ****   HAL_NVIC_SetPriority(SysTick_IRQn, 15, 0);
+ 552:Src/main.c    **** }
+ 553:Src/main.c    **** 
+ 554:Src/main.c    **** 
+ 555:Src/main.c    **** 
+ 556:Src/main.c    **** 
+ 557:Src/main.c    **** /* USART1 init function */
+ 558:Src/main.c    **** static void MX_USART1_UART_Init(void)
+ 559:Src/main.c    **** {
+ 560:Src/main.c    **** 
+ 561:Src/main.c    ****   huart1.Instance = USART1;
+ 562:Src/main.c    ****   huart1.Init.BaudRate = 115200;
+ 563:Src/main.c    ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 564:Src/main.c    ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 565:Src/main.c    ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 566:Src/main.c    ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 567:Src/main.c    ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 568:Src/main.c    ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 569:Src/main.c    ****   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 570:Src/main.c    ****   huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 571:Src/main.c    ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 572:Src/main.c    ****   {
+ 573:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 574:Src/main.c    ****   }
+ 575:Src/main.c    **** 
+ 576:Src/main.c    **** }
+ 577:Src/main.c    **** 
+ 578:Src/main.c    **** /* USART6 init function */
+ 579:Src/main.c    **** static void MX_USART6_UART_Init(void)
+ 580:Src/main.c    **** {
+ 581:Src/main.c    **** 
+ 582:Src/main.c    ****   huart6.Instance = USART6;
+ 583:Src/main.c    ****   huart6.Init.BaudRate = 115200;
+ 584:Src/main.c    ****   huart6.Init.WordLength = UART_WORDLENGTH_8B;
+ 585:Src/main.c    ****   huart6.Init.StopBits = UART_STOPBITS_1;
+ 586:Src/main.c    ****   huart6.Init.Parity = UART_PARITY_NONE;
+ 587:Src/main.c    ****   huart6.Init.Mode = UART_MODE_TX_RX;
+ 588:Src/main.c    ****   huart6.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 589:Src/main.c    ****   huart6.Init.OverSampling = UART_OVERSAMPLING_16;
+ 590:Src/main.c    ****   huart6.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 591:Src/main.c    ****   huart6.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 592:Src/main.c    ****   if (HAL_UART_Init(&huart6) != HAL_OK)
+ 593:Src/main.c    ****   {
+ 594:Src/main.c    ****     _Error_Handler(__FILE__, __LINE__);
+ 595:Src/main.c    ****   }
+ 596:Src/main.c    **** 
+ 597:Src/main.c    **** }
+ 598:Src/main.c    **** 
+ 599:Src/main.c    **** 
+ 600:Src/main.c    **** 
+ 601:Src/main.c    **** /** Configure pins as
+ 602:Src/main.c    ****         * Analog
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 12
+
+
+ 603:Src/main.c    ****         * Input
+ 604:Src/main.c    ****         * Output
+ 605:Src/main.c    ****         * EVENT_OUT
+ 606:Src/main.c    ****         * EXTI
+ 607:Src/main.c    ****      PB5   ------> USB_OTG_HS_ULPI_D7
+ 608:Src/main.c    ****      PH4   ------> USB_OTG_HS_ULPI_NXT
+ 609:Src/main.c    ****      PB13   ------> USB_OTG_HS_ULPI_D6
+ 610:Src/main.c    ****      PB12   ------> USB_OTG_HS_ULPI_D5
+ 611:Src/main.c    ****      PC0   ------> USB_OTG_HS_ULPI_STP
+ 612:Src/main.c    ****      PC2   ------> USB_OTG_HS_ULPI_DIR
+ 613:Src/main.c    ****      PA5   ------> USB_OTG_HS_ULPI_CK
+ 614:Src/main.c    ****      PB10   ------> USB_OTG_HS_ULPI_D3
+ 615:Src/main.c    ****      PA3   ------> USB_OTG_HS_ULPI_D0
+ 616:Src/main.c    ****      PB1   ------> USB_OTG_HS_ULPI_D2
+ 617:Src/main.c    ****      PB0   ------> USB_OTG_HS_ULPI_D1
+ 618:Src/main.c    ****      PB11   ------> USB_OTG_HS_ULPI_D4
+ 619:Src/main.c    **** */
+ 620:Src/main.c    **** static void MX_GPIO_Init(void)
+ 621:Src/main.c    **** {
+  27              		.loc 1 621 0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 64
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31 0000 2DE9F04F 		push	{r4, r5, r6, r7, r8, r9, r10, fp, lr}
+  32              	.LCFI0:
+  33              		.cfi_def_cfa_offset 36
+  34              		.cfi_offset 4, -36
+  35              		.cfi_offset 5, -32
+  36              		.cfi_offset 6, -28
+  37              		.cfi_offset 7, -24
+  38              		.cfi_offset 8, -20
+  39              		.cfi_offset 9, -16
+  40              		.cfi_offset 10, -12
+  41              		.cfi_offset 11, -8
+  42              		.cfi_offset 14, -4
+  43 0004 91B0     		sub	sp, sp, #68
+  44              	.LCFI1:
+  45              		.cfi_def_cfa_offset 104
+  46              	.LBB2:
+ 622:Src/main.c    **** 
+ 623:Src/main.c    ****   GPIO_InitTypeDef GPIO_InitStruct;
+ 624:Src/main.c    **** 
+ 625:Src/main.c    ****   /* GPIO Ports Clock Enable */
+ 626:Src/main.c    ****   __HAL_RCC_GPIOE_CLK_ENABLE();
+  47              		.loc 1 626 0
+  48 0006 954B     		ldr	r3, .L3
+  49 0008 1A6B     		ldr	r2, [r3, #48]
+  50 000a 42F01002 		orr	r2, r2, #16
+  51 000e 1A63     		str	r2, [r3, #48]
+  52 0010 1A6B     		ldr	r2, [r3, #48]
+  53 0012 02F01002 		and	r2, r2, #16
+  54 0016 0092     		str	r2, [sp]
+  55 0018 009A     		ldr	r2, [sp]
+  56              	.LBE2:
+  57              	.LBB3:
+ 627:Src/main.c    ****   __HAL_RCC_GPIOG_CLK_ENABLE();
+  58              		.loc 1 627 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 13
+
+
+  59 001a 1A6B     		ldr	r2, [r3, #48]
+  60 001c 42F04002 		orr	r2, r2, #64
+  61 0020 1A63     		str	r2, [r3, #48]
+  62 0022 1A6B     		ldr	r2, [r3, #48]
+  63 0024 02F04002 		and	r2, r2, #64
+  64 0028 0192     		str	r2, [sp, #4]
+  65 002a 019A     		ldr	r2, [sp, #4]
+  66              	.LBE3:
+  67              	.LBB4:
+ 628:Src/main.c    ****   __HAL_RCC_GPIOB_CLK_ENABLE();
+  68              		.loc 1 628 0
+  69 002c 1A6B     		ldr	r2, [r3, #48]
+  70 002e 42F00202 		orr	r2, r2, #2
+  71 0032 1A63     		str	r2, [r3, #48]
+  72 0034 1A6B     		ldr	r2, [r3, #48]
+  73 0036 02F00202 		and	r2, r2, #2
+  74 003a 0292     		str	r2, [sp, #8]
+  75 003c 029A     		ldr	r2, [sp, #8]
+  76              	.LBE4:
+  77              	.LBB5:
+ 629:Src/main.c    ****   __HAL_RCC_GPIOD_CLK_ENABLE();
+  78              		.loc 1 629 0
+  79 003e 1A6B     		ldr	r2, [r3, #48]
+  80 0040 42F00802 		orr	r2, r2, #8
+  81 0044 1A63     		str	r2, [r3, #48]
+  82 0046 1A6B     		ldr	r2, [r3, #48]
+  83 0048 02F00802 		and	r2, r2, #8
+  84 004c 0392     		str	r2, [sp, #12]
+  85 004e 039A     		ldr	r2, [sp, #12]
+  86              	.LBE5:
+  87              	.LBB6:
+ 630:Src/main.c    ****   __HAL_RCC_GPIOC_CLK_ENABLE();
+  88              		.loc 1 630 0
+  89 0050 1A6B     		ldr	r2, [r3, #48]
+  90 0052 42F00402 		orr	r2, r2, #4
+  91 0056 1A63     		str	r2, [r3, #48]
+  92 0058 1A6B     		ldr	r2, [r3, #48]
+  93 005a 02F00402 		and	r2, r2, #4
+  94 005e 0492     		str	r2, [sp, #16]
+  95 0060 049A     		ldr	r2, [sp, #16]
+  96              	.LBE6:
+  97              	.LBB7:
+ 631:Src/main.c    ****   __HAL_RCC_GPIOA_CLK_ENABLE();
+  98              		.loc 1 631 0
+  99 0062 1A6B     		ldr	r2, [r3, #48]
+ 100 0064 42F00102 		orr	r2, r2, #1
+ 101 0068 1A63     		str	r2, [r3, #48]
+ 102 006a 1A6B     		ldr	r2, [r3, #48]
+ 103 006c 02F00102 		and	r2, r2, #1
+ 104 0070 0592     		str	r2, [sp, #20]
+ 105 0072 059A     		ldr	r2, [sp, #20]
+ 106              	.LBE7:
+ 107              	.LBB8:
+ 632:Src/main.c    ****   __HAL_RCC_GPIOJ_CLK_ENABLE();
+ 108              		.loc 1 632 0
+ 109 0074 1A6B     		ldr	r2, [r3, #48]
+ 110 0076 42F40072 		orr	r2, r2, #512
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 14
+
+
+ 111 007a 1A63     		str	r2, [r3, #48]
+ 112 007c 1A6B     		ldr	r2, [r3, #48]
+ 113 007e 02F40072 		and	r2, r2, #512
+ 114 0082 0692     		str	r2, [sp, #24]
+ 115 0084 069A     		ldr	r2, [sp, #24]
+ 116              	.LBE8:
+ 117              	.LBB9:
+ 633:Src/main.c    ****   __HAL_RCC_GPIOI_CLK_ENABLE();
+ 118              		.loc 1 633 0
+ 119 0086 1A6B     		ldr	r2, [r3, #48]
+ 120 0088 42F48072 		orr	r2, r2, #256
+ 121 008c 1A63     		str	r2, [r3, #48]
+ 122 008e 1A6B     		ldr	r2, [r3, #48]
+ 123 0090 02F48072 		and	r2, r2, #256
+ 124 0094 0792     		str	r2, [sp, #28]
+ 125 0096 079A     		ldr	r2, [sp, #28]
+ 126              	.LBE9:
+ 127              	.LBB10:
+ 634:Src/main.c    ****   __HAL_RCC_GPIOK_CLK_ENABLE();
+ 128              		.loc 1 634 0
+ 129 0098 1A6B     		ldr	r2, [r3, #48]
+ 130 009a 42F48062 		orr	r2, r2, #1024
+ 131 009e 1A63     		str	r2, [r3, #48]
+ 132 00a0 1A6B     		ldr	r2, [r3, #48]
+ 133 00a2 02F48062 		and	r2, r2, #1024
+ 134 00a6 0892     		str	r2, [sp, #32]
+ 135 00a8 089A     		ldr	r2, [sp, #32]
+ 136              	.LBE10:
+ 137              	.LBB11:
+ 635:Src/main.c    ****   __HAL_RCC_GPIOF_CLK_ENABLE();
+ 138              		.loc 1 635 0
+ 139 00aa 1A6B     		ldr	r2, [r3, #48]
+ 140 00ac 42F02002 		orr	r2, r2, #32
+ 141 00b0 1A63     		str	r2, [r3, #48]
+ 142 00b2 1A6B     		ldr	r2, [r3, #48]
+ 143 00b4 02F02002 		and	r2, r2, #32
+ 144 00b8 0992     		str	r2, [sp, #36]
+ 145 00ba 099A     		ldr	r2, [sp, #36]
+ 146              	.LBE11:
+ 147              	.LBB12:
+ 636:Src/main.c    ****   __HAL_RCC_GPIOH_CLK_ENABLE();
+ 148              		.loc 1 636 0
+ 149 00bc 1A6B     		ldr	r2, [r3, #48]
+ 150 00be 42F08002 		orr	r2, r2, #128
+ 151 00c2 1A63     		str	r2, [r3, #48]
+ 152 00c4 1B6B     		ldr	r3, [r3, #48]
+ 153 00c6 03F08003 		and	r3, r3, #128
+ 154 00ca 0A93     		str	r3, [sp, #40]
+ 155 00cc 0A9B     		ldr	r3, [sp, #40]
+ 156              	.LBE12:
+ 637:Src/main.c    **** 
+ 638:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 639:Src/main.c    ****   HAL_GPIO_WritePin(OTG_FS_PowerSwitchOn_GPIO_Port, OTG_FS_PowerSwitchOn_Pin, GPIO_PIN_SET);
+ 157              		.loc 1 639 0
+ 158 00ce 0122     		movs	r2, #1
+ 159 00d0 2021     		movs	r1, #32
+ 160 00d2 6348     		ldr	r0, .L3+4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 15
+
+
+ 161 00d4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 162              	.LVL0:
+ 640:Src/main.c    **** 
+ 641:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 642:Src/main.c    ****   HAL_GPIO_WritePin(GPIOI, ARDUINO_D7_Pin|ARDUINO_D8_Pin, GPIO_PIN_RESET);
+ 163              		.loc 1 642 0
+ 164 00d8 0022     		movs	r2, #0
+ 165 00da 0C21     		movs	r1, #12
+ 166 00dc 6148     		ldr	r0, .L3+8
+ 167 00de FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 168              	.LVL1:
+ 643:Src/main.c    **** 
+ 644:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 645:Src/main.c    ****   HAL_GPIO_WritePin(LCD_BL_CTRL_GPIO_Port, LCD_BL_CTRL_Pin, GPIO_PIN_SET);
+ 169              		.loc 1 645 0
+ 170 00e2 0122     		movs	r2, #1
+ 171 00e4 0821     		movs	r1, #8
+ 172 00e6 6048     		ldr	r0, .L3+12
+ 173 00e8 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 174              	.LVL2:
+ 646:Src/main.c    **** 
+ 647:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 648:Src/main.c    ****   HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_SET);
+ 175              		.loc 1 648 0
+ 176 00ec 0122     		movs	r2, #1
+ 177 00ee 4FF48051 		mov	r1, #4096
+ 178 00f2 5C48     		ldr	r0, .L3+8
+ 179 00f4 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 180              	.LVL3:
+ 649:Src/main.c    **** 
+ 650:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 651:Src/main.c    ****   HAL_GPIO_WritePin(DCMI_PWR_EN_GPIO_Port, DCMI_PWR_EN_Pin, GPIO_PIN_RESET);
+ 181              		.loc 1 651 0
+ 182 00f8 DFF88CA1 		ldr	r10, .L3+44
+ 183 00fc 0022     		movs	r2, #0
+ 184 00fe 4FF40051 		mov	r1, #8192
+ 185 0102 5046     		mov	r0, r10
+ 186 0104 FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 187              	.LVL4:
+ 652:Src/main.c    **** 
+ 653:Src/main.c    ****   /*Configure GPIO pin Output Level */
+ 654:Src/main.c    ****   HAL_GPIO_WritePin(GPIOG, ARDUINO_D4_Pin|ARDUINO_D2_Pin|EXT_RST_Pin, GPIO_PIN_RESET);
+ 188              		.loc 1 654 0
+ 189 0108 0022     		movs	r2, #0
+ 190 010a C821     		movs	r1, #200
+ 191 010c 5748     		ldr	r0, .L3+16
+ 192 010e FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 193              	.LVL5:
+ 655:Src/main.c    **** 
+ 656:Src/main.c    ****   /*Configure GPIO pin : OTG_HS_OverCurrent_Pin */
+ 657:Src/main.c    ****   GPIO_InitStruct.Pin = OTG_HS_OverCurrent_Pin;
+ 194              		.loc 1 657 0
+ 195 0112 4FF0080B 		mov	fp, #8
+ 196 0116 CDF82CB0 		str	fp, [sp, #44]
+ 658:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 197              		.loc 1 658 0
+ 198 011a 0024     		movs	r4, #0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 16
+
+
+ 199 011c 0C94     		str	r4, [sp, #48]
+ 659:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 200              		.loc 1 659 0
+ 201 011e 0D94     		str	r4, [sp, #52]
+ 660:Src/main.c    ****   HAL_GPIO_Init(OTG_HS_OverCurrent_GPIO_Port, &GPIO_InitStruct);
+ 202              		.loc 1 660 0
+ 203 0120 0BA9     		add	r1, sp, #44
+ 204 0122 5348     		ldr	r0, .L3+20
+ 205 0124 FFF7FEFF 		bl	HAL_GPIO_Init
+ 206              	.LVL6:
+ 661:Src/main.c    **** 
+ 662:Src/main.c    ****   /*Configure GPIO pins : ULPI_D7_Pin ULPI_D6_Pin ULPI_D5_Pin ULPI_D3_Pin
+ 663:Src/main.c    ****                            ULPI_D2_Pin ULPI_D1_Pin ULPI_D4_Pin */
+ 664:Src/main.c    ****   GPIO_InitStruct.Pin = ULPI_D7_Pin|ULPI_D6_Pin|ULPI_D5_Pin|ULPI_D3_Pin
+ 207              		.loc 1 664 0
+ 208 0128 43F62343 		movw	r3, #15395
+ 209 012c 0B93     		str	r3, [sp, #44]
+ 665:Src/main.c    ****                           |ULPI_D2_Pin|ULPI_D1_Pin|ULPI_D4_Pin;
+ 666:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 210              		.loc 1 666 0
+ 211 012e 4FF00208 		mov	r8, #2
+ 212 0132 CDF83080 		str	r8, [sp, #48]
+ 667:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 213              		.loc 1 667 0
+ 214 0136 0D94     		str	r4, [sp, #52]
+ 668:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 215              		.loc 1 668 0
+ 216 0138 0327     		movs	r7, #3
+ 217 013a 0E97     		str	r7, [sp, #56]
+ 669:Src/main.c    ****   GPIO_InitStruct.Alternate = GPIO_AF10_OTG_HS;
+ 218              		.loc 1 669 0
+ 219 013c 0A26     		movs	r6, #10
+ 220 013e 0F96     		str	r6, [sp, #60]
+ 670:Src/main.c    ****   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 221              		.loc 1 670 0
+ 222 0140 0BA9     		add	r1, sp, #44
+ 223 0142 4C48     		ldr	r0, .L3+24
+ 224 0144 FFF7FEFF 		bl	HAL_GPIO_Init
+ 225              	.LVL7:
+ 671:Src/main.c    **** 
+ 672:Src/main.c    ****   /*Configure GPIO pin : OTG_FS_VBUS_Pin */
+ 673:Src/main.c    ****   GPIO_InitStruct.Pin = OTG_FS_VBUS_Pin;
+ 226              		.loc 1 673 0
+ 227 0148 4FF48053 		mov	r3, #4096
+ 228 014c 0B93     		str	r3, [sp, #44]
+ 674:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 229              		.loc 1 674 0
+ 230 014e 0C94     		str	r4, [sp, #48]
+ 675:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 231              		.loc 1 675 0
+ 232 0150 0D94     		str	r4, [sp, #52]
+ 676:Src/main.c    ****   HAL_GPIO_Init(OTG_FS_VBUS_GPIO_Port, &GPIO_InitStruct);
+ 233              		.loc 1 676 0
+ 234 0152 0BA9     		add	r1, sp, #44
+ 235 0154 4848     		ldr	r0, .L3+28
+ 236 0156 FFF7FEFF 		bl	HAL_GPIO_Init
+ 237              	.LVL8:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 17
+
+
+ 677:Src/main.c    **** 
+ 678:Src/main.c    ****   /*Configure GPIO pin : Audio_INT_Pin */
+ 679:Src/main.c    ****   /*Configure GPIO pin : OTG_FS_PowerSwitchOn_Pin */
+ 680:Src/main.c    ****   GPIO_InitStruct.Pin = OTG_FS_PowerSwitchOn_Pin;
+ 238              		.loc 1 680 0
+ 239 015a 2023     		movs	r3, #32
+ 240 015c 0B93     		str	r3, [sp, #44]
+ 681:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 241              		.loc 1 681 0
+ 242 015e 0125     		movs	r5, #1
+ 243 0160 0C95     		str	r5, [sp, #48]
+ 682:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 244              		.loc 1 682 0
+ 245 0162 0D94     		str	r4, [sp, #52]
+ 683:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 246              		.loc 1 683 0
+ 247 0164 0E94     		str	r4, [sp, #56]
+ 684:Src/main.c    ****   HAL_GPIO_Init(OTG_FS_PowerSwitchOn_GPIO_Port, &GPIO_InitStruct);
+ 248              		.loc 1 684 0
+ 249 0166 0BA9     		add	r1, sp, #44
+ 250 0168 3D48     		ldr	r0, .L3+4
+ 251 016a FFF7FEFF 		bl	HAL_GPIO_Init
+ 252              	.LVL9:
+ 685:Src/main.c    **** 
+ 686:Src/main.c    ****   /*Configure GPIO pins : ARDUINO_D7_Pin ARDUINO_D8_Pin LCD_DISP_Pin */
+ 687:Src/main.c    ****   GPIO_InitStruct.Pin = ARDUINO_D7_Pin|ARDUINO_D8_Pin|LCD_DISP_Pin;
+ 253              		.loc 1 687 0
+ 254 016e 41F20C03 		movw	r3, #4108
+ 255 0172 0B93     		str	r3, [sp, #44]
+ 688:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 256              		.loc 1 688 0
+ 257 0174 0C95     		str	r5, [sp, #48]
+ 689:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 258              		.loc 1 689 0
+ 259 0176 0D94     		str	r4, [sp, #52]
+ 690:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 260              		.loc 1 690 0
+ 261 0178 0E94     		str	r4, [sp, #56]
+ 691:Src/main.c    ****   HAL_GPIO_Init(GPIOI, &GPIO_InitStruct);
+ 262              		.loc 1 691 0
+ 263 017a 0BA9     		add	r1, sp, #44
+ 264 017c 3948     		ldr	r0, .L3+8
+ 265 017e FFF7FEFF 		bl	HAL_GPIO_Init
+ 266              	.LVL10:
+ 692:Src/main.c    **** 
+ 693:Src/main.c    ****   /*Configure GPIO pin : uSD_Detect_Pin */
+ 694:Src/main.c    ****   GPIO_InitStruct.Pin = uSD_Detect_Pin;
+ 267              		.loc 1 694 0
+ 268 0182 4FF40059 		mov	r9, #8192
+ 269 0186 CDF82C90 		str	r9, [sp, #44]
+ 695:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 270              		.loc 1 695 0
+ 271 018a 0C94     		str	r4, [sp, #48]
+ 696:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 272              		.loc 1 696 0
+ 273 018c 0D94     		str	r4, [sp, #52]
+ 697:Src/main.c    ****   HAL_GPIO_Init(uSD_Detect_GPIO_Port, &GPIO_InitStruct);
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 18
+
+
+ 274              		.loc 1 697 0
+ 275 018e 0BA9     		add	r1, sp, #44
+ 276 0190 3A48     		ldr	r0, .L3+32
+ 277 0192 FFF7FEFF 		bl	HAL_GPIO_Init
+ 278              	.LVL11:
+ 698:Src/main.c    **** 
+ 699:Src/main.c    ****   /*Configure GPIO pin : LCD_BL_CTRL_Pin */
+ 700:Src/main.c    ****   GPIO_InitStruct.Pin = LCD_BL_CTRL_Pin;
+ 279              		.loc 1 700 0
+ 280 0196 CDF82CB0 		str	fp, [sp, #44]
+ 701:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 281              		.loc 1 701 0
+ 282 019a 0C95     		str	r5, [sp, #48]
+ 702:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 283              		.loc 1 702 0
+ 284 019c 0D94     		str	r4, [sp, #52]
+ 703:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 285              		.loc 1 703 0
+ 286 019e 0E94     		str	r4, [sp, #56]
+ 704:Src/main.c    ****   HAL_GPIO_Init(LCD_BL_CTRL_GPIO_Port, &GPIO_InitStruct);
+ 287              		.loc 1 704 0
+ 288 01a0 0BA9     		add	r1, sp, #44
+ 289 01a2 3148     		ldr	r0, .L3+12
+ 290 01a4 FFF7FEFF 		bl	HAL_GPIO_Init
+ 291              	.LVL12:
+ 705:Src/main.c    **** 
+ 706:Src/main.c    ****   /*Configure GPIO pin : OTG_FS_OverCurrent_Pin */
+ 707:Src/main.c    ****   GPIO_InitStruct.Pin = OTG_FS_OverCurrent_Pin;
+ 292              		.loc 1 707 0
+ 293 01a8 4FF0100B 		mov	fp, #16
+ 294 01ac CDF82CB0 		str	fp, [sp, #44]
+ 708:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 295              		.loc 1 708 0
+ 296 01b0 0C94     		str	r4, [sp, #48]
+ 709:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 297              		.loc 1 709 0
+ 298 01b2 0D94     		str	r4, [sp, #52]
+ 710:Src/main.c    ****   HAL_GPIO_Init(OTG_FS_OverCurrent_GPIO_Port, &GPIO_InitStruct);
+ 299              		.loc 1 710 0
+ 300 01b4 0BA9     		add	r1, sp, #44
+ 301 01b6 2A48     		ldr	r0, .L3+4
+ 302 01b8 FFF7FEFF 		bl	HAL_GPIO_Init
+ 303              	.LVL13:
+ 711:Src/main.c    **** 
+ 712:Src/main.c    ****   /*Configure GPIO pins : TP3_Pin NC2_Pin */
+ 713:Src/main.c    ****   GPIO_InitStruct.Pin = TP3_Pin|NC2_Pin;
+ 304              		.loc 1 713 0
+ 305 01bc 48F20403 		movw	r3, #32772
+ 306 01c0 0B93     		str	r3, [sp, #44]
+ 714:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 307              		.loc 1 714 0
+ 308 01c2 0C94     		str	r4, [sp, #48]
+ 715:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 309              		.loc 1 715 0
+ 310 01c4 0D94     		str	r4, [sp, #52]
+ 716:Src/main.c    ****   HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
+ 311              		.loc 1 716 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 19
+
+
+ 312 01c6 0BA9     		add	r1, sp, #44
+ 313 01c8 5046     		mov	r0, r10
+ 314 01ca FFF7FEFF 		bl	HAL_GPIO_Init
+ 315              	.LVL14:
+ 717:Src/main.c    **** 
+ 718:Src/main.c    ****   /*Configure GPIO pin : DCMI_PWR_EN_Pin */
+ 719:Src/main.c    ****   GPIO_InitStruct.Pin = DCMI_PWR_EN_Pin;
+ 316              		.loc 1 719 0
+ 317 01ce CDF82C90 		str	r9, [sp, #44]
+ 720:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 318              		.loc 1 720 0
+ 319 01d2 0C95     		str	r5, [sp, #48]
+ 721:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 320              		.loc 1 721 0
+ 321 01d4 0D94     		str	r4, [sp, #52]
+ 722:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 322              		.loc 1 722 0
+ 323 01d6 0E94     		str	r4, [sp, #56]
+ 723:Src/main.c    ****   HAL_GPIO_Init(DCMI_PWR_EN_GPIO_Port, &GPIO_InitStruct);
+ 324              		.loc 1 723 0
+ 325 01d8 0BA9     		add	r1, sp, #44
+ 326 01da 5046     		mov	r0, r10
+ 327 01dc FFF7FEFF 		bl	HAL_GPIO_Init
+ 328              	.LVL15:
+ 724:Src/main.c    **** 
+ 725:Src/main.c    ****   /*Configure GPIO pin : LCD_INT_Pin */
+ 726:Src/main.c    ****   GPIO_InitStruct.Pin = LCD_INT_Pin;
+ 329              		.loc 1 726 0
+ 330 01e0 CDF82C90 		str	r9, [sp, #44]
+ 727:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_EVT_RISING;
+ 331              		.loc 1 727 0
+ 332 01e4 264B     		ldr	r3, .L3+36
+ 333 01e6 0C93     		str	r3, [sp, #48]
+ 728:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 334              		.loc 1 728 0
+ 335 01e8 0D94     		str	r4, [sp, #52]
+ 729:Src/main.c    ****   HAL_GPIO_Init(LCD_INT_GPIO_Port, &GPIO_InitStruct);
+ 336              		.loc 1 729 0
+ 337 01ea 0BA9     		add	r1, sp, #44
+ 338 01ec 1D48     		ldr	r0, .L3+8
+ 339 01ee FFF7FEFF 		bl	HAL_GPIO_Init
+ 340              	.LVL16:
+ 730:Src/main.c    **** 
+ 731:Src/main.c    ****   /*Configure GPIO pin : ULPI_NXT_Pin */
+ 732:Src/main.c    ****   GPIO_InitStruct.Pin = ULPI_NXT_Pin;
+ 341              		.loc 1 732 0
+ 342 01f2 CDF82CB0 		str	fp, [sp, #44]
+ 733:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 343              		.loc 1 733 0
+ 344 01f6 CDF83080 		str	r8, [sp, #48]
+ 734:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 345              		.loc 1 734 0
+ 346 01fa 0D94     		str	r4, [sp, #52]
+ 735:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 347              		.loc 1 735 0
+ 348 01fc 0E97     		str	r7, [sp, #56]
+ 736:Src/main.c    ****   GPIO_InitStruct.Alternate = GPIO_AF10_OTG_HS;
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 20
+
+
+ 349              		.loc 1 736 0
+ 350 01fe 0F96     		str	r6, [sp, #60]
+ 737:Src/main.c    ****   HAL_GPIO_Init(ULPI_NXT_GPIO_Port, &GPIO_InitStruct);
+ 351              		.loc 1 737 0
+ 352 0200 0BA9     		add	r1, sp, #44
+ 353 0202 5046     		mov	r0, r10
+ 354 0204 FFF7FEFF 		bl	HAL_GPIO_Init
+ 355              	.LVL17:
+ 738:Src/main.c    **** 
+ 739:Src/main.c    ****   /*Configure GPIO pins : ARDUINO_D4_Pin ARDUINO_D2_Pin EXT_RST_Pin */
+ 740:Src/main.c    ****   GPIO_InitStruct.Pin = ARDUINO_D4_Pin|ARDUINO_D2_Pin|EXT_RST_Pin;
+ 356              		.loc 1 740 0
+ 357 0208 C823     		movs	r3, #200
+ 358 020a 0B93     		str	r3, [sp, #44]
+ 741:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 359              		.loc 1 741 0
+ 360 020c 0C95     		str	r5, [sp, #48]
+ 742:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 361              		.loc 1 742 0
+ 362 020e 0D94     		str	r4, [sp, #52]
+ 743:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ 363              		.loc 1 743 0
+ 364 0210 0E94     		str	r4, [sp, #56]
+ 744:Src/main.c    ****   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
+ 365              		.loc 1 744 0
+ 366 0212 0BA9     		add	r1, sp, #44
+ 367 0214 1548     		ldr	r0, .L3+16
+ 368 0216 FFF7FEFF 		bl	HAL_GPIO_Init
+ 369              	.LVL18:
+ 745:Src/main.c    **** 
+ 746:Src/main.c    ****   /*Configure GPIO pins : ULPI_STP_Pin ULPI_DIR_Pin */
+ 747:Src/main.c    ****   GPIO_InitStruct.Pin = ULPI_STP_Pin|ULPI_DIR_Pin;
+ 370              		.loc 1 747 0
+ 371 021a 0523     		movs	r3, #5
+ 372 021c 0B93     		str	r3, [sp, #44]
+ 748:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 373              		.loc 1 748 0
+ 374 021e CDF83080 		str	r8, [sp, #48]
+ 749:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 375              		.loc 1 749 0
+ 376 0222 0D94     		str	r4, [sp, #52]
+ 750:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 377              		.loc 1 750 0
+ 378 0224 0E97     		str	r7, [sp, #56]
+ 751:Src/main.c    ****   GPIO_InitStruct.Alternate = GPIO_AF10_OTG_HS;
+ 379              		.loc 1 751 0
+ 380 0226 0F96     		str	r6, [sp, #60]
+ 752:Src/main.c    ****   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+ 381              		.loc 1 752 0
+ 382 0228 0BA9     		add	r1, sp, #44
+ 383 022a 1448     		ldr	r0, .L3+32
+ 384 022c FFF7FEFF 		bl	HAL_GPIO_Init
+ 385              	.LVL19:
+ 753:Src/main.c    **** 
+ 754:Src/main.c    ****   /*Configure GPIO pin : RMII_RXER_Pin */
+ 755:Src/main.c    ****   GPIO_InitStruct.Pin = RMII_RXER_Pin;
+ 386              		.loc 1 755 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 21
+
+
+ 387 0230 0423     		movs	r3, #4
+ 388 0232 0B93     		str	r3, [sp, #44]
+ 756:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+ 389              		.loc 1 756 0
+ 390 0234 0C94     		str	r4, [sp, #48]
+ 757:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 391              		.loc 1 757 0
+ 392 0236 0D94     		str	r4, [sp, #52]
+ 758:Src/main.c    ****   HAL_GPIO_Init(RMII_RXER_GPIO_Port, &GPIO_InitStruct);
+ 393              		.loc 1 758 0
+ 394 0238 0BA9     		add	r1, sp, #44
+ 395 023a 0C48     		ldr	r0, .L3+16
+ 396 023c FFF7FEFF 		bl	HAL_GPIO_Init
+ 397              	.LVL20:
+ 759:Src/main.c    **** 
+ 760:Src/main.c    ****   /*Configure GPIO pins : ULPI_CLK_Pin ULPI_D0_Pin */
+ 761:Src/main.c    ****   GPIO_InitStruct.Pin = ULPI_CLK_Pin|ULPI_D0_Pin;
+ 398              		.loc 1 761 0
+ 399 0240 2823     		movs	r3, #40
+ 400 0242 0B93     		str	r3, [sp, #44]
+ 762:Src/main.c    ****   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+ 401              		.loc 1 762 0
+ 402 0244 CDF83080 		str	r8, [sp, #48]
+ 763:Src/main.c    ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
+ 403              		.loc 1 763 0
+ 404 0248 0D94     		str	r4, [sp, #52]
+ 764:Src/main.c    ****   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+ 405              		.loc 1 764 0
+ 406 024a 0E97     		str	r7, [sp, #56]
+ 765:Src/main.c    ****   GPIO_InitStruct.Alternate = GPIO_AF10_OTG_HS;
+ 407              		.loc 1 765 0
+ 408 024c 0F96     		str	r6, [sp, #60]
+ 766:Src/main.c    ****   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 409              		.loc 1 766 0
+ 410 024e 0BA9     		add	r1, sp, #44
+ 411 0250 0C48     		ldr	r0, .L3+40
+ 412 0252 FFF7FEFF 		bl	HAL_GPIO_Init
+ 413              	.LVL21:
+ 767:Src/main.c    **** 
+ 768:Src/main.c    **** }
+ 414              		.loc 1 768 0
+ 415 0256 11B0     		add	sp, sp, #68
+ 416              	.LCFI2:
+ 417              		.cfi_def_cfa_offset 36
+ 418              		@ sp needed
+ 419 0258 BDE8F08F 		pop	{r4, r5, r6, r7, r8, r9, r10, fp, pc}
+ 420              	.L4:
+ 421              		.align	2
+ 422              	.L3:
+ 423 025c 00380240 		.word	1073887232
+ 424 0260 000C0240 		.word	1073875968
+ 425 0264 00200240 		.word	1073881088
+ 426 0268 00280240 		.word	1073883136
+ 427 026c 00180240 		.word	1073879040
+ 428 0270 00100240 		.word	1073876992
+ 429 0274 00040240 		.word	1073873920
+ 430 0278 00240240 		.word	1073882112
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 22
+
+
+ 431 027c 00080240 		.word	1073874944
+ 432 0280 00001210 		.word	269615104
+ 433 0284 00000240 		.word	1073872896
+ 434 0288 001C0240 		.word	1073880064
+ 435              		.cfi_endproc
+ 436              	.LFE169:
+ 438              		.section	.text.lcd_start,"ax",%progbits
+ 439              		.align	1
+ 440              		.syntax unified
+ 441              		.thumb
+ 442              		.thumb_func
+ 443              		.fpu fpv5-sp-d16
+ 445              	lcd_start:
+ 446              	.LFB159:
+ 191:Src/main.c    ****   /* LCD Initialization */
+ 447              		.loc 1 191 0
+ 448              		.cfi_startproc
+ 449              		@ args = 0, pretend = 0, frame = 0
+ 450              		@ frame_needed = 0, uses_anonymous_args = 0
+ 451 0000 08B5     		push	{r3, lr}
+ 452              	.LCFI3:
+ 453              		.cfi_def_cfa_offset 8
+ 454              		.cfi_offset 3, -8
+ 455              		.cfi_offset 14, -4
+ 193:Src/main.c    **** 
+ 456              		.loc 1 193 0
+ 457 0002 FFF7FEFF 		bl	BSP_LCD_Init
+ 458              	.LVL22:
+ 196:Src/main.c    ****   //BSP_LCD_LayerDefaultInit(1, (unsigned int)lcd_image_bg+(LCD_X_SIZE*LCD_Y_SIZE*4));
+ 459              		.loc 1 196 0
+ 460 0006 4FF04041 		mov	r1, #-1073741824
+ 461 000a 0020     		movs	r0, #0
+ 462 000c FFF7FEFF 		bl	BSP_LCD_LayerDefaultInit
+ 463              	.LVL23:
+ 198:Src/main.c    **** 
+ 464              		.loc 1 198 0
+ 465 0010 1449     		ldr	r1, .L7
+ 466 0012 0120     		movs	r0, #1
+ 467 0014 FFF7FEFF 		bl	BSP_LCD_LayerDefaultInit
+ 468              	.LVL24:
+ 201:Src/main.c    **** 
+ 469              		.loc 1 201 0
+ 470 0018 FFF7FEFF 		bl	BSP_LCD_DisplayOn
+ 471              	.LVL25:
+ 204:Src/main.c    **** 
+ 472              		.loc 1 204 0
+ 473 001c 0020     		movs	r0, #0
+ 474 001e FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 475              	.LVL26:
+ 207:Src/main.c    ****   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+ 476              		.loc 1 207 0
+ 477 0022 4FF0FF30 		mov	r0, #-1
+ 478 0026 FFF7FEFF 		bl	BSP_LCD_Clear
+ 479              	.LVL27:
+ 208:Src/main.c    **** 
+ 480              		.loc 1 208 0
+ 481 002a 4FF0FF30 		mov	r0, #-1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 23
+
+
+ 482 002e FFF7FEFF 		bl	BSP_LCD_SetBackColor
+ 483              	.LVL28:
+ 210:Src/main.c    **** 
+ 484              		.loc 1 210 0
+ 485 0032 4FF0FF31 		mov	r1, #-1
+ 486 0036 0120     		movs	r0, #1
+ 487 0038 FFF7FEFF 		bl	BSP_LCD_SetColorKeying
+ 488              	.LVL29:
+ 213:Src/main.c    **** 
+ 489              		.loc 1 213 0
+ 490 003c 0120     		movs	r0, #1
+ 491 003e FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 492              	.LVL30:
+ 216:Src/main.c    ****   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+ 493              		.loc 1 216 0
+ 494 0042 4FF0FF30 		mov	r0, #-1
+ 495 0046 FFF7FEFF 		bl	BSP_LCD_Clear
+ 496              	.LVL31:
+ 217:Src/main.c    **** 
+ 497              		.loc 1 217 0
+ 498 004a 4FF0FF30 		mov	r0, #-1
+ 499 004e FFF7FEFF 		bl	BSP_LCD_SetBackColor
+ 500              	.LVL32:
+ 221:Src/main.c    ****   BSP_LCD_SetTransparency(1, 255);
+ 501              		.loc 1 221 0
+ 502 0052 FF21     		movs	r1, #255
+ 503 0054 0020     		movs	r0, #0
+ 504 0056 FFF7FEFF 		bl	BSP_LCD_SetTransparency
+ 505              	.LVL33:
+ 222:Src/main.c    **** }
+ 506              		.loc 1 222 0
+ 507 005a FF21     		movs	r1, #255
+ 508 005c 0120     		movs	r0, #1
+ 509 005e FFF7FEFF 		bl	BSP_LCD_SetTransparency
+ 510              	.LVL34:
+ 511 0062 08BD     		pop	{r3, pc}
+ 512              	.L8:
+ 513              		.align	2
+ 514              	.L7:
+ 515 0064 00F807C0 		.word	-1073219584
+ 516              		.cfi_endproc
+ 517              	.LFE159:
+ 519              		.section	.text.mqtt_sub_request_cb,"ax",%progbits
+ 520              		.align	1
+ 521              		.syntax unified
+ 522              		.thumb
+ 523              		.thumb_func
+ 524              		.fpu fpv5-sp-d16
+ 526              	mqtt_sub_request_cb:
+ 527              	.LFB172:
+ 769:Src/main.c    **** 
+ 770:Src/main.c    **** 
+ 771:Src/main.c    **** 
+ 772:Src/main.c    **** /* USER CODE END 4 */
+ 773:Src/main.c    **** 
+ 774:Src/main.c    **** /* USER CODE BEGIN Header_StartDefaultTask */
+ 775:Src/main.c    **** /**
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 24
+
+
+ 776:Src/main.c    ****   * @brief  Function implementing the defaultTask thread.
+ 777:Src/main.c    ****   * @param  argument: Not used
+ 778:Src/main.c    ****   * @retval None
+ 779:Src/main.c    ****   */
+ 780:Src/main.c    **** /* USER CODE END Header_StartDefaultTask */
+ 781:Src/main.c    **** static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
+ 782:Src/main.c    **** static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len);
+ 783:Src/main.c    **** static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags);
+ 784:Src/main.c    **** static void mqtt_sub_request_cb(void *arg, err_t result);
+ 785:Src/main.c    **** static void mqtt_pub_request_cb(void *arg, err_t result);
+ 786:Src/main.c    **** int example_do_connect(mqtt_client_t *client)
+ 787:Src/main.c    **** {
+ 788:Src/main.c    ****   struct mqtt_connect_client_info_t ci;
+ 789:Src/main.c    ****   err_t err;
+ 790:Src/main.c    **** 
+ 791:Src/main.c    ****   /* Setup an empty client info structure */
+ 792:Src/main.c    ****   memset(&ci, 0, sizeof(ci));
+ 793:Src/main.c    **** 
+ 794:Src/main.c    ****   /* Minimal amount of information required is client identifier, so set it here */
+ 795:Src/main.c    ****   ci.client_id = "lwip_test";
+ 796:Src/main.c    **** 
+ 797:Src/main.c    ****   /* Initiate client and connect to server, if this fails immediately an error code is returned
+ 798:Src/main.c    ****      otherwise mqtt_connection_cb will be called with connection result after attempting
+ 799:Src/main.c    ****      to establish a connection with the server.
+ 800:Src/main.c    ****      For now MQTT version 3.1.1 is always used */
+ 801:Src/main.c    ****   ip_addr_t ip_addr;
+ 802:Src/main.c    ****   if(1 == ipaddr_aton( "192.168.0.101",&ip_addr)){
+ 803:Src/main.c    **** 	printf("Created ip");
+ 804:Src/main.c    ****   }
+ 805:Src/main.c    ****   err = mqtt_client_connect(client, &ip_addr, 1883, mqtt_connection_cb, 0, &ci);
+ 806:Src/main.c    **** 
+ 807:Src/main.c    ****   /* For now just print the result code if something goes wrong */
+ 808:Src/main.c    ****   if(err != ERR_OK) {
+ 809:Src/main.c    ****     printf("mqtt_connect return tutaj %d\n", err);
+ 810:Src/main.c    **** 	return 1;
+ 811:Src/main.c    **** 
+ 812:Src/main.c    ****   }
+ 813:Src/main.c    ****   else{
+ 814:Src/main.c    **** 	printf("mqtt_connectbvgfdbgfdgfd\n");
+ 815:Src/main.c    **** 	return 0;
+ 816:Src/main.c    ****   }
+ 817:Src/main.c    **** }
+ 818:Src/main.c    **** 
+ 819:Src/main.c    **** static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status)
+ 820:Src/main.c    **** {
+ 821:Src/main.c    **** 
+ 822:Src/main.c    ****   err_t err;
+ 823:Src/main.c    ****   err_t err2;
+ 824:Src/main.c    ****   if(status == MQTT_CONNECT_ACCEPTED) {
+ 825:Src/main.c    ****     printf("mqtt_connection_cb: Successfully connected\n");
+ 826:Src/main.c    **** 
+ 827:Src/main.c    ****     /* Setup callback for incoming publish requests */
+ 828:Src/main.c    ****     mqtt_set_inpub_callback(client, mqtt_incoming_publish_cb, mqtt_incoming_data_cb, arg);
+ 829:Src/main.c    **** 
+ 830:Src/main.c    ****     /* Subscribe to a topic named "subtopic" with QoS level 1, call mqtt_sub_request_cb with result
+ 831:Src/main.c    ****     err = mqtt_subscribe(client, "esp/temperature/client2", 1, mqtt_sub_request_cb, arg);
+ 832:Src/main.c    **** 	err2 = mqtt_subscribe(client, "esp/temperature/client1", 1, mqtt_sub_request_cb, arg);
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 25
+
+
+ 833:Src/main.c    **** 
+ 834:Src/main.c    ****     if(err != ERR_OK || err2 != ERR_OK) {
+ 835:Src/main.c    ****       printf("mqtt_subscribe return: %d\n", err);
+ 836:Src/main.c    ****     }
+ 837:Src/main.c    ****   } else {
+ 838:Src/main.c    ****     printf("mqtt_connection_cb: Disconnected, reason: %d\n", status);
+ 839:Src/main.c    ****     /* Its more nice to be connected, so try to reconnect */
+ 840:Src/main.c    ****     example_do_connect(client);
+ 841:Src/main.c    ****   }
+ 842:Src/main.c    **** 
+ 843:Src/main.c    **** }
+ 844:Src/main.c    **** 
+ 845:Src/main.c    **** static void mqtt_sub_request_cb(void *arg, err_t result)
+ 846:Src/main.c    **** {
+ 528              		.loc 1 846 0
+ 529              		.cfi_startproc
+ 530              		@ args = 0, pretend = 0, frame = 0
+ 531              		@ frame_needed = 0, uses_anonymous_args = 0
+ 532              	.LVL35:
+ 533 0000 10B5     		push	{r4, lr}
+ 534              	.LCFI4:
+ 535              		.cfi_def_cfa_offset 8
+ 536              		.cfi_offset 4, -8
+ 537              		.cfi_offset 14, -4
+ 538 0002 0C46     		mov	r4, r1
+ 847:Src/main.c    ****   /* Just print the result code here for simplicity,
+ 848:Src/main.c    ****      normal behaviour would be to take some action if subscribe fails like
+ 849:Src/main.c    ****      notifying user, retry subscribe or disconnect from server */
+ 850:Src/main.c    ****   printf("Subscribe result: %d\n", result);
+ 539              		.loc 1 850 0
+ 540 0004 0448     		ldr	r0, .L13
+ 541              	.LVL36:
+ 542 0006 FFF7FEFF 		bl	printf
+ 543              	.LVL37:
+ 851:Src/main.c    ****   if(result == ERR_OK){
+ 544              		.loc 1 851 0
+ 545 000a 04B1     		cbz	r4, .L12
+ 546              	.L9:
+ 547 000c 10BD     		pop	{r4, pc}
+ 548              	.L12:
+ 852:Src/main.c    ****   printf("Subscribe result is OK!\n");
+ 549              		.loc 1 852 0
+ 550 000e 0348     		ldr	r0, .L13+4
+ 551 0010 FFF7FEFF 		bl	puts
+ 552              	.LVL38:
+ 853:Src/main.c    ****   }
+ 854:Src/main.c    **** }
+ 553              		.loc 1 854 0
+ 554 0014 FAE7     		b	.L9
+ 555              	.L14:
+ 556 0016 00BF     		.align	2
+ 557              	.L13:
+ 558 0018 00000000 		.word	.LC3
+ 559 001c 18000000 		.word	.LC4
+ 560              		.cfi_endproc
+ 561              	.LFE172:
+ 563              		.section	.text.mqtt_pub_request_cb,"ax",%progbits
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 26
+
+
+ 564              		.align	1
+ 565              		.syntax unified
+ 566              		.thumb
+ 567              		.thumb_func
+ 568              		.fpu fpv5-sp-d16
+ 570              	mqtt_pub_request_cb:
+ 571              	.LFB175:
+ 855:Src/main.c    **** 
+ 856:Src/main.c    **** //-----------------------------------------------------------------
+ 857:Src/main.c    **** //3. Implementing callbacks for incoming publish and data
+ 858:Src/main.c    **** 
+ 859:Src/main.c    **** /* The idea is to demultiplex topic and create some reference to be used in data callbacks
+ 860:Src/main.c    ****    Example here uses a global variable, better would be to use a member in arg
+ 861:Src/main.c    ****    If RAM and CPU budget allows it, the easiest implementation might be to just take a copy of
+ 862:Src/main.c    ****    the topic string and use it in mqtt_incoming_data_cb
+ 863:Src/main.c    **** */
+ 864:Src/main.c    **** static int inpub_id;
+ 865:Src/main.c    **** static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len) // callback invok
+ 866:Src/main.c    **** {
+ 867:Src/main.c    ****   printf("Incoming publish at topic %s with total length %u\n", topic, (unsigned int)tot_len);
+ 868:Src/main.c    **** 
+ 869:Src/main.c    ****   /* Decode topic string into a user defined reference */
+ 870:Src/main.c    ****   if(strcmp(topic, "print_payload") == 0) {
+ 871:Src/main.c    ****     inpub_id = 0;
+ 872:Src/main.c    ****   } else if(topic[0] == 'A') {
+ 873:Src/main.c    ****     /* All topics starting with 'A' might be handled at the same way */
+ 874:Src/main.c    ****     inpub_id = 1;
+ 875:Src/main.c    ****   } else if(strcmp(topic,"esp/temperature/client1") == 0){
+ 876:Src/main.c    **** 	inpub_id = 2;
+ 877:Src/main.c    ****   }
+ 878:Src/main.c    ****   else {
+ 879:Src/main.c    ****     /* For all other topics */
+ 880:Src/main.c    ****     inpub_id = 3;
+ 881:Src/main.c    ****   }
+ 882:Src/main.c    **** }
+ 883:Src/main.c    **** 
+ 884:Src/main.c    **** static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags) // callback f
+ 885:Src/main.c    **** {
+ 886:Src/main.c    ****   printf("Incoming publish payload with length %d, flags %u\n", len, (unsigned int)flags);
+ 887:Src/main.c    **** 
+ 888:Src/main.c    ****   if(flags & MQTT_DATA_FLAG_LAST) {
+ 889:Src/main.c    ****     /* Last fragment of payload received (or whole part if payload fits receive buffer
+ 890:Src/main.c    ****        See MQTT_VAR_HEADER_BUFFER_LEN)  */
+ 891:Src/main.c    **** 
+ 892:Src/main.c    ****     /* Call function or do action depending on reference, in this case inpub_id */
+ 893:Src/main.c    ****     if(inpub_id == 0) {
+ 894:Src/main.c    ****       /* Don't trust the publisher, check zero termination */
+ 895:Src/main.c    ****       if(data[len-1] == 0) {
+ 896:Src/main.c    ****         printf("mqtt_incoming_data_cb: %s\n", (const char *)data);
+ 897:Src/main.c    ****       }
+ 898:Src/main.c    ****     } else if(inpub_id == 1) {
+ 899:Src/main.c    ****       /* Call an 'A' function... */
+ 900:Src/main.c    **** 
+ 901:Src/main.c    **** 	  xprintf("Call an A function ...\n");
+ 902:Src/main.c    **** 
+ 903:Src/main.c    ****     } else if(inpub_id == 2){
+ 904:Src/main.c    **** 		print_data((const char *)data, 1,len);
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 27
+
+
+ 905:Src/main.c    **** 	}
+ 906:Src/main.c    **** 	else {
+ 907:Src/main.c    ****       //printf("mqtt_incoming_data_cb: Ignoring payload...\n");
+ 908:Src/main.c    **** 	  printf("mqtt_incoming_data_cb: %s\n", (const char *)data);
+ 909:Src/main.c    **** 	  print_data((const char *)data,2,len);
+ 910:Src/main.c    ****     }
+ 911:Src/main.c    ****   } else {
+ 912:Src/main.c    ****     /* Handle fragmented payload, store in buffer, write to file or whatever */
+ 913:Src/main.c    ****   }
+ 914:Src/main.c    ****   //data = NULL;
+ 915:Src/main.c    **** }
+ 916:Src/main.c    **** 
+ 917:Src/main.c    **** //-----------------------------------------------------------------
+ 918:Src/main.c    **** //4. Using outgoing publish
+ 919:Src/main.c    ****  static void mqtt_pub_request_cb(void *arg, err_t result)
+ 920:Src/main.c    **** {
+ 572              		.loc 1 920 0
+ 573              		.cfi_startproc
+ 574              		@ args = 0, pretend = 0, frame = 0
+ 575              		@ frame_needed = 0, uses_anonymous_args = 0
+ 576              	.LVL39:
+ 921:Src/main.c    ****   if(result != ERR_OK) {
+ 577              		.loc 1 921 0
+ 578 0000 01B9     		cbnz	r1, .L21
+ 579 0002 7047     		bx	lr
+ 580              	.L21:
+ 920:Src/main.c    ****   if(result != ERR_OK) {
+ 581              		.loc 1 920 0
+ 582 0004 08B5     		push	{r3, lr}
+ 583              	.LCFI5:
+ 584              		.cfi_def_cfa_offset 8
+ 585              		.cfi_offset 3, -8
+ 586              		.cfi_offset 14, -4
+ 922:Src/main.c    ****     printf("Publish result: %d\n", result);
+ 587              		.loc 1 922 0
+ 588 0006 0248     		ldr	r0, .L22
+ 589              	.LVL40:
+ 590 0008 FFF7FEFF 		bl	printf
+ 591              	.LVL41:
+ 592 000c 08BD     		pop	{r3, pc}
+ 593              	.L23:
+ 594 000e 00BF     		.align	2
+ 595              	.L22:
+ 596 0010 00000000 		.word	.LC5
+ 597              		.cfi_endproc
+ 598              	.LFE175:
+ 600              		.section	.text.mqtt_incoming_publish_cb,"ax",%progbits
+ 601              		.align	1
+ 602              		.syntax unified
+ 603              		.thumb
+ 604              		.thumb_func
+ 605              		.fpu fpv5-sp-d16
+ 607              	mqtt_incoming_publish_cb:
+ 608              	.LFB173:
+ 866:Src/main.c    ****   printf("Incoming publish at topic %s with total length %u\n", topic, (unsigned int)tot_len);
+ 609              		.loc 1 866 0
+ 610              		.cfi_startproc
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 28
+
+
+ 611              		@ args = 0, pretend = 0, frame = 0
+ 612              		@ frame_needed = 0, uses_anonymous_args = 0
+ 613              	.LVL42:
+ 614 0000 10B5     		push	{r4, lr}
+ 615              	.LCFI6:
+ 616              		.cfi_def_cfa_offset 8
+ 617              		.cfi_offset 4, -8
+ 618              		.cfi_offset 14, -4
+ 619 0002 0C46     		mov	r4, r1
+ 867:Src/main.c    **** 
+ 620              		.loc 1 867 0
+ 621 0004 0F48     		ldr	r0, .L33
+ 622              	.LVL43:
+ 623 0006 FFF7FEFF 		bl	printf
+ 624              	.LVL44:
+ 625              	.LBB13:
+ 870:Src/main.c    ****     inpub_id = 0;
+ 626              		.loc 1 870 0
+ 627 000a 0F49     		ldr	r1, .L33+4
+ 628 000c 2046     		mov	r0, r4
+ 629 000e FFF7FEFF 		bl	strcmp
+ 630              	.LVL45:
+ 631 0012 58B1     		cbz	r0, .L30
+ 872:Src/main.c    ****     /* All topics starting with 'A' might be handled at the same way */
+ 632              		.loc 1 872 0
+ 633 0014 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 634 0016 412B     		cmp	r3, #65
+ 635 0018 0CD0     		beq	.L31
+ 875:Src/main.c    **** 	inpub_id = 2;
+ 636              		.loc 1 875 0
+ 637 001a 0C49     		ldr	r1, .L33+8
+ 638 001c 2046     		mov	r0, r4
+ 639 001e FFF7FEFF 		bl	strcmp
+ 640              	.LVL46:
+ 641 0022 58B1     		cbz	r0, .L32
+ 880:Src/main.c    ****   }
+ 642              		.loc 1 880 0
+ 643 0024 0322     		movs	r2, #3
+ 644 0026 0A4B     		ldr	r3, .L33+12
+ 645 0028 1A60     		str	r2, [r3]
+ 646 002a 10BD     		pop	{r4, pc}
+ 647              	.LVL47:
+ 648              	.L30:
+ 871:Src/main.c    ****   } else if(topic[0] == 'A') {
+ 649              		.loc 1 871 0
+ 650 002c 0022     		movs	r2, #0
+ 651 002e 084B     		ldr	r3, .L33+12
+ 652 0030 1A60     		str	r2, [r3]
+ 653 0032 10BD     		pop	{r4, pc}
+ 654              	.LVL48:
+ 655              	.L31:
+ 874:Src/main.c    ****   } else if(strcmp(topic,"esp/temperature/client1") == 0){
+ 656              		.loc 1 874 0
+ 657 0034 0122     		movs	r2, #1
+ 658 0036 064B     		ldr	r3, .L33+12
+ 659 0038 1A60     		str	r2, [r3]
+ 660 003a 10BD     		pop	{r4, pc}
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 29
+
+
+ 661              	.LVL49:
+ 662              	.L32:
+ 876:Src/main.c    ****   }
+ 663              		.loc 1 876 0
+ 664 003c 0222     		movs	r2, #2
+ 665 003e 044B     		ldr	r3, .L33+12
+ 666 0040 1A60     		str	r2, [r3]
+ 667 0042 10BD     		pop	{r4, pc}
+ 668              	.LVL50:
+ 669              	.L34:
+ 670              		.align	2
+ 671              	.L33:
+ 672 0044 00000000 		.word	.LC6
+ 673 0048 34000000 		.word	.LC7
+ 674 004c 44000000 		.word	.LC8
+ 675 0050 00000000 		.word	.LANCHOR0
+ 676              	.LBE13:
+ 677              		.cfi_endproc
+ 678              	.LFE173:
+ 680              		.section	.text.__io_putchar,"ax",%progbits
+ 681              		.align	1
+ 682              		.global	__io_putchar
+ 683              		.syntax unified
+ 684              		.thumb
+ 685              		.thumb_func
+ 686              		.fpu fpv5-sp-d16
+ 688              	__io_putchar:
+ 689              	.LFB157:
+ 165:Src/main.c    **** 	uint8_t data = ch;
+ 690              		.loc 1 165 0
+ 691              		.cfi_startproc
+ 692              		@ args = 0, pretend = 0, frame = 0
+ 693              		@ frame_needed = 0, uses_anonymous_args = 0
+ 694              		@ link register save eliminated.
+ 695              	.LVL51:
+ 696              	.L36:
+ 170:Src/main.c    **** 		huart1.Instance->TDR = (uint16_t)data;
+ 697              		.loc 1 170 0 discriminator 1
+ 698 0000 044B     		ldr	r3, .L37
+ 699 0002 1B68     		ldr	r3, [r3]
+ 700 0004 DA69     		ldr	r2, [r3, #28]
+ 701 0006 12F0800F 		tst	r2, #128
+ 702 000a F9D0     		beq	.L36
+ 171:Src/main.c    **** 	#endif
+ 703              		.loc 1 171 0
+ 704 000c C0B2     		uxtb	r0, r0
+ 705              	.LVL52:
+ 706 000e 9862     		str	r0, [r3, #40]
+ 174:Src/main.c    **** 
+ 707              		.loc 1 174 0
+ 708 0010 0020     		movs	r0, #0
+ 709 0012 7047     		bx	lr
+ 710              	.L38:
+ 711              		.align	2
+ 712              	.L37:
+ 713 0014 00000000 		.word	huart1
+ 714              		.cfi_endproc
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 30
+
+
+ 715              	.LFE157:
+ 717              		.section	.text.inkey,"ax",%progbits
+ 718              		.align	1
+ 719              		.global	inkey
+ 720              		.syntax unified
+ 721              		.thumb
+ 722              		.thumb_func
+ 723              		.fpu fpv5-sp-d16
+ 725              	inkey:
+ 726              	.LFB158:
+ 177:Src/main.c    **** 	uint32_t flags = huart1.Instance->ISR;
+ 727              		.loc 1 177 0
+ 728              		.cfi_startproc
+ 729              		@ args = 0, pretend = 0, frame = 0
+ 730              		@ frame_needed = 0, uses_anonymous_args = 0
+ 731              		@ link register save eliminated.
+ 178:Src/main.c    **** 
+ 732              		.loc 1 178 0
+ 733 0000 064B     		ldr	r3, .L42
+ 734 0002 1B68     		ldr	r3, [r3]
+ 735 0004 DA69     		ldr	r2, [r3, #28]
+ 736              	.LVL53:
+ 180:Src/main.c    **** 	{
+ 737              		.loc 1 180 0
+ 738 0006 12F0280F 		tst	r2, #40
+ 739 000a 04D0     		beq	.L41
+ 182:Src/main.c    **** 		return (huart1.Instance->RDR);
+ 740              		.loc 1 182 0
+ 741 000c 0822     		movs	r2, #8
+ 742              	.LVL54:
+ 743 000e 1A62     		str	r2, [r3, #32]
+ 183:Src/main.c    **** 	}
+ 744              		.loc 1 183 0
+ 745 0010 586A     		ldr	r0, [r3, #36]
+ 746 0012 C0B2     		uxtb	r0, r0
+ 747 0014 7047     		bx	lr
+ 748              	.LVL55:
+ 749              	.L41:
+ 186:Src/main.c    **** }
+ 750              		.loc 1 186 0
+ 751 0016 0020     		movs	r0, #0
+ 187:Src/main.c    **** 
+ 752              		.loc 1 187 0
+ 753 0018 7047     		bx	lr
+ 754              	.L43:
+ 755 001a 00BF     		.align	2
+ 756              	.L42:
+ 757 001c 00000000 		.word	huart1
+ 758              		.cfi_endproc
+ 759              	.LFE158:
+ 761              		.section	.text.draw_button,"ax",%progbits
+ 762              		.align	1
+ 763              		.global	draw_button
+ 764              		.syntax unified
+ 765              		.thumb
+ 766              		.thumb_func
+ 767              		.fpu fpv5-sp-d16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 31
+
+
+ 769              	draw_button:
+ 770              	.LFB161:
+ 240:Src/main.c    **** 
+ 771              		.loc 1 240 0
+ 772              		.cfi_startproc
+ 773              		@ args = 8, pretend = 0, frame = 0
+ 774              		@ frame_needed = 0, uses_anonymous_args = 0
+ 775              	.LVL56:
+ 776 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 777              	.LCFI7:
+ 778              		.cfi_def_cfa_offset 24
+ 779              		.cfi_offset 3, -24
+ 780              		.cfi_offset 4, -20
+ 781              		.cfi_offset 5, -16
+ 782              		.cfi_offset 6, -12
+ 783              		.cfi_offset 7, -8
+ 784              		.cfi_offset 14, -4
+ 785 0002 0446     		mov	r4, r0
+ 786 0004 0D46     		mov	r5, r1
+ 787 0006 1646     		mov	r6, r2
+ 788 0008 1F46     		mov	r7, r3
+ 242:Src/main.c    **** 	BSP_LCD_SetTextColor(color);
+ 789              		.loc 1 242 0
+ 790 000a 0020     		movs	r0, #0
+ 791              	.LVL57:
+ 792 000c FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 793              	.LVL58:
+ 243:Src/main.c    **** 	BSP_LCD_FillRect(xPos,yPos,width,height);
+ 794              		.loc 1 243 0
+ 795 0010 0698     		ldr	r0, [sp, #24]
+ 796 0012 FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 797              	.LVL59:
+ 244:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 798              		.loc 1 244 0
+ 799 0016 A4B2     		uxth	r4, r4
+ 800              	.LVL60:
+ 801 0018 ADB2     		uxth	r5, r5
+ 802              	.LVL61:
+ 803 001a BBB2     		uxth	r3, r7
+ 804 001c B2B2     		uxth	r2, r6
+ 805 001e 2946     		mov	r1, r5
+ 806 0020 2046     		mov	r0, r4
+ 807 0022 FFF7FEFF 		bl	BSP_LCD_FillRect
+ 808              	.LVL62:
+ 245:Src/main.c    **** 	BSP_LCD_DisplayStringAt(xPos+5, yPos+5, text, 0);
+ 809              		.loc 1 245 0
+ 810 0026 0648     		ldr	r0, .L46
+ 811 0028 FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 812              	.LVL63:
+ 246:Src/main.c    **** 
+ 813              		.loc 1 246 0
+ 814 002c 691D     		adds	r1, r5, #5
+ 815 002e 601D     		adds	r0, r4, #5
+ 816 0030 0023     		movs	r3, #0
+ 817 0032 079A     		ldr	r2, [sp, #28]
+ 818 0034 89B2     		uxth	r1, r1
+ 819 0036 80B2     		uxth	r0, r0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 32
+
+
+ 820 0038 FFF7FEFF 		bl	BSP_LCD_DisplayStringAt
+ 821              	.LVL64:
+ 822 003c F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 823              	.LVL65:
+ 824              	.L47:
+ 825 003e 00BF     		.align	2
+ 826              	.L46:
+ 827 0040 800000FF 		.word	-16777088
+ 828              		.cfi_endproc
+ 829              	.LFE161:
+ 831              		.section	.text.draw_background,"ax",%progbits
+ 832              		.align	1
+ 833              		.global	draw_background
+ 834              		.syntax unified
+ 835              		.thumb
+ 836              		.thumb_func
+ 837              		.fpu fpv5-sp-d16
+ 839              	draw_background:
+ 840              	.LFB160:
+ 228:Src/main.c    **** 	/* Select the LCD Background Layer  */
+ 841              		.loc 1 228 0
+ 842              		.cfi_startproc
+ 843              		@ args = 0, pretend = 0, frame = 8
+ 844              		@ frame_needed = 0, uses_anonymous_args = 0
+ 845 0000 00B5     		push	{lr}
+ 846              	.LCFI8:
+ 847              		.cfi_def_cfa_offset 4
+ 848              		.cfi_offset 14, -4
+ 849 0002 85B0     		sub	sp, sp, #20
+ 850              	.LCFI9:
+ 851              		.cfi_def_cfa_offset 24
+ 230:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+ 852              		.loc 1 230 0
+ 853 0004 0020     		movs	r0, #0
+ 854 0006 FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 855              	.LVL66:
+ 231:Src/main.c    **** 	BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
+ 856              		.loc 1 231 0
+ 857 000a 4FF0FF20 		mov	r0, #-16711936
+ 858 000e FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 859              	.LVL67:
+ 232:Src/main.c    **** 
+ 860              		.loc 1 232 0
+ 861 0012 4FF48873 		mov	r3, #272
+ 862 0016 4FF4F072 		mov	r2, #480
+ 863 001a 0021     		movs	r1, #0
+ 864 001c 0846     		mov	r0, r1
+ 865 001e FFF7FEFF 		bl	BSP_LCD_FillRect
+ 866              	.LVL68:
+ 235:Src/main.c    **** 	char greeting[] = "Hello";
+ 867              		.loc 1 235 0
+ 868 0022 0120     		movs	r0, #1
+ 869 0024 FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 870              	.LVL69:
+ 236:Src/main.c    **** 	draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
+ 871              		.loc 1 236 0
+ 872 0028 094B     		ldr	r3, .L50
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 33
+
+
+ 873 002a 93E80300 		ldm	r3, {r0, r1}
+ 874 002e 0290     		str	r0, [sp, #8]
+ 875 0030 ADF80C10 		strh	r1, [sp, #12]	@ movhi
+ 237:Src/main.c    **** }
+ 876              		.loc 1 237 0
+ 877 0034 02AB     		add	r3, sp, #8
+ 878 0036 0193     		str	r3, [sp, #4]
+ 879 0038 6FF47F43 		mvn	r3, #65280
+ 880 003c 0093     		str	r3, [sp]
+ 881 003e 6423     		movs	r3, #100
+ 882 0040 1A46     		mov	r2, r3
+ 883 0042 3221     		movs	r1, #50
+ 884 0044 0846     		mov	r0, r1
+ 885 0046 FFF7FEFF 		bl	draw_button
+ 886              	.LVL70:
+ 238:Src/main.c    **** 
+ 887              		.loc 1 238 0
+ 888 004a 05B0     		add	sp, sp, #20
+ 889              	.LCFI10:
+ 890              		.cfi_def_cfa_offset 4
+ 891              		@ sp needed
+ 892 004c 5DF804FB 		ldr	pc, [sp], #4
+ 893              	.L51:
+ 894              		.align	2
+ 895              	.L50:
+ 896 0050 00000000 		.word	.LC9
+ 897              		.cfi_endproc
+ 898              	.LFE160:
+ 900              		.section	.text.draw_chart,"ax",%progbits
+ 901              		.align	1
+ 902              		.global	draw_chart
+ 903              		.syntax unified
+ 904              		.thumb
+ 905              		.thumb_func
+ 906              		.fpu fpv5-sp-d16
+ 908              	draw_chart:
+ 909              	.LFB162:
+ 250:Src/main.c    **** 
+ 910              		.loc 1 250 0
+ 911              		.cfi_startproc
+ 912              		@ args = 0, pretend = 0, frame = 24
+ 913              		@ frame_needed = 0, uses_anonymous_args = 0
+ 914              	.LVL71:
+ 915 0000 30B5     		push	{r4, r5, lr}
+ 916              	.LCFI11:
+ 917              		.cfi_def_cfa_offset 12
+ 918              		.cfi_offset 4, -12
+ 919              		.cfi_offset 5, -8
+ 920              		.cfi_offset 14, -4
+ 921 0002 2DED048B 		vpush.64	{d8, d9}
+ 922              	.LCFI12:
+ 923              		.cfi_def_cfa_offset 28
+ 924              		.cfi_offset 80, -28
+ 925              		.cfi_offset 81, -24
+ 926              		.cfi_offset 82, -20
+ 927              		.cfi_offset 83, -16
+ 928 0006 87B0     		sub	sp, sp, #28
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 34
+
+
+ 929              	.LCFI13:
+ 930              		.cfi_def_cfa_offset 56
+ 931 0008 0546     		mov	r5, r0
+ 932              	.LVL72:
+ 260:Src/main.c    ****     BSP_LCD_Clear(LCD_COLOR_WHITE);
+ 933              		.loc 1 260 0
+ 934 000a 0020     		movs	r0, #0
+ 935              	.LVL73:
+ 936 000c FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 937              	.LVL74:
+ 261:Src/main.c    ****     BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+ 938              		.loc 1 261 0
+ 939 0010 4FF0FF30 		mov	r0, #-1
+ 940 0014 FFF7FEFF 		bl	BSP_LCD_Clear
+ 941              	.LVL75:
+ 262:Src/main.c    ****     BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos,chart_length);
+ 942              		.loc 1 262 0
+ 943 0018 4FF07F40 		mov	r0, #-16777216
+ 944 001c FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 945              	.LVL76:
+ 263:Src/main.c    ****     BSP_LCD_DrawVLine(chart_x_pos,chart_y_pos_coord,chart_height_coord);
+ 946              		.loc 1 263 0
+ 947 0020 4FF4E172 		mov	r2, #450
+ 948 0024 FA21     		movs	r1, #250
+ 949 0026 1420     		movs	r0, #20
+ 950 0028 FFF7FEFF 		bl	BSP_LCD_DrawHLine
+ 951              	.LVL77:
+ 264:Src/main.c    ****     
+ 952              		.loc 1 264 0
+ 953 002c E622     		movs	r2, #230
+ 954 002e 1421     		movs	r1, #20
+ 955 0030 0846     		mov	r0, r1
+ 956 0032 FFF7FEFF 		bl	BSP_LCD_DrawVLine
+ 957              	.LVL78:
+ 268:Src/main.c    ****     float min = data[0];//0;//data[0];
+ 958              		.loc 1 268 0
+ 959 0036 D5ED008A 		vldr.32	s17, [r5]
+ 960              	.LVL79:
+ 269:Src/main.c    **** 
+ 961              		.loc 1 269 0
+ 962 003a B0EE687A 		vmov.f32	s14, s17
+ 963              	.LBB14:
+ 271:Src/main.c    ****       if(data[i] < min)
+ 964              		.loc 1 271 0
+ 965 003e 0123     		movs	r3, #1
+ 966 0040 00E0     		b	.L53
+ 967              	.LVL80:
+ 968              	.L55:
+ 271:Src/main.c    ****       if(data[i] < min)
+ 969              		.loc 1 271 0 is_stmt 0 discriminator 2
+ 970 0042 0133     		adds	r3, r3, #1
+ 971              	.LVL81:
+ 972              	.L53:
+ 271:Src/main.c    ****       if(data[i] < min)
+ 973              		.loc 1 271 0 discriminator 1
+ 974 0044 592B     		cmp	r3, #89
+ 975 0046 12DC     		bgt	.L66
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 35
+
+
+ 272:Src/main.c    ****           min = data[i];
+ 976              		.loc 1 272 0 is_stmt 1
+ 977 0048 05EB8302 		add	r2, r5, r3, lsl #2
+ 978 004c D2ED007A 		vldr.32	s15, [r2]
+ 979 0050 B4EEE77A 		vcmpe.f32	s14, s15
+ 980 0054 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 981 0058 01DD     		ble	.L54
+ 273:Src/main.c    ****       if(data[i] > max)
+ 982              		.loc 1 273 0
+ 983 005a B0EE677A 		vmov.f32	s14, s15
+ 984              	.LVL82:
+ 985              	.L54:
+ 274:Src/main.c    ****           max = data[i];
+ 986              		.loc 1 274 0
+ 987 005e F4EEE78A 		vcmpe.f32	s17, s15
+ 988 0062 F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 989 0066 ECD5     		bpl	.L55
+ 275:Src/main.c    ****     }
+ 990              		.loc 1 275 0
+ 991 0068 F0EE678A 		vmov.f32	s17, s15
+ 992              	.LVL83:
+ 993 006c E9E7     		b	.L55
+ 994              	.LVL84:
+ 995              	.L66:
+ 996              	.LBE14:
+ 277:Src/main.c    ****     int max_i = max;
+ 997              		.loc 1 277 0
+ 998 006e FDEEC79A 		vcvt.s32.f32	s19, s14
+ 999              	.LVL85:
+ 278:Src/main.c    ****     float coordinates_scale = chart_height/(max_i - min_i);
+ 1000              		.loc 1 278 0
+ 1001 0072 FDEEE87A 		vcvt.s32.f32	s15, s17
+ 1002 0076 17EE903A 		vmov	r3, s15	@ int
+ 1003              	.LVL86:
+ 279:Src/main.c    ****     float amplitude = max - min; // ?
+ 1004              		.loc 1 279 0
+ 1005 007a 19EE902A 		vmov	r2, s19	@ int
+ 1006 007e 9A1A     		subs	r2, r3, r2
+ 1007 0080 C823     		movs	r3, #200
+ 1008              	.LVL87:
+ 1009 0082 93FBF2F3 		sdiv	r3, r3, r2
+ 1010 0086 07EE903A 		vmov	s15, r3	@ int
+ 1011              	.LVL88:
+ 1012 008a B8EEE78A 		vcvt.f32.s32	s16, s15
+ 1013              	.LVL89:
+ 280:Src/main.c    ****     float scale = chart_height/amplitude; // ?
+ 1014              		.loc 1 280 0
+ 1015 008e 38EEC79A 		vsub.f32	s18, s17, s14
+ 1016              	.LVL90:
+ 285:Src/main.c    ****     for(int i=1;i<amplitude;i++){
+ 1017              		.loc 1 285 0
+ 1018 0092 5A48     		ldr	r0, .L67
+ 1019 0094 FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1020              	.LVL91:
+ 1021              	.LBB15:
+ 286:Src/main.c    ****       BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos-i*coordinates_scale,chart_length);
+ 1022              		.loc 1 286 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 36
+
+
+ 1023 0098 0124     		movs	r4, #1
+ 1024 009a 11E0     		b	.L57
+ 1025              	.LVL92:
+ 1026              	.L58:
+ 287:Src/main.c    ****     }
+ 1027              		.loc 1 287 0 discriminator 3
+ 1028 009c 68EE277A 		vmul.f32	s15, s16, s15
+ 1029 00a0 9FED577A 		vldr.32	s14, .L67+4
+ 1030 00a4 77EE677A 		vsub.f32	s15, s14, s15
+ 1031 00a8 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1032 00ac CDED007A 		vstr.32	s15, [sp]	@ int
+ 1033 00b0 4FF4E172 		mov	r2, #450
+ 1034 00b4 BDF80010 		ldrh	r1, [sp]
+ 1035 00b8 1420     		movs	r0, #20
+ 1036 00ba FFF7FEFF 		bl	BSP_LCD_DrawHLine
+ 1037              	.LVL93:
+ 286:Src/main.c    ****       BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos-i*coordinates_scale,chart_length);
+ 1038              		.loc 1 286 0 discriminator 3
+ 1039 00be 0134     		adds	r4, r4, #1
+ 1040              	.LVL94:
+ 1041              	.L57:
+ 286:Src/main.c    ****       BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos-i*coordinates_scale,chart_length);
+ 1042              		.loc 1 286 0 is_stmt 0 discriminator 1
+ 1043 00c0 07EE904A 		vmov	s15, r4	@ int
+ 1044 00c4 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 1045 00c8 B4EEE79A 		vcmpe.f32	s18, s15
+ 1046 00cc F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1047 00d0 E4DC     		bgt	.L58
+ 1048              	.LBE15:
+ 291:Src/main.c    **** 
+ 1049              		.loc 1 291 0 is_stmt 1
+ 1050 00d2 4C48     		ldr	r0, .L67+8
+ 1051 00d4 FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1052              	.LVL95:
+ 1053              	.LBB16:
+ 294:Src/main.c    ****     int x1,y1,x2,y2;
+ 1054              		.loc 1 294 0
+ 1055 00d8 0023     		movs	r3, #0
+ 1056 00da 2DE0     		b	.L59
+ 1057              	.LVL96:
+ 1058              	.L60:
+ 1059              	.LBB17:
+ 296:Src/main.c    ****     x2 = chart_x_pos + (i+1) * sample_len;
+ 1060              		.loc 1 296 0 discriminator 3
+ 1061 00dc 9900     		lsls	r1, r3, #2
+ 1062 00de C818     		adds	r0, r1, r3
+ 1063 00e0 1430     		adds	r0, r0, #20
+ 1064              	.LVL97:
+ 297:Src/main.c    ****     y1 = chart_y_pos - (data[i] - min_i)*coordinates_scale;
+ 1065              		.loc 1 297 0 discriminator 3
+ 1066 00e2 5C1C     		adds	r4, r3, #1
+ 1067 00e4 A300     		lsls	r3, r4, #2
+ 1068              	.LVL98:
+ 1069 00e6 1A19     		adds	r2, r3, r4
+ 1070 00e8 1432     		adds	r2, r2, #20
+ 1071              	.LVL99:
+ 298:Src/main.c    ****     y2 = chart_y_pos - (data[i+1] - min_i)*coordinates_scale;
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 37
+
+
+ 1072              		.loc 1 298 0 discriminator 3
+ 1073 00ea 2944     		add	r1, r1, r5
+ 1074 00ec D1ED007A 		vldr.32	s15, [r1]
+ 1075 00f0 F8EEE96A 		vcvt.f32.s32	s13, s19
+ 1076 00f4 77EEE67A 		vsub.f32	s15, s15, s13
+ 1077 00f8 68EE277A 		vmul.f32	s15, s16, s15
+ 1078 00fc 9FED407A 		vldr.32	s14, .L67+4
+ 1079 0100 77EE677A 		vsub.f32	s15, s14, s15
+ 1080 0104 FDEEE77A 		vcvt.s32.f32	s15, s15
+ 1081 0108 CDED007A 		vstr.32	s15, [sp]	@ int
+ 1082              	.LVL100:
+ 299:Src/main.c    **** 
+ 1083              		.loc 1 299 0 discriminator 3
+ 1084 010c 2B44     		add	r3, r3, r5
+ 1085 010e D3ED007A 		vldr.32	s15, [r3]
+ 1086              	.LVL101:
+ 1087 0112 77EEE67A 		vsub.f32	s15, s15, s13
+ 1088 0116 68EE277A 		vmul.f32	s15, s16, s15
+ 1089 011a 77EE677A 		vsub.f32	s15, s14, s15
+ 1090 011e FDEEE77A 		vcvt.s32.f32	s15, s15
+ 1091 0122 CDED017A 		vstr.32	s15, [sp, #4]	@ int
+ 1092              	.LVL102:
+ 301:Src/main.c    **** 
+ 1093              		.loc 1 301 0 discriminator 3
+ 1094 0126 BDF80430 		ldrh	r3, [sp, #4]
+ 1095 012a 92B2     		uxth	r2, r2
+ 1096              	.LVL103:
+ 1097 012c BDF80010 		ldrh	r1, [sp]
+ 1098 0130 80B2     		uxth	r0, r0
+ 1099              	.LVL104:
+ 1100 0132 FFF7FEFF 		bl	BSP_LCD_DrawLine
+ 1101              	.LVL105:
+ 1102              	.LBE17:
+ 294:Src/main.c    ****     int x1,y1,x2,y2;
+ 1103              		.loc 1 294 0 discriminator 3
+ 1104 0136 2346     		mov	r3, r4
+ 1105              	.LVL106:
+ 1106              	.L59:
+ 294:Src/main.c    ****     int x1,y1,x2,y2;
+ 1107              		.loc 1 294 0 is_stmt 0 discriminator 1
+ 1108 0138 582B     		cmp	r3, #88
+ 1109 013a CFDD     		ble	.L60
+ 1110              	.LBE16:
+ 304:Src/main.c    **** 	Point points[3];
+ 1111              		.loc 1 304 0 is_stmt 1
+ 1112 013c 4FF07F40 		mov	r0, #-16777216
+ 1113 0140 FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1114              	.LVL107:
+ 306:Src/main.c    **** 	points[1].X=chart_x_pos-5;
+ 1115              		.loc 1 306 0
+ 1116 0144 1923     		movs	r3, #25
+ 1117 0146 ADF80C30 		strh	r3, [sp, #12]	@ movhi
+ 307:Src/main.c    **** 	points[2].X=chart_x_pos;
+ 1118              		.loc 1 307 0
+ 1119 014a 0F23     		movs	r3, #15
+ 1120 014c ADF81030 		strh	r3, [sp, #16]	@ movhi
+ 308:Src/main.c    **** 	
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 38
+
+
+ 1121              		.loc 1 308 0
+ 1122 0150 1423     		movs	r3, #20
+ 1123 0152 ADF81430 		strh	r3, [sp, #20]	@ movhi
+ 310:Src/main.c    **** 	points[1].Y=chart_y_pos_coord+10;
+ 1124              		.loc 1 310 0
+ 1125 0156 1E22     		movs	r2, #30
+ 1126 0158 ADF80E20 		strh	r2, [sp, #14]	@ movhi
+ 311:Src/main.c    **** 	points[2].Y=chart_y_pos_coord;
+ 1127              		.loc 1 311 0
+ 1128 015c ADF81220 		strh	r2, [sp, #18]	@ movhi
+ 312:Src/main.c    **** 	BSP_LCD_FillPolygon(points,3);
+ 1129              		.loc 1 312 0
+ 1130 0160 ADF81630 		strh	r3, [sp, #22]	@ movhi
+ 313:Src/main.c    **** 
+ 1131              		.loc 1 313 0
+ 1132 0164 0321     		movs	r1, #3
+ 1133 0166 03A8     		add	r0, sp, #12
+ 1134 0168 FFF7FEFF 		bl	BSP_LCD_FillPolygon
+ 1135              	.LVL108:
+ 315:Src/main.c    **** 	points[1].X=chart_x_pos+chart_length;
+ 1136              		.loc 1 315 0
+ 1137 016c 4FF4E673 		mov	r3, #460
+ 1138 0170 ADF80C30 		strh	r3, [sp, #12]	@ movhi
+ 316:Src/main.c    **** 	points[2].X=chart_x_pos+chart_length-10;
+ 1139              		.loc 1 316 0
+ 1140 0174 4FF4EB72 		mov	r2, #470
+ 1141 0178 ADF81020 		strh	r2, [sp, #16]	@ movhi
+ 317:Src/main.c    **** 
+ 1142              		.loc 1 317 0
+ 1143 017c ADF81430 		strh	r3, [sp, #20]	@ movhi
+ 319:Src/main.c    **** 	points[1].Y=chart_y_pos;
+ 1144              		.loc 1 319 0
+ 1145 0180 F523     		movs	r3, #245
+ 1146 0182 ADF80E30 		strh	r3, [sp, #14]	@ movhi
+ 320:Src/main.c    **** 	points[2].Y=chart_y_pos+5;
+ 1147              		.loc 1 320 0
+ 1148 0186 FA23     		movs	r3, #250
+ 1149 0188 ADF81230 		strh	r3, [sp, #18]	@ movhi
+ 321:Src/main.c    **** 	BSP_LCD_FillPolygon(points,3);
+ 1150              		.loc 1 321 0
+ 1151 018c FF23     		movs	r3, #255
+ 1152 018e ADF81630 		strh	r3, [sp, #22]	@ movhi
+ 322:Src/main.c    **** 	//BSP_LCD_FillPolygon(chart_x_pos-5,chart_x_pos-5,chart_x_pos+5,chart_height-10,chart_height,chart
+ 1153              		.loc 1 322 0
+ 1154 0192 0321     		movs	r1, #3
+ 1155 0194 03A8     		add	r0, sp, #12
+ 1156 0196 FFF7FEFF 		bl	BSP_LCD_FillPolygon
+ 1157              	.LVL109:
+ 326:Src/main.c    **** 	
+ 1158              		.loc 1 326 0
+ 1159 019a 1B48     		ldr	r0, .L67+12
+ 1160 019c FFF7FEFF 		bl	BSP_LCD_SetFont
+ 1161              	.LVL110:
+ 328:Src/main.c    **** 	for(int i = min; i <=max ; i+=5){
+ 1162              		.loc 1 328 0
+ 1163 01a0 0024     		movs	r4, #0
+ 1164              	.LBB18:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 39
+
+
+ 329:Src/main.c    **** 		int someInt = i;
+ 1165              		.loc 1 329 0
+ 1166 01a2 20E0     		b	.L61
+ 1167              	.LVL111:
+ 1168              	.L62:
+ 1169              	.LBB19:
+ 332:Src/main.c    **** 		BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-j*coordinates_scale, (uint8_t*)str, LEFT_MOD
+ 1170              		.loc 1 332 0 discriminator 3
+ 1171 01a4 19EE902A 		vmov	r2, s19	@ int
+ 1172 01a8 1849     		ldr	r1, .L67+16
+ 1173 01aa 02A8     		add	r0, sp, #8
+ 1174 01ac FFF7FEFF 		bl	sprintf
+ 1175              	.LVL112:
+ 333:Src/main.c    **** 		j+=5;
+ 1176              		.loc 1 333 0 discriminator 3
+ 1177 01b0 07EE904A 		vmov	s15, r4	@ int
+ 1178 01b4 F8EEE77A 		vcvt.f32.s32	s15, s15
+ 1179 01b8 27EE887A 		vmul.f32	s14, s15, s16
+ 1180 01bc DFED147A 		vldr.32	s15, .L67+20
+ 1181 01c0 77EEC77A 		vsub.f32	s15, s15, s14
+ 1182 01c4 FCEEE77A 		vcvt.u32.f32	s15, s15
+ 1183 01c8 CDED007A 		vstr.32	s15, [sp]	@ int
+ 1184 01cc 0323     		movs	r3, #3
+ 1185 01ce 02AA     		add	r2, sp, #8
+ 1186 01d0 BDF80010 		ldrh	r1, [sp]
+ 1187 01d4 0520     		movs	r0, #5
+ 1188 01d6 FFF7FEFF 		bl	BSP_LCD_DisplayStringAt
+ 1189              	.LVL113:
+ 334:Src/main.c    **** 	}
+ 1190              		.loc 1 334 0 discriminator 3
+ 1191 01da 0534     		adds	r4, r4, #5
+ 1192              	.LVL114:
+ 1193              	.LBE19:
+ 329:Src/main.c    **** 		int someInt = i;
+ 1194              		.loc 1 329 0 discriminator 3
+ 1195 01dc 19EE903A 		vmov	r3, s19	@ int
+ 1196 01e0 0533     		adds	r3, r3, #5
+ 1197 01e2 09EE903A 		vmov	s19, r3	@ int
+ 1198              	.LVL115:
+ 1199              	.L61:
+ 329:Src/main.c    **** 		int someInt = i;
+ 1200              		.loc 1 329 0 is_stmt 0 discriminator 1
+ 1201 01e6 F8EEE97A 		vcvt.f32.s32	s15, s19
+ 1202 01ea F4EEE78A 		vcmpe.f32	s17, s15
+ 1203 01ee F1EE10FA 		vmrs	APSR_nzcv, FPSCR
+ 1204 01f2 D7DA     		bge	.L62
+ 1205              	.LBE18:
+ 342:Src/main.c    **** 
+ 1206              		.loc 1 342 0 is_stmt 1
+ 1207 01f4 07B0     		add	sp, sp, #28
+ 1208              	.LCFI14:
+ 1209              		.cfi_def_cfa_offset 28
+ 1210              		@ sp needed
+ 1211 01f6 BDEC048B 		vldm	sp!, {d8-d9}
+ 1212              	.LCFI15:
+ 1213              		.cfi_restore 82
+ 1214              		.cfi_restore 83
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 40
+
+
+ 1215              		.cfi_restore 80
+ 1216              		.cfi_restore 81
+ 1217              		.cfi_def_cfa_offset 12
+ 1218              	.LVL116:
+ 1219 01fa 30BD     		pop	{r4, r5, pc}
+ 1220              	.LVL117:
+ 1221              	.L68:
+ 1222              		.align	2
+ 1223              	.L67:
+ 1224 01fc D3D3D3FF 		.word	-2894893
+ 1225 0200 00007A43 		.word	1132068864
+ 1226 0204 800000FF 		.word	-16777088
+ 1227 0208 00000000 		.word	Font12
+ 1228 020c 00000000 		.word	.LC10
+ 1229 0210 00007543 		.word	1131741184
+ 1230              		.cfi_endproc
+ 1231              	.LFE162:
+ 1233              		.section	.text.initialize_touchscreen,"ax",%progbits
+ 1234              		.align	1
+ 1235              		.global	initialize_touchscreen
+ 1236              		.syntax unified
+ 1237              		.thumb
+ 1238              		.thumb_func
+ 1239              		.fpu fpv5-sp-d16
+ 1241              	initialize_touchscreen:
+ 1242              	.LFB163:
+ 348:Src/main.c    **** 	uint8_t  status = 0;
+ 1243              		.loc 1 348 0
+ 1244              		.cfi_startproc
+ 1245              		@ args = 0, pretend = 0, frame = 0
+ 1246              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1247 0000 10B5     		push	{r4, lr}
+ 1248              	.LCFI16:
+ 1249              		.cfi_def_cfa_offset 8
+ 1250              		.cfi_offset 4, -8
+ 1251              		.cfi_offset 14, -4
+ 1252              	.LVL118:
+ 350:Src/main.c    **** 	if(status != TS_OK) return -1;
+ 1253              		.loc 1 350 0
+ 1254 0002 FFF7FEFF 		bl	BSP_LCD_GetXSize
+ 1255              	.LVL119:
+ 1256 0006 84B2     		uxth	r4, r0
+ 1257 0008 FFF7FEFF 		bl	BSP_LCD_GetYSize
+ 1258              	.LVL120:
+ 1259 000c 81B2     		uxth	r1, r0
+ 1260 000e 2046     		mov	r0, r4
+ 1261 0010 FFF7FEFF 		bl	BSP_TS_Init
+ 1262              	.LVL121:
+ 351:Src/main.c    **** 	return 0;
+ 1263              		.loc 1 351 0
+ 1264 0014 08B9     		cbnz	r0, .L73
+ 352:Src/main.c    **** }
+ 1265              		.loc 1 352 0
+ 1266 0016 0020     		movs	r0, #0
+ 1267              	.LVL122:
+ 353:Src/main.c    **** 
+ 1268              		.loc 1 353 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 41
+
+
+ 1269 0018 10BD     		pop	{r4, pc}
+ 1270              	.LVL123:
+ 1271              	.L73:
+ 351:Src/main.c    **** 	return 0;
+ 1272              		.loc 1 351 0
+ 1273 001a 4FF0FF30 		mov	r0, #-1
+ 1274              	.LVL124:
+ 1275 001e 10BD     		pop	{r4, pc}
+ 1276              		.cfi_endproc
+ 1277              	.LFE163:
+ 1279              		.section	.text.print_data,"ax",%progbits
+ 1280              		.align	1
+ 1281              		.global	print_data
+ 1282              		.syntax unified
+ 1283              		.thumb
+ 1284              		.thumb_func
+ 1285              		.fpu fpv5-sp-d16
+ 1287              	print_data:
+ 1288              	.LFB164:
+ 355:Src/main.c    **** 	BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
+ 1289              		.loc 1 355 0
+ 1290              		.cfi_startproc
+ 1291              		@ args = 0, pretend = 0, frame = 104
+ 1292              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1293              	.LVL125:
+ 1294 0000 70B5     		push	{r4, r5, r6, lr}
+ 1295              	.LCFI17:
+ 1296              		.cfi_def_cfa_offset 16
+ 1297              		.cfi_offset 4, -16
+ 1298              		.cfi_offset 5, -12
+ 1299              		.cfi_offset 6, -8
+ 1300              		.cfi_offset 14, -4
+ 1301 0002 9AB0     		sub	sp, sp, #104
+ 1302              	.LCFI18:
+ 1303              		.cfi_def_cfa_offset 120
+ 1304 0004 0646     		mov	r6, r0
+ 1305 0006 0C46     		mov	r4, r1
+ 1306 0008 1546     		mov	r5, r2
+ 356:Src/main.c    **** 	BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
+ 1307              		.loc 1 356 0
+ 1308 000a 3448     		ldr	r0, .L81
+ 1309              	.LVL126:
+ 1310 000c FFF7FEFF 		bl	BSP_LCD_SetFont
+ 1311              	.LVL127:
+ 357:Src/main.c    **** 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 1312              		.loc 1 357 0
+ 1313 0010 4FF0FF30 		mov	r0, #-1
+ 1314 0014 FFF7FEFF 		bl	BSP_LCD_SetBackColor
+ 1315              	.LVL128:
+ 358:Src/main.c    **** 	if(client_id == 1){
+ 1316              		.loc 1 358 0
+ 1317 0018 3148     		ldr	r0, .L81+4
+ 1318 001a FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1319              	.LVL129:
+ 359:Src/main.c    **** 		printf("%s\n",data);
+ 1320              		.loc 1 359 0
+ 1321 001e 012C     		cmp	r4, #1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 42
+
+
+ 1322 0020 27D0     		beq	.L80
+ 1323              	.LBB20:
+ 377:Src/main.c    **** 	char target[100];
+ 1324              		.loc 1 377 0
+ 1325 0022 3046     		mov	r0, r6
+ 1326 0024 FFF7FEFF 		bl	puts
+ 1327              	.LVL130:
+ 379:Src/main.c    **** 		BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+ 1328              		.loc 1 379 0
+ 1329 0028 4FF0FF30 		mov	r0, #-1
+ 1330 002c FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1331              	.LVL131:
+ 380:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 1332              		.loc 1 380 0
+ 1333 0030 3223     		movs	r3, #50
+ 1334 0032 0A22     		movs	r2, #10
+ 1335 0034 1B21     		movs	r1, #27
+ 1336 0036 9020     		movs	r0, #144
+ 1337 0038 FFF7FEFF 		bl	BSP_LCD_FillRect
+ 1338              	.LVL132:
+ 381:Src/main.c    **** 	strncpy(target, data, len);
+ 1339              		.loc 1 381 0
+ 1340 003c 2848     		ldr	r0, .L81+4
+ 1341 003e FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1342              	.LVL133:
+ 382:Src/main.c    **** 	target[len] = '\0';
+ 1343              		.loc 1 382 0
+ 1344 0042 2A46     		mov	r2, r5
+ 1345 0044 3146     		mov	r1, r6
+ 1346 0046 01A8     		add	r0, sp, #4
+ 1347 0048 FFF7FEFF 		bl	strncpy
+ 1348              	.LVL134:
+ 383:Src/main.c    **** 	BSP_LCD_DisplayStringAt(0, 70, (uint8_t*)"Temperature2 is:", CENTER_MODE);
+ 1349              		.loc 1 383 0
+ 1350 004c 1AAB     		add	r3, sp, #104
+ 1351 004e 1D44     		add	r5, r5, r3
+ 1352              	.LVL135:
+ 1353 0050 0024     		movs	r4, #0
+ 1354              	.LVL136:
+ 1355 0052 05F8644C 		strb	r4, [r5, #-100]
+ 384:Src/main.c    **** 	BSP_LCD_DisplayStringAt(0, 110, (uint8_t*)target, CENTER_MODE);
+ 1356              		.loc 1 384 0
+ 1357 0056 0123     		movs	r3, #1
+ 1358 0058 224A     		ldr	r2, .L81+8
+ 1359 005a 4621     		movs	r1, #70
+ 1360 005c 2046     		mov	r0, r4
+ 1361 005e FFF7FEFF 		bl	BSP_LCD_DisplayStringAt
+ 1362              	.LVL137:
+ 385:Src/main.c    **** 	}
+ 1363              		.loc 1 385 0
+ 1364 0062 0123     		movs	r3, #1
+ 1365 0064 01AA     		add	r2, sp, #4
+ 1366 0066 6E21     		movs	r1, #110
+ 1367 0068 2046     		mov	r0, r4
+ 1368 006a FFF7FEFF 		bl	BSP_LCD_DisplayStringAt
+ 1369              	.LVL138:
+ 1370              	.L78:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 43
+
+
+ 1371              	.LBE20:
+ 387:Src/main.c    **** 
+ 1372              		.loc 1 387 0
+ 1373 006e 1AB0     		add	sp, sp, #104
+ 1374              	.LCFI19:
+ 1375              		.cfi_remember_state
+ 1376              		.cfi_def_cfa_offset 16
+ 1377              		@ sp needed
+ 1378 0070 70BD     		pop	{r4, r5, r6, pc}
+ 1379              	.LVL139:
+ 1380              	.L80:
+ 1381              	.LCFI20:
+ 1382              		.cfi_restore_state
+ 1383              	.LBB21:
+ 360:Src/main.c    **** 		int i;
+ 1384              		.loc 1 360 0
+ 1385 0072 3046     		mov	r0, r6
+ 1386 0074 FFF7FEFF 		bl	puts
+ 1387              	.LVL140:
+ 362:Src/main.c    **** 			BSP_LCD_ClearStringLine(i);
+ 1388              		.loc 1 362 0
+ 1389 0078 0A24     		movs	r4, #10
+ 1390              	.LVL141:
+ 1391 007a 03E0     		b	.L76
+ 1392              	.LVL142:
+ 1393              	.L77:
+ 363:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
+ 1394              		.loc 1 363 0 discriminator 3
+ 1395 007c 2046     		mov	r0, r4
+ 1396 007e FFF7FEFF 		bl	BSP_LCD_ClearStringLine
+ 1397              	.LVL143:
+ 362:Src/main.c    **** 			BSP_LCD_ClearStringLine(i);
+ 1398              		.loc 1 362 0 discriminator 3
+ 1399 0082 0134     		adds	r4, r4, #1
+ 1400              	.LVL144:
+ 1401              	.L76:
+ 362:Src/main.c    **** 			BSP_LCD_ClearStringLine(i);
+ 1402              		.loc 1 362 0 is_stmt 0 discriminator 1
+ 1403 0084 452C     		cmp	r4, #69
+ 1404 0086 F9DD     		ble	.L77
+ 364:Src/main.c    **** 		BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+ 1405              		.loc 1 364 0 is_stmt 1
+ 1406 0088 4FF0FF30 		mov	r0, #-1
+ 1407 008c FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1408              	.LVL145:
+ 365:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+ 1409              		.loc 1 365 0
+ 1410 0090 3223     		movs	r3, #50
+ 1411 0092 0A22     		movs	r2, #10
+ 1412 0094 1B21     		movs	r1, #27
+ 1413 0096 9020     		movs	r0, #144
+ 1414 0098 FFF7FEFF 		bl	BSP_LCD_FillRect
+ 1415              	.LVL146:
+ 366:Src/main.c    **** 		BSP_LCD_ClearStringLine(10);
+ 1416              		.loc 1 366 0
+ 1417 009c 1048     		ldr	r0, .L81+4
+ 1418 009e FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 44
+
+
+ 1419              	.LVL147:
+ 367:Src/main.c    **** 		BSP_LCD_ClearStringLine(50);
+ 1420              		.loc 1 367 0
+ 1421 00a2 0A20     		movs	r0, #10
+ 1422 00a4 FFF7FEFF 		bl	BSP_LCD_ClearStringLine
+ 1423              	.LVL148:
+ 368:Src/main.c    **** 		char target[100];
+ 1424              		.loc 1 368 0
+ 1425 00a8 3220     		movs	r0, #50
+ 1426 00aa FFF7FEFF 		bl	BSP_LCD_ClearStringLine
+ 1427              	.LVL149:
+ 371:Src/main.c    **** 		target[len] = '\0';
+ 1428              		.loc 1 371 0
+ 1429 00ae 2A46     		mov	r2, r5
+ 1430 00b0 3146     		mov	r1, r6
+ 1431 00b2 01A8     		add	r0, sp, #4
+ 1432 00b4 FFF7FEFF 		bl	strncpy
+ 1433              	.LVL150:
+ 372:Src/main.c    **** 		BSP_LCD_DisplayStringAt(0, 10, (uint8_t*)"Temperature1 is:", CENTER_MODE);
+ 1434              		.loc 1 372 0
+ 1435 00b8 1AAB     		add	r3, sp, #104
+ 1436 00ba 1D44     		add	r5, r5, r3
+ 1437              	.LVL151:
+ 1438 00bc 0024     		movs	r4, #0
+ 1439              	.LVL152:
+ 1440 00be 05F8644C 		strb	r4, [r5, #-100]
+ 373:Src/main.c    **** 		BSP_LCD_DisplayStringAt(0, 50, (uint8_t*)target, CENTER_MODE);
+ 1441              		.loc 1 373 0
+ 1442 00c2 0123     		movs	r3, #1
+ 1443 00c4 084A     		ldr	r2, .L81+12
+ 1444 00c6 0A21     		movs	r1, #10
+ 1445 00c8 2046     		mov	r0, r4
+ 1446 00ca FFF7FEFF 		bl	BSP_LCD_DisplayStringAt
+ 1447              	.LVL153:
+ 374:Src/main.c    **** 	}
+ 1448              		.loc 1 374 0
+ 1449 00ce 0123     		movs	r3, #1
+ 1450 00d0 01AA     		add	r2, sp, #4
+ 1451 00d2 3221     		movs	r1, #50
+ 1452 00d4 2046     		mov	r0, r4
+ 1453 00d6 FFF7FEFF 		bl	BSP_LCD_DisplayStringAt
+ 1454              	.LVL154:
+ 1455              	.LBE21:
+ 1456 00da C8E7     		b	.L78
+ 1457              	.L82:
+ 1458              		.align	2
+ 1459              	.L81:
+ 1460 00dc 00000000 		.word	Font24
+ 1461 00e0 800000FF 		.word	-16777088
+ 1462 00e4 14000000 		.word	.LC12
+ 1463 00e8 00000000 		.word	.LC11
+ 1464              		.cfi_endproc
+ 1465              	.LFE164:
+ 1467              		.section	.text.mqtt_incoming_data_cb,"ax",%progbits
+ 1468              		.align	1
+ 1469              		.syntax unified
+ 1470              		.thumb
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 45
+
+
+ 1471              		.thumb_func
+ 1472              		.fpu fpv5-sp-d16
+ 1474              	mqtt_incoming_data_cb:
+ 1475              	.LFB174:
+ 885:Src/main.c    ****   printf("Incoming publish payload with length %d, flags %u\n", len, (unsigned int)flags);
+ 1476              		.loc 1 885 0
+ 1477              		.cfi_startproc
+ 1478              		@ args = 0, pretend = 0, frame = 0
+ 1479              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1480              	.LVL155:
+ 1481 0000 70B5     		push	{r4, r5, r6, lr}
+ 1482              	.LCFI21:
+ 1483              		.cfi_def_cfa_offset 16
+ 1484              		.cfi_offset 4, -16
+ 1485              		.cfi_offset 5, -12
+ 1486              		.cfi_offset 6, -8
+ 1487              		.cfi_offset 14, -4
+ 1488 0002 0E46     		mov	r6, r1
+ 1489 0004 1446     		mov	r4, r2
+ 1490 0006 1D46     		mov	r5, r3
+ 886:Src/main.c    **** 
+ 1491              		.loc 1 886 0
+ 1492 0008 1A46     		mov	r2, r3
+ 1493              	.LVL156:
+ 1494 000a 2146     		mov	r1, r4
+ 1495              	.LVL157:
+ 1496 000c 1448     		ldr	r0, .L91
+ 1497              	.LVL158:
+ 1498 000e FFF7FEFF 		bl	printf
+ 1499              	.LVL159:
+ 888:Src/main.c    ****     /* Last fragment of payload received (or whole part if payload fits receive buffer
+ 1500              		.loc 1 888 0
+ 1501 0012 15F0010F 		tst	r5, #1
+ 1502 0016 18D0     		beq	.L83
+ 893:Src/main.c    ****       /* Don't trust the publisher, check zero termination */
+ 1503              		.loc 1 893 0
+ 1504 0018 124B     		ldr	r3, .L91+4
+ 1505 001a 1B68     		ldr	r3, [r3]
+ 1506 001c 43B9     		cbnz	r3, .L85
+ 895:Src/main.c    ****         printf("mqtt_incoming_data_cb: %s\n", (const char *)data);
+ 1507              		.loc 1 895 0
+ 1508 001e 3444     		add	r4, r4, r6
+ 1509 0020 14F8013C 		ldrb	r3, [r4, #-1]	@ zero_extendqisi2
+ 1510 0024 8BB9     		cbnz	r3, .L83
+ 896:Src/main.c    ****       }
+ 1511              		.loc 1 896 0
+ 1512 0026 3146     		mov	r1, r6
+ 1513 0028 0F48     		ldr	r0, .L91+8
+ 1514 002a FFF7FEFF 		bl	printf
+ 1515              	.LVL160:
+ 1516 002e 70BD     		pop	{r4, r5, r6, pc}
+ 1517              	.LVL161:
+ 1518              	.L85:
+ 898:Src/main.c    ****       /* Call an 'A' function... */
+ 1519              		.loc 1 898 0
+ 1520 0030 012B     		cmp	r3, #1
+ 1521 0032 0BD0     		beq	.L89
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 46
+
+
+ 903:Src/main.c    **** 		print_data((const char *)data, 1,len);
+ 1522              		.loc 1 903 0
+ 1523 0034 022B     		cmp	r3, #2
+ 1524 0036 0DD0     		beq	.L90
+ 908:Src/main.c    **** 	  print_data((const char *)data,2,len);
+ 1525              		.loc 1 908 0
+ 1526 0038 3146     		mov	r1, r6
+ 1527 003a 0B48     		ldr	r0, .L91+8
+ 1528 003c FFF7FEFF 		bl	printf
+ 1529              	.LVL162:
+ 909:Src/main.c    ****     }
+ 1530              		.loc 1 909 0
+ 1531 0040 2246     		mov	r2, r4
+ 1532 0042 0221     		movs	r1, #2
+ 1533 0044 3046     		mov	r0, r6
+ 1534 0046 FFF7FEFF 		bl	print_data
+ 1535              	.LVL163:
+ 1536              	.L83:
+ 1537 004a 70BD     		pop	{r4, r5, r6, pc}
+ 1538              	.LVL164:
+ 1539              	.L89:
+ 901:Src/main.c    **** 
+ 1540              		.loc 1 901 0
+ 1541 004c 0748     		ldr	r0, .L91+12
+ 1542 004e FFF7FEFF 		bl	xprintf
+ 1543              	.LVL165:
+ 1544 0052 70BD     		pop	{r4, r5, r6, pc}
+ 1545              	.LVL166:
+ 1546              	.L90:
+ 904:Src/main.c    **** 	}
+ 1547              		.loc 1 904 0
+ 1548 0054 2246     		mov	r2, r4
+ 1549 0056 0121     		movs	r1, #1
+ 1550 0058 3046     		mov	r0, r6
+ 1551 005a FFF7FEFF 		bl	print_data
+ 1552              	.LVL167:
+ 1553 005e 70BD     		pop	{r4, r5, r6, pc}
+ 1554              	.LVL168:
+ 1555              	.L92:
+ 1556              		.align	2
+ 1557              	.L91:
+ 1558 0060 00000000 		.word	.LC13
+ 1559 0064 00000000 		.word	.LANCHOR0
+ 1560 0068 34000000 		.word	.LC14
+ 1561 006c 50000000 		.word	.LC15
+ 1562              		.cfi_endproc
+ 1563              	.LFE174:
+ 1565              		.section	.text.example_do_connect,"ax",%progbits
+ 1566              		.align	1
+ 1567              		.global	example_do_connect
+ 1568              		.syntax unified
+ 1569              		.thumb
+ 1570              		.thumb_func
+ 1571              		.fpu fpv5-sp-d16
+ 1573              	example_do_connect:
+ 1574              	.LFB170:
+ 787:Src/main.c    ****   struct mqtt_connect_client_info_t ci;
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 47
+
+
+ 1575              		.loc 1 787 0
+ 1576              		.cfi_startproc
+ 1577              		@ args = 0, pretend = 0, frame = 32
+ 1578              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1579              	.LVL169:
+ 1580 0000 10B5     		push	{r4, lr}
+ 1581              	.LCFI22:
+ 1582              		.cfi_def_cfa_offset 8
+ 1583              		.cfi_offset 4, -8
+ 1584              		.cfi_offset 14, -4
+ 1585 0002 8AB0     		sub	sp, sp, #40
+ 1586              	.LCFI23:
+ 1587              		.cfi_def_cfa_offset 48
+ 1588 0004 0446     		mov	r4, r0
+ 792:Src/main.c    **** 
+ 1589              		.loc 1 792 0
+ 1590 0006 0023     		movs	r3, #0
+ 1591 0008 0493     		str	r3, [sp, #16]
+ 1592 000a 0593     		str	r3, [sp, #20]
+ 1593 000c 0693     		str	r3, [sp, #24]
+ 1594 000e 0793     		str	r3, [sp, #28]
+ 1595 0010 0893     		str	r3, [sp, #32]
+ 1596 0012 0993     		str	r3, [sp, #36]
+ 795:Src/main.c    **** 
+ 1597              		.loc 1 795 0
+ 1598 0014 114B     		ldr	r3, .L100
+ 1599 0016 0393     		str	r3, [sp, #12]
+ 802:Src/main.c    **** 	printf("Created ip");
+ 1600              		.loc 1 802 0
+ 1601 0018 02A9     		add	r1, sp, #8
+ 1602 001a 1148     		ldr	r0, .L100+4
+ 1603              	.LVL170:
+ 1604 001c FFF7FEFF 		bl	ip4addr_aton
+ 1605              	.LVL171:
+ 1606 0020 0128     		cmp	r0, #1
+ 1607 0022 12D0     		beq	.L98
+ 1608              	.L94:
+ 805:Src/main.c    **** 
+ 1609              		.loc 1 805 0
+ 1610 0024 03AB     		add	r3, sp, #12
+ 1611 0026 0193     		str	r3, [sp, #4]
+ 1612 0028 0023     		movs	r3, #0
+ 1613 002a 0093     		str	r3, [sp]
+ 1614 002c 0D4B     		ldr	r3, .L100+8
+ 1615 002e 40F25B72 		movw	r2, #1883
+ 1616 0032 02A9     		add	r1, sp, #8
+ 1617 0034 2046     		mov	r0, r4
+ 1618 0036 FFF7FEFF 		bl	mqtt_client_connect
+ 1619              	.LVL172:
+ 808:Src/main.c    ****     printf("mqtt_connect return tutaj %d\n", err);
+ 1620              		.loc 1 808 0
+ 1621 003a 0146     		mov	r1, r0
+ 1622 003c 48B9     		cbnz	r0, .L99
+ 814:Src/main.c    **** 	return 0;
+ 1623              		.loc 1 814 0
+ 1624 003e 0A48     		ldr	r0, .L100+12
+ 1625              	.LVL173:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 48
+
+
+ 1626 0040 FFF7FEFF 		bl	puts
+ 1627              	.LVL174:
+ 815:Src/main.c    ****   }
+ 1628              		.loc 1 815 0
+ 1629 0044 0020     		movs	r0, #0
+ 1630              	.L93:
+ 817:Src/main.c    **** 
+ 1631              		.loc 1 817 0
+ 1632 0046 0AB0     		add	sp, sp, #40
+ 1633              	.LCFI24:
+ 1634              		.cfi_remember_state
+ 1635              		.cfi_def_cfa_offset 8
+ 1636              		@ sp needed
+ 1637 0048 10BD     		pop	{r4, pc}
+ 1638              	.LVL175:
+ 1639              	.L98:
+ 1640              	.LCFI25:
+ 1641              		.cfi_restore_state
+ 803:Src/main.c    ****   }
+ 1642              		.loc 1 803 0
+ 1643 004a 0848     		ldr	r0, .L100+16
+ 1644 004c FFF7FEFF 		bl	printf
+ 1645              	.LVL176:
+ 1646 0050 E8E7     		b	.L94
+ 1647              	.LVL177:
+ 1648              	.L99:
+ 809:Src/main.c    **** 	return 1;
+ 1649              		.loc 1 809 0
+ 1650 0052 0748     		ldr	r0, .L100+20
+ 1651              	.LVL178:
+ 1652 0054 FFF7FEFF 		bl	printf
+ 1653              	.LVL179:
+ 810:Src/main.c    **** 
+ 1654              		.loc 1 810 0
+ 1655 0058 0120     		movs	r0, #1
+ 1656 005a F4E7     		b	.L93
+ 1657              	.L101:
+ 1658              		.align	2
+ 1659              	.L100:
+ 1660 005c 00000000 		.word	.LC16
+ 1661 0060 0C000000 		.word	.LC17
+ 1662 0064 00000000 		.word	mqtt_connection_cb
+ 1663 0068 48000000 		.word	.LC20
+ 1664 006c 1C000000 		.word	.LC18
+ 1665 0070 28000000 		.word	.LC19
+ 1666              		.cfi_endproc
+ 1667              	.LFE170:
+ 1669              		.section	.text.mqtt_connection_cb,"ax",%progbits
+ 1670              		.align	1
+ 1671              		.syntax unified
+ 1672              		.thumb
+ 1673              		.thumb_func
+ 1674              		.fpu fpv5-sp-d16
+ 1676              	mqtt_connection_cb:
+ 1677              	.LFB171:
+ 820:Src/main.c    **** 
+ 1678              		.loc 1 820 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 49
+
+
+ 1679              		.cfi_startproc
+ 1680              		@ args = 0, pretend = 0, frame = 0
+ 1681              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1682              	.LVL180:
+ 1683 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+ 1684              	.LCFI26:
+ 1685              		.cfi_def_cfa_offset 24
+ 1686              		.cfi_offset 4, -24
+ 1687              		.cfi_offset 5, -20
+ 1688              		.cfi_offset 6, -16
+ 1689              		.cfi_offset 7, -12
+ 1690              		.cfi_offset 8, -8
+ 1691              		.cfi_offset 14, -4
+ 1692 0004 82B0     		sub	sp, sp, #8
+ 1693              	.LCFI27:
+ 1694              		.cfi_def_cfa_offset 32
+ 1695 0006 0446     		mov	r4, r0
+ 824:Src/main.c    ****     printf("mqtt_connection_cb: Successfully connected\n");
+ 1696              		.loc 1 824 0
+ 1697 0008 32BB     		cbnz	r2, .L103
+ 1698 000a 0E46     		mov	r6, r1
+ 825:Src/main.c    **** 
+ 1699              		.loc 1 825 0
+ 1700 000c 1748     		ldr	r0, .L106
+ 1701              	.LVL181:
+ 1702 000e FFF7FEFF 		bl	puts
+ 1703              	.LVL182:
+ 828:Src/main.c    **** 
+ 1704              		.loc 1 828 0
+ 1705 0012 3346     		mov	r3, r6
+ 1706 0014 164A     		ldr	r2, .L106+4
+ 1707 0016 1749     		ldr	r1, .L106+8
+ 1708 0018 2046     		mov	r0, r4
+ 1709 001a FFF7FEFF 		bl	mqtt_set_inpub_callback
+ 1710              	.LVL183:
+ 831:Src/main.c    **** 	err2 = mqtt_subscribe(client, "esp/temperature/client1", 1, mqtt_sub_request_cb, arg);
+ 1711              		.loc 1 831 0
+ 1712 001e 164F     		ldr	r7, .L106+12
+ 1713 0020 0125     		movs	r5, #1
+ 1714 0022 0195     		str	r5, [sp, #4]
+ 1715 0024 0096     		str	r6, [sp]
+ 1716 0026 3B46     		mov	r3, r7
+ 1717 0028 2A46     		mov	r2, r5
+ 1718 002a 1449     		ldr	r1, .L106+16
+ 1719 002c 2046     		mov	r0, r4
+ 1720 002e FFF7FEFF 		bl	mqtt_sub_unsub
+ 1721              	.LVL184:
+ 1722 0032 8046     		mov	r8, r0
+ 1723              	.LVL185:
+ 832:Src/main.c    **** 
+ 1724              		.loc 1 832 0
+ 1725 0034 0195     		str	r5, [sp, #4]
+ 1726 0036 0096     		str	r6, [sp]
+ 1727 0038 3B46     		mov	r3, r7
+ 1728 003a 2A46     		mov	r2, r5
+ 1729 003c 1049     		ldr	r1, .L106+20
+ 1730 003e 2046     		mov	r0, r4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 50
+
+
+ 1731 0040 FFF7FEFF 		bl	mqtt_sub_unsub
+ 1732              	.LVL186:
+ 834:Src/main.c    ****       printf("mqtt_subscribe return: %d\n", err);
+ 1733              		.loc 1 834 0
+ 1734 0044 0028     		cmp	r0, #0
+ 1735 0046 08BF     		it	eq
+ 1736 0048 B8F1000F 		cmpeq	r8, #0
+ 1737 004c 0BD0     		beq	.L102
+ 835:Src/main.c    ****     }
+ 1738              		.loc 1 835 0
+ 1739 004e 4146     		mov	r1, r8
+ 1740 0050 0C48     		ldr	r0, .L106+24
+ 1741              	.LVL187:
+ 1742 0052 FFF7FEFF 		bl	printf
+ 1743              	.LVL188:
+ 1744 0056 06E0     		b	.L102
+ 1745              	.LVL189:
+ 1746              	.L103:
+ 1747 0058 1146     		mov	r1, r2
+ 1748              	.LVL190:
+ 838:Src/main.c    ****     /* Its more nice to be connected, so try to reconnect */
+ 1749              		.loc 1 838 0
+ 1750 005a 0B48     		ldr	r0, .L106+28
+ 1751              	.LVL191:
+ 1752 005c FFF7FEFF 		bl	printf
+ 1753              	.LVL192:
+ 840:Src/main.c    ****   }
+ 1754              		.loc 1 840 0
+ 1755 0060 2046     		mov	r0, r4
+ 1756 0062 FFF7FEFF 		bl	example_do_connect
+ 1757              	.LVL193:
+ 1758              	.L102:
+ 843:Src/main.c    **** 
+ 1759              		.loc 1 843 0
+ 1760 0066 02B0     		add	sp, sp, #8
+ 1761              	.LCFI28:
+ 1762              		.cfi_def_cfa_offset 24
+ 1763              		@ sp needed
+ 1764 0068 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 1765              	.LVL194:
+ 1766              	.L107:
+ 1767              		.align	2
+ 1768              	.L106:
+ 1769 006c 00000000 		.word	.LC21
+ 1770 0070 00000000 		.word	mqtt_incoming_data_cb
+ 1771 0074 00000000 		.word	mqtt_incoming_publish_cb
+ 1772 0078 00000000 		.word	mqtt_sub_request_cb
+ 1773 007c 2C000000 		.word	.LC22
+ 1774 0080 44000000 		.word	.LC8
+ 1775 0084 44000000 		.word	.LC23
+ 1776 0088 60000000 		.word	.LC24
+ 1777              		.cfi_endproc
+ 1778              	.LFE171:
+ 1780              		.section	.text.example_publish,"ax",%progbits
+ 1781              		.align	1
+ 1782              		.global	example_publish
+ 1783              		.syntax unified
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 51
+
+
+ 1784              		.thumb
+ 1785              		.thumb_func
+ 1786              		.fpu fpv5-sp-d16
+ 1788              	example_publish:
+ 1789              	.LFB176:
+ 923:Src/main.c    ****   }
+ 924:Src/main.c    **** }
+ 925:Src/main.c    **** 
+ 926:Src/main.c    **** void example_publish(mqtt_client_t *client, void *arg)
+ 927:Src/main.c    **** {
+ 1790              		.loc 1 927 0
+ 1791              		.cfi_startproc
+ 1792              		@ args = 0, pretend = 0, frame = 0
+ 1793              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1794              	.LVL195:
+ 1795 0000 00B5     		push	{lr}
+ 1796              	.LCFI29:
+ 1797              		.cfi_def_cfa_offset 4
+ 1798              		.cfi_offset 14, -4
+ 1799 0002 85B0     		sub	sp, sp, #20
+ 1800              	.LCFI30:
+ 1801              		.cfi_def_cfa_offset 24
+ 1802              	.LVL196:
+ 928:Src/main.c    ****   const char *pub_payload= "give_temperature";
+ 929:Src/main.c    ****   err_t err;
+ 930:Src/main.c    ****   u8_t qos = 2; /* 0 1 or 2, see MQTT specification */
+ 931:Src/main.c    ****   u8_t retain = 0; /* No don't retain such crappy payload... */
+ 932:Src/main.c    ****   err = mqtt_publish(client, "esp/temperature", pub_payload, strlen(pub_payload), qos, retain, mqtt
+ 1803              		.loc 1 932 0
+ 1804 0004 0391     		str	r1, [sp, #12]
+ 1805 0006 0A4B     		ldr	r3, .L112
+ 1806 0008 0293     		str	r3, [sp, #8]
+ 1807 000a 0023     		movs	r3, #0
+ 1808 000c 0193     		str	r3, [sp, #4]
+ 1809 000e 0223     		movs	r3, #2
+ 1810 0010 0093     		str	r3, [sp]
+ 1811 0012 1023     		movs	r3, #16
+ 1812 0014 074A     		ldr	r2, .L112+4
+ 1813 0016 0849     		ldr	r1, .L112+8
+ 1814              	.LVL197:
+ 1815 0018 FFF7FEFF 		bl	mqtt_publish
+ 1816              	.LVL198:
+ 933:Src/main.c    ****   if(err != ERR_OK) {
+ 1817              		.loc 1 933 0
+ 1818 001c 10B9     		cbnz	r0, .L111
+ 1819              	.LVL199:
+ 1820              	.L108:
+ 934:Src/main.c    ****     printf("Publish err: %d\n", err);
+ 935:Src/main.c    ****   }
+ 936:Src/main.c    **** }
+ 1821              		.loc 1 936 0
+ 1822 001e 05B0     		add	sp, sp, #20
+ 1823              	.LCFI31:
+ 1824              		.cfi_remember_state
+ 1825              		.cfi_def_cfa_offset 4
+ 1826              		@ sp needed
+ 1827 0020 5DF804FB 		ldr	pc, [sp], #4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 52
+
+
+ 1828              	.LVL200:
+ 1829              	.L111:
+ 1830              	.LCFI32:
+ 1831              		.cfi_restore_state
+ 1832 0024 0146     		mov	r1, r0
+ 934:Src/main.c    ****     printf("Publish err: %d\n", err);
+ 1833              		.loc 1 934 0
+ 1834 0026 0548     		ldr	r0, .L112+12
+ 1835              	.LVL201:
+ 1836 0028 FFF7FEFF 		bl	printf
+ 1837              	.LVL202:
+ 1838              		.loc 1 936 0
+ 1839 002c F7E7     		b	.L108
+ 1840              	.L113:
+ 1841 002e 00BF     		.align	2
+ 1842              	.L112:
+ 1843 0030 00000000 		.word	mqtt_pub_request_cb
+ 1844 0034 00000000 		.word	.LC25
+ 1845 0038 14000000 		.word	.LC26
+ 1846 003c 24000000 		.word	.LC27
+ 1847              		.cfi_endproc
+ 1848              	.LFE176:
+ 1850              		.section	.text.StartDefaultTask,"ax",%progbits
+ 1851              		.align	1
+ 1852              		.global	StartDefaultTask
+ 1853              		.syntax unified
+ 1854              		.thumb
+ 1855              		.thumb_func
+ 1856              		.fpu fpv5-sp-d16
+ 1858              	StartDefaultTask:
+ 1859              	.LFB178:
+ 937:Src/main.c    **** 
+ 938:Src/main.c    **** void create_menu(){
+ 939:Src/main.c    **** 
+ 940:Src/main.c    **** 
+ 941:Src/main.c    **** }
+ 942:Src/main.c    **** void StartDefaultTask(void const * argument)
+ 943:Src/main.c    **** {
+ 1860              		.loc 1 943 0
+ 1861              		.cfi_startproc
+ 1862              		@ args = 0, pretend = 0, frame = 504
+ 1863              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1864              	.LVL203:
+ 1865 0000 10B5     		push	{r4, lr}
+ 1866              	.LCFI33:
+ 1867              		.cfi_def_cfa_offset 8
+ 1868              		.cfi_offset 4, -8
+ 1869              		.cfi_offset 14, -4
+ 1870 0002 ADF5007D 		sub	sp, sp, #512
+ 1871              	.LCFI34:
+ 1872              		.cfi_def_cfa_offset 520
+ 944:Src/main.c    ****   MX_LWIP_Init();
+ 1873              		.loc 1 944 0
+ 1874 0006 FFF7FEFF 		bl	MX_LWIP_Init
+ 1875              	.LVL204:
+ 1876 000a 06E0     		b	.L117
+ 1877              	.L115:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 53
+
+
+ 1878              	.LBB22:
+ 945:Src/main.c    **** 
+ 946:Src/main.c    ****   /*MQTT */
+ 947:Src/main.c    **** 
+ 948:Src/main.c    ****   int tmp = 0; //1
+ 949:Src/main.c    ****   mqtt_client_t static_client;
+ 950:Src/main.c    ****   while(tmp == 1){
+ 951:Src/main.c    **** 	xprintf("Trying to connect\n");
+ 952:Src/main.c    **** 	vTaskDelay(1000);
+ 953:Src/main.c    **** 	tmp = example_do_connect(&static_client);
+ 954:Src/main.c    **** 	vTaskDelay(1000);
+ 955:Src/main.c    ****   //xprintf("tutaj koniecx");
+ 956:Src/main.c    ****   }
+ 957:Src/main.c    **** 
+ 958:Src/main.c    ****   for(;;)
+ 959:Src/main.c    ****   {
+ 960:Src/main.c    **** 
+ 961:Src/main.c    **** 	BSP_TS_GetState(&TS_State);
+ 962:Src/main.c    **** 	if(TS_State.touchDetected)
+ 963:Src/main.c    **** 	{
+ 964:Src/main.c    **** 		BSP_LCD_Clear(LCD_COLOR_WHITE);
+ 965:Src/main.c    **** 		BSP_LCD_SelectLayer(0);
+ 966:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+ 967:Src/main.c    **** 		BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
+ 968:Src/main.c    **** 
+ 969:Src/main.c    **** 		//select Foreground Layer
+ 970:Src/main.c    **** 		BSP_LCD_SelectLayer(1);
+ 971:Src/main.c    **** 		char greeting[] = "Hello";
+ 972:Src/main.c    **** 		draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
+ 973:Src/main.c    **** 
+ 974:Src/main.c    **** 	}
+ 975:Src/main.c    **** 
+ 976:Src/main.c    **** 	char key = inkey();
+ 1879              		.loc 1 976 0
+ 1880 000c FFF7FEFF 		bl	inkey
+ 1881              	.LVL205:
+ 977:Src/main.c    **** 	if(key == 'p'){
+ 1882              		.loc 1 977 0
+ 1883 0010 7028     		cmp	r0, #112
+ 1884 0012 30D0     		beq	.L119
+ 1885              	.LVL206:
+ 1886              	.L116:
+ 978:Src/main.c    **** 		xprintf("Send message \n");
+ 979:Src/main.c    **** 		example_publish(&static_client,2);
+ 980:Src/main.c    **** 	}
+ 981:Src/main.c    **** 
+ 982:Src/main.c    **** 
+ 983:Src/main.c    **** 	vTaskDelay(2);
+ 1887              		.loc 1 983 0
+ 1888 0014 0220     		movs	r0, #2
+ 1889 0016 FFF7FEFF 		bl	vTaskDelay
+ 1890              	.LVL207:
+ 1891              	.L117:
+ 961:Src/main.c    **** 	if(TS_State.touchDetected)
+ 1892              		.loc 1 961 0
+ 1893 001a 1B4C     		ldr	r4, .L120
+ 1894 001c 2046     		mov	r0, r4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 54
+
+
+ 1895 001e FFF7FEFF 		bl	BSP_TS_GetState
+ 1896              	.LVL208:
+ 962:Src/main.c    **** 	{
+ 1897              		.loc 1 962 0
+ 1898 0022 2378     		ldrb	r3, [r4]	@ zero_extendqisi2
+ 1899 0024 002B     		cmp	r3, #0
+ 1900 0026 F1D0     		beq	.L115
+ 1901              	.LBB23:
+ 964:Src/main.c    **** 		BSP_LCD_SelectLayer(0);
+ 1902              		.loc 1 964 0
+ 1903 0028 4FF0FF30 		mov	r0, #-1
+ 1904 002c FFF7FEFF 		bl	BSP_LCD_Clear
+ 1905              	.LVL209:
+ 965:Src/main.c    **** 		BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+ 1906              		.loc 1 965 0
+ 1907 0030 0020     		movs	r0, #0
+ 1908 0032 FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 1909              	.LVL210:
+ 966:Src/main.c    **** 		BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
+ 1910              		.loc 1 966 0
+ 1911 0036 4FF0FF20 		mov	r0, #-16711936
+ 1912 003a FFF7FEFF 		bl	BSP_LCD_SetTextColor
+ 1913              	.LVL211:
+ 967:Src/main.c    **** 
+ 1914              		.loc 1 967 0
+ 1915 003e 4FF48873 		mov	r3, #272
+ 1916 0042 4FF4F072 		mov	r2, #480
+ 1917 0046 0021     		movs	r1, #0
+ 1918 0048 0846     		mov	r0, r1
+ 1919 004a FFF7FEFF 		bl	BSP_LCD_FillRect
+ 1920              	.LVL212:
+ 970:Src/main.c    **** 		char greeting[] = "Hello";
+ 1921              		.loc 1 970 0
+ 1922 004e 0120     		movs	r0, #1
+ 1923 0050 FFF7FEFF 		bl	BSP_LCD_SelectLayer
+ 1924              	.LVL213:
+ 971:Src/main.c    **** 		draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
+ 1925              		.loc 1 971 0
+ 1926 0054 02AB     		add	r3, sp, #8
+ 1927 0056 0D49     		ldr	r1, .L120+4
+ 1928 0058 03C9     		ldm	r1, {r0, r1}
+ 1929 005a 0290     		str	r0, [sp, #8]
+ 1930 005c ADF80C10 		strh	r1, [sp, #12]	@ movhi
+ 972:Src/main.c    **** 
+ 1931              		.loc 1 972 0
+ 1932 0060 0193     		str	r3, [sp, #4]
+ 1933 0062 6FF47F43 		mvn	r3, #65280
+ 1934 0066 0093     		str	r3, [sp]
+ 1935 0068 6423     		movs	r3, #100
+ 1936 006a 1A46     		mov	r2, r3
+ 1937 006c 3221     		movs	r1, #50
+ 1938 006e 0846     		mov	r0, r1
+ 1939 0070 FFF7FEFF 		bl	draw_button
+ 1940              	.LVL214:
+ 1941 0074 CAE7     		b	.L115
+ 1942              	.LVL215:
+ 1943              	.L119:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 55
+
+
+ 1944              	.LBE23:
+ 978:Src/main.c    **** 		example_publish(&static_client,2);
+ 1945              		.loc 1 978 0
+ 1946 0076 0648     		ldr	r0, .L120+8
+ 1947              	.LVL216:
+ 1948 0078 FFF7FEFF 		bl	xprintf
+ 1949              	.LVL217:
+ 979:Src/main.c    **** 	}
+ 1950              		.loc 1 979 0
+ 1951 007c 0221     		movs	r1, #2
+ 1952 007e 04A8     		add	r0, sp, #16
+ 1953 0080 FFF7FEFF 		bl	example_publish
+ 1954              	.LVL218:
+ 1955 0084 C6E7     		b	.L116
+ 1956              	.L121:
+ 1957 0086 00BF     		.align	2
+ 1958              	.L120:
+ 1959 0088 00000000 		.word	.LANCHOR1
+ 1960 008c 00000000 		.word	.LC9
+ 1961 0090 00000000 		.word	.LC28
+ 1962              	.LBE22:
+ 1963              		.cfi_endproc
+ 1964              	.LFE178:
+ 1966              		.section	.text.create_menu,"ax",%progbits
+ 1967              		.align	1
+ 1968              		.global	create_menu
+ 1969              		.syntax unified
+ 1970              		.thumb
+ 1971              		.thumb_func
+ 1972              		.fpu fpv5-sp-d16
+ 1974              	create_menu:
+ 1975              	.LFB177:
+ 938:Src/main.c    **** 
+ 1976              		.loc 1 938 0
+ 1977              		.cfi_startproc
+ 1978              		@ args = 0, pretend = 0, frame = 0
+ 1979              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1980              		@ link register save eliminated.
+ 1981 0000 7047     		bx	lr
+ 1982              		.cfi_endproc
+ 1983              	.LFE177:
+ 1985              		.section	.text.HAL_TIM_PeriodElapsedCallback,"ax",%progbits
+ 1986              		.align	1
+ 1987              		.global	HAL_TIM_PeriodElapsedCallback
+ 1988              		.syntax unified
+ 1989              		.thumb
+ 1990              		.thumb_func
+ 1991              		.fpu fpv5-sp-d16
+ 1993              	HAL_TIM_PeriodElapsedCallback:
+ 1994              	.LFB179:
+ 984:Src/main.c    **** 
+ 985:Src/main.c    ****   }
+ 986:Src/main.c    ****   /* USER CODE END 5 */
+ 987:Src/main.c    **** }
+ 988:Src/main.c    **** 
+ 989:Src/main.c    **** /**
+ 990:Src/main.c    ****   * @brief  Period elapsed callback in non blocking mode
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 56
+
+
+ 991:Src/main.c    ****   * @note   This function is called  when TIM6 interrupt took place, inside
+ 992:Src/main.c    ****   * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ 993:Src/main.c    ****   * a global variable "uwTick" used as application time base.
+ 994:Src/main.c    ****   * @param  htim : TIM handle
+ 995:Src/main.c    ****   * @retval None
+ 996:Src/main.c    ****   */
+ 997:Src/main.c    **** void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+ 998:Src/main.c    **** {
+ 1995              		.loc 1 998 0
+ 1996              		.cfi_startproc
+ 1997              		@ args = 0, pretend = 0, frame = 0
+ 1998              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1999              	.LVL219:
+ 2000              		.loc 1 998 0
+ 2001 0000 08B5     		push	{r3, lr}
+ 2002              	.LCFI35:
+ 2003              		.cfi_def_cfa_offset 8
+ 2004              		.cfi_offset 3, -8
+ 2005              		.cfi_offset 14, -4
+ 999:Src/main.c    ****   /* USER CODE BEGIN Callback 0 */
+1000:Src/main.c    **** 
+1001:Src/main.c    ****   /* USER CODE END Callback 0 */
+1002:Src/main.c    ****   if (htim->Instance == TIM6) {
+ 2006              		.loc 1 1002 0
+ 2007 0002 0268     		ldr	r2, [r0]
+ 2008 0004 034B     		ldr	r3, .L127
+ 2009 0006 9A42     		cmp	r2, r3
+ 2010 0008 00D0     		beq	.L126
+ 2011              	.LVL220:
+ 2012              	.L123:
+ 2013 000a 08BD     		pop	{r3, pc}
+ 2014              	.LVL221:
+ 2015              	.L126:
+1003:Src/main.c    ****     HAL_IncTick();
+ 2016              		.loc 1 1003 0
+ 2017 000c FFF7FEFF 		bl	HAL_IncTick
+ 2018              	.LVL222:
+1004:Src/main.c    ****   }
+1005:Src/main.c    ****   /* USER CODE BEGIN Callback 1 */
+1006:Src/main.c    **** 
+1007:Src/main.c    ****   /* USER CODE END Callback 1 */
+1008:Src/main.c    **** }
+ 2019              		.loc 1 1008 0
+ 2020 0010 FBE7     		b	.L123
+ 2021              	.L128:
+ 2022 0012 00BF     		.align	2
+ 2023              	.L127:
+ 2024 0014 00100040 		.word	1073745920
+ 2025              		.cfi_endproc
+ 2026              	.LFE179:
+ 2028              		.section	.text._Error_Handler,"ax",%progbits
+ 2029              		.align	1
+ 2030              		.global	_Error_Handler
+ 2031              		.syntax unified
+ 2032              		.thumb
+ 2033              		.thumb_func
+ 2034              		.fpu fpv5-sp-d16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 57
+
+
+ 2036              	_Error_Handler:
+ 2037              	.LFB180:
+1009:Src/main.c    **** 
+1010:Src/main.c    **** /**
+1011:Src/main.c    ****   * @brief  This function is executed in case of error occurrence.
+1012:Src/main.c    ****   * @param  file: The file name as string.
+1013:Src/main.c    ****   * @param  line: The line in file as a number.
+1014:Src/main.c    ****   * @retval None
+1015:Src/main.c    ****   */
+1016:Src/main.c    **** void _Error_Handler(char *file, int line)
+1017:Src/main.c    **** {
+ 2038              		.loc 1 1017 0
+ 2039              		.cfi_startproc
+ 2040              		@ Volatile: function does not return.
+ 2041              		@ args = 0, pretend = 0, frame = 0
+ 2042              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2043              		@ link register save eliminated.
+ 2044              	.LVL223:
+ 2045              	.L130:
+ 2046 0000 FEE7     		b	.L130
+ 2047              		.cfi_endproc
+ 2048              	.LFE180:
+ 2050              		.section	.text.MX_USART1_UART_Init,"ax",%progbits
+ 2051              		.align	1
+ 2052              		.syntax unified
+ 2053              		.thumb
+ 2054              		.thumb_func
+ 2055              		.fpu fpv5-sp-d16
+ 2057              	MX_USART1_UART_Init:
+ 2058              	.LFB167:
+ 559:Src/main.c    **** 
+ 2059              		.loc 1 559 0
+ 2060              		.cfi_startproc
+ 2061              		@ args = 0, pretend = 0, frame = 0
+ 2062              		@ frame_needed = 0, uses_anonymous_args = 0
+ 559:Src/main.c    **** 
+ 2063              		.loc 1 559 0
+ 2064 0000 08B5     		push	{r3, lr}
+ 2065              	.LCFI36:
+ 2066              		.cfi_def_cfa_offset 8
+ 2067              		.cfi_offset 3, -8
+ 2068              		.cfi_offset 14, -4
+ 561:Src/main.c    ****   huart1.Init.BaudRate = 115200;
+ 2069              		.loc 1 561 0
+ 2070 0002 0C48     		ldr	r0, .L135
+ 2071 0004 0C4B     		ldr	r3, .L135+4
+ 2072 0006 0360     		str	r3, [r0]
+ 562:Src/main.c    ****   huart1.Init.WordLength = UART_WORDLENGTH_8B;
+ 2073              		.loc 1 562 0
+ 2074 0008 4FF4E133 		mov	r3, #115200
+ 2075 000c 4360     		str	r3, [r0, #4]
+ 563:Src/main.c    ****   huart1.Init.StopBits = UART_STOPBITS_1;
+ 2076              		.loc 1 563 0
+ 2077 000e 0023     		movs	r3, #0
+ 2078 0010 8360     		str	r3, [r0, #8]
+ 564:Src/main.c    ****   huart1.Init.Parity = UART_PARITY_NONE;
+ 2079              		.loc 1 564 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 58
+
+
+ 2080 0012 C360     		str	r3, [r0, #12]
+ 565:Src/main.c    ****   huart1.Init.Mode = UART_MODE_TX_RX;
+ 2081              		.loc 1 565 0
+ 2082 0014 0361     		str	r3, [r0, #16]
+ 566:Src/main.c    ****   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 2083              		.loc 1 566 0
+ 2084 0016 0C22     		movs	r2, #12
+ 2085 0018 4261     		str	r2, [r0, #20]
+ 567:Src/main.c    ****   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+ 2086              		.loc 1 567 0
+ 2087 001a 8361     		str	r3, [r0, #24]
+ 568:Src/main.c    ****   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 2088              		.loc 1 568 0
+ 2089 001c C361     		str	r3, [r0, #28]
+ 569:Src/main.c    ****   huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 2090              		.loc 1 569 0
+ 2091 001e 0362     		str	r3, [r0, #32]
+ 570:Src/main.c    ****   if (HAL_UART_Init(&huart1) != HAL_OK)
+ 2092              		.loc 1 570 0
+ 2093 0020 4362     		str	r3, [r0, #36]
+ 571:Src/main.c    ****   {
+ 2094              		.loc 1 571 0
+ 2095 0022 FFF7FEFF 		bl	HAL_UART_Init
+ 2096              	.LVL224:
+ 2097 0026 00B9     		cbnz	r0, .L134
+ 2098 0028 08BD     		pop	{r3, pc}
+ 2099              	.L134:
+ 573:Src/main.c    ****   }
+ 2100              		.loc 1 573 0
+ 2101 002a 40F23D21 		movw	r1, #573
+ 2102 002e 0348     		ldr	r0, .L135+8
+ 2103 0030 FFF7FEFF 		bl	_Error_Handler
+ 2104              	.LVL225:
+ 2105              	.L136:
+ 2106              		.align	2
+ 2107              	.L135:
+ 2108 0034 00000000 		.word	huart1
+ 2109 0038 00100140 		.word	1073811456
+ 2110 003c 00000000 		.word	.LC29
+ 2111              		.cfi_endproc
+ 2112              	.LFE167:
+ 2114              		.section	.text.MX_USART6_UART_Init,"ax",%progbits
+ 2115              		.align	1
+ 2116              		.syntax unified
+ 2117              		.thumb
+ 2118              		.thumb_func
+ 2119              		.fpu fpv5-sp-d16
+ 2121              	MX_USART6_UART_Init:
+ 2122              	.LFB168:
+ 580:Src/main.c    **** 
+ 2123              		.loc 1 580 0
+ 2124              		.cfi_startproc
+ 2125              		@ args = 0, pretend = 0, frame = 0
+ 2126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2127 0000 08B5     		push	{r3, lr}
+ 2128              	.LCFI37:
+ 2129              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 59
+
+
+ 2130              		.cfi_offset 3, -8
+ 2131              		.cfi_offset 14, -4
+ 582:Src/main.c    ****   huart6.Init.BaudRate = 115200;
+ 2132              		.loc 1 582 0
+ 2133 0002 0C48     		ldr	r0, .L141
+ 2134 0004 0C4B     		ldr	r3, .L141+4
+ 2135 0006 0360     		str	r3, [r0]
+ 583:Src/main.c    ****   huart6.Init.WordLength = UART_WORDLENGTH_8B;
+ 2136              		.loc 1 583 0
+ 2137 0008 4FF4E133 		mov	r3, #115200
+ 2138 000c 4360     		str	r3, [r0, #4]
+ 584:Src/main.c    ****   huart6.Init.StopBits = UART_STOPBITS_1;
+ 2139              		.loc 1 584 0
+ 2140 000e 0023     		movs	r3, #0
+ 2141 0010 8360     		str	r3, [r0, #8]
+ 585:Src/main.c    ****   huart6.Init.Parity = UART_PARITY_NONE;
+ 2142              		.loc 1 585 0
+ 2143 0012 C360     		str	r3, [r0, #12]
+ 586:Src/main.c    ****   huart6.Init.Mode = UART_MODE_TX_RX;
+ 2144              		.loc 1 586 0
+ 2145 0014 0361     		str	r3, [r0, #16]
+ 587:Src/main.c    ****   huart6.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+ 2146              		.loc 1 587 0
+ 2147 0016 0C22     		movs	r2, #12
+ 2148 0018 4261     		str	r2, [r0, #20]
+ 588:Src/main.c    ****   huart6.Init.OverSampling = UART_OVERSAMPLING_16;
+ 2149              		.loc 1 588 0
+ 2150 001a 8361     		str	r3, [r0, #24]
+ 589:Src/main.c    ****   huart6.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+ 2151              		.loc 1 589 0
+ 2152 001c C361     		str	r3, [r0, #28]
+ 590:Src/main.c    ****   huart6.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+ 2153              		.loc 1 590 0
+ 2154 001e 0362     		str	r3, [r0, #32]
+ 591:Src/main.c    ****   if (HAL_UART_Init(&huart6) != HAL_OK)
+ 2155              		.loc 1 591 0
+ 2156 0020 4362     		str	r3, [r0, #36]
+ 592:Src/main.c    ****   {
+ 2157              		.loc 1 592 0
+ 2158 0022 FFF7FEFF 		bl	HAL_UART_Init
+ 2159              	.LVL226:
+ 2160 0026 00B9     		cbnz	r0, .L140
+ 2161 0028 08BD     		pop	{r3, pc}
+ 2162              	.L140:
+ 594:Src/main.c    ****   }
+ 2163              		.loc 1 594 0
+ 2164 002a 40F25221 		movw	r1, #594
+ 2165 002e 0348     		ldr	r0, .L141+8
+ 2166 0030 FFF7FEFF 		bl	_Error_Handler
+ 2167              	.LVL227:
+ 2168              	.L142:
+ 2169              		.align	2
+ 2170              	.L141:
+ 2171 0034 00000000 		.word	huart6
+ 2172 0038 00140140 		.word	1073812480
+ 2173 003c 00000000 		.word	.LC29
+ 2174              		.cfi_endproc
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 60
+
+
+ 2175              	.LFE168:
+ 2177              		.section	.text.SystemClock_Config,"ax",%progbits
+ 2178              		.align	1
+ 2179              		.global	SystemClock_Config
+ 2180              		.syntax unified
+ 2181              		.thumb
+ 2182              		.thumb_func
+ 2183              		.fpu fpv5-sp-d16
+ 2185              	SystemClock_Config:
+ 2186              	.LFB166:
+ 464:Src/main.c    **** 
+ 2187              		.loc 1 464 0
+ 2188              		.cfi_startproc
+ 2189              		@ args = 0, pretend = 0, frame = 208
+ 2190              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2191 0000 00B5     		push	{lr}
+ 2192              	.LCFI38:
+ 2193              		.cfi_def_cfa_offset 4
+ 2194              		.cfi_offset 14, -4
+ 2195 0002 B5B0     		sub	sp, sp, #212
+ 2196              	.LCFI39:
+ 2197              		.cfi_def_cfa_offset 216
+ 2198              	.LBB24:
+ 472:Src/main.c    **** 
+ 2199              		.loc 1 472 0
+ 2200 0004 474B     		ldr	r3, .L153
+ 2201 0006 1A6C     		ldr	r2, [r3, #64]
+ 2202 0008 42F08052 		orr	r2, r2, #268435456
+ 2203 000c 1A64     		str	r2, [r3, #64]
+ 2204 000e 1B6C     		ldr	r3, [r3, #64]
+ 2205 0010 03F08053 		and	r3, r3, #268435456
+ 2206 0014 0093     		str	r3, [sp]
+ 2207 0016 009B     		ldr	r3, [sp]
+ 2208              	.LBE24:
+ 2209              	.LBB25:
+ 474:Src/main.c    **** 
+ 2210              		.loc 1 474 0
+ 2211 0018 434B     		ldr	r3, .L153+4
+ 2212 001a 1A68     		ldr	r2, [r3]
+ 2213 001c 42F44042 		orr	r2, r2, #49152
+ 2214 0020 1A60     		str	r2, [r3]
+ 2215 0022 1B68     		ldr	r3, [r3]
+ 2216 0024 03F44043 		and	r3, r3, #49152
+ 2217 0028 0193     		str	r3, [sp, #4]
+ 2218 002a 019B     		ldr	r3, [sp, #4]
+ 2219              	.LBE25:
+ 478:Src/main.c    ****   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
+ 2220              		.loc 1 478 0
+ 2221 002c 0923     		movs	r3, #9
+ 2222 002e 2893     		str	r3, [sp, #160]
+ 479:Src/main.c    ****   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
+ 2223              		.loc 1 479 0
+ 2224 0030 4FF48033 		mov	r3, #65536
+ 2225 0034 2993     		str	r3, [sp, #164]
+ 480:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+ 2226              		.loc 1 480 0
+ 2227 0036 0123     		movs	r3, #1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 61
+
+
+ 2228 0038 2D93     		str	r3, [sp, #180]
+ 481:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+ 2229              		.loc 1 481 0
+ 2230 003a 0223     		movs	r3, #2
+ 2231 003c 2E93     		str	r3, [sp, #184]
+ 482:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLM = 25;
+ 2232              		.loc 1 482 0
+ 2233 003e 4FF48002 		mov	r2, #4194304
+ 2234 0042 2F92     		str	r2, [sp, #188]
+ 483:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLN = 400;
+ 2235              		.loc 1 483 0
+ 2236 0044 1922     		movs	r2, #25
+ 2237 0046 3092     		str	r2, [sp, #192]
+ 484:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+ 2238              		.loc 1 484 0
+ 2239 0048 4FF4C872 		mov	r2, #400
+ 2240 004c 3192     		str	r2, [sp, #196]
+ 485:Src/main.c    ****   RCC_OscInitStruct.PLL.PLLQ = 8;
+ 2241              		.loc 1 485 0
+ 2242 004e 3293     		str	r3, [sp, #200]
+ 486:Src/main.c    ****   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+ 2243              		.loc 1 486 0
+ 2244 0050 0823     		movs	r3, #8
+ 2245 0052 3393     		str	r3, [sp, #204]
+ 487:Src/main.c    ****   {
+ 2246              		.loc 1 487 0
+ 2247 0054 28A8     		add	r0, sp, #160
+ 2248 0056 FFF7FEFF 		bl	HAL_RCC_OscConfig
+ 2249              	.LVL228:
+ 2250 005a 0028     		cmp	r0, #0
+ 2251 005c 4ED1     		bne	.L149
+ 494:Src/main.c    ****   {
+ 2252              		.loc 1 494 0
+ 2253 005e FFF7FEFF 		bl	HAL_PWREx_EnableOverDrive
+ 2254              	.LVL229:
+ 2255 0062 0028     		cmp	r0, #0
+ 2256 0064 4FD1     		bne	.L150
+ 501:Src/main.c    ****                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+ 2257              		.loc 1 501 0
+ 2258 0066 0F23     		movs	r3, #15
+ 2259 0068 2393     		str	r3, [sp, #140]
+ 503:Src/main.c    ****   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+ 2260              		.loc 1 503 0
+ 2261 006a 0223     		movs	r3, #2
+ 2262 006c 2493     		str	r3, [sp, #144]
+ 504:Src/main.c    ****   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+ 2263              		.loc 1 504 0
+ 2264 006e 0023     		movs	r3, #0
+ 2265 0070 2593     		str	r3, [sp, #148]
+ 505:Src/main.c    ****   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+ 2266              		.loc 1 505 0
+ 2267 0072 4FF4A053 		mov	r3, #5120
+ 2268 0076 2693     		str	r3, [sp, #152]
+ 506:Src/main.c    **** 
+ 2269              		.loc 1 506 0
+ 2270 0078 4FF48053 		mov	r3, #4096
+ 2271 007c 2793     		str	r3, [sp, #156]
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 62
+
+
+ 508:Src/main.c    ****   {
+ 2272              		.loc 1 508 0
+ 2273 007e 0621     		movs	r1, #6
+ 2274 0080 23A8     		add	r0, sp, #140
+ 2275 0082 FFF7FEFF 		bl	HAL_RCC_ClockConfig
+ 2276              	.LVL230:
+ 2277 0086 0028     		cmp	r0, #0
+ 2278 0088 42D1     		bne	.L151
+ 513:Src/main.c    ****                               |RCC_PERIPHCLK_RTC|RCC_PERIPHCLK_USART1
+ 2279              		.loc 1 513 0
+ 2280 008a 284B     		ldr	r3, .L153+8
+ 2281 008c 0293     		str	r3, [sp, #8]
+ 518:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SP = RCC_PLLP_DIV2;
+ 2282              		.loc 1 518 0
+ 2283 008e 6423     		movs	r3, #100
+ 2284 0090 0393     		str	r3, [sp, #12]
+ 519:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SR = 2;
+ 2285              		.loc 1 519 0
+ 2286 0092 0223     		movs	r3, #2
+ 2287 0094 0693     		str	r3, [sp, #24]
+ 520:Src/main.c    ****   PeriphClkInitStruct.PLLI2S.PLLI2SQ = 2;
+ 2288              		.loc 1 520 0
+ 2289 0096 0493     		str	r3, [sp, #16]
+ 521:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIN = 192;
+ 2290              		.loc 1 521 0
+ 2291 0098 0593     		str	r3, [sp, #20]
+ 522:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIR = 4;
+ 2292              		.loc 1 522 0
+ 2293 009a C023     		movs	r3, #192
+ 2294 009c 0793     		str	r3, [sp, #28]
+ 523:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIQ = 4;
+ 2295              		.loc 1 523 0
+ 2296 009e 0423     		movs	r3, #4
+ 2297 00a0 0993     		str	r3, [sp, #36]
+ 524:Src/main.c    ****   PeriphClkInitStruct.PLLSAI.PLLSAIP = RCC_PLLSAIP_DIV4;
+ 2298              		.loc 1 524 0
+ 2299 00a2 0893     		str	r3, [sp, #32]
+ 525:Src/main.c    ****   PeriphClkInitStruct.PLLI2SDivQ = 1;
+ 2300              		.loc 1 525 0
+ 2301 00a4 0123     		movs	r3, #1
+ 2302 00a6 0A93     		str	r3, [sp, #40]
+ 526:Src/main.c    ****   PeriphClkInitStruct.PLLSAIDivQ = 1;
+ 2303              		.loc 1 526 0
+ 2304 00a8 0B93     		str	r3, [sp, #44]
+ 527:Src/main.c    ****   PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_8;
+ 2305              		.loc 1 527 0
+ 2306 00aa 0C93     		str	r3, [sp, #48]
+ 528:Src/main.c    ****   PeriphClkInitStruct.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
+ 2307              		.loc 1 528 0
+ 2308 00ac 4FF40033 		mov	r3, #131072
+ 2309 00b0 0D93     		str	r3, [sp, #52]
+ 529:Src/main.c    ****   PeriphClkInitStruct.Sai2ClockSelection = RCC_SAI2CLKSOURCE_PLLSAI;
+ 2310              		.loc 1 529 0
+ 2311 00b2 4FF40073 		mov	r3, #512
+ 2312 00b6 0E93     		str	r3, [sp, #56]
+ 530:Src/main.c    ****   PeriphClkInitStruct.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
+ 2313              		.loc 1 530 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 63
+
+
+ 2314 00b8 0023     		movs	r3, #0
+ 2315 00ba 1293     		str	r3, [sp, #72]
+ 531:Src/main.c    ****   PeriphClkInitStruct.Usart6ClockSelection = RCC_USART6CLKSOURCE_PCLK2;
+ 2316              		.loc 1 531 0
+ 2317 00bc 1393     		str	r3, [sp, #76]
+ 532:Src/main.c    ****   PeriphClkInitStruct.I2c1ClockSelection = RCC_I2C1CLKSOURCE_PCLK1;
+ 2318              		.loc 1 532 0
+ 2319 00be 1893     		str	r3, [sp, #96]
+ 533:Src/main.c    ****   PeriphClkInitStruct.I2c3ClockSelection = RCC_I2C3CLKSOURCE_PCLK1;
+ 2320              		.loc 1 533 0
+ 2321 00c0 1B93     		str	r3, [sp, #108]
+ 534:Src/main.c    ****   PeriphClkInitStruct.Clk48ClockSelection = RCC_CLK48SOURCE_PLLSAIP;
+ 2322              		.loc 1 534 0
+ 2323 00c2 1D93     		str	r3, [sp, #116]
+ 535:Src/main.c    ****   PeriphClkInitStruct.Sdmmc1ClockSelection = RCC_SDMMC1CLKSOURCE_CLK48;
+ 2324              		.loc 1 535 0
+ 2325 00c4 4FF00062 		mov	r2, #134217728
+ 2326 00c8 2192     		str	r2, [sp, #132]
+ 536:Src/main.c    ****   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+ 2327              		.loc 1 536 0
+ 2328 00ca 2293     		str	r3, [sp, #136]
+ 537:Src/main.c    ****   {
+ 2329              		.loc 1 537 0
+ 2330 00cc 02A8     		add	r0, sp, #8
+ 2331 00ce FFF7FEFF 		bl	HAL_RCCEx_PeriphCLKConfig
+ 2332              	.LVL231:
+ 2333 00d2 10BB     		cbnz	r0, .L152
+ 544:Src/main.c    **** 
+ 2334              		.loc 1 544 0
+ 2335 00d4 FFF7FEFF 		bl	HAL_RCC_GetHCLKFreq
+ 2336              	.LVL232:
+ 2337 00d8 154B     		ldr	r3, .L153+12
+ 2338 00da A3FB0030 		umull	r3, r0, r3, r0
+ 2339 00de 8009     		lsrs	r0, r0, #6
+ 2340 00e0 FFF7FEFF 		bl	HAL_SYSTICK_Config
+ 2341              	.LVL233:
+ 548:Src/main.c    **** 
+ 2342              		.loc 1 548 0
+ 2343 00e4 0420     		movs	r0, #4
+ 2344 00e6 FFF7FEFF 		bl	HAL_SYSTICK_CLKSourceConfig
+ 2345              	.LVL234:
+ 551:Src/main.c    **** }
+ 2346              		.loc 1 551 0
+ 2347 00ea 0022     		movs	r2, #0
+ 2348 00ec 0F21     		movs	r1, #15
+ 2349 00ee 4FF0FF30 		mov	r0, #-1
+ 2350 00f2 FFF7FEFF 		bl	HAL_NVIC_SetPriority
+ 2351              	.LVL235:
+ 552:Src/main.c    **** 
+ 2352              		.loc 1 552 0
+ 2353 00f6 35B0     		add	sp, sp, #212
+ 2354              	.LCFI40:
+ 2355              		.cfi_remember_state
+ 2356              		.cfi_def_cfa_offset 4
+ 2357              		@ sp needed
+ 2358 00f8 5DF804FB 		ldr	pc, [sp], #4
+ 2359              	.L149:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 64
+
+
+ 2360              	.LCFI41:
+ 2361              		.cfi_restore_state
+ 489:Src/main.c    ****   }
+ 2362              		.loc 1 489 0
+ 2363 00fc 40F2E911 		movw	r1, #489
+ 2364 0100 0C48     		ldr	r0, .L153+16
+ 2365 0102 FFF7FEFF 		bl	_Error_Handler
+ 2366              	.LVL236:
+ 2367              	.L150:
+ 496:Src/main.c    ****   }
+ 2368              		.loc 1 496 0
+ 2369 0106 4FF4F871 		mov	r1, #496
+ 2370 010a 0A48     		ldr	r0, .L153+16
+ 2371 010c FFF7FEFF 		bl	_Error_Handler
+ 2372              	.LVL237:
+ 2373              	.L151:
+ 510:Src/main.c    ****   }
+ 2374              		.loc 1 510 0
+ 2375 0110 4FF4FF71 		mov	r1, #510
+ 2376 0114 0748     		ldr	r0, .L153+16
+ 2377 0116 FFF7FEFF 		bl	_Error_Handler
+ 2378              	.LVL238:
+ 2379              	.L152:
+ 539:Src/main.c    ****   }
+ 2380              		.loc 1 539 0
+ 2381 011a 40F21B21 		movw	r1, #539
+ 2382 011e 0548     		ldr	r0, .L153+16
+ 2383 0120 FFF7FEFF 		bl	_Error_Handler
+ 2384              	.LVL239:
+ 2385              	.L154:
+ 2386              		.align	2
+ 2387              	.L153:
+ 2388 0124 00380240 		.word	1073887232
+ 2389 0128 00700040 		.word	1073770496
+ 2390 012c 6848B101 		.word	28395624
+ 2391 0130 D34D6210 		.word	274877907
+ 2392 0134 00000000 		.word	.LC29
+ 2393              		.cfi_endproc
+ 2394              	.LFE166:
+ 2396              		.section	.text.main,"ax",%progbits
+ 2397              		.align	1
+ 2398              		.global	main
+ 2399              		.syntax unified
+ 2400              		.thumb
+ 2401              		.thumb_func
+ 2402              		.fpu fpv5-sp-d16
+ 2404              	main:
+ 2405              	.LFB165:
+ 398:Src/main.c    **** 
+ 2406              		.loc 1 398 0
+ 2407              		.cfi_startproc
+ 2408              		@ Volatile: function does not return.
+ 2409              		@ args = 0, pretend = 0, frame = 384
+ 2410              		@ frame_needed = 0, uses_anonymous_args = 0
+ 2411 0000 00B5     		push	{lr}
+ 2412              	.LCFI42:
+ 2413              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 65
+
+
+ 2414              		.cfi_offset 14, -4
+ 2415 0002 E1B0     		sub	sp, sp, #388
+ 2416              	.LCFI43:
+ 2417              		.cfi_def_cfa_offset 392
+ 401:Src/main.c    **** 
+ 2418              		.loc 1 401 0
+ 2419 0004 194C     		ldr	r4, .L158
+ 2420 0006 4FF4B472 		mov	r2, #360
+ 2421 000a 2146     		mov	r1, r4
+ 2422 000c 06A8     		add	r0, sp, #24
+ 2423 000e FFF7FEFF 		bl	memcpy
+ 2424              	.LVL240:
+ 410:Src/main.c    **** 
+ 2425              		.loc 1 410 0
+ 2426 0012 FFF7FEFF 		bl	HAL_Init
+ 2427              	.LVL241:
+ 417:Src/main.c    **** 
+ 2428              		.loc 1 417 0
+ 2429 0016 FFF7FEFF 		bl	SystemClock_Config
+ 2430              	.LVL242:
+ 424:Src/main.c    ****   MX_USART1_UART_Init();
+ 2431              		.loc 1 424 0
+ 2432 001a FFF7FEFF 		bl	MX_GPIO_Init
+ 2433              	.LVL243:
+ 425:Src/main.c    ****   MX_USART6_UART_Init();
+ 2434              		.loc 1 425 0
+ 2435 001e FFF7FEFF 		bl	MX_USART1_UART_Init
+ 2436              	.LVL244:
+ 426:Src/main.c    ****   /* USER CODE BEGIN 2 */
+ 2437              		.loc 1 426 0
+ 2438 0022 FFF7FEFF 		bl	MX_USART6_UART_Init
+ 2439              	.LVL245:
+ 428:Src/main.c    **** 
+ 2440              		.loc 1 428 0
+ 2441 0026 1248     		ldr	r0, .L158+4
+ 2442 0028 FFF7FEFF 		bl	debug_init
+ 2443              	.LVL246:
+ 430:Src/main.c    **** 
+ 2444              		.loc 1 430 0
+ 2445 002c 1148     		ldr	r0, .L158+8
+ 2446 002e FFF7FEFF 		bl	xprintf
+ 2447              	.LVL247:
+ 432:Src/main.c    **** 
+ 2448              		.loc 1 432 0
+ 2449 0032 1148     		ldr	r0, .L158+12
+ 2450 0034 FFF7FEFF 		bl	puts
+ 2451              	.LVL248:
+ 434:Src/main.c    **** draw_background();
+ 2452              		.loc 1 434 0
+ 2453 0038 FFF7FEFF 		bl	lcd_start
+ 2454              	.LVL249:
+ 435:Src/main.c    **** initialize_touchscreen();
+ 2455              		.loc 1 435 0
+ 2456 003c FFF7FEFF 		bl	draw_background
+ 2457              	.LVL250:
+ 436:Src/main.c    **** draw_chart(data);
+ 2458              		.loc 1 436 0
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 66
+
+
+ 2459 0040 FFF7FEFF 		bl	initialize_touchscreen
+ 2460              	.LVL251:
+ 437:Src/main.c    **** 
+ 2461              		.loc 1 437 0
+ 2462 0044 06A8     		add	r0, sp, #24
+ 2463 0046 FFF7FEFF 		bl	draw_chart
+ 2464              	.LVL252:
+ 441:Src/main.c    ****   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+ 2465              		.loc 1 441 0
+ 2466 004a 01AD     		add	r5, sp, #4
+ 2467 004c 04F5B474 		add	r4, r4, #360
+ 2468 0050 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 2469 0052 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 2470 0054 2368     		ldr	r3, [r4]
+ 2471 0056 2B60     		str	r3, [r5]
+ 442:Src/main.c    **** 
+ 2472              		.loc 1 442 0
+ 2473 0058 0021     		movs	r1, #0
+ 2474 005a 01A8     		add	r0, sp, #4
+ 2475 005c FFF7FEFF 		bl	osThreadCreate
+ 2476              	.LVL253:
+ 2477 0060 064B     		ldr	r3, .L158+16
+ 2478 0062 1860     		str	r0, [r3]
+ 446:Src/main.c    **** 
+ 2479              		.loc 1 446 0
+ 2480 0064 FFF7FEFF 		bl	osKernelStart
+ 2481              	.LVL254:
+ 2482              	.L156:
+ 2483 0068 FEE7     		b	.L156
+ 2484              	.L159:
+ 2485 006a 00BF     		.align	2
+ 2486              	.L158:
+ 2487 006c 00000000 		.word	.LANCHOR2
+ 2488 0070 00000000 		.word	huart1
+ 2489 0074 00000000 		.word	.LC30
+ 2490 0078 2C000000 		.word	.LC31
+ 2491 007c 00000000 		.word	defaultTaskHandle
+ 2492              		.cfi_endproc
+ 2493              	.LFE165:
+ 2495              		.comm	netconn_thread_handle,4,4
+ 2496              		.comm	defaultTaskHandle,4,4
+ 2497              		.comm	hsdram1,52,4
+ 2498              		.comm	huart6,112,4
+ 2499              		.comm	huart1,112,4
+ 2500              		.comm	htim12,64,4
+ 2501              		.comm	htim8,64,4
+ 2502              		.comm	htim7,64,4
+ 2503              		.comm	htim5,64,4
+ 2504              		.comm	htim3,64,4
+ 2505              		.comm	htim2,64,4
+ 2506              		.comm	htim1,64,4
+ 2507              		.comm	hspi2,100,4
+ 2508              		.comm	hspdif,76,4
+ 2509              		.comm	hsd1,132,4
+ 2510              		.comm	hsai_BlockB2,132,4
+ 2511              		.comm	hsai_BlockA2,132,4
+ 2512              		.comm	hrtc,32,4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 67
+
+
+ 2513              		.comm	hqspi,76,4
+ 2514              		.comm	hltdc,168,4
+ 2515              		.comm	hi2c3,76,4
+ 2516              		.comm	hi2c1,76,4
+ 2517              		.comm	hdma2d,64,4
+ 2518              		.comm	hdcmi,80,4
+ 2519              		.comm	hcrc,36,4
+ 2520              		.comm	hadc3,72,4
+ 2521              		.section	.rodata
+ 2522              		.align	2
+ 2523              		.set	.LANCHOR2,. + 0
+ 2524              	.LC0:
+ 2525 0000 52B8A241 		.word	1101183058
+ 2526 0004 B81EAB41 		.word	1101733560
+ 2527 0008 6666A041 		.word	1101031014
+ 2528 000c 5C8FC841 		.word	1103662940
+ 2529 0010 8FC2AF41 		.word	1102037647
+ 2530 0014 F628C241 		.word	1103243510
+ 2531 0018 52B8D241 		.word	1104328786
+ 2532 001c B81ED341 		.word	1104355000
+ 2533 0020 5C8FD241 		.word	1104318300
+ 2534 0024 7B14B041 		.word	1102058619
+ 2535 0028 52B8A241 		.word	1101183058
+ 2536 002c B81EDB41 		.word	1104879288
+ 2537 0030 6666B041 		.word	1102079590
+ 2538 0034 5C8FC841 		.word	1103662940
+ 2539 0038 8FC2A741 		.word	1101513359
+ 2540 003c F628C241 		.word	1103243510
+ 2541 0040 52B8D241 		.word	1104328786
+ 2542 0044 B81EA341 		.word	1101209272
+ 2543 0048 5C8FD241 		.word	1104318300
+ 2544 004c 7B14B041 		.word	1102058619
+ 2545 0050 52B8A241 		.word	1101183058
+ 2546 0054 B81EAB41 		.word	1101733560
+ 2547 0058 6666B041 		.word	1102079590
+ 2548 005c 5C8FA841 		.word	1101565788
+ 2549 0060 8FC2D741 		.word	1104659087
+ 2550 0064 0AD7A141 		.word	1101125386
+ 2551 0068 52B8D241 		.word	1104328786
+ 2552 006c B81ED341 		.word	1104355000
+ 2553 0070 5C8FD241 		.word	1104318300
+ 2554 0074 7B14B041 		.word	1102058619
+ 2555 0078 52B8A241 		.word	1101183058
+ 2556 007c B81EAB41 		.word	1101733560
+ 2557 0080 6666B041 		.word	1102079590
+ 2558 0084 5C8FC841 		.word	1103662940
+ 2559 0088 8FC2D741 		.word	1104659087
+ 2560 008c F628C241 		.word	1103243510
+ 2561 0090 52B8D241 		.word	1104328786
+ 2562 0094 B81ED341 		.word	1104355000
+ 2563 0098 5C8FD241 		.word	1104318300
+ 2564 009c 7B14B041 		.word	1102058619
+ 2565 00a0 52B8A241 		.word	1101183058
+ 2566 00a4 B81EAB41 		.word	1101733560
+ 2567 00a8 6666B041 		.word	1102079590
+ 2568 00ac 5C8FC841 		.word	1103662940
+ 2569 00b0 8FC2D741 		.word	1104659087
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 68
+
+
+ 2570 00b4 F628C241 		.word	1103243510
+ 2571 00b8 52B8D241 		.word	1104328786
+ 2572 00bc B81ED341 		.word	1104355000
+ 2573 00c0 5C8FD241 		.word	1104318300
+ 2574 00c4 7B14B041 		.word	1102058619
+ 2575 00c8 52B8A241 		.word	1101183058
+ 2576 00cc B81EAB41 		.word	1101733560
+ 2577 00d0 6666B041 		.word	1102079590
+ 2578 00d4 5C8FC841 		.word	1103662940
+ 2579 00d8 8FC2D741 		.word	1104659087
+ 2580 00dc F628C241 		.word	1103243510
+ 2581 00e0 52B8D241 		.word	1104328786
+ 2582 00e4 B81ED341 		.word	1104355000
+ 2583 00e8 5C8FD241 		.word	1104318300
+ 2584 00ec 7B14B041 		.word	1102058619
+ 2585 00f0 52B8A241 		.word	1101183058
+ 2586 00f4 B81EAB41 		.word	1101733560
+ 2587 00f8 6666B041 		.word	1102079590
+ 2588 00fc 5C8FC841 		.word	1103662940
+ 2589 0100 8FC2D741 		.word	1104659087
+ 2590 0104 F628C241 		.word	1103243510
+ 2591 0108 52B8D241 		.word	1104328786
+ 2592 010c B81ED341 		.word	1104355000
+ 2593 0110 5C8FD241 		.word	1104318300
+ 2594 0114 7B14B041 		.word	1102058619
+ 2595 0118 52B8A241 		.word	1101183058
+ 2596 011c B81EAB41 		.word	1101733560
+ 2597 0120 6666B041 		.word	1102079590
+ 2598 0124 5C8FC841 		.word	1103662940
+ 2599 0128 8FC2D741 		.word	1104659087
+ 2600 012c F628C241 		.word	1103243510
+ 2601 0130 52B8D241 		.word	1104328786
+ 2602 0134 B81ED341 		.word	1104355000
+ 2603 0138 5C8FD241 		.word	1104318300
+ 2604 013c 7B14B041 		.word	1102058619
+ 2605 0140 52B8A241 		.word	1101183058
+ 2606 0144 B81EAB41 		.word	1101733560
+ 2607 0148 6666B041 		.word	1102079590
+ 2608 014c 5C8FC841 		.word	1103662940
+ 2609 0150 8FC2D741 		.word	1104659087
+ 2610 0154 F628C241 		.word	1103243510
+ 2611 0158 52B8D241 		.word	1104328786
+ 2612 015c B81ED341 		.word	1104355000
+ 2613 0160 5C8FD241 		.word	1104318300
+ 2614 0164 7B14B041 		.word	1102058619
+ 2615              	.LC32:
+ 2616 0168 00000000 		.word	.LC1
+ 2617 016c 00000000 		.word	StartDefaultTask
+ 2618 0170 0000     		.short	0
+ 2619 0172 0000     		.space	2
+ 2620 0174 00000000 		.word	0
+ 2621 0178 00100000 		.word	4096
+ 2622              		.section	.bss.TS_State,"aw",%nobits
+ 2623              		.align	2
+ 2624              		.set	.LANCHOR1,. + 0
+ 2627              	TS_State:
+ 2628 0000 00000000 		.space	44
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 69
+
+
+ 2628      00000000 
+ 2628      00000000 
+ 2628      00000000 
+ 2628      00000000 
+ 2629              		.section	.bss.inpub_id,"aw",%nobits
+ 2630              		.align	2
+ 2631              		.set	.LANCHOR0,. + 0
+ 2634              	inpub_id:
+ 2635 0000 00000000 		.space	4
+ 2636              		.section	.rodata.MX_USART1_UART_Init.str1.4,"aMS",%progbits,1
+ 2637              		.align	2
+ 2638              	.LC29:
+ 2639 0000 5372632F 		.ascii	"Src/main.c\000"
+ 2639      6D61696E 
+ 2639      2E6300
+ 2640              		.section	.rodata.StartDefaultTask.str1.4,"aMS",%progbits,1
+ 2641              		.align	2
+ 2642              	.LC28:
+ 2643 0000 53656E64 		.ascii	"Send message \012\000"
+ 2643      206D6573 
+ 2643      73616765 
+ 2643      200A00
+ 2644              		.section	.rodata.draw_background.str1.4,"aMS",%progbits,1
+ 2645              		.align	2
+ 2646              	.LC9:
+ 2647 0000 48656C6C 		.ascii	"Hello\000"
+ 2647      6F00
+ 2648              		.section	.rodata.draw_chart.str1.4,"aMS",%progbits,1
+ 2649              		.align	2
+ 2650              	.LC10:
+ 2651 0000 256400   		.ascii	"%d\000"
+ 2652              		.section	.rodata.example_do_connect.str1.4,"aMS",%progbits,1
+ 2653              		.align	2
+ 2654              	.LC16:
+ 2655 0000 6C776970 		.ascii	"lwip_test\000"
+ 2655      5F746573 
+ 2655      7400
+ 2656 000a 0000     		.space	2
+ 2657              	.LC17:
+ 2658 000c 3139322E 		.ascii	"192.168.0.101\000"
+ 2658      3136382E 
+ 2658      302E3130 
+ 2658      3100
+ 2659 001a 0000     		.space	2
+ 2660              	.LC18:
+ 2661 001c 43726561 		.ascii	"Created ip\000"
+ 2661      74656420 
+ 2661      697000
+ 2662 0027 00       		.space	1
+ 2663              	.LC19:
+ 2664 0028 6D717474 		.ascii	"mqtt_connect return tutaj %d\012\000"
+ 2664      5F636F6E 
+ 2664      6E656374 
+ 2664      20726574 
+ 2664      75726E20 
+ 2665 0046 0000     		.space	2
+ 2666              	.LC20:
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 70
+
+
+ 2667 0048 6D717474 		.ascii	"mqtt_connectbvgfdbgfdgfd\000"
+ 2667      5F636F6E 
+ 2667      6E656374 
+ 2667      62766766 
+ 2667      64626766 
+ 2668              		.section	.rodata.example_publish.str1.4,"aMS",%progbits,1
+ 2669              		.align	2
+ 2670              	.LC25:
+ 2671 0000 67697665 		.ascii	"give_temperature\000"
+ 2671      5F74656D 
+ 2671      70657261 
+ 2671      74757265 
+ 2671      00
+ 2672 0011 000000   		.space	3
+ 2673              	.LC26:
+ 2674 0014 6573702F 		.ascii	"esp/temperature\000"
+ 2674      74656D70 
+ 2674      65726174 
+ 2674      75726500 
+ 2675              	.LC27:
+ 2676 0024 5075626C 		.ascii	"Publish err: %d\012\000"
+ 2676      69736820 
+ 2676      6572723A 
+ 2676      2025640A 
+ 2676      00
+ 2677              		.section	.rodata.main.str1.4,"aMS",%progbits,1
+ 2678              		.align	2
+ 2679              	.LC30:
+ 2680 0000 1B5B303B 		.ascii	"\033[0;32mSTM32F746 Discovery Project\033[0;39m\012"
+ 2680      33326D53 
+ 2680      544D3332 
+ 2680      46373436 
+ 2680      20446973 
+ 2681 002a 00       		.ascii	"\000"
+ 2682 002b 00       		.space	1
+ 2683              	.LC31:
+ 2684 002c 52656775 		.ascii	"Regular printf\000"
+ 2684      6C617220 
+ 2684      7072696E 
+ 2684      746600
+ 2685              		.section	.rodata.mqtt_connection_cb.str1.4,"aMS",%progbits,1
+ 2686              		.align	2
+ 2687              	.LC21:
+ 2688 0000 6D717474 		.ascii	"mqtt_connection_cb: Successfully connected\000"
+ 2688      5F636F6E 
+ 2688      6E656374 
+ 2688      696F6E5F 
+ 2688      63623A20 
+ 2689 002b 00       		.space	1
+ 2690              	.LC22:
+ 2691 002c 6573702F 		.ascii	"esp/temperature/client2\000"
+ 2691      74656D70 
+ 2691      65726174 
+ 2691      7572652F 
+ 2691      636C6965 
+ 2692              	.LC23:
+ 2693 0044 6D717474 		.ascii	"mqtt_subscribe return: %d\012\000"
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 71
+
+
+ 2693      5F737562 
+ 2693      73637269 
+ 2693      62652072 
+ 2693      65747572 
+ 2694 005f 00       		.space	1
+ 2695              	.LC24:
+ 2696 0060 6D717474 		.ascii	"mqtt_connection_cb: Disconnected, reason: %d\012\000"
+ 2696      5F636F6E 
+ 2696      6E656374 
+ 2696      696F6E5F 
+ 2696      63623A20 
+ 2697              		.section	.rodata.mqtt_incoming_data_cb.str1.4,"aMS",%progbits,1
+ 2698              		.align	2
+ 2699              	.LC13:
+ 2700 0000 496E636F 		.ascii	"Incoming publish payload with length %d, flags %u\012"
+ 2700      6D696E67 
+ 2700      20707562 
+ 2700      6C697368 
+ 2700      20706179 
+ 2701 0032 00       		.ascii	"\000"
+ 2702 0033 00       		.space	1
+ 2703              	.LC14:
+ 2704 0034 6D717474 		.ascii	"mqtt_incoming_data_cb: %s\012\000"
+ 2704      5F696E63 
+ 2704      6F6D696E 
+ 2704      675F6461 
+ 2704      74615F63 
+ 2705 004f 00       		.space	1
+ 2706              	.LC15:
+ 2707 0050 43616C6C 		.ascii	"Call an A function ...\012\000"
+ 2707      20616E20 
+ 2707      41206675 
+ 2707      6E637469 
+ 2707      6F6E202E 
+ 2708              		.section	.rodata.mqtt_incoming_publish_cb.str1.4,"aMS",%progbits,1
+ 2709              		.align	2
+ 2710              	.LC6:
+ 2711 0000 496E636F 		.ascii	"Incoming publish at topic %s with total length %u\012"
+ 2711      6D696E67 
+ 2711      20707562 
+ 2711      6C697368 
+ 2711      20617420 
+ 2712 0032 00       		.ascii	"\000"
+ 2713 0033 00       		.space	1
+ 2714              	.LC7:
+ 2715 0034 7072696E 		.ascii	"print_payload\000"
+ 2715      745F7061 
+ 2715      796C6F61 
+ 2715      6400
+ 2716 0042 0000     		.space	2
+ 2717              	.LC8:
+ 2718 0044 6573702F 		.ascii	"esp/temperature/client1\000"
+ 2718      74656D70 
+ 2718      65726174 
+ 2718      7572652F 
+ 2718      636C6965 
+ 2719              		.section	.rodata.mqtt_pub_request_cb.str1.4,"aMS",%progbits,1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 72
+
+
+ 2720              		.align	2
+ 2721              	.LC5:
+ 2722 0000 5075626C 		.ascii	"Publish result: %d\012\000"
+ 2722      69736820 
+ 2722      72657375 
+ 2722      6C743A20 
+ 2722      25640A00 
+ 2723              		.section	.rodata.mqtt_sub_request_cb.str1.4,"aMS",%progbits,1
+ 2724              		.align	2
+ 2725              	.LC3:
+ 2726 0000 53756273 		.ascii	"Subscribe result: %d\012\000"
+ 2726      63726962 
+ 2726      65207265 
+ 2726      73756C74 
+ 2726      3A202564 
+ 2727 0016 0000     		.space	2
+ 2728              	.LC4:
+ 2729 0018 53756273 		.ascii	"Subscribe result is OK!\000"
+ 2729      63726962 
+ 2729      65207265 
+ 2729      73756C74 
+ 2729      20697320 
+ 2730              		.section	.rodata.print_data.str1.4,"aMS",%progbits,1
+ 2731              		.align	2
+ 2732              	.LC11:
+ 2733 0000 54656D70 		.ascii	"Temperature1 is:\000"
+ 2733      65726174 
+ 2733      75726531 
+ 2733      2069733A 
+ 2733      00
+ 2734 0011 000000   		.space	3
+ 2735              	.LC12:
+ 2736 0014 54656D70 		.ascii	"Temperature2 is:\000"
+ 2736      65726174 
+ 2736      75726532 
+ 2736      2069733A 
+ 2736      00
+ 2737              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 2738              		.align	2
+ 2739              	.LC1:
+ 2740 0000 64656661 		.ascii	"defaultTask\000"
+ 2740      756C7454 
+ 2740      61736B00 
+ 2741              		.text
+ 2742              	.Letext0:
+ 2743              		.file 2 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 2744              		.file 3 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\_stdint.h"
+ 2745              		.file 4 "Drivers/CMSIS/Include/core_cm7.h"
+ 2746              		.file 5 "Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h"
+ 2747              		.file 6 "Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f746xx.h"
+ 2748              		.file 7 "Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h"
+ 2749              		.file 8 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\lock.h"
+ 2750              		.file 9 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\_types.h"
+ 2751              		.file 10 "c:\\gcc_toolchain\\6_2017-q1-update\\lib\\gcc\\arm-none-eabi\\6.3.1\\include\\stddef.h"
+ 2752              		.file 11 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\reent.h"
+ 2753              		.file 12 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h"
+ 2754              		.file 13 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc_ex.h"
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 73
+
+
+ 2755              		.file 14 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rcc.h"
+ 2756              		.file 15 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio.h"
+ 2757              		.file 16 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h"
+ 2758              		.file 17 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h"
+ 2759              		.file 18 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_crc.h"
+ 2760              		.file 19 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h"
+ 2761              		.file 20 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dcmi.h"
+ 2762              		.file 21 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_eth.h"
+ 2763              		.file 22 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_fmc.h"
+ 2764              		.file 23 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sdram.h"
+ 2765              		.file 24 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_i2c.h"
+ 2766              		.file 25 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc.h"
+ 2767              		.file 26 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_qspi.h"
+ 2768              		.file 27 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_rtc.h"
+ 2769              		.file 28 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai.h"
+ 2770              		.file 29 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h"
+ 2771              		.file 30 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h"
+ 2772              		.file 31 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spdifrx.h"
+ 2773              		.file 32 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h"
+ 2774              		.file 33 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h"
+ 2775              		.file 34 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h"
+ 2776              		.file 35 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 2777              		.file 36 "Middlewares/Third_Party/FreeRTOS/Source/include/queue.h"
+ 2778              		.file 37 "Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h"
+ 2779              		.file 38 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h"
+ 2780              		.file 39 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\stdlib.h"
+ 2781              		.file 40 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\time.h"
+ 2782              		.file 41 "Middlewares/Third_Party/LwIP/src/include/lwip/arch.h"
+ 2783              		.file 42 "Middlewares/Third_Party/LwIP/src/include/lwip/memp.h"
+ 2784              		.file 43 "Middlewares/Third_Party/LwIP/src/include/lwip/priv/memp_priv.h"
+ 2785              		.file 44 "Middlewares/Third_Party/LwIP/src/include/lwip/err.h"
+ 2786              		.file 45 "Middlewares/Third_Party/LwIP/src/include/lwip/pbuf.h"
+ 2787              		.file 46 "Middlewares/Third_Party/LwIP/src/include/lwip/ip4_addr.h"
+ 2788              		.file 47 "Middlewares/Third_Party/LwIP/src/include/lwip/ip_addr.h"
+ 2789              		.file 48 "Middlewares/Third_Party/LwIP/src/include/lwip/netif.h"
+ 2790              		.file 49 "Middlewares/Third_Party/LwIP/src/include/lwip/prot/ip4.h"
+ 2791              		.file 50 "Middlewares/Third_Party/LwIP/src/include/lwip/prot/ethernet.h"
+ 2792              		.file 51 "Middlewares/Third_Party/LwIP/src/include/netif/ethernet.h"
+ 2793              		.file 52 "Middlewares/Third_Party/LwIP/src/include/lwip/ip.h"
+ 2794              		.file 53 "Middlewares/Third_Party/LwIP/src/include/lwip/udp.h"
+ 2795              		.file 54 "Middlewares/Third_Party/LwIP/system/arch/sys_arch.h"
+ 2796              		.file 55 "Middlewares/Third_Party/LwIP/src/include/lwip/timeouts.h"
+ 2797              		.file 56 "Middlewares/Third_Party/LwIP/src/include/lwip/tcpip.h"
+ 2798              		.file 57 "Inc/lwip.h"
+ 2799              		.file 58 "Middlewares/Third_Party/LwIP/src/include/lwip/errno.h"
+ 2800              		.file 59 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\unistd.h"
+ 2801              		.file 60 "e:\\swprojekt\\7tmqqt_piesoc\\utilities\\fonts\\fonts.h"
+ 2802              		.file 61 "Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h"
+ 2803              		.file 62 "e:\\swprojekt\\7tmqqt_piesoc\\drivers\\bsp\\components\\common\\ts.h"
+ 2804              		.file 63 "Drivers/BSP/STM32746G-Discovery/../Components/ft5336/ft5336.h"
+ 2805              		.file 64 "Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.h"
+ 2806              		.file 65 "Middlewares/Third_Party/LwIP/src/include/lwip/inet.h"
+ 2807              		.file 66 "Middlewares/Third_Party/LwIP/src/include/lwip/netdb.h"
+ 2808              		.file 67 "Drivers/BSP/Components/wm8994/../Common/audio.h"
+ 2809              		.file 68 "Drivers/BSP/Components/wm8994/wm8994.h"
+ 2810              		.file 69 "Middlewares/Third_Party/LwIP/src/include/lwip/apps/mqtt.h"
+ 2811              		.file 70 "<built-in>"
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 74
+
+
+ 2812              		.file 71 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h"
+ 2813              		.file 72 "Inc/term_io.h"
+ 2814              		.file 73 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\stdio.h"
+ 2815              		.file 74 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h"
+ 2816              		.file 75 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h"
+ 2817              		.file 76 "Inc/dbgu.h"
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 75
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:18     .text.MX_GPIO_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:24     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:423    .text.MX_GPIO_Init:0000025c $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:439    .text.lcd_start:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:445    .text.lcd_start:00000000 lcd_start
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:515    .text.lcd_start:00000064 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:520    .text.mqtt_sub_request_cb:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:526    .text.mqtt_sub_request_cb:00000000 mqtt_sub_request_cb
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:558    .text.mqtt_sub_request_cb:00000018 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:564    .text.mqtt_pub_request_cb:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:570    .text.mqtt_pub_request_cb:00000000 mqtt_pub_request_cb
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:596    .text.mqtt_pub_request_cb:00000010 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:601    .text.mqtt_incoming_publish_cb:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:607    .text.mqtt_incoming_publish_cb:00000000 mqtt_incoming_publish_cb
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:672    .text.mqtt_incoming_publish_cb:00000044 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:681    .text.__io_putchar:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:688    .text.__io_putchar:00000000 __io_putchar
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:713    .text.__io_putchar:00000014 $d
+                            *COM*:00000070 huart1
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:718    .text.inkey:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:725    .text.inkey:00000000 inkey
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:757    .text.inkey:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:762    .text.draw_button:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:769    .text.draw_button:00000000 draw_button
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:827    .text.draw_button:00000040 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:832    .text.draw_background:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:839    .text.draw_background:00000000 draw_background
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:896    .text.draw_background:00000050 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:901    .text.draw_chart:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:908    .text.draw_chart:00000000 draw_chart
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1224   .text.draw_chart:000001fc $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1234   .text.initialize_touchscreen:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1241   .text.initialize_touchscreen:00000000 initialize_touchscreen
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1280   .text.print_data:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1287   .text.print_data:00000000 print_data
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1460   .text.print_data:000000dc $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1468   .text.mqtt_incoming_data_cb:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1474   .text.mqtt_incoming_data_cb:00000000 mqtt_incoming_data_cb
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1558   .text.mqtt_incoming_data_cb:00000060 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1566   .text.example_do_connect:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1573   .text.example_do_connect:00000000 example_do_connect
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1660   .text.example_do_connect:0000005c $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1676   .text.mqtt_connection_cb:00000000 mqtt_connection_cb
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1670   .text.mqtt_connection_cb:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1769   .text.mqtt_connection_cb:0000006c $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1781   .text.example_publish:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1788   .text.example_publish:00000000 example_publish
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1843   .text.example_publish:00000030 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1851   .text.StartDefaultTask:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1858   .text.StartDefaultTask:00000000 StartDefaultTask
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1959   .text.StartDefaultTask:00000088 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1967   .text.create_menu:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1974   .text.create_menu:00000000 create_menu
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1986   .text.HAL_TIM_PeriodElapsedCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:1993   .text.HAL_TIM_PeriodElapsedCallback:00000000 HAL_TIM_PeriodElapsedCallback
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 76
+
+
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2024   .text.HAL_TIM_PeriodElapsedCallback:00000014 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2029   .text._Error_Handler:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2036   .text._Error_Handler:00000000 _Error_Handler
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2051   .text.MX_USART1_UART_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2057   .text.MX_USART1_UART_Init:00000000 MX_USART1_UART_Init
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2108   .text.MX_USART1_UART_Init:00000034 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2115   .text.MX_USART6_UART_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2121   .text.MX_USART6_UART_Init:00000000 MX_USART6_UART_Init
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2171   .text.MX_USART6_UART_Init:00000034 $d
+                            *COM*:00000070 huart6
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2178   .text.SystemClock_Config:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2185   .text.SystemClock_Config:00000000 SystemClock_Config
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2388   .text.SystemClock_Config:00000124 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2397   .text.main:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2404   .text.main:00000000 main
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2487   .text.main:0000006c $d
+                            *COM*:00000004 defaultTaskHandle
+                            *COM*:00000004 netconn_thread_handle
+                            *COM*:00000034 hsdram1
+                            *COM*:00000040 htim12
+                            *COM*:00000040 htim8
+                            *COM*:00000040 htim7
+                            *COM*:00000040 htim5
+                            *COM*:00000040 htim3
+                            *COM*:00000040 htim2
+                            *COM*:00000040 htim1
+                            *COM*:00000064 hspi2
+                            *COM*:0000004c hspdif
+                            *COM*:00000084 hsd1
+                            *COM*:00000084 hsai_BlockB2
+                            *COM*:00000084 hsai_BlockA2
+                            *COM*:00000020 hrtc
+                            *COM*:0000004c hqspi
+                            *COM*:000000a8 hltdc
+                            *COM*:0000004c hi2c3
+                            *COM*:0000004c hi2c1
+                            *COM*:00000040 hdma2d
+                            *COM*:00000050 hdcmi
+                            *COM*:00000024 hcrc
+                            *COM*:00000048 hadc3
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2522   .rodata:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2623   .bss.TS_State:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2627   .bss.TS_State:00000000 TS_State
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2630   .bss.inpub_id:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2634   .bss.inpub_id:00000000 inpub_id
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2637   .rodata.MX_USART1_UART_Init.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2641   .rodata.StartDefaultTask.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2645   .rodata.draw_background.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2649   .rodata.draw_chart.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2653   .rodata.example_do_connect.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2669   .rodata.example_publish.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2678   .rodata.main.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2686   .rodata.mqtt_connection_cb.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2698   .rodata.mqtt_incoming_data_cb.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2709   .rodata.mqtt_incoming_publish_cb.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2720   .rodata.mqtt_pub_request_cb.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2724   .rodata.mqtt_sub_request_cb.str1.4:00000000 $d
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 77
+
+
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2731   .rodata.print_data.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s:2738   .rodata.str1.4:00000000 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+HAL_GPIO_WritePin
+HAL_GPIO_Init
+BSP_LCD_Init
+BSP_LCD_LayerDefaultInit
+BSP_LCD_DisplayOn
+BSP_LCD_SelectLayer
+BSP_LCD_Clear
+BSP_LCD_SetBackColor
+BSP_LCD_SetColorKeying
+BSP_LCD_SetTransparency
+printf
+puts
+strcmp
+BSP_LCD_SetTextColor
+BSP_LCD_FillRect
+BSP_LCD_DisplayStringAt
+BSP_LCD_DrawHLine
+BSP_LCD_DrawVLine
+BSP_LCD_DrawLine
+BSP_LCD_FillPolygon
+BSP_LCD_SetFont
+sprintf
+Font12
+BSP_LCD_GetXSize
+BSP_LCD_GetYSize
+BSP_TS_Init
+strncpy
+BSP_LCD_ClearStringLine
+Font24
+xprintf
+ip4addr_aton
+mqtt_client_connect
+mqtt_set_inpub_callback
+mqtt_sub_unsub
+mqtt_publish
+MX_LWIP_Init
+vTaskDelay
+BSP_TS_GetState
+HAL_IncTick
+HAL_UART_Init
+HAL_RCC_OscConfig
+HAL_PWREx_EnableOverDrive
+HAL_RCC_ClockConfig
+HAL_RCCEx_PeriphCLKConfig
+HAL_RCC_GetHCLKFreq
+HAL_SYSTICK_Config
+HAL_SYSTICK_CLKSourceConfig
+HAL_NVIC_SetPriority
+memcpy
+HAL_Init
+debug_init
+osThreadCreate
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKxj4SE.s 			page 78
+
+
+osKernelStart

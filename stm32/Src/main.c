@@ -223,7 +223,7 @@ static void lcd_start(void)
 }
 
 //[rmv]
-void draw_button(int xPos, int yPos, int width, int height, uint32_t color, uint8_t* text);
+void draw_button(int button[4], uint32_t color, uint8_t* text);
 void draw_background(void)
 {
 	/* Select the LCD Background Layer  */
@@ -233,15 +233,19 @@ void draw_background(void)
 
 	//select Foreground Layer
 	BSP_LCD_SelectLayer(1);
-	char greeting[] = "Hello";
-	draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
+	// char greeting[] = "Hello";
+	// draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
 }
 
-void draw_button(int xPos, int yPos, int width, int height, uint32_t color, uint8_t* text){
+void draw_button(int button[4], uint32_t color, uint8_t* text){
+  int xPos = button[0];
+  int yPos = button[1];
+  int width = button[2];
+  int height = button[3];
 
 	BSP_LCD_SelectLayer(0);
 	BSP_LCD_SetTextColor(color);
-	BSP_LCD_FillRect(xPos,yPos,width,height);
+	BSP_LCD_DrawRect(xPos,yPos,width,height);
 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
 	BSP_LCD_DisplayStringAt(xPos+5, yPos+5, text, 0);
 
@@ -778,6 +782,7 @@ static void MX_GPIO_Init(void)
   * @retval None
   */
 /* USER CODE END Header_StartDefaultTask */
+int which_window = 0;
 static void mqtt_connection_cb(mqtt_client_t *client, void *arg, mqtt_connection_status_t status);
 static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len);
 static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags);
@@ -885,7 +890,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
 {
   printf("Incoming publish payload with length %d, flags %u\n", len, (unsigned int)flags);
 
-  if(flags & MQTT_DATA_FLAG_LAST) {
+  if(flags & MQTT_DATA_FLAG_LAST && which_window == 2) {
     /* Last fragment of payload received (or whole part if payload fits receive buffer
        See MQTT_VAR_HEADER_BUFFER_LEN)  */
 
@@ -935,10 +940,66 @@ void example_publish(mqtt_client_t *client, void *arg)
   }
 }
 
-void create_menu(){
+// zmienna jest u gory bo przyjmowanie danych musi wiedziec czy moze wyswietlic je
+// int which_window = 0;
+
+int button_return[4] = {0,0,0,0};
+int button_choose_thermometer1[4] = {0,0,0,0};
+int button_choose_thermometer2[4] = {0,0,0,0};
+int button_show_temperature[4] = {0,0,0,0};
+int button_show_charts[4] = {0,0,0,0};
+
+void draw_menu(){
+  BSP_LCD_Clear(LCD_COLOR_WHITE);
+  BSP_LCD_SelectLayer(0);
+  BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+  // BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
+
+  //select Foreground Layer
+  BSP_LCD_SelectLayer(1);
+  char actual[] = "Actual temperature";
+  char charts[] = "Temperature charts";
+  draw_button(button_show_temperature,LCD_COLOR_MAGENTA,&actual);
+  draw_button(button_show_charts,LCD_COLOR_MAGENTA,&charts);
+
+}
+
+void draw_choose_thermometer(){
+  BSP_LCD_Clear(LCD_COLOR_WHITE);
+  BSP_LCD_SelectLayer(0);
+  BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+  // BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
+
+  //select Foreground Layer
+  BSP_LCD_SelectLayer(1);
+  char thermometer1[] = "Thermometer 1";
+  char thermometer2[] = "Thermometer 2";
+  draw_button(button_choose_thermometer1,LCD_COLOR_MAGENTA,&thermometer1);
+  draw_button(button_choose_thermometer2,LCD_COLOR_MAGENTA,&thermometer2);
+
+}
+
+void draw_actual_temperature(){
+
+  
+}
+
+
+void draw_chart(int id_thermometer){
+
+  //narysuj odpowiedni wykres
 
 
 }
+
+int touched_button(int button[4],int x, int y){
+  if(button[0] <= x && (button[0] + button[2]) >= x && button[1] <= y && (button[3] + button[1]) >= y){
+    return 1;
+  }
+  return 0;
+}
+
+
 void StartDefaultTask(void const * argument)
 {
   MX_LWIP_Init();
@@ -961,16 +1022,43 @@ void StartDefaultTask(void const * argument)
 	BSP_TS_GetState(&TS_State);
 	if(TS_State.touchDetected)
 	{
-		BSP_LCD_Clear(LCD_COLOR_WHITE);
-		BSP_LCD_SelectLayer(0);
-		BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-		BSP_LCD_FillRect(0,0,LCD_X_SIZE,LCD_Y_SIZE);
-
-		//select Foreground Layer
-		BSP_LCD_SelectLayer(1);
-		char greeting[] = "Hello";
-		draw_button(50,50,100,100,LCD_COLOR_MAGENTA,&greeting);
-
+    
+    //pobrac jakos wspolrzedne dotknietego pola
+    int x = 0;
+    int y = 0;
+    if(which_window == 0){
+      if(touched_button(button_show_charts,x,y) == 1){
+        draw_choose_thermometer();
+        which_window = 1;
+      }
+      else if(touched_button(button_show_temperature,x,y) == 1){
+        // draw_actual_temperature();
+        //przy otrzymaniu danych mqtt pokaze temperature
+        which_window = 2;
+      }
+    }
+    else if(which_window == 1){
+      if(touched_button(button_choose_thermometer1,x,y) == 1){
+        draw_chart();
+        which_window = 3;
+      }
+      else if(touched_button(button_choose_thermometer2,x,y) == 1){
+        draw_chart();
+        which_window = 3;
+      }
+    }
+    else if(which_window == 2){
+      if(touched_button(button_return,x,y) == 1){
+        draw_menu();
+        which_window = 0;
+      }
+    }
+    else if(which_window == 3){
+      if(touched_button(button_return,x,y) == 1){
+        draw_menu();
+        which_window = 0;
+      }
+    }
 	}
 
 	char key = inkey();

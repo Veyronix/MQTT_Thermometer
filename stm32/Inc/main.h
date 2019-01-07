@@ -382,7 +382,10 @@
 #define ARDUINO_MISO_D12_Pin GPIO_PIN_14
 #define ARDUINO_MISO_D12_GPIO_Port GPIOB
 #define ARDUINO_MOSI_PWM_D11_Pin GPIO_PIN_15
-#define ARDUINO_MOSI_PWM_D11_GPIO_Port GPIOB
+#define ARDUINO_MOSI_PWM_D11_GPIO_Port
+// user defined
+#define BUFFER_SIZE 100
+
 
 /* ########################## Assert Selection ############################## */
 /**

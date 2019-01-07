@@ -125,7 +125,14 @@ UART_HandleTypeDef huart6;
 
 SDRAM_HandleTypeDef hsdram1;
 
+
 osThreadId defaultTaskHandle;
+
+float buffer[BUFFER_SIZE];
+int first_index = 0;
+int current_pos = 0;
+int is_full = 0;
+
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
@@ -247,7 +254,7 @@ void draw_button(int xPos, int yPos, int width, int height, uint32_t color, uint
 
 }
 
-void draw_chart(float* data){
+void draw_chart(){
 
     int chart_height = 200;
 	int chart_height_coord = 230;
@@ -264,15 +271,23 @@ void draw_chart(float* data){
     BSP_LCD_DrawVLine(chart_x_pos,chart_y_pos_coord,chart_height_coord);
     
 //    BSP_LCD_FillTriangle(chart_length-10,chart_length-10,chart_length,chart_y_pos+5,chart_y_pos-5,chart_y_pos);
-    int n = 90; //sizeof(data)/sizeof(data[0]);
-    float max = data[0];
-    float min = data[0];//0;//data[0];
+
+    //check amount of data
+    int n = 0;
+    for(int i = 0; i < BUFFER_SIZE; i++){
+        if(buffer[i] != INT32_MIN)
+            n++;
+    }
+
+    //int n = 90; //sizeof(data)/sizeof(data[0]);
+    float max = buffer[0];
+    float min = buffer[0];//0;//data[0];
 
     for(int i=1; i<n; i++){
-      if(data[i] < min)
-          min = data[i];
-      if(data[i] > max)
-          max = data[i];
+      if(buffer[i] < min)
+          min = buffer[i];
+      if(buffer[i] > max)
+          max = buffer[i];
     }
     int min_i = min;//0;//min;
     int max_i = max;
@@ -280,7 +295,7 @@ void draw_chart(float* data){
     float amplitude = max - min; // ?
     float scale = chart_height/amplitude; // ?
 
-// draw scale
+    // draw scale
     int y = chart_y_pos;
     BSP_LCD_SetTextColor(LCD_COLOR_LIGHTGRAY);
     for(int i=1;i<amplitude;i++){
@@ -291,15 +306,16 @@ void draw_chart(float* data){
   BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
 
   int sample_len = chart_length/n;
-  for(int i=0; i<n-1; i++){
-    int x1,y1,x2,y2;
-    x1 = chart_x_pos + i * sample_len;
-    x2 = chart_x_pos + (i+1) * sample_len;
-    y1 = chart_y_pos - (data[i] - min_i)*coordinates_scale;
-    y2 = chart_y_pos - (data[i+1] - min_i)*coordinates_scale;
-
-    BSP_LCD_DrawLine(x1,y1,x2,y2);
-
+  int stop_cond = (first_index == 0) ? BUFFER_SIZE -1 : first_index -1;
+  for(int i= first_index; i != stop_cond; i = (i+1)%BUFFER_SIZE){
+      if(buffer[i] != INT32_MIN) {
+          int x1, y1, x2, y2;
+          x1 = chart_x_pos + i * sample_len;
+          x2 = chart_x_pos + (i + 1) * sample_len;
+          y1 = chart_y_pos - (buffer[i] - min_i) * coordinates_scale;
+          y2 = chart_y_pos - (buffer[i + 1] - min_i) * coordinates_scale;
+          BSP_LCD_DrawLine(x1, y1, x2, y2);
+      }
   }
 	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 	Point points[3];
@@ -352,6 +368,30 @@ int initialize_touchscreen(void)
 	return 0;
 }
 
+void add_data_to_buffer(char* new_item)
+{
+    int buff_size = sizeof(buffer);
+    float new_item_f = atoi(new_item);
+    buffer[current_pos] = new_item_f;
+
+    if( is_full == 0){
+        current_pos = (current_pos++)%buff_size;
+    }
+
+    if(is_full == 1){
+        first_index = (first_index++)%buff_size;
+        current_pos = (current_pos++)%buff_size;
+    }
+
+    if(current_pos == buff_size - 1 && is_full == 0)
+    {
+        is_full = 1;
+        first_index = 1;
+    }
+}
+
+
+
  int print_data(char* data, int client_id, int len){
 	BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
 	BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
@@ -399,6 +439,11 @@ int main(void)
 
 
   float data[90] = {20.34,21.39,20.05,25.07,21.97,24.27,26.34,26.39,26.32,22.01,20.34,27.39,22.05,25.07,20.97,24.27,26.34,20.39,26.32,22.01,20.34,21.39,22.05,21.07,26.97,20.23,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01};
+
+// fill buffer
+for(int i = 0; i < BUFFER_SIZE; i++)
+    buffer[i] = INT32_MIN;
+
 
   /* USER CODE BEGIN 1 */
 
@@ -902,6 +947,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
 
     } else if(inpub_id == 2){
 		print_data((const char *)data, 1,len);
+		add_data_to_buffer((const char *)data);
 	}
 	else {
       //printf("mqtt_incoming_data_cb: Ignoring payload...\n");

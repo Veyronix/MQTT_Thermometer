@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
   30:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****      *    is the industry's de facto standard.                               *
   31:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****      *                                                                       *
   32:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****      *    Help yourself get started quickly while simultaneously helping     *
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 2
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 2
 
 
   33:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****      *    to support the FreeRTOS project by purchasing a FreeRTOS           *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
   87:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** header files above, but not in this file, in order to generate the correct
   88:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** privileged Vs unprivileged linkage and placement. */
   89:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE /*lint !e961 !e750. */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 3
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 3
 
 
   90:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  144:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #define tskREADY_CHAR		( 'R' )
  145:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #define tskDELETED_CHAR		( 'D' )
  146:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #define tskSUSPENDED_CHAR	( 'S' )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 4
 
 
  147:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  201:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	/* If configUSE_PORT_OPTIMISED_TASK_SELECTION is 1 then task selection is
  202:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	performed in a way that is tailored to the particular microcontroller
  203:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	architecture being used. */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 5
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 5
 
 
  204:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  258:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  */
  259:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #define prvAddTaskToReadyList( pxTCB )																\
  260:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	traceMOVED_TASK_TO_READY_STATE( pxTCB );														\
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 6
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 6
 
 
  261:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	taskRECORD_READY_PRIORITY( ( pxTCB )->uxPriority );												\
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  315:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#if ( configUSE_TRACE_FACILITY == 1 )
  316:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		UBaseType_t		uxTCBNumber;		/*< Stores a number that increments each time a TCB is created.  It al
  317:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		UBaseType_t		uxTaskNumber;		/*< Stores a number specifically for use by third party trace code. *
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 7
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 7
 
 
  318:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  372:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_INITIALIZED_DATA TCB_t * volatile pxCurrentTCB = NULL;
  373:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  374:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /* Lists for ready and blocked tasks. --------------------*/
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 8
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 8
 
 
  375:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_DATA static List_t pxReadyTasksLists[ configMAX_PRIORITIES ];/*< Prioritised ready tasks
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  429:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if(  configCHECK_FOR_STACK_OVERFLOW > 0 )
  430:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	extern void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName );
  431:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 9
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 9
 
 
  432:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  486:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * in the list of tasks waiting to be deleted.  If so the task is cleaned up
  487:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * and its TCB deleted.
  488:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 10
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 10
 
 
  489:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** PRIVILEGED_FUNCTION static void prvCheckTasksWaitingTermination( void );
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  543:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	PRIVILEGED_FUNCTION static TickType_t prvGetExpectedIdleTime( void );
  544:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  545:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 11
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 11
 
 
  546:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  600:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( ( pxTaskBuffer != NULL ) && ( puxStackBuffer != NULL ) )
  601:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
  602:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* The memory used for the task's TCB and stack are passed into this
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 12
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 12
 
 
  603:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			function - use them. */
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  657:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 										( uint32_t ) pxTaskDefinition->usStackDepth,
  658:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 										pxTaskDefinition->pvParameters,
  659:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 										pxTaskDefinition->uxPriority,
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 13
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 13
 
 
  660:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 										pxCreatedTask, pxNewTCB,
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  714:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  715:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* Allocate space for the stack used by the task being created. */
  716:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxStack = ( StackType_t * ) pvPortMalloc( ( ( ( size_t ) usStackDepth ) * sizeof( StackType_t ) 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 14
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 14
 
 
  717:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  771:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									UBaseType_t uxPriority,
  772:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									TaskHandle_t * const pxCreatedTask,
  773:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									TCB_t *pxNewTCB,
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 15
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 15
 
 
  774:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 									const MemoryRegion_t * const xRegions ) /*lint !e971 Unqualified char types are allowed fo
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  828:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
  829:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->pcTaskName[ x ] = pcName[ x ];
  830:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 16
 
 
  831:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Don't copy all configMAX_TASK_NAME_LEN if the string is shorter than
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  885:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
  886:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->pxTaskTag = NULL;
  887:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 17
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 17
 
 
  888:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif /* configUSE_APPLICATION_TASK_TAG */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  942:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->pxTopOfStack = pxPortInitialiseStack( pxTopOfStack, pxTaskCode, pvParameters, xRunPrivi
  943:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
  944:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#else /* portUSING_MPU_WRAPPERS */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 18
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 18
 
 
  945:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  999:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				else
 1000:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
 1001:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					mtCOVERAGE_TEST_MARKER();
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 19
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 19
 
 
 1002:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1056:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTCB = prvGetTCBFromHandle( xTaskToDelete );
 1057:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1058:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* Remove task from the ready list. */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 20
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 20
 
 
 1059:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1113:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 1114:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1115:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			traceTASK_DELETE( pxTCB );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 21
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 21
 
 
 1116:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1170:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
 1171:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					mtCOVERAGE_TEST_MARKER();
 1172:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 22
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 22
 
 
 1173:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1227:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1228:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* A delay time of zero just forces a reschedule. */
 1229:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( xTicksToDelay > ( TickType_t ) 0U )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 23
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 23
 
 
 1230:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1284:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			taskENTER_CRITICAL();
 1285:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
 1286:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				pxStateList = ( List_t * ) listLIST_ITEM_CONTAINER( &( pxTCB->xStateListItem ) );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 24
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 24
 
 
 1287:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1341:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
 1342:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t *pxTCB;
 1343:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	UBaseType_t uxReturn;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 25
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 25
 
 
 1344:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1398:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 1399:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1400:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( INCLUDE_vTaskPrioritySet == 1 )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 26
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 26
 
 
 1401:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1455:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 							mtCOVERAGE_TEST_MARKER();
 1456:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						}
 1457:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 27
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 27
 
 
 1458:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					else
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1512:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				else
 1513:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
 1514:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					mtCOVERAGE_TEST_MARKER();
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 28
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 28
 
 
 1515:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1569:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1570:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskENTER_CRITICAL();
 1571:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 29
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 29
 
 
 1572:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* If null is passed in here then it is the running task that is
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1626:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			else
 1627:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
 1628:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				/* The scheduler is not running, but the task that was pointed
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 30
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 30
 
 
 1629:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				to by pxCurrentTCB has just been suspended and pxCurrentTCB
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
   41 000c 0023     		movs	r3, #0
   42              	.L4:
   43              		.loc 1 1668 0 is_stmt 0 discriminator 4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 31
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 31
 
 
   44 000e BBB1     		cbz	r3, .L8
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
    6:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 
    7:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h ****     This file is part of the FreeRTOS distribution.
    8:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 32
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 32
 
 
    9:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h ****     FreeRTOS is free software; you can redistribute it and/or modify it under
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
   63:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h ****     http://www.SafeRTOS.com - High Integrity Systems also provide a safety
   64:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h ****     engineered and independently SIL3 certified version for use in safety and
   65:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h ****     mission critical applications that require provable dependability.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 33
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 33
 
 
   66:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  120:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** /* Scheduler utilities. */
  121:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** #define portYIELD() 															\
  122:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** {																				\
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 34
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 34
 
 
  123:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 	/* Set a PendSV to request a context switch. */								\
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  177:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 		return ucReturn;
  178:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 	}
  179:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 35
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 35
 
 
  180:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 	/* Check the configuration. */
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  234:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** {
  235:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** uint32_t ulNewBASEPRI;
  236:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 36
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 36
 
 
  237:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 	__asm volatile
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  119              	.LFB41:
 1696:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1697:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* INCLUDE_vTaskSuspend */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 37
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 37
 
 
 1698:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1752:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 1753:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1754:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( ( INCLUDE_xTaskResumeFromISR == 1 ) && ( INCLUDE_vTaskSuspend == 1 ) )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 38
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 38
 
 
 1755:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1809:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					unsuspended. */
 1810:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					vListInsertEnd( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
 1811:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 39
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 39
 
 
 1812:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1866:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif /* configSUPPORT_STATIC_ALLOCATION */
 1867:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 1868:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#if ( configUSE_TIMERS == 1 )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 40
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 40
 
 
 1869:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1923:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		or the timer task. */
 1924:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		configASSERT( xReturn != errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY );
 1925:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 41
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 41
 
 
 1926:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1980:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			care of the case where the co-operative scheduler is in use. */
 1981:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( uxTopReadyPriority > uxLeastSignificantBit )
 1982:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 42
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 42
 
 
 1983:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				uxHigherPriorityReadyTasks = pdTRUE;
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2037:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( uxCurrentNumberOfTasks > ( UBaseType_t ) 0U )
 2038:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
 2039:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				/* Move any readied tasks from the pending list into the
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 43
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 43
 
 
 2040:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				appropriate ready list. */
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2094:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
 2095:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					else
 2096:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 44
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 44
 
 
 2097:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						mtCOVERAGE_TEST_MARKER();
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2151:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	FreeRTOS API functions.  If configASSERT() is defined in FreeRTOSConfig.h
 2152:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	then portASSERT_IF_INTERRUPT_PRIORITY_INVALID() will result in an assertion
 2153:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	failure if a FreeRTOS API function is called from an interrupt that has been
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 45
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 45
 
 
 2154:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	assigned a priority above the configured maximum system call priority.
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2208:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
 2209:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				listGET_OWNER_OF_NEXT_ENTRY( pxNextTCB, pxList );
 2210:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 46
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 46
 
 
 2211:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				/* Check each character in the name looking for a match or
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2265:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 2266:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* Search the ready lists. */
 2267:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			do
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 47
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 47
 
 
 2268:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2322:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
 2323:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	UBaseType_t uxTask = 0, uxQueue = configMAX_PRIORITIES;
 2324:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 48
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 48
 
 
 2325:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		vTaskSuspendAll();
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2379:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 2380:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			else
 2381:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 49
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 49
 
 
 2382:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				mtCOVERAGE_TEST_MARKER();
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2436:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			/* A task can only be prematurely removed from the Blocked state if
 2437:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			it is actually in the Blocked state. */
 2438:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( eTaskGetState( xTask ) == eBlocked )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 50
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 50
 
 
 2439:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2493:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		return xReturn;
 2494:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 2495:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 51
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 51
 
 
 2496:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* INCLUDE_xTaskAbortDelay */
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2550:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					at which the task at the head of the delayed list must
 2551:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					be removed from the Blocked state. */
 2552:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					pxTCB = ( TCB_t * ) listGET_OWNER_OF_HEAD_ENTRY( pxDelayedTaskList );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 52
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 52
 
 
 2553:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					xItemValue = listGET_LIST_ITEM_VALUE( &( pxTCB->xStateListItem ) );
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2607:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 2608:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 2609:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 53
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 53
 
 
 2610:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Tasks of equal priority to the currently running task will share
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2664:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 2665:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif /* configUSE_PREEMPTION */
 2666:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 54
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 54
 
 
 2667:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	return xSwitchRequired;
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2721:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskEXIT_CRITICAL();
 2722:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2723:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		return xReturn;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 55
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 55
 
 
 2724:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2778:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				#else
 2779:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					ulTotalRunTime = portGET_RUN_TIME_COUNTER_VALUE();
 2780:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				#endif
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 56
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 56
 
 
 2781:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2835:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 2836:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2837:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** void vTaskPlaceOnUnorderedEventList( List_t * pxEventList, const TickType_t xItemValue, const TickT
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 57
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 57
 
 
 2838:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** {
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2892:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 2893:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 2894:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 58
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 58
 
 
 2895:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** {
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2949:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		normally left unchanged, because it is automatically reset to a new
 2950:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		value when the tick count equals xNextTaskUnblockTime.  However if
 2951:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		tickless idling is used it might be more important to enter sleep mode
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 59
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 59
 
 
 2952:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		at the earliest possible time - so reset xNextTaskUnblockTime here to
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3006:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3007:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut )
 3008:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 60
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 60
 
 
 3009:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	configASSERT( pxTimeOut );
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3063:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			xReturn = pdFALSE;
 3064:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3065:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 61
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 61
 
 
 3066:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3120:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*
 3121:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * -----------------------------------------------------------
 3122:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * The Idle task.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 62
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 62
 
 
 3123:Middlewares/Third_Party/FreeRTOS/Source/tasks.c ****  * ----------------------------------------------------------
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3177:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		#if ( configUSE_IDLE_HOOK == 1 )
 3178:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
 3179:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			extern void vApplicationIdleHook( void );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 63
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 63
 
 
 3180:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3234:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 3235:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** }
 3236:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 64
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 64
 
 
 3237:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3291:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* configNUM_THREAD_LOCAL_STORAGE_POINTERS */
 3292:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 3293:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 65
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 65
 
 
 3294:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( configNUM_THREAD_LOCAL_STORAGE_POINTERS != 0 )
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3348:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		vListInitialise( &xTasksWaitingTermination );
 3349:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 3350:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif /* INCLUDE_vTaskDelete */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 66
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 66
 
 
 3351:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3405:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	#endif /* INCLUDE_vTaskDelete */
 3406:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** }
 3407:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 67
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 67
 
 
 3408:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3462:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3463:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Obtaining the task state is a little fiddly, so is only done if the value
 3464:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		of eState passed into this function is eInvalid - otherwise the state is
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 68
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 68
 
 
 3465:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		just set to whatever is passed in. */
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3519:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3520:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
 3521:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 69
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 69
 
 
 3522:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			mtCOVERAGE_TEST_MARKER();
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3576:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* INCLUDE_uxTaskGetStackHighWaterMark */
 3577:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 3578:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 70
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 70
 
 
 3579:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( INCLUDE_vTaskDelete == 1 )
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3633:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
 3634:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3635:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** static void prvResetNextTaskUnblockTime( void )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 71
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 71
 
 
 3636:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** {
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  153 0024 024B     		ldr	r3, .L23+4
  154 0026 1A60     		str	r2, [r3]
  155 0028 7047     		bx	lr
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 72
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 72
 
 
  156              	.L24:
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  210              	.LVL15:
  211 0000 2DE9F84F 		push	{r3, r4, r5, r6, r7, r8, r9, r10, fp, lr}
  212              	.LCFI1:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 73
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 73
 
 
  213              		.cfi_def_cfa_offset 40
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  260              		.loc 1 834 0
  261 003c EA5C     		ldrb	r2, [r5, r3]	@ zero_extendqisi2
  262 003e 0AB1     		cbz	r2, .L29
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 74
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 74
 
 
  827:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  304 0070 E564     		str	r5, [r4, #76]
  918:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxNewTCB->ucNotifyState = taskNOT_WAITING_NOTIFICATION;
  305              		.loc 1 918 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 75
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 75
 
 
  306 0072 2565     		str	r5, [r4, #80]
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  355 000c 0E48     		ldr	r0, .L39
  356 000e 1844     		add	r0, r0, r3
  357 0010 FFF7FEFF 		bl	vListInitialise
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 76
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 76
 
 
  358              	.LVL33:
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  403 0058 00000000 		.word	.LANCHOR7
  404 005c 00000000 		.word	.LANCHOR0
  405 0060 00000000 		.word	.LANCHOR2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 77
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 77
 
 
  406 0064 00000000 		.word	.LANCHOR8
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  455 002a 194B     		ldr	r3, .L47+4
  456 002c 1C60     		str	r4, [r3]
  457              	.L43:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 78
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 78
 
 
 1010:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  506 007a 10BD     		pop	{r4, pc}
  507              	.LVL45:
  508              	.L46:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 79
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 79
 
 
  974:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3675:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3676:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )
 3677:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 80
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 80
 
 
 3678:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	BaseType_t xTaskGetSchedulerState( void )
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3732:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				to be moved into a new list. */
 3733:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				if( listIS_CONTAINED_WITHIN( &( pxReadyTasksLists[ pxTCB->uxPriority ] ), &( pxTCB->xStateListI
 3734:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 81
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 81
 
 
 3735:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3789:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			task? */
 3790:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			if( pxTCB->uxPriority != pxTCB->uxBasePriority )
 3791:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 82
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 82
 
 
 3792:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				/* Only disinherit if no other mutexes are held. */
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3846:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 3847:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 3848:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* configUSE_MUTEXES */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 83
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 83
 
 
 3849:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3903:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 3904:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
 3905:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		else
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 84
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 84
 
 
 3906:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3960:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * might bloat the code size, use a lot of stack, and provide different
 3961:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * results on different platforms.  An alternative, tiny, third party,
 3962:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * and limited functionality implementation of sprintf() is provided in
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 85
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 85
 
 
 3963:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		 * many of the FreeRTOS/Demo sub-directories in a file called
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4017:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				/* Write the rest of the string. */
 4018:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				sprintf( pcWriteBuffer, "\t%c\t%u\t%u\t%u\r\n", cStatus, ( unsigned int ) pxTaskStatusArray[ x 
 4019:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				pcWriteBuffer += strlen( pcWriteBuffer );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 86
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 86
 
 
 4020:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4074:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Make sure the write buffer does not contain a string. */
 4075:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		*pcWriteBuffer = 0x00;
 4076:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 87
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 87
 
 
 4077:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		/* Take a snapshot of the number of tasks in case it changes while this
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4131:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						}
 4132:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						#else
 4133:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 88
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 88
 
 
 4134:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 							/* sizeof( int ) == sizeof( long ) so a smaller
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4188:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
 4189:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4190:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** #endif /* configUSE_MUTEXES */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 89
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 89
 
 
 4191:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4245:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			}
 4246:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			else
 4247:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 90
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 90
 
 
 4248:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				mtCOVERAGE_TEST_MARKER();
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4302:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4303:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		taskENTER_CRITICAL();
 4304:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 91
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 91
 
 
 4305:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			traceTASK_NOTIFY_WAIT();
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4359:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			ucOriginalNotifyState = pxTCB->ucNotifyState;
 4360:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
 4361:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTCB->ucNotifyState = taskNOTIFICATION_RECEIVED;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 92
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 92
 
 
 4362:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4416:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					sleep mode at the earliest possible time - so reset
 4417:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					xNextTaskUnblockTime here to ensure it is updated at the
 4418:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					earliest possible time. */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 93
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 93
 
 
 4419:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvResetNextTaskUnblockTime();
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4473:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		http://www.freertos.org/RTOS-Cortex-M3-M4.html */
 4474:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		portASSERT_IF_INTERRUPT_PRIORITY_INVALID();
 4475:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 94
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 94
 
 
 4476:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		pxTCB = ( TCB_t * ) xTaskToNotify;
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4530:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
 4531:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					( void ) uxListRemove( &( pxTCB->xStateListItem ) );
 4532:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvAddTaskToReadyList( pxTCB );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 95
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 95
 
 
 4533:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4587:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		portASSERT_IF_INTERRUPT_PRIORITY_INVALID() will result in an assertion
 4588:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		failure if a FreeRTOS API function is called from an interrupt that has
 4589:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		been assigned a priority above the configured maximum system call
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 96
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 96
 
 
 4590:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		priority.  Only FreeRTOS functions that end in FromISR can be called
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4644:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						xYieldPending = pdTRUE;
 4645:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
 4646:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 97
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 97
 
 
 4647:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				else
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  549              		.cfi_def_cfa_offset 16
  550              		.cfi_offset 4, -16
  551              		.cfi_offset 5, -12
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 98
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 98
 
 
  552              		.cfi_offset 6, -8
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4721:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		if( ( xTicksToWait == portMAX_DELAY ) && ( xCanBlockIndefinitely != pdFALSE ) )
  579              		.loc 1 4721 0
  580 002c B4F1FF3F 		cmp	r4, #-1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 99
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 99
 
 
  581 0030 14BF     		ite	ne
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4751:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				head of the list of blocked tasks then xNextTaskUnblockTime
 4752:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				needs to be updated too. */
 4753:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				if( xTimeToWake < xNextTaskUnblockTime )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 100
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 100
 
 
  606              		.loc 1 4753 0
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  657              		.fpu fpv5-sp-d16
  659              	xTaskCreate:
  660              	.LFB5:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 101
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 101
 
 
  682:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t *pxNewTCB;
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  707              		.loc 1 752 0
  708 0028 0023     		movs	r3, #0
  709 002a 0393     		str	r3, [sp, #12]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 102
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 102
 
 
  710 002c 0294     		str	r4, [sp, #8]
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  761:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
  758              		.loc 1 761 0
  759 0060 F3E7     		b	.L59
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 103
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 103
 
 
  760              		.cfi_endproc
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  810 002a 2549     		ldr	r1, .L80+4
  811 002c 0B68     		ldr	r3, [r1]
  812 002e 23EA0203 		bic	r3, r3, r2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 104
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 104
 
 
  813 0032 0B60     		str	r3, [r1]
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  857 0072 0CD0     		beq	.L79
  858              	.L66:
  859 0074 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 105
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 105
 
 
  860              	.LVL81:
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  909 00b0 1A60     		str	r2, [r3]
  910              		.syntax unified
  911              	@ 1126 "Middlewares/Third_Party/FreeRTOS/Source/tasks.c" 1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 106
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 106
 
 
  912 00b2 BFF34F8F 		dsb
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  964              	.L83:
 1350:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		}
  965              		.loc 1 1350 0 discriminator 4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 107
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 107
 
 
  966 000a E46A     		ldr	r4, [r4, #44]
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  241:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 		"	msr basepri, %0											\n" \
  242:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 		"	isb														\n" \
  243:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 		"	dsb														\n" \
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 108
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 108
 
 
  244:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 		"	cpsie i													\n" \
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  271:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** /*-----------------------------------------------------------*/
  272:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** 
  273:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** portFORCE_INLINE static void vPortSetBASEPRI( uint32_t ulNewMaskValue )
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 109
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 109
 
 
  274:Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h **** {
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1408:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  1090              		.loc 1 1408 0
  1091 0002 0629     		cmp	r1, #6
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 110
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 110
 
 
  1092 0004 0AD9     		bls	.L97
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1138 0036 9442     		cmp	r4, r2
  1139 0038 48D0     		beq	.L109
 1449:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 						{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 111
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 111
 
 
  1140              		.loc 1 1449 0
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1184 0070 251D     		adds	r5, r4, #4
  1185 0072 2846     		mov	r0, r5
  1186 0074 FFF7FEFF 		bl	uxListRemove
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 112
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 112
 
 
  1187              	.LVL111:
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1236              	.L101:
 1465:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
  1237              		.loc 1 1465 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 113
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 113
 
 
  1238 00c0 064A     		ldr	r2, .L114
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1289              		.cfi_offset 3, -16
  1290              		.cfi_offset 4, -12
  1291              		.cfi_offset 5, -8
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 114
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 114
 
 
  1292              		.cfi_offset 14, -4
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1721:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvAddTaskToReadyList( pxTCB );
  1340              		.loc 1 1721 0
  1341 0036 251D     		adds	r5, r4, #4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 115
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 115
 
 
  1342 0038 2846     		mov	r0, r5
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1394              		.syntax unified
  1395              		.thumb
  1396              		.thumb_func
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 116
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 116
 
 
  1397              		.fpu fpv5-sp-d16
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 1789:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
  1447              		.loc 1 1789 0
  1448 002e 1B4B     		ldr	r3, .L137
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 117
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 117
 
 
  1449 0030 1B68     		ldr	r3, [r3]
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1498              	.LVL136:
  1499              	.L135:
  1500              	.LBB109:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 118
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 118
 
 
  1501              	.LBB110:
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1552              		.thumb
  1553              		.thumb_func
  1554              		.fpu fpv5-sp-d16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 119
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 119
 
 
  1556              	vTaskStartScheduler:
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1604 002a 72B6     		cpsid i													
  1605 002c 83F31188 		msr basepri, r3											
  1606 0030 BFF36F8F 		isb														
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 120
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 120
 
 
  1607 0034 BFF34F8F 		dsb														
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1656 0074 00000000 		.word	prvIdleTask
  1657 0078 00000000 		.word	.LANCHOR3
  1658 007c 00000000 		.word	.LANCHOR11
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 121
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 121
 
 
  1659 0080 00000000 		.word	.LANCHOR14
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1711              	.L150:
  1712 0024 00000000 		.word	.LANCHOR11
  1713              		.cfi_endproc
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 122
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 122
 
 
  1714              	.LFE18:
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1767              	.L156:
  1768 0008 00000000 		.word	.LANCHOR14
  1769              		.cfi_endproc
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 123
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 123
 
 
  1770              	.LFE21:
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1822              		.loc 1 2177 0
  1823 0000 014B     		ldr	r3, .L163
  1824 0002 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 124
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 124
 
 
 2178:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1874 000e 4FF05003 			mov r3, #80												
  1875 0012 72B6     		cpsid i													
  1876 0014 83F31188 		msr basepri, r3											
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 125
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 125
 
 
  1877 0018 BFF36F8F 		isb														
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1930              	.LVL158:
 2517:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  1931              		.loc 1 2517 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 126
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 126
 
 
  1932 0010 1D60     		str	r5, [r3]
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  1981 004e 9D42     		cmp	r5, r3
  1982 0050 3AD2     		bcs	.L189
  1983              	.LBE119:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 127
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 127
 
 
 2503:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2029 0086 28D3     		bcc	.L197
 2571:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  2030              		.loc 1 2571 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 128
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 128
 
 
  2031 0088 371D     		adds	r7, r6, #4
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2079 00d6 1A60     		str	r2, [r3]
 2544:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
  2080              		.loc 1 2544 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 129
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 129
 
 
  2081 00d8 BCE7     		b	.L180
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2129              		.section	.text.xTaskResumeAll,"ax",%progbits
  2130              		.align	1
  2131              		.global	xTaskResumeAll
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 130
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 130
 
 
  2132              		.syntax unified
@@ -7798,7 +7798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2182 0026 013A     		subs	r2, r2, #1
  2183 0028 1A60     		str	r2, [r3]
 2035:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 131
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 131
 
 
  2184              		.loc 1 2035 0
@@ -7858,7 +7858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2229 0064 2049     		ldr	r1, .L217+12
  2230 0066 0868     		ldr	r0, [r1]
  2231 0068 0243     		orrs	r2, r2, r0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 132
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 132
 
 
  2232 006a 0A60     		str	r2, [r1]
@@ -7918,7 +7918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2278              	@ 2108 "Middlewares/Third_Party/FreeRTOS/Source/tasks.c" 1
  2279 00aa BFF34F8F 		dsb
  2280              	@ 0 "" 2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 133
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 133
 
 
  2281              	@ 2108 "Middlewares/Third_Party/FreeRTOS/Source/tasks.c" 1
@@ -7978,7 +7978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2329 00e0 00000000 		.word	.LANCHOR9
  2330 00e4 00000000 		.word	.LANCHOR1
  2331 00e8 00000000 		.word	.LANCHOR13
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 134
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 134
 
 
  2332 00ec 00000000 		.word	.LANCHOR4
@@ -8038,7 +8038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2384              	.L222:
  2385 0020 FEE7     		b	.L222
  2386              	.L221:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 135
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 135
 
 
  2387              	.LBE129:
@@ -8098,7 +8098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2436              		.thumb_func
  2437              		.fpu fpv5-sp-d16
  2439              	prvCheckTasksWaitingTermination:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 136
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 136
 
 
  2440              	.LFB39:
@@ -8158,7 +8158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 3388:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
  2485              		.loc 1 3388 0
  2486 0020 FFF7FEFF 		bl	vPortEnterCritical
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 137
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 137
 
 
  2487              	.LVL211:
@@ -8218,7 +8218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2536              		.thumb
  2537              		.thumb_func
  2538              		.fpu fpv5-sp-d16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 138
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 138
 
 
  2540              	prvIdleTask:
@@ -8278,7 +8278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2589              		.cfi_endproc
  2590              	.LFE37:
  2592              		.section	.text.vTaskSetApplicationTaskTag,"ax",%progbits
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 139
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 139
 
 
  2593              		.align	1
@@ -8338,7 +8338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2643              		.section	.text.xTaskGetApplicationTaskTag,"ax",%progbits
  2644              		.align	1
  2645              		.global	xTaskGetApplicationTaskTag
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 140
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 140
 
 
  2646              		.syntax unified
@@ -8398,7 +8398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2695              		.align	1
  2696              		.global	xTaskCallApplicationTaskHook
  2697              		.syntax unified
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 141
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 141
 
 
  2698              		.thumb
@@ -8458,7 +8458,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2746 001c 00000000 		.word	.LANCHOR10
  2747              		.cfi_endproc
  2748              	.LFE28:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 142
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 142
 
 
  2750              		.section	.text.vTaskSwitchContext,"ax",%progbits
@@ -8518,7 +8518,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2798 002c FFF7FEFF 		bl	vApplicationStackOverflowHook
  2799              	.LVL245:
  2800              	.L272:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 143
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 143
 
 
  2801              	.LBE135:
@@ -8578,7 +8578,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2851              		.cfi_restore 14
  2852              	.LBE140:
  2853              	.LBE139:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 144
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 144
 
 
  2854              	.LBE136:
@@ -8638,7 +8638,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2903 009e 1344     		add	r3, r3, r2
  2904 00a0 5B68     		ldr	r3, [r3, #4]
  2905 00a2 DA68     		ldr	r2, [r3, #12]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 145
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 145
 
 
  2906 00a4 074B     		ldr	r3, .L282+8
@@ -8698,7 +8698,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  2958              		.loc 1 1574 0
  2959 0008 3CB3     		cbz	r4, .L296
  2960              	.LVL258:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 146
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 146
 
 
  2961              	.L285:
@@ -8758,7 +8758,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3006 0052 1B68     		ldr	r3, [r3]
  3007 0054 9C42     		cmp	r4, r3
  3008 0056 0AD0     		beq	.L298
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 147
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 147
 
 
  3009              	.L284:
@@ -8818,7 +8818,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3056 008e FEE7     		b	.L292
  3057              	.L291:
  3058              	.LBE145:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 148
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 148
 
 
  3059              	.LBE144:
@@ -8878,7 +8878,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3109              		.section	.text.vTaskPlaceOnEventList,"ax",%progbits
  3110              		.align	1
  3111              		.global	vTaskPlaceOnEventList
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 149
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 149
 
 
  3112              		.syntax unified
@@ -8938,7 +8938,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3161              		.loc 1 2833 0
  3162 0026 0121     		movs	r1, #1
  3163 0028 2046     		mov	r0, r4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 150
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 150
 
 
  3164 002a FFF7FEFF 		bl	prvAddCurrentTaskToDelayedList
@@ -8998,7 +8998,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3216              	.LVL282:
  3217              	.L315:
  3218              	.LBE149:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 151
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 151
 
 
  3219              	.LBE148:
@@ -9058,7 +9058,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3269 0058 10BD     		pop	{r4, pc}
  3270              	.LVL291:
  3271              	.L317:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 152
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 152
 
 
  3272 005a 00BF     		.align	2
@@ -9118,7 +9118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2919:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
  3322              		.loc 1 2919 0
  3323 0020 E36A     		ldr	r3, [r4, #44]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 153
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 153
 
 
  3324 0022 0122     		movs	r2, #1
@@ -9178,7 +9178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2925:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	}
  3375              		.loc 1 2925 0
  3376 0068 2946     		mov	r1, r5
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 154
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 154
 
 
  3377 006a 0848     		ldr	r0, .L327+20
@@ -9238,7 +9238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3428              		.loc 2 237 0
  3429              		.syntax unified
  3430              	@ 237 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h" 1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 155
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 155
 
 
  3431 0008 4FF05003 			mov r3, #80												
@@ -9298,7 +9298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 2986:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	{
  3479              		.loc 1 2986 0
  3480 0052 E26A     		ldr	r2, [r4, #44]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 156
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 156
 
 
  3481 0054 0D4B     		ldr	r3, .L338+12
@@ -9358,7 +9358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3531              	.LFE33:
  3533              		.section	.text.vTaskSetTimeOutState,"ax",%progbits
  3534              		.align	1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 157
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 157
 
 
  3535              		.global	vTaskSetTimeOutState
@@ -9418,7 +9418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3585              	.LBE158:
  3586              		.cfi_endproc
  3587              	.LFE34:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 158
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 158
 
 
  3589              		.section	.text.xTaskCheckForTimeOut,"ax",%progbits
@@ -9478,7 +9478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3636 0024 6268     		ldr	r2, [r4, #4]
  3637 0026 9142     		cmp	r1, r2
  3638 0028 28D2     		bcs	.L354
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 159
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 159
 
 
  3639              	.L352:
@@ -9538,7 +9538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3690              	.LVL327:
  3691              	.L359:
  3692              	.LBE164:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 160
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 160
 
 
  3693              	.LBE163:
@@ -9598,7 +9598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3741              		.thumb_func
  3742              		.fpu fpv5-sp-d16
  3744              	vTaskMissedYield:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 161
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 161
 
 
  3745              	.LFB36:
@@ -9658,7 +9658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3797              		.fpu fpv5-sp-d16
  3799              	xTaskGetSchedulerState:
  3800              	.LFB43:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 162
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 162
 
 
 3679:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	BaseType_t xReturn;
@@ -9718,7 +9718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3849              	.LVL337:
 3712:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 		{
  3850              		.loc 1 3712 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 163
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 163
 
 
  3851 0000 0028     		cmp	r0, #0
@@ -9778,7 +9778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3898              	.L374:
  3899 0042 38BD     		pop	{r3, r4, r5, pc}
  3900              	.LVL339:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 164
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 164
 
 
  3901              	.L385:
@@ -9838,7 +9838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  3949              	.LCFI40:
  3950              		.cfi_def_cfa_offset 0
  3951              		.cfi_restore 3
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 165
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 165
 
 
  3952              		.cfi_restore 4
@@ -9898,7 +9898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4003 0014 72B6     		cpsid i													
  4004 0016 83F31188 		msr basepri, r3											
  4005 001a BFF36F8F 		isb														
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 166
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 166
 
 
  4006 001e BFF34F8F 		dsb														
@@ -9958,7 +9958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4054 004e 251D     		adds	r5, r4, #4
  4055 0050 2846     		mov	r0, r5
  4056 0052 FFF7FEFF 		bl	uxListRemove
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 167
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 167
 
 
  4057              	.LVL347:
@@ -10018,7 +10018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4105              		.cfi_restore 14
 3775:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 
  4106              		.loc 1 3775 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 168
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 168
 
 
  4107 00a2 0020     		movs	r0, #0
@@ -10078,7 +10078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4159 000c C3F10703 		rsb	r3, r3, #7
  4160 0010 9361     		str	r3, [r2, #24]
 4173:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** /*-----------------------------------------------------------*/
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 169
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 169
 
 
  4161              		.loc 1 4173 0
@@ -10138,7 +10138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4213              		.thumb_func
  4214              		.fpu fpv5-sp-d16
  4216              	ulTaskNotifyTake:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 170
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 170
 
 
  4217              	.LFB48:
@@ -10198,7 +10198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4261              		.loc 1 4237 0
  4262 002e CDB9     		cbnz	r5, .L418
 4243:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 171
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 171
 
 
  4263              		.loc 1 4243 0
@@ -10258,7 +10258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4311              	.L419:
  4312 0070 00000000 		.word	.LANCHOR10
  4313 0074 04ED00E0 		.word	-536810236
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 172
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 172
 
 
  4314              		.cfi_endproc
@@ -10318,7 +10318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4280:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				{
  4365              		.loc 1 4280 0
  4366 0030 FEB9     		cbnz	r6, .L427
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 173
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 173
 
 
  4367              	.L422:
@@ -10378,7 +10378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4411              	.LVL372:
  4412              	.L427:
 4282:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					traceTASK_NOTIFY_WAIT_BLOCK();
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 174
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 174
 
 
  4413              		.loc 1 4282 0
@@ -10438,7 +10438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4466              		.cfi_offset 6, -12
  4467              		.cfi_offset 7, -8
  4468              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 175
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 175
 
 
  4469              	.LVL376:
@@ -10498,7 +10498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4515 003e BFF34F8F 		dsb														
  4516 0042 62B6     		cpsie i													
  4517              	
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 176
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 176
 
 
  4518              	@ 0 "" 2
@@ -10558,7 +10558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4565              		.loc 2 237 0
  4566              		.syntax unified
  4567              	@ 237 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1/portmacro.h" 1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 177
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 177
 
 
  4568 007c 4FF05003 			mov r3, #80												
@@ -10618,7 +10618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4385:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
  4613              		.loc 1 4385 0
  4614 00b0 0025     		movs	r5, #0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 178
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 178
 
 
  4615 00b2 CCE7     		b	.L434
@@ -10678,7 +10678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4666              		.loc 1 4450 0
  4667              		.cfi_startproc
  4668              		@ args = 4, pretend = 0, frame = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 179
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 179
 
 
  4669              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -10738,7 +10738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4485:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			pxTCB->ucNotifyState = taskNOTIFICATION_RECEIVED;
  4718              		.loc 1 4485 0
  4719 0038 94F85430 		ldrb	r3, [r4, #84]	@ zero_extendqisi2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 180
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 180
 
 
  4720 003c DBB2     		uxtb	r3, r3
@@ -10798,7 +10798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4524:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
  4769              		.loc 1 4524 0
  4770 0070 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 181
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 181
 
 
  4771 0072 3CD1     		bne	.L459
@@ -10858,7 +10858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4816 00a0 04D0     		beq	.L466
 4505:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
  4817              		.loc 1 4505 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 182
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 182
 
 
  4818 00a2 2765     		str	r7, [r4, #80]
@@ -10918,7 +10918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4547:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					}
  4865              		.loc 1 4547 0
  4866 00ea 0123     		movs	r3, #1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 183
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 183
 
 
  4867 00ec 3360     		str	r3, [r6]
@@ -10978,7 +10978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4920              	.LFB52:
 4574:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 	TCB_t * pxTCB;
  4921              		.loc 1 4574 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 184
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 184
 
 
  4922              		.cfi_startproc
@@ -11038,7 +11038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  4970 0034 2265     		str	r2, [r4, #80]
 4614:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 			{
  4971              		.loc 1 4614 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 185
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 185
 
 
  4972 0036 012B     		cmp	r3, #1
@@ -11098,7 +11098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  5023 006c 1B68     		ldr	r3, [r3]
  5024 006e F3B9     		cbnz	r3, .L477
 4621:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 					prvAddTaskToReadyList( pxTCB );
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 186
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 186
 
 
  5025              		.loc 1 4621 0
@@ -11158,7 +11158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
 4628:Middlewares/Third_Party/FreeRTOS/Source/tasks.c **** 				}
  5075              		.loc 1 4628 0
  5076 00ae 04F11801 		add	r1, r4, #24
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 187
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 187
 
 
  5077 00b2 0848     		ldr	r0, .L482+16
@@ -11218,7 +11218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  5128 000a 94F85430 		ldrb	r3, [r4, #84]	@ zero_extendqisi2
  5129 000e DBB2     		uxtb	r3, r3
  5130 0010 022B     		cmp	r3, #2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 188
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 188
 
 
  5131 0012 07D0     		beq	.L491
@@ -11278,7 +11278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  5186 0000 00000000 		.space	4
  5187              		.section	.bss.pxReadyTasksLists,"aw",%nobits
  5188              		.align	2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 189
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 189
 
 
  5189              		.set	.LANCHOR4,. + 0
@@ -11338,7 +11338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  5249      00000000 
  5250              		.section	.bss.xIdleTaskHandle,"aw",%nobits
  5251              		.align	2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 190
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 190
 
 
  5252              		.set	.LANCHOR17,. + 0
@@ -11398,7 +11398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  5312 0000 00000000 		.space	4
  5313              		.section	.rodata.vTaskStartScheduler.str1.4,"aMS",%progbits,1
  5314              		.align	2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 191
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 191
 
 
  5315              	.LC0:
@@ -11419,214 +11419,214 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 1
  5329              		.file 13 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
  5330              		.file 14 "Middlewares/Third_Party/FreeRTOS/Source/include/portable.h"
  5331              		.file 15 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\string.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 192
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 192
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 tasks.c
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:18     .text.prvTaskIsTaskSuspended:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:24     .text.prvTaskIsTaskSuspended:00000000 prvTaskIsTaskSuspended
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:106    .text.prvTaskIsTaskSuspended:00000048 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:112    .text.prvResetNextTaskUnblockTime:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:118    .text.prvResetNextTaskUnblockTime:00000000 prvResetNextTaskUnblockTime
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:159    .text.prvResetNextTaskUnblockTime:0000002c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:165    .text.prvDeleteTCB:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:171    .text.prvDeleteTCB:00000000 prvDeleteTCB
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:198    .text.prvInitialiseNewTask:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:204    .text.prvInitialiseNewTask:00000000 prvInitialiseNewTask
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:327    .text.prvInitialiseTaskLists:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:333    .text.prvInitialiseTaskLists:00000000 prvInitialiseTaskLists
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:399    .text.prvInitialiseTaskLists:00000048 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:411    .text.prvAddNewTaskToReadyList:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:417    .text.prvAddNewTaskToReadyList:00000000 prvAddNewTaskToReadyList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:523    .text.prvAddNewTaskToReadyList:0000008c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:534    .text.prvAddCurrentTaskToDelayedList:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:540    .text.prvAddCurrentTaskToDelayedList:00000000 prvAddCurrentTaskToDelayedList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:641    .text.prvAddCurrentTaskToDelayedList:00000084 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:652    .text.xTaskCreate:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:659    .text.xTaskCreate:00000000 xTaskCreate
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:764    .text.vTaskDelete:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:771    .text.vTaskDelete:00000000 vTaskDelete
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:924    .text.vTaskDelete:000000bc $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:938    .text.uxTaskPriorityGet:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:945    .text.uxTaskPriorityGet:00000000 uxTaskPriorityGet
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:984    .text.uxTaskPriorityGet:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:989    .text.uxTaskPriorityGetFromISR:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:996    .text.uxTaskPriorityGetFromISR:00000000 uxTaskPriorityGetFromISR
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1061   .text.uxTaskPriorityGetFromISR:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1066   .text.vTaskPrioritySet:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1073   .text.vTaskPrioritySet:00000000 vTaskPrioritySet
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1264   .text.vTaskPrioritySet:000000dc $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1272   .text.vTaskResume:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1279   .text.vTaskResume:00000000 vTaskResume
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1384   .text.vTaskResume:0000007c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1392   .text.xTaskResumeFromISR:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1399   .text.xTaskResumeFromISR:00000000 xTaskResumeFromISR
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1540   .text.xTaskResumeFromISR:0000009c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1549   .text.vTaskStartScheduler:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1556   .text.vTaskStartScheduler:00000000 vTaskStartScheduler
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1654   .text.vTaskStartScheduler:0000006c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2540   .text.prvIdleTask:00000000 prvIdleTask
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1666   .text.vTaskEndScheduler:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1673   .text.vTaskEndScheduler:00000000 vTaskEndScheduler
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1712   .text.vTaskEndScheduler:00000024 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1717   .text.vTaskSuspendAll:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1724   .text.vTaskSuspendAll:00000000 vTaskSuspendAll
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1740   .text.vTaskSuspendAll:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1745   .text.xTaskGetTickCount:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1752   .text.xTaskGetTickCount:00000000 xTaskGetTickCount
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1768   .text.xTaskGetTickCount:00000008 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1773   .text.xTaskGetTickCountFromISR:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1780   .text.xTaskGetTickCountFromISR:00000000 xTaskGetTickCountFromISR
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1803   .text.xTaskGetTickCountFromISR:0000000c $d
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 193
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:18     .text.prvTaskIsTaskSuspended:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:24     .text.prvTaskIsTaskSuspended:00000000 prvTaskIsTaskSuspended
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:106    .text.prvTaskIsTaskSuspended:00000048 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:112    .text.prvResetNextTaskUnblockTime:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:118    .text.prvResetNextTaskUnblockTime:00000000 prvResetNextTaskUnblockTime
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:159    .text.prvResetNextTaskUnblockTime:0000002c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:165    .text.prvDeleteTCB:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:171    .text.prvDeleteTCB:00000000 prvDeleteTCB
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:198    .text.prvInitialiseNewTask:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:204    .text.prvInitialiseNewTask:00000000 prvInitialiseNewTask
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:327    .text.prvInitialiseTaskLists:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:333    .text.prvInitialiseTaskLists:00000000 prvInitialiseTaskLists
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:399    .text.prvInitialiseTaskLists:00000048 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:411    .text.prvAddNewTaskToReadyList:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:417    .text.prvAddNewTaskToReadyList:00000000 prvAddNewTaskToReadyList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:523    .text.prvAddNewTaskToReadyList:0000008c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:534    .text.prvAddCurrentTaskToDelayedList:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:540    .text.prvAddCurrentTaskToDelayedList:00000000 prvAddCurrentTaskToDelayedList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:641    .text.prvAddCurrentTaskToDelayedList:00000084 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:652    .text.xTaskCreate:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:659    .text.xTaskCreate:00000000 xTaskCreate
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:764    .text.vTaskDelete:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:771    .text.vTaskDelete:00000000 vTaskDelete
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:924    .text.vTaskDelete:000000bc $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:938    .text.uxTaskPriorityGet:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:945    .text.uxTaskPriorityGet:00000000 uxTaskPriorityGet
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:984    .text.uxTaskPriorityGet:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:989    .text.uxTaskPriorityGetFromISR:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:996    .text.uxTaskPriorityGetFromISR:00000000 uxTaskPriorityGetFromISR
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1061   .text.uxTaskPriorityGetFromISR:00000030 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1066   .text.vTaskPrioritySet:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1073   .text.vTaskPrioritySet:00000000 vTaskPrioritySet
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1264   .text.vTaskPrioritySet:000000dc $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1272   .text.vTaskResume:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1279   .text.vTaskResume:00000000 vTaskResume
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1384   .text.vTaskResume:0000007c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1392   .text.xTaskResumeFromISR:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1399   .text.xTaskResumeFromISR:00000000 xTaskResumeFromISR
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1540   .text.xTaskResumeFromISR:0000009c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1549   .text.vTaskStartScheduler:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1556   .text.vTaskStartScheduler:00000000 vTaskStartScheduler
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1654   .text.vTaskStartScheduler:0000006c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2540   .text.prvIdleTask:00000000 prvIdleTask
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1666   .text.vTaskEndScheduler:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1673   .text.vTaskEndScheduler:00000000 vTaskEndScheduler
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1712   .text.vTaskEndScheduler:00000024 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1717   .text.vTaskSuspendAll:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1724   .text.vTaskSuspendAll:00000000 vTaskSuspendAll
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1740   .text.vTaskSuspendAll:0000000c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1745   .text.xTaskGetTickCount:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1752   .text.xTaskGetTickCount:00000000 xTaskGetTickCount
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1768   .text.xTaskGetTickCount:00000008 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1773   .text.xTaskGetTickCountFromISR:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1780   .text.xTaskGetTickCountFromISR:00000000 xTaskGetTickCountFromISR
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1803   .text.xTaskGetTickCountFromISR:0000000c $d
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 193
 
 
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1808   .text.uxTaskGetNumberOfTasks:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1815   .text.uxTaskGetNumberOfTasks:00000000 uxTaskGetNumberOfTasks
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1830   .text.uxTaskGetNumberOfTasks:00000008 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1835   .text.pcTaskGetName:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1842   .text.pcTaskGetName:00000000 pcTaskGetName
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1890   .text.pcTaskGetName:00000024 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1897   .text.xTaskIncrementTick:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:1904   .text.xTaskIncrementTick:00000000 xTaskIncrementTick
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2115   .text.xTaskIncrementTick:000000f8 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2130   .text.xTaskResumeAll:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2137   .text.xTaskResumeAll:00000000 xTaskResumeAll
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2328   .text.xTaskResumeAll:000000dc $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2341   .text.vTaskDelay:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2348   .text.vTaskDelay:00000000 vTaskDelay
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2427   .text.vTaskDelay:0000004c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2433   .text.prvCheckTasksWaitingTermination:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2439   .text.prvCheckTasksWaitingTermination:00000000 prvCheckTasksWaitingTermination
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2526   .text.prvCheckTasksWaitingTermination:00000050 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2534   .text.prvIdleTask:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2587   .text.prvIdleTask:00000028 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2593   .text.vTaskSetApplicationTaskTag:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2600   .text.vTaskSetApplicationTaskTag:00000000 vTaskSetApplicationTaskTag
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2639   .text.vTaskSetApplicationTaskTag:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2644   .text.xTaskGetApplicationTaskTag:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2651   .text.xTaskGetApplicationTaskTag:00000000 xTaskGetApplicationTaskTag
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2690   .text.xTaskGetApplicationTaskTag:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2695   .text.xTaskCallApplicationTaskHook:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2702   .text.xTaskCallApplicationTaskHook:00000000 xTaskCallApplicationTaskHook
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2746   .text.xTaskCallApplicationTaskHook:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2751   .text.vTaskSwitchContext:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2758   .text.vTaskSwitchContext:00000000 vTaskSwitchContext
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2922   .text.vTaskSwitchContext:000000bc $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2933   .text.vTaskSuspend:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:2940   .text.vTaskSuspend:00000000 vTaskSuspend
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3098   .text.vTaskSuspend:000000bc $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3110   .text.vTaskPlaceOnEventList:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3117   .text.vTaskPlaceOnEventList:00000000 vTaskPlaceOnEventList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3171   .text.vTaskPlaceOnEventList:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3176   .text.vTaskPlaceOnUnorderedEventList:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3183   .text.vTaskPlaceOnUnorderedEventList:00000000 vTaskPlaceOnUnorderedEventList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3274   .text.vTaskPlaceOnUnorderedEventList:0000005c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3280   .text.xTaskRemoveFromEventList:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3287   .text.xTaskRemoveFromEventList:00000000 xTaskRemoveFromEventList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3391   .text.xTaskRemoveFromEventList:00000078 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3401   .text.xTaskRemoveFromUnorderedEventList:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3408   .text.xTaskRemoveFromUnorderedEventList:00000000 xTaskRemoveFromUnorderedEventList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3525   .text.xTaskRemoveFromUnorderedEventList:00000080 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3534   .text.vTaskSetTimeOutState:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3541   .text.vTaskSetTimeOutState:00000000 vTaskSetTimeOutState
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3582   .text.vTaskSetTimeOutState:00000028 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3590   .text.xTaskCheckForTimeOut:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3597   .text.xTaskCheckForTimeOut:00000000 xTaskCheckForTimeOut
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3730   .text.xTaskCheckForTimeOut:00000080 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3737   .text.vTaskMissedYield:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3744   .text.vTaskMissedYield:00000000 vTaskMissedYield
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3759   .text.vTaskMissedYield:00000008 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3764   .text.xTaskGetCurrentTaskHandle:00000000 $t
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 194
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1808   .text.uxTaskGetNumberOfTasks:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1815   .text.uxTaskGetNumberOfTasks:00000000 uxTaskGetNumberOfTasks
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1830   .text.uxTaskGetNumberOfTasks:00000008 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1835   .text.pcTaskGetName:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1842   .text.pcTaskGetName:00000000 pcTaskGetName
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1890   .text.pcTaskGetName:00000024 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1897   .text.xTaskIncrementTick:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:1904   .text.xTaskIncrementTick:00000000 xTaskIncrementTick
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2115   .text.xTaskIncrementTick:000000f8 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2130   .text.xTaskResumeAll:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2137   .text.xTaskResumeAll:00000000 xTaskResumeAll
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2328   .text.xTaskResumeAll:000000dc $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2341   .text.vTaskDelay:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2348   .text.vTaskDelay:00000000 vTaskDelay
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2427   .text.vTaskDelay:0000004c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2433   .text.prvCheckTasksWaitingTermination:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2439   .text.prvCheckTasksWaitingTermination:00000000 prvCheckTasksWaitingTermination
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2526   .text.prvCheckTasksWaitingTermination:00000050 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2534   .text.prvIdleTask:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2587   .text.prvIdleTask:00000028 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2593   .text.vTaskSetApplicationTaskTag:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2600   .text.vTaskSetApplicationTaskTag:00000000 vTaskSetApplicationTaskTag
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2639   .text.vTaskSetApplicationTaskTag:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2644   .text.xTaskGetApplicationTaskTag:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2651   .text.xTaskGetApplicationTaskTag:00000000 xTaskGetApplicationTaskTag
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2690   .text.xTaskGetApplicationTaskTag:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2695   .text.xTaskCallApplicationTaskHook:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2702   .text.xTaskCallApplicationTaskHook:00000000 xTaskCallApplicationTaskHook
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2746   .text.xTaskCallApplicationTaskHook:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2751   .text.vTaskSwitchContext:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2758   .text.vTaskSwitchContext:00000000 vTaskSwitchContext
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2922   .text.vTaskSwitchContext:000000bc $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2933   .text.vTaskSuspend:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:2940   .text.vTaskSuspend:00000000 vTaskSuspend
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3098   .text.vTaskSuspend:000000bc $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3110   .text.vTaskPlaceOnEventList:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3117   .text.vTaskPlaceOnEventList:00000000 vTaskPlaceOnEventList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3171   .text.vTaskPlaceOnEventList:00000030 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3176   .text.vTaskPlaceOnUnorderedEventList:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3183   .text.vTaskPlaceOnUnorderedEventList:00000000 vTaskPlaceOnUnorderedEventList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3274   .text.vTaskPlaceOnUnorderedEventList:0000005c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3280   .text.xTaskRemoveFromEventList:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3287   .text.xTaskRemoveFromEventList:00000000 xTaskRemoveFromEventList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3391   .text.xTaskRemoveFromEventList:00000078 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3401   .text.xTaskRemoveFromUnorderedEventList:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3408   .text.xTaskRemoveFromUnorderedEventList:00000000 xTaskRemoveFromUnorderedEventList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3525   .text.xTaskRemoveFromUnorderedEventList:00000080 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3534   .text.vTaskSetTimeOutState:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3541   .text.vTaskSetTimeOutState:00000000 vTaskSetTimeOutState
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3582   .text.vTaskSetTimeOutState:00000028 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3590   .text.xTaskCheckForTimeOut:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3597   .text.xTaskCheckForTimeOut:00000000 xTaskCheckForTimeOut
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3730   .text.xTaskCheckForTimeOut:00000080 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3737   .text.vTaskMissedYield:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3744   .text.vTaskMissedYield:00000000 vTaskMissedYield
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3759   .text.vTaskMissedYield:00000008 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3764   .text.xTaskGetCurrentTaskHandle:00000000 $t
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 194
 
 
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3771   .text.xTaskGetCurrentTaskHandle:00000000 xTaskGetCurrentTaskHandle
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3787   .text.xTaskGetCurrentTaskHandle:00000008 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3792   .text.xTaskGetSchedulerState:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3799   .text.xTaskGetSchedulerState:00000000 xTaskGetSchedulerState
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3830   .text.xTaskGetSchedulerState:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3836   .text.vTaskPriorityInherit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3843   .text.vTaskPriorityInherit:00000000 vTaskPriorityInherit
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3959   .text.vTaskPriorityInherit:00000098 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3966   .text.xTaskPriorityDisinherit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:3973   .text.xTaskPriorityDisinherit:00000000 xTaskPriorityDisinherit
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4129   .text.xTaskPriorityDisinherit:000000b0 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4136   .text.uxTaskResetEventItemValue:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4143   .text.uxTaskResetEventItemValue:00000000 uxTaskResetEventItemValue
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4166   .text.uxTaskResetEventItemValue:00000014 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4171   .text.pvTaskIncrementMutexHeldCount:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4178   .text.pvTaskIncrementMutexHeldCount:00000000 pvTaskIncrementMutexHeldCount
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4204   .text.pvTaskIncrementMutexHeldCount:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4209   .text.ulTaskNotifyTake:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4216   .text.ulTaskNotifyTake:00000000 ulTaskNotifyTake
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4312   .text.ulTaskNotifyTake:00000070 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4318   .text.xTaskNotifyWait:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4325   .text.xTaskNotifyWait:00000000 xTaskNotifyWait
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4440   .text.xTaskNotifyWait:00000090 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4446   .text.xTaskGenericNotify:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4453   .text.xTaskGenericNotify:00000000 xTaskGenericNotify
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4499   .text.xTaskGenericNotify:0000002c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4504   .text.xTaskGenericNotify:00000030 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4649   .text.xTaskGenericNotify:000000d8 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4657   .text.xTaskGenericNotifyFromISR:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4664   .text.xTaskGenericNotifyFromISR:00000000 xTaskGenericNotifyFromISR
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4731   .text.xTaskGenericNotifyFromISR:0000004e $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4736   .text.xTaskGenericNotifyFromISR:00000052 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4902   .text.xTaskGenericNotifyFromISR:0000010c $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4912   .text.vTaskNotifyGiveFromISR:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:4919   .text.vTaskNotifyGiveFromISR:00000000 vTaskNotifyGiveFromISR
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5090   .text.vTaskNotifyGiveFromISR:000000c4 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5100   .text.xTaskNotifyStateClear:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5107   .text.xTaskNotifyStateClear:00000000 xTaskNotifyStateClear
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5161   .text.xTaskNotifyStateClear:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5171   .bss.pxCurrentTCB:00000000 pxCurrentTCB
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5167   .bss.pxCurrentTCB:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5174   .bss.pxDelayedTaskList:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5178   .bss.pxDelayedTaskList:00000000 pxDelayedTaskList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5181   .bss.pxOverflowDelayedTaskList:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5185   .bss.pxOverflowDelayedTaskList:00000000 pxOverflowDelayedTaskList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5188   .bss.pxReadyTasksLists:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5192   .bss.pxReadyTasksLists:00000000 pxReadyTasksLists
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5195   .bss.uxCurrentNumberOfTasks:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5199   .bss.uxCurrentNumberOfTasks:00000000 uxCurrentNumberOfTasks
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5202   .bss.uxDeletedTasksWaitingCleanUp:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5206   .bss.uxDeletedTasksWaitingCleanUp:00000000 uxDeletedTasksWaitingCleanUp
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5209   .bss.uxPendedTicks:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5213   .bss.uxPendedTicks:00000000 uxPendedTicks
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5216   .bss.uxSchedulerSuspended:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5220   .bss.uxSchedulerSuspended:00000000 uxSchedulerSuspended
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5223   .bss.uxTaskNumber:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5227   .bss.uxTaskNumber:00000000 uxTaskNumber
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s 			page 195
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3771   .text.xTaskGetCurrentTaskHandle:00000000 xTaskGetCurrentTaskHandle
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3787   .text.xTaskGetCurrentTaskHandle:00000008 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3792   .text.xTaskGetSchedulerState:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3799   .text.xTaskGetSchedulerState:00000000 xTaskGetSchedulerState
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3830   .text.xTaskGetSchedulerState:00000018 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3836   .text.vTaskPriorityInherit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3843   .text.vTaskPriorityInherit:00000000 vTaskPriorityInherit
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3959   .text.vTaskPriorityInherit:00000098 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3966   .text.xTaskPriorityDisinherit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:3973   .text.xTaskPriorityDisinherit:00000000 xTaskPriorityDisinherit
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4129   .text.xTaskPriorityDisinherit:000000b0 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4136   .text.uxTaskResetEventItemValue:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4143   .text.uxTaskResetEventItemValue:00000000 uxTaskResetEventItemValue
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4166   .text.uxTaskResetEventItemValue:00000014 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4171   .text.pvTaskIncrementMutexHeldCount:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4178   .text.pvTaskIncrementMutexHeldCount:00000000 pvTaskIncrementMutexHeldCount
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4204   .text.pvTaskIncrementMutexHeldCount:00000018 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4209   .text.ulTaskNotifyTake:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4216   .text.ulTaskNotifyTake:00000000 ulTaskNotifyTake
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4312   .text.ulTaskNotifyTake:00000070 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4318   .text.xTaskNotifyWait:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4325   .text.xTaskNotifyWait:00000000 xTaskNotifyWait
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4440   .text.xTaskNotifyWait:00000090 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4446   .text.xTaskGenericNotify:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4453   .text.xTaskGenericNotify:00000000 xTaskGenericNotify
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4499   .text.xTaskGenericNotify:0000002c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4504   .text.xTaskGenericNotify:00000030 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4649   .text.xTaskGenericNotify:000000d8 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4657   .text.xTaskGenericNotifyFromISR:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4664   .text.xTaskGenericNotifyFromISR:00000000 xTaskGenericNotifyFromISR
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4731   .text.xTaskGenericNotifyFromISR:0000004e $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4736   .text.xTaskGenericNotifyFromISR:00000052 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4902   .text.xTaskGenericNotifyFromISR:0000010c $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4912   .text.vTaskNotifyGiveFromISR:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:4919   .text.vTaskNotifyGiveFromISR:00000000 vTaskNotifyGiveFromISR
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5090   .text.vTaskNotifyGiveFromISR:000000c4 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5100   .text.xTaskNotifyStateClear:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5107   .text.xTaskNotifyStateClear:00000000 xTaskNotifyStateClear
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5161   .text.xTaskNotifyStateClear:00000030 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5171   .bss.pxCurrentTCB:00000000 pxCurrentTCB
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5167   .bss.pxCurrentTCB:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5174   .bss.pxDelayedTaskList:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5178   .bss.pxDelayedTaskList:00000000 pxDelayedTaskList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5181   .bss.pxOverflowDelayedTaskList:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5185   .bss.pxOverflowDelayedTaskList:00000000 pxOverflowDelayedTaskList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5188   .bss.pxReadyTasksLists:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5192   .bss.pxReadyTasksLists:00000000 pxReadyTasksLists
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5195   .bss.uxCurrentNumberOfTasks:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5199   .bss.uxCurrentNumberOfTasks:00000000 uxCurrentNumberOfTasks
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5202   .bss.uxDeletedTasksWaitingCleanUp:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5206   .bss.uxDeletedTasksWaitingCleanUp:00000000 uxDeletedTasksWaitingCleanUp
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5209   .bss.uxPendedTicks:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5213   .bss.uxPendedTicks:00000000 uxPendedTicks
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5216   .bss.uxSchedulerSuspended:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5220   .bss.uxSchedulerSuspended:00000000 uxSchedulerSuspended
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5223   .bss.uxTaskNumber:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5227   .bss.uxTaskNumber:00000000 uxTaskNumber
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccayWr7c.s 			page 195
 
 
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5230   .bss.uxTopReadyPriority:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5234   .bss.uxTopReadyPriority:00000000 uxTopReadyPriority
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5237   .bss.xDelayedTaskList1:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5241   .bss.xDelayedTaskList1:00000000 xDelayedTaskList1
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5244   .bss.xDelayedTaskList2:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5248   .bss.xDelayedTaskList2:00000000 xDelayedTaskList2
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5251   .bss.xIdleTaskHandle:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5255   .bss.xIdleTaskHandle:00000000 xIdleTaskHandle
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5258   .bss.xNextTaskUnblockTime:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5262   .bss.xNextTaskUnblockTime:00000000 xNextTaskUnblockTime
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5265   .bss.xNumOfOverflows:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5269   .bss.xNumOfOverflows:00000000 xNumOfOverflows
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5272   .bss.xPendingReadyList:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5276   .bss.xPendingReadyList:00000000 xPendingReadyList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5279   .bss.xSchedulerRunning:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5283   .bss.xSchedulerRunning:00000000 xSchedulerRunning
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5286   .bss.xSuspendedTaskList:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5290   .bss.xSuspendedTaskList:00000000 xSuspendedTaskList
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5293   .bss.xTasksWaitingTermination:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5297   .bss.xTasksWaitingTermination:00000000 xTasksWaitingTermination
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5300   .bss.xTickCount:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5304   .bss.xTickCount:00000000 xTickCount
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5307   .bss.xYieldPending:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5311   .bss.xYieldPending:00000000 xYieldPending
-C:\Users\Student\AppData\Local\Temp\ccqlLBFU.s:5314   .rodata.vTaskStartScheduler.str1.4:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5230   .bss.uxTopReadyPriority:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5234   .bss.uxTopReadyPriority:00000000 uxTopReadyPriority
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5237   .bss.xDelayedTaskList1:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5241   .bss.xDelayedTaskList1:00000000 xDelayedTaskList1
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5244   .bss.xDelayedTaskList2:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5248   .bss.xDelayedTaskList2:00000000 xDelayedTaskList2
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5251   .bss.xIdleTaskHandle:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5255   .bss.xIdleTaskHandle:00000000 xIdleTaskHandle
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5258   .bss.xNextTaskUnblockTime:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5262   .bss.xNextTaskUnblockTime:00000000 xNextTaskUnblockTime
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5265   .bss.xNumOfOverflows:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5269   .bss.xNumOfOverflows:00000000 xNumOfOverflows
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5272   .bss.xPendingReadyList:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5276   .bss.xPendingReadyList:00000000 xPendingReadyList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5279   .bss.xSchedulerRunning:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5283   .bss.xSchedulerRunning:00000000 xSchedulerRunning
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5286   .bss.xSuspendedTaskList:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5290   .bss.xSuspendedTaskList:00000000 xSuspendedTaskList
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5293   .bss.xTasksWaitingTermination:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5297   .bss.xTasksWaitingTermination:00000000 xTasksWaitingTermination
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5300   .bss.xTickCount:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5304   .bss.xTickCount:00000000 xTickCount
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5307   .bss.xYieldPending:00000000 $d
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5311   .bss.xYieldPending:00000000 xYieldPending
+C:\Users\Student\AppData\Local\Temp\ccayWr7c.s:5314   .rodata.vTaskStartScheduler.str1.4:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

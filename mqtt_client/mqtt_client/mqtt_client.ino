@@ -5,9 +5,9 @@
 #include <DallasTemperature.h>
 // Update these with values suitable for your network.
 
-const char* ssid = "Redmi";
-const char* password = "aniaania";
-const char* mqtt_server = "192.168.43.189";
+const char* ssid = "esp";
+const char* password = "haslo8266";
+const char* mqtt_server = "192.168.0.111";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -121,7 +121,7 @@ void TempLoop(){
 
 
 void callback(char* topic, byte* payload, unsigned int length) {
- 
+
   Serial.print("Message arrived in topic: ");
   Serial.println(topic);
  
@@ -134,8 +134,9 @@ void callback(char* topic, byte* payload, unsigned int length) {
   dtostrf(tempDev[0], 2, 2, temperatureString);
   Serial.println();
   Serial.println(temperatureString);
-  client.publish("esp/temperature/sensor1", temperatureString);
+  client.publish("esp/temperature/client2", temperatureString);
  
+
 }
 
 void reconnect() {
@@ -182,5 +183,12 @@ void setup() {
 }
 
 void loop() {
-  client.loop();
+//  client.loop();
+  TempLoop();
+  char temperatureString[6];
+  dtostrf(tempDev[0], 2, 2, temperatureString);
+  client.publish("esp/temperature/client2", temperatureString);
+  Serial.println();
+  Serial.println(temperatureString);
+  delay(1000);
 }

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccfTniy8.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 1
   29:Src/fatfs_platform.c ****   * 5. Redistribution and use of this software other than as permitted under 
   30:Src/fatfs_platform.c ****   *    this license is void and will automatically terminate your rights under 
   31:Src/fatfs_platform.c ****   *    this license. 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 2
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccfTniy8.s 			page 2
 
 
   32:Src/fatfs_platform.c ****   *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 1
   52 0012 0120     		movs	r0, #1
   53 0014 08BD     		pop	{r3, pc}
   54              	.L7:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 3
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccfTniy8.s 			page 3
 
 
   55 0016 00BF     		.align	2
@@ -138,14 +138,14 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 1
   70              		.file 9 "c:\\gcc_toolchain\\6_2017-q1-update\\lib\\gcc\\arm-none-eabi\\6.3.1\\include\\stddef.h"
   71              		.file 10 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\reent.h"
   72              		.file 11 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_gpio.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccKa07kC.s 			page 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccfTniy8.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 fatfs_platform.c
-C:\Users\Student\AppData\Local\Temp\ccKa07kC.s:18     .text.BSP_PlatformIsDetected:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccKa07kC.s:25     .text.BSP_PlatformIsDetected:00000000 BSP_PlatformIsDetected
-C:\Users\Student\AppData\Local\Temp\ccKa07kC.s:57     .text.BSP_PlatformIsDetected:00000018 $d
+C:\Users\Student\AppData\Local\Temp\ccfTniy8.s:18     .text.BSP_PlatformIsDetected:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccfTniy8.s:25     .text.BSP_PlatformIsDetected:00000000 BSP_PlatformIsDetected
+C:\Users\Student\AppData\Local\Temp\ccfTniy8.s:57     .text.BSP_PlatformIsDetected:00000018 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

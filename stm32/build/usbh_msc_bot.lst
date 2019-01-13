@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
   30:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   * THIS SOFTWARE IS PROVIDED BY STMICROELECTRONICS AND CONTRIBUTORS "AS IS"
   31:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   * AND ANY EXPRESS, IMPLIED OR STATUTORY WARRANTIES, INCLUDING, BUT NOT
   32:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 2
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 2
 
 
   33:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   * PARTICULAR PURPOSE AND NON-INFRINGEMENT OF THIRD PARTY INTELLECTUAL PROPERTY
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
   87:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** */
   88:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
   89:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** /** @defgroup USBH_MSC_BOT_Private_Macros
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 3
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 3
 
 
   90:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** * @{
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  144:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
  145:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   return USBH_CtlReq(phost, 0U, 0U);
  146:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 4
 
 
  147:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  201:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   USBH_StatusTypeDef   error  = USBH_BUSY;
  202:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   BOT_CSWStatusTypeDef CSW_Status = BOT_CSW_CMD_FAILED;
  203:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   USBH_URBStateTypeDef URB_Status = USBH_URB_IDLE;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 5
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 5
 
 
  204:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   MSC_HandleTypeDef *MSC_Handle =  (MSC_HandleTypeDef *) phost->pActiveClass->pData;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  258:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       {
  259:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****         MSC_Handle->hbot.state  = BOT_ERROR_OUT;
  260:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** #if (USBH_USE_OS == 1U)
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 6
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 6
 
 
  261:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****         osMessagePut ( phost->os_event, USBH_URB_EVENT, 0U);
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  315:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       6.7.2 Host expects to receive data from the device
  316:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       3. On a STALL condition receiving data, then:
  317:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       The host shall accept the data received.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 7
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 7
 
 
  318:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       The host shall clear the Bulk-In pipe.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  372:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       /* Resend same data */
  373:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       MSC_Handle->hbot.state  = BOT_DATA_OUT;
  374:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** #if (USBH_USE_OS == 1U)
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 8
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 8
 
 
  375:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****     osMessagePut ( phost->os_event, USBH_URB_EVENT, 0U);
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  429:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****     else if(URB_Status == USBH_URB_STALL)
  430:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****     {
  431:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       MSC_Handle->hbot.state  = BOT_ERROR_IN;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 9
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 9
 
 
  432:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** #if (USBH_USE_OS == 1U)
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  486:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
  487:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   default:
  488:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****     break;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 10
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 10
 
 
  489:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   }
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 11
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 11
 
 
   31              	.LVL0:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  570:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****           corresponding CBW */
  571:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
  572:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****           if(MSC_Handle->hbot.csw.field.Status == 0U)
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 12
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 12
 
 
  573:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****           {
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  627:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       {
  628:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****         /* If the CSW Signature is not valid, We sall return the Phase Error to
  629:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****         Upper Layers for Reset Recovery */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 13
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 13
 
 
  630:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  633:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****     } /* CSW Length Check*/
  634:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
  635:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   return status;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 14
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 14
 
 
  636:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** }
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  148              	.LVL17:
  512:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
  149              		.loc 1 512 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 15
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 15
 
 
  150 0018 08BD     		pop	{r3, pc}
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  197 0012 0A46     		mov	r2, r1
  198 0014 FFF7FEFF 		bl	USBH_CtlReq
  199              	.LVL22:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 16
 
 
  146:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c **** 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  248              		.align	1
  249              		.global	USBH_MSC_BOT_Init
  250              		.syntax unified
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 17
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 17
 
 
  251              		.thumb
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  300              		.loc 1 199 0
  301              		.cfi_startproc
  302              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 18
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 18
 
 
  303              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  352              	.LVL31:
  353 0048 FFF7FEFF 		bl	USBH_BulkSendData
  354              	.LVL32:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 19
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 19
 
 
  355              	.L30:
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  399 007c 0323     		movs	r3, #3
  400 007e 84F85030 		strb	r3, [r4, #80]
  401 0082 02E0     		b	.L46
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 20
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 20
 
 
  402              	.L44:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  447              		.loc 1 269 0
  448 00c4 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
  449 00c6 6289     		ldrh	r2, [r4, #10]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 21
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 21
 
 
  450 00c8 D4F88C10 		ldr	r1, [r4, #140]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  493 0104 5BB1     		cbz	r3, .L51
  297:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****                               MSC_Handle->InEpSize, MSC_Handle->InPipe);
  494              		.loc 1 297 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 22
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 22
 
 
  495 0106 2379     		ldrb	r3, [r4, #4]	@ zero_extendqisi2
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  541              	.L36:
  332:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****                        MSC_Handle->OutEpSize, MSC_Handle->OutPipe, 1U);
  542              		.loc 1 332 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 23
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 23
 
 
  543 014a 6379     		ldrb	r3, [r4, #5]	@ zero_extendqisi2
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  587 018c E365     		str	r3, [r4, #92]
  588              	.L54:
  355:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 24
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 24
 
 
  589              		.loc 1 355 0
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  200:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   USBH_StatusTypeDef   error  = USBH_BUSY;
  636              		.loc 1 200 0
  637 01d4 0126     		movs	r6, #1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 25
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 25
 
 
  638 01d6 39E7     		b	.L30
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  682 0210 14D0     		beq	.L82
  200:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   USBH_StatusTypeDef   error  = USBH_BUSY;
  683              		.loc 1 200 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 26
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 26
 
 
  684 0212 0126     		movs	r6, #1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  728              		.loc 1 200 0
  729 024e 0126     		movs	r6, #1
  730 0250 FCE6     		b	.L30
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 27
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 27
 
 
  731              	.LVL90:
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  773              	.L86:
  464:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****       USBH_LL_SetToggle(phost, MSC_Handle->OutPipe, 1U - toggle);
  774              		.loc 1 464 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 28
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 28
 
 
  775 0286 6179     		ldrb	r1, [r4, #5]	@ zero_extendqisi2
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  820 02cc BEE6     		b	.L30
  821              	.LVL102:
  822              	.L62:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 29
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 29
 
 
  200:Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src/usbh_msc_bot.c ****   USBH_StatusTypeDef   error  = USBH_BUSY;
@@ -1708,27 +1708,27 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 1
  847              		.file 18 "Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc/usbh_msc.h"
  848              		.file 19 "Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h"
  849              		.file 20 "Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_ioreq.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s 			page 30
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s 			page 30
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 usbh_msc_bot.c
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:18     .text.USBH_MSC_DecodeCSW:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:24     .text.USBH_MSC_DecodeCSW:00000000 USBH_MSC_DecodeCSW
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:105    .text.USBH_MSC_DecodeCSW:0000004c $d
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:110    .text.USBH_MSC_BOT_Abort:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:116    .text.USBH_MSC_BOT_Abort:00000000 USBH_MSC_BOT_Abort
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:164    .text.USBH_MSC_BOT_REQ_Reset:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:171    .text.USBH_MSC_BOT_REQ_Reset:00000000 USBH_MSC_BOT_REQ_Reset
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:206    .text.USBH_MSC_BOT_REQ_GetMaxLUN:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:213    .text.USBH_MSC_BOT_REQ_GetMaxLUN:00000000 USBH_MSC_BOT_REQ_GetMaxLUN
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:248    .text.USBH_MSC_BOT_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:255    .text.USBH_MSC_BOT_Init:00000000 USBH_MSC_BOT_Init
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:285    .text.USBH_MSC_BOT_Init:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:291    .text.USBH_MSC_BOT_Process:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:298    .text.USBH_MSC_BOT_Process:00000000 USBH_MSC_BOT_Process
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:328    .text.USBH_MSC_BOT_Process:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccZa9O6f.s:339    .text.USBH_MSC_BOT_Process:00000032 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:18     .text.USBH_MSC_DecodeCSW:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:24     .text.USBH_MSC_DecodeCSW:00000000 USBH_MSC_DecodeCSW
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:105    .text.USBH_MSC_DecodeCSW:0000004c $d
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:110    .text.USBH_MSC_BOT_Abort:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:116    .text.USBH_MSC_BOT_Abort:00000000 USBH_MSC_BOT_Abort
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:164    .text.USBH_MSC_BOT_REQ_Reset:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:171    .text.USBH_MSC_BOT_REQ_Reset:00000000 USBH_MSC_BOT_REQ_Reset
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:206    .text.USBH_MSC_BOT_REQ_GetMaxLUN:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:213    .text.USBH_MSC_BOT_REQ_GetMaxLUN:00000000 USBH_MSC_BOT_REQ_GetMaxLUN
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:248    .text.USBH_MSC_BOT_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:255    .text.USBH_MSC_BOT_Init:00000000 USBH_MSC_BOT_Init
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:285    .text.USBH_MSC_BOT_Init:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:291    .text.USBH_MSC_BOT_Process:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:298    .text.USBH_MSC_BOT_Process:00000000 USBH_MSC_BOT_Process
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:328    .text.USBH_MSC_BOT_Process:0000001c $d
+C:\Users\Student\AppData\Local\Temp\ccHAcXJa.s:339    .text.USBH_MSC_BOT_Process:00000032 $t
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

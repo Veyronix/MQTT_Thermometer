@@ -144,7 +144,15 @@ void StartDefaultTask(void const * argument);
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 
+float buffer[BUFFER_SIZE];
+int first_index = 0;
+int current_pos = 0;
+int is_full = 0;
 
+float buffer2[BUFFER_SIZE];
+int first_index2= 0;
+int current_pos2 = 0;
+int is_full2 = 0;
 
 
 /* USER CODE BEGIN PFP */
@@ -191,6 +199,8 @@ char inkey(void)
 static void lcd_start(void)
 {
   /* LCD Initialization */
+  BSP_LCD_SetFont(&Font12);
+
   BSP_LCD_Init();
 
   /* LCD Initialization */
@@ -248,12 +258,14 @@ void draw_button(int button[4], uint32_t color, uint8_t* text){
 	BSP_LCD_SetTextColor(color);
 	BSP_LCD_DrawRect(xPos,yPos,width,height);
 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
-	BSP_LCD_DisplayStringAt(xPos+5, yPos+5, text, 0);
+	BSP_LCD_DisplayStringAt(xPos+5, yPos+height/2, text, 0);
 
 }
 
-void draw_chart(float* data){
-
+void draw_chart(){
+	if(current_pos == BUFFER_SIZE - 1 || current_pos == BUFFER_SIZE - 2){
+		return;
+	}
     int chart_height = 200;
 	int chart_height_coord = 230;
     int chart_length = 450;
@@ -269,15 +281,23 @@ void draw_chart(float* data){
     BSP_LCD_DrawVLine(chart_x_pos,chart_y_pos_coord,chart_height_coord);
     
 //    BSP_LCD_FillTriangle(chart_length-10,chart_length-10,chart_length,chart_y_pos+5,chart_y_pos-5,chart_y_pos);
-    int n = 90; //sizeof(data)/sizeof(data[0]);
-    float max = data[0];
-    float min = data[0];//0;//data[0];
+
+    //check amount of data
+    int n = 0;
+    for(int i = 0; i < BUFFER_SIZE; i++){
+        if(buffer[i] != INT32_MIN)
+            n++;
+    }
+
+    //int n = 90; //sizeof(data)/sizeof(data[0]);
+    float max = 30;//buffer[0];
+    float min = 20;//buffer[0];//0;//data[0];
 
     for(int i=1; i<n; i++){
-      if(data[i] < min)
-          min = data[i];
-      if(data[i] > max)
-          max = data[i];
+      if(buffer[i] < min)
+          min = buffer[i];
+      if(buffer[i] > max)
+          max = buffer[i];
     }
     int min_i = min;//0;//min;
     int max_i = max;
@@ -285,7 +305,7 @@ void draw_chart(float* data){
     float amplitude = max - min; // ?
     float scale = chart_height/amplitude; // ?
 
-// draw scale
+    // draw scale
     int y = chart_y_pos;
     BSP_LCD_SetTextColor(LCD_COLOR_LIGHTGRAY);
     for(int i=1;i<amplitude;i++){
@@ -296,15 +316,141 @@ void draw_chart(float* data){
   BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
 
   int sample_len = chart_length/n;
-  for(int i=0; i<n-1; i++){
-    int x1,y1,x2,y2;
-    x1 = chart_x_pos + i * sample_len;
-    x2 = chart_x_pos + (i+1) * sample_len;
-    y1 = chart_y_pos - (data[i] - min_i)*coordinates_scale;
-    y2 = chart_y_pos - (data[i+1] - min_i)*coordinates_scale;
+  int stop_cond; 
 
-    BSP_LCD_DrawLine(x1,y1,x2,y2);
+   if(first_index == 0){
+		stop_cond = BUFFER_SIZE -1;
+	} 
+	else{
+		stop_cond = first_index - 1;
+	}
+  for(int i= first_index; i != stop_cond; i = (i+1)%BUFFER_SIZE){
+      if(buffer[(i+1)%BUFFER_SIZE] != INT32_MIN) {
+		  //printf("i:  %d\n",i);
+          int x1, y1, x2, y2;
+          x1 = chart_x_pos + i * sample_len;
+          x2 = chart_x_pos + (i + 1) * sample_len;
+          y1 = chart_y_pos - (buffer[i%BUFFER_SIZE] - min_i) * coordinates_scale;
+          y2 = chart_y_pos - (buffer[(i + 1)%BUFFER_SIZE] - min_i) * coordinates_scale;
+          BSP_LCD_DrawLine(x1, y1, x2, y2);
+      }
+	  //printf("iiii:   %d\n",i);
+  }
+    //printf("ended for\n");
+  
+	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+	Point points[3];
+	points[0].X=chart_x_pos+5;
+	points[1].X=chart_x_pos-5;
+	points[2].X=chart_x_pos;
+	
+	points[0].Y=chart_y_pos_coord+10;
+	points[1].Y=chart_y_pos_coord+10;
+	points[2].Y=chart_y_pos_coord;
+	BSP_LCD_FillPolygon(points,3);
 
+	points[0].X=chart_x_pos+chart_length-10;
+	points[1].X=chart_x_pos+chart_length;
+	points[2].X=chart_x_pos+chart_length-10;
+
+	points[0].Y=chart_y_pos-5;
+	points[1].Y=chart_y_pos;
+	points[2].Y=chart_y_pos+5;
+	BSP_LCD_FillPolygon(points,3);
+	//BSP_LCD_FillPolygon(chart_x_pos-5,chart_x_pos-5,chart_x_pos+5,chart_height-10,chart_height,chart_height-10);
+
+
+	BSP_LCD_SetFont(&Font12);
+	
+	int j = 0;
+	for(int i = min; i <=max ; i+=5){
+		int someInt = i;
+		char str[3];
+		sprintf(str, "%d", someInt);
+		BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-j*coordinates_scale, (uint8_t*)str, LEFT_MODE);
+		j+=5;
+	}
+	/*
+	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5, (uint8_t*)"0", LEFT_MODE);
+	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-5*coordinates_scale, (uint8_t*)"5", LEFT_MODE);
+	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-10*coordinates_scale, (uint8_t*)"10", LEFT_MODE);
+	BSP_LCD_DisplayStringAt(chart_x_pos-15,chart_y_pos-5-15*coordinates_scale, (uint8_t*)"15", LEFT_MODE);
+	*/
+	}
+
+void draw_chart2(){
+
+	if(current_pos2 == BUFFER_SIZE - 1 || current_pos2 == BUFFER_SIZE - 2){
+		return;
+	}
+    int chart_height = 200;
+	int chart_height_coord = 230;
+    int chart_length = 450;
+    int chart_y_pos = 250;
+    int chart_x_pos = 20;
+	int chart_y_pos_coord = 20;
+
+//drawing coordinates system
+    BSP_LCD_SelectLayer(0);
+    BSP_LCD_Clear(LCD_COLOR_WHITE);
+    BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+    BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos,chart_length);
+    BSP_LCD_DrawVLine(chart_x_pos,chart_y_pos_coord,chart_height_coord);
+    
+//    BSP_LCD_FillTriangle(chart_length-10,chart_length-10,chart_length,chart_y_pos+5,chart_y_pos-5,chart_y_pos);
+
+    //check amount of data
+    int n = 0;
+    for(int i = 0; i < BUFFER_SIZE; i++){
+        if(buffer2[i] != INT32_MIN)
+            n++;
+    }
+
+    //int n = 90; //sizeof(data)/sizeof(data[0]);
+    float max = 30;//buffer[0];
+    float min = 20;//buffer[0];//0;//data[0];
+
+    for(int i=1; i<n; i++){
+      if(buffer2[i] < min)
+          min = buffer2[i];
+      if(buffer2[i] > max)
+          max = buffer2[i];
+    }
+    int min_i = min;//0;//min;
+    int max_i = max;
+    float coordinates_scale = chart_height/(max_i - min_i);
+    float amplitude = max - min; // ?
+    float scale = chart_height/amplitude; // ?
+
+    // draw scale
+    int y = chart_y_pos;
+    BSP_LCD_SetTextColor(LCD_COLOR_LIGHTGRAY);
+    for(int i=1;i<amplitude;i++){
+      BSP_LCD_DrawHLine(chart_x_pos,chart_y_pos-i*coordinates_scale,chart_length);
+    }
+
+// draw data
+  BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
+
+  int sample_len = chart_length/n;
+  int stop_cond; 
+
+   if(first_index2 == 0){
+		stop_cond = BUFFER_SIZE -1;
+	} 
+	else{
+		stop_cond = first_index2 - 1;
+	}
+  for(int i= first_index2; i != stop_cond; i = (i+1)%BUFFER_SIZE){
+      if(buffer2[(i+1)%BUFFER_SIZE] != INT32_MIN) {
+		  //printf("i:  %d\n",i);
+          int x1, y1, x2, y2;
+          x1 = chart_x_pos + i * sample_len;
+          x2 = chart_x_pos + (i + 1) * sample_len;
+          y1 = chart_y_pos - (buffer2[i%BUFFER_SIZE] - min_i) * coordinates_scale;
+          y2 = chart_y_pos - (buffer2[(i + 1)%BUFFER_SIZE] - min_i) * coordinates_scale;
+          BSP_LCD_DrawLine(x1, y1, x2, y2);
+      }
   }
 	BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
 	Point points[3];
@@ -357,20 +503,77 @@ int initialize_touchscreen(void)
 	return 0;
 }
 
+
+void add_data_to_buffer(char* new_item, int client_number)
+{
+	if(client_number == 1){
+
+		int buff_size = sizeof(buffer);
+		float new_item_f = atof(new_item);
+		buffer[current_pos] = new_item_f;
+		
+		printf("%2.6f to dodaje\n",new_item_f);
+		printf("Current pos %d\n",current_pos);
+		printf("First index %d\n",first_index);
+		printf("is_full %d \n",is_full);
+
+		if( is_full == 0){
+			current_pos = (current_pos+1)%BUFFER_SIZE;
+		}
+
+		if(is_full == 1){
+			first_index = (first_index+1)%BUFFER_SIZE;
+			current_pos = (current_pos+1)%BUFFER_SIZE;
+		}
+
+		if((current_pos == BUFFER_SIZE - 1) && is_full == 0)
+		{
+			is_full = 1;
+			first_index = 1;
+		}
+	}
+	else if(client_number == 2){
+
+		int buff_size = sizeof(buffer2);
+		float new_item_f = atof(new_item);
+		buffer2[current_pos2] = new_item_f;
+		
+		printf("%f to dodaje\n",new_item_f);
+
+		if( is_full2 == 0){
+			current_pos2 = (current_pos2+1)%BUFFER_SIZE;
+		}
+
+		if(is_full2 == 1){
+			first_index2 = (first_index2+1)%BUFFER_SIZE;
+			current_pos2 = (current_pos2+1)%BUFFER_SIZE;
+		}
+
+		if((current_pos2 == BUFFER_SIZE - 1) && is_full2 == 0)
+		{
+			is_full2 = 1;
+			first_index2 = 1;
+		}
+	}
+}
+
  int print_data(char* data, int client_id, int len){
+    sFONT* old_font = BSP_LCD_GetFont();
 	BSP_LCD_SetFont(&LCD_DEFAULT_FONT);
 	BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
 	BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
 	if(client_id == 1){
 		printf("%s\n",data);
 		int i;
-		for(i = 10; i < 70;i++)
-			BSP_LCD_ClearStringLine(i);
+		//for(i = 10; i < 70;i++)
+			//BSP_LCD_ClearStringLine(i);
 		BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-		BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+		BSP_LCD_FillRect(10,50,LCD_X_SIZE,LCD_Y_SIZE*0.08);
+//BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+
 		BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
-		BSP_LCD_ClearStringLine(10);
-		BSP_LCD_ClearStringLine(50);
+		//BSP_LCD_ClearStringLine(10);
+		//BSP_LCD_ClearStringLine(50);
 		char target[100];
 
 		strncpy(target, data, len);
@@ -382,13 +585,16 @@ int initialize_touchscreen(void)
 	printf("%s\n",data);
 	char target[100];
 	BSP_LCD_SetTextColor(LCD_COLOR_WHITE);
-		BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+		//BSP_LCD_FillRect(0.3*LCD_X_SIZE,0.1*LCD_Y_SIZE,10,50);
+		BSP_LCD_FillRect(10,110,LCD_X_SIZE,LCD_Y_SIZE*0.08);
 		BSP_LCD_SetTextColor(LCD_COLOR_DARKBLUE);
 	strncpy(target, data, len);
 	target[len] = '\0';
 	BSP_LCD_DisplayStringAt(0, 70, (uint8_t*)"Temperature2 is:", CENTER_MODE);
 	BSP_LCD_DisplayStringAt(0, 110, (uint8_t*)target, CENTER_MODE);
 	}
+	
+	BSP_LCD_SetFont(old_font);
 }
 
 
@@ -405,6 +611,11 @@ int main(void)
 
   float data[90] = {20.34,21.39,20.05,25.07,21.97,24.27,26.34,26.39,26.32,22.01,20.34,27.39,22.05,25.07,20.97,24.27,26.34,20.39,26.32,22.01,20.34,21.39,22.05,21.07,26.97,20.23,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01,20.34,21.39,22.05,25.07,26.97,24.27,26.34,26.39,26.32,22.01};
 
+// fill buffer
+for(int i = 0; i < BUFFER_SIZE; i++){
+    buffer[i] = INT32_MIN;
+	buffer2[i] = INT32_MIN;
+}
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -805,7 +1016,7 @@ int example_do_connect(mqtt_client_t *client)
      to establish a connection with the server.
      For now MQTT version 3.1.1 is always used */
   ip_addr_t ip_addr;
-  if(1 == ipaddr_aton( "192.168.0.101",&ip_addr)){
+  if(1 == ipaddr_aton( "192.168.0.111",&ip_addr)){
 	printf("Created ip");
   }
   err = mqtt_client_connect(client, &ip_addr, 1883, mqtt_connection_cb, 0, &ci);
@@ -891,7 +1102,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
 {
   printf("Incoming publish payload with length %d, flags %u\n", len, (unsigned int)flags);
 
-  if(flags & MQTT_DATA_FLAG_LAST && which_window == 2) {
+  if(flags & MQTT_DATA_FLAG_LAST) {
     /* Last fragment of payload received (or whole part if payload fits receive buffer
        See MQTT_VAR_HEADER_BUFFER_LEN)  */
 
@@ -907,12 +1118,25 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
 	  xprintf("Call an A function ...\n");
 
     } else if(inpub_id == 2){
-		print_data((const char *)data, 1,len);
+		add_data_to_buffer((const char *)data,1);
+		if(which_window == 2){
+			
+			print_data((const char *)data, 1,len);
+		}
+		if(which_window == 3){
+			draw_chosen_chart(1);
+		}
 	}
 	else {
       //printf("mqtt_incoming_data_cb: Ignoring payload...\n");
 	  printf("mqtt_incoming_data_cb: %s\n", (const char *)data);
-	  print_data((const char *)data,2,len);
+	  add_data_to_buffer((const char *)data,2);
+	  if(which_window == 2){
+		print_data((const char *)data,2,len);
+	  }
+	  if(which_window == 4){
+		draw_chosen_chart(2);
+	  }
     }
   } else {
     /* Handle fragmented payload, store in buffer, write to file or whatever */
@@ -944,11 +1168,11 @@ void example_publish(mqtt_client_t *client, void *arg)
 // zmienna jest u gory bo przyjmowanie danych musi wiedziec czy moze wyswietlic je
 // int which_window = 0;
 
-int button_return[4] = {0,0,0,0};
-int button_choose_thermometer1[4] = {0,0,0,0};
-int button_choose_thermometer2[4] = {0,0,0,0};
-int button_show_temperature[4] = {0,0,0,0};
-int button_show_charts[4] = {0,0,0,0};
+int button_return[4] = {125,220,140,50};
+int button_choose_thermometer1[4] = {50,120,140,50};
+int button_choose_thermometer2[4] = {250,120,140,50};
+int button_show_temperature[4] = {50,120,140,50};
+int button_show_charts[4] = {250,120,140,50};
 
 void draw_menu(){
   BSP_LCD_Clear(LCD_COLOR_WHITE);
@@ -975,22 +1199,37 @@ void draw_choose_thermometer(){
   BSP_LCD_SelectLayer(1);
   char thermometer1[] = "Thermometer 1";
   char thermometer2[] = "Thermometer 2";
+  char return_text[] = "Return";
   draw_button(button_choose_thermometer1,LCD_COLOR_MAGENTA,&thermometer1);
   draw_button(button_choose_thermometer2,LCD_COLOR_MAGENTA,&thermometer2);
-
+  draw_button(button_return,LCD_COLOR_MAGENTA,&return_text);
 }
 
 void draw_actual_temperature(){
 
-  
+	//pozwol mqtt wyswietlac dane
+	BSP_LCD_Clear(LCD_COLOR_WHITE);
+	char no_value[] = "No value";
+	print_data(no_value, 1, 8);
+	print_data(no_value, 2, 8);
+	char return_text[] = "Return";
+	draw_button(button_return,LCD_COLOR_MAGENTA,&return_text);
 }
 
-
-void draw_chart(int id_thermometer){
+void draw_chosen_chart(int id_thermometer){
 
   //narysuj odpowiedni wykres
-
-
+  if(id_thermometer == 1){
+		draw_chart();
+		char return_text[] = "Return";
+		draw_button(button_return,LCD_COLOR_MAGENTA,&return_text);
+	}
+	
+	  if(id_thermometer == 2){
+		draw_chart2();
+		char return_text[] = "Return";
+		draw_button(button_return,LCD_COLOR_MAGENTA,&return_text);
+	}
 }
 
 int touched_button(int button[4],int x, int y){
@@ -1003,6 +1242,8 @@ int touched_button(int button[4],int x, int y){
 
 void StartDefaultTask(void const * argument)
 {
+  
+  //odkomentowac to ponizej!!
   MX_LWIP_Init();
 
   /*MQTT */
@@ -1017,36 +1258,46 @@ void StartDefaultTask(void const * argument)
   //xprintf("tutaj koniecx");
   }
 
+  which_window = 0;
+  draw_menu();
+	int still_touched = 0;
   for(;;)
   {
-
+	
 	BSP_TS_GetState(&TS_State);
-	if(TS_State.touchDetected)
+	if(TS_State.touchDetected && still_touched == 0)
 	{
-    
+	still_touched = 1;
+    xprintf("Touched touchscreen\n");
     //pobrac jakos wspolrzedne dotknietego pola
-    int x = 0;
-    int y = 0;
+    int x = TS_State.touchX[0];
+    int y = TS_State.touchY[0];
+	printf("x %d\n", x);
+	printf("y %d\n", y);
     if(which_window == 0){
       if(touched_button(button_show_charts,x,y) == 1){
         draw_choose_thermometer();
         which_window = 1;
       }
       else if(touched_button(button_show_temperature,x,y) == 1){
-        // draw_actual_temperature();
+        draw_actual_temperature();
         //przy otrzymaniu danych mqtt pokaze temperature
         which_window = 2;
       }
     }
     else if(which_window == 1){
       if(touched_button(button_choose_thermometer1,x,y) == 1){
-        draw_chart();
+        draw_chosen_chart(1);
         which_window = 3;
       }
       else if(touched_button(button_choose_thermometer2,x,y) == 1){
-        draw_chart();
-        which_window = 3;
+        draw_chosen_chart(2);
+        which_window = 4;
       }
+	  else if(touched_button(button_choose_thermometer2,x,y) == 1){
+		draw_menu();
+		which_window = 0;
+	  }
     }
     else if(which_window == 2){
       if(touched_button(button_return,x,y) == 1){
@@ -1054,14 +1305,20 @@ void StartDefaultTask(void const * argument)
         which_window = 0;
       }
     }
-    else if(which_window == 3){
+    else if(which_window == 3 || which_window == 4){
       if(touched_button(button_return,x,y) == 1){
         draw_menu();
         which_window = 0;
       }
     }
+	
 	}
-
+	else if(TS_State.touchDetected){
+		
+	}
+	else{
+		still_touched = 0;
+	}
 	char key = inkey();
 	if(key == 'p'){
 		xprintf("Send message \n");

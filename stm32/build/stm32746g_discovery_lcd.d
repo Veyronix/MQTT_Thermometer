@@ -51,13 +51,13 @@ build/stm32746g_discovery_lcd.o: \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hcd.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\fonts.h \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font24.c \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\fonts.h \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font20.c \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font16.c \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font12.c \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font8.c
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font24.c \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font20.c \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font16.c \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font12.c \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font8.c
 
 Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_lcd.h:
 
@@ -167,16 +167,16 @@ Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 
 Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\fonts.h:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font24.c:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font24.c:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\fonts.h:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font20.c:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font20.c:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font16.c:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font16.c:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font12.c:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font12.c:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\font8.c:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/font8.c:

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
   30:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****                                      )
   31:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****           to start playing (for the first time) from the audio file/stream.
   32:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****        + Call the function BSP_AUDIO_OUT_Pause() to pause playing   
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 2
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 2
 
 
   33:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****        + Call the function BSP_AUDIO_OUT_Resume() to resume playing.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
   87:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   88:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   89:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   *
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 3
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 3
 
 
   90:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   ******************************************************************************
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  144:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** AUDIO_DrvTypeDef          *audio_drv;
  145:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** SAI_HandleTypeDef         haudio_out_sai={0};
  146:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** SAI_HandleTypeDef         haudio_in_sai={0};
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 4
 
 
  147:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** TIM_HandleTypeDef         haudio_tim;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  201:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   deviceid = wm8994_drv.ReadID(AUDIO_I2C_ADDRESS);
  202:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   
  203:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   if((deviceid) == WM8994_ID)
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 5
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 5
 
 
  204:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   {  
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  258:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
  259:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** /**
  260:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @brief  This function Pauses the audio file stream. In case
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 6
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 6
 
 
  261:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   *         of using DMA, the DMA Pause feature is used.
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  315:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @retval AUDIO_OK if correct communication, else wrong communication
  316:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   */
  317:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** uint8_t BSP_AUDIO_OUT_Stop(uint32_t Option)
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 7
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 7
 
 
  318:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  372:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   else
  373:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   {
  374:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     /* Return AUDIO_OK when all operations are correctly done */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 8
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 8
 
 
  375:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     return AUDIO_OK;
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  429:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   *            @arg CODEC_AUDIOFRAME_SLOT_13
  430:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @note   This API should be called after the BSP_AUDIO_OUT_Init() to adjust the
  431:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   *         audio frame slot.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 9
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 9
 
 
  432:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @retval None
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  486:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   */
  487:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** void HAL_SAI_ErrorCallback(SAI_HandleTypeDef *hsai)
  488:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 10
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 10
 
 
  489:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   HAL_SAI_StateTypeDef audio_out_state;
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  543:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   AUDIO_OUT_SAIx_CLK_ENABLE();
  544:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   
  545:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Enable GPIO clock */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 11
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 11
 
 
  546:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   AUDIO_OUT_SAIx_MCLK_ENABLE();
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  600:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     __HAL_LINKDMA(hsai, hdmatx, hdma_sai_tx);
  601:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     
  602:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     /* Deinitialize the Stream for new transfer */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 12
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 12
 
 
  603:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     HAL_DMA_DeInit(&hdma_sai_tx);
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  657:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @brief  Clock Config.
  658:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @param  hsai: might be required to set audio peripheral predivider if any.
  659:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @param  AudioFreq: Audio frequency used to play the audio stream.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 13
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 13
 
 
  660:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @param  Params  
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  714:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** static void SAIx_Out_Init(uint32_t AudioFreq)
  715:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {
  716:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Initialize the haudio_out_sai Instance parameter */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 14
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 14
 
 
  717:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_out_sai.Instance = AUDIO_OUT_SAIx;
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  771:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {
   27              		.loc 1 771 0
   28              		.cfi_startproc
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 15
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 15
 
 
   29              		@ args = 0, pretend = 0, frame = 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  792:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @param  BitRes: Audio frequency to be configured.
  793:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @param  ChnlNbr: Channel number.
  794:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @retval AUDIO_OK if correct communication, else wrong communication
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 16
 
 
  795:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   */
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  849:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     }
  850:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     SAIx_In_Init(SAI_MODEMASTER_RX, slot_active, AudioFreq);
  851:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 17
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 17
 
 
  852:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     /* wm8994 codec initialization */
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  906:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     /* SAI data transfer preparation:
  907:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     Prepare the Media to be used for the audio transfer from SAI peripheral to memory */
  908:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     haudio_in_sai.Instance = AUDIO_IN_SAIx;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 18
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 18
 
 
  909:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     if(HAL_SAI_GetState(&haudio_in_sai) == HAL_SAI_STATE_RESET)
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  963:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
  964:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** /**
  965:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @brief  Starts audio recording.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 19
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 19
 
 
  966:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   * @param  pbuf: Main buffer pointer for the recorded data storing  
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
 1020:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {    
 1021:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Call the Media layer pause function */
 1022:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   HAL_SAI_DMAPause(&haudio_in_sai);
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 20
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 20
 
 
 1023:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Return AUDIO_OK when all operations are correctly done */
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
 1077:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {
 1078:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Call the record update function to get the next buffer to fill and its size (size is ignored) 
 1079:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   BSP_AUDIO_IN_TransferComplete_CallBack();
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 21
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 21
 
 
 1080:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** }
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
 1134:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   static DMA_HandleTypeDef hdma_sai_rx;
 1135:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   GPIO_InitTypeDef  gpio_init_structure;  
 1136:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 22
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 22
 
 
 1137:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Enable SAI clock */
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
 1191:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   HAL_NVIC_SetPriority(AUDIO_IN_SAIx_DMAx_IRQ, AUDIO_IN_IRQ_PREPRIO, 0);
 1192:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   HAL_NVIC_EnableIRQ(AUDIO_IN_SAIx_DMAx_IRQ);
 1193:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 23
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 23
 
 
 1194:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Audio INT IRQ Channel configuration */
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
 1248:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** {
 1249:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Initialize SAI2 block A in MASTER RX */
 1250:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Initialize the haudio_out_sai Instance parameter */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 24
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 24
 
 
 1251:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_out_sai.Instance = AUDIO_OUT_SAIx;
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
 1305:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_in_sai.Init.AudioMode = SAI_MODESLAVE_RX;
 1306:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_in_sai.Init.NoDivider = SAI_MASTERDIVIDER_ENABLED;
 1307:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_in_sai.Init.Protocol = SAI_FREE_PROTOCOL;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 25
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 25
 
 
 1308:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_in_sai.Init.DataSize = SAI_DATASIZE_16;
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
   73              		.cfi_offset 14, -4
 1354:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Initialize the haudio_in_sai Instance parameter */
 1355:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_in_sai.Instance = AUDIO_IN_SAIx;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 26
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 26
 
 
   74              		.loc 1 1355 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  121              		.loc 1 725 0
  122 0010 E061     		str	r0, [r4, #28]
  726:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_out_sai.Init.NoDivider = SAI_MASTERDIVIDER_ENABLED;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 27
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 27
 
 
  123              		.loc 1 726 0
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  162 0046 A365     		str	r3, [r4, #88]
  755:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_out_sai.SlotInit.SlotActive = CODEC_AUDIOFRAME_SLOT_0123;
  163              		.loc 1 755 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 28
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 28
 
 
  164 0048 0423     		movs	r3, #4
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  216              		.cfi_def_cfa_offset 48
  217 0006 1446     		mov	r4, r2
 1251:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 29
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 29
 
 
  218              		.loc 1 1251 0
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  258              		.loc 1 1278 0
  259 004a 4FF48038 		mov	r8, #65536
  260 004e C5F84880 		str	r8, [r5, #72]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 30
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 30
 
 
 1279:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_out_sai.FrameInit.FSOffset = SAI_FS_BEFOREFIRSTBIT;
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  301              		.loc 1 1308 0
  302 0086 C4F834B0 		str	fp, [r4, #52]
 1309:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   haudio_in_sai.Init.ClockStrobing = SAI_CLOCKSTROBING_RISINGEDGE;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 31
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 31
 
 
  303              		.loc 1 1309 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  342 00c2 1360     		str	r3, [r2]
 1343:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** }
  343              		.loc 1 1343 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 32
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 32
 
 
  344 00c4 2268     		ldr	r2, [r4]
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  397 0012 9847     		blx	r3
  398              	.LVL15:
  399 0014 68B9     		cbnz	r0, .L20
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 33
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 33
 
 
  242:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  448 0000 08B5     		push	{r3, lr}
  449              	.LCFI7:
  450              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 34
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 34
 
 
  451              		.cfi_offset 3, -8
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  501              		.loc 1 277 0
  502 0012 0348     		ldr	r0, .L34+4
  503 0014 FFF7FEFF 		bl	HAL_SAI_DMAPause
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 35
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 35
 
 
  504              	.LVL24:
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  553 0018 0020     		movs	r0, #0
  554 001a 08BD     		pop	{r3, pc}
  555              	.L42:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 36
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 36
 
 
  556              		.align	2
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  606              	.L48:
  332:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     }
  607              		.loc 1 332 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 37
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 37
 
 
  608 0020 0120     		movs	r0, #1
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  659 0010 0020     		movs	r0, #0
  357:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
  660              		.loc 1 357 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 38
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 38
 
 
  661 0012 08BD     		pop	{r3, pc}
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  711              	.L64:
  712              		.align	2
  713              	.L63:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 39
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 39
 
 
  714 0018 00000000 		.word	audio_drv
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  766              		.syntax unified
  767              		.thumb
  768              		.thumb_func
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 40
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 40
 
 
  769              		.fpu fpv5-sp-d16
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  820              		.cfi_startproc
  821              		@ args = 0, pretend = 0, frame = 0
  822              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 41
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 41
 
 
  823              		@ link register save eliminated.
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  878              		.syntax unified
  879              		.thumb
  880              		.thumb_func
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 42
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 42
 
 
  881              		.fpu fpv5-sp-d16
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  935              		@ frame_needed = 0, uses_anonymous_args = 0
  936              	.LVL51:
  538:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   static DMA_HandleTypeDef hdma_sai_tx;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 43
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 43
 
 
  937              		.loc 1 538 0
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  987 0042 43F48073 		orr	r3, r3, #256
  988 0046 2363     		str	r3, [r4, #48]
  989 0048 236B     		ldr	r3, [r4, #48]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 44
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 44
 
 
  990 004a 03F48073 		and	r3, r3, #256
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1032              	.LVL55:
  564:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   gpio_init_structure.Mode = GPIO_MODE_AF_PP;
  1033              		.loc 1 564 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 45
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 45
 
 
  1034 0090 4023     		movs	r3, #64
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1075              		.loc 1 581 0
  1076 00d2 DAF80020 		ldr	r2, [r10]
  1077 00d6 1E4B     		ldr	r3, .L87+8
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 46
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 46
 
 
  1078 00d8 9A42     		cmp	r2, r3
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1122 0118 E261     		str	r2, [r4, #28]
  591:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     hdma_sai_tx.Init.FIFOMode            = DMA_FIFOMODE_ENABLE;         
  1123              		.loc 1 591 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 47
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 47
 
 
  1124 011a 4FF40032 		mov	r2, #131072
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1171              		.loc 1 621 0
  1172              		.cfi_startproc
  1173              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 48
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 48
 
 
  1174              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1220              		.loc 1 650 0
  1221 003e 074A     		ldr	r2, .L93+8
  1222 0040 536C     		ldr	r3, [r2, #68]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 49
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 49
 
 
  1223 0042 23F40003 		bic	r3, r3, #8388608
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1275              	.LFE147:
  1277              		.section	.text.BSP_AUDIO_OUT_ClockConfig,"ax",%progbits
  1278              		.align	1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 50
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 50
 
 
  1279              		.weak	BSP_AUDIO_OUT_ClockConfig
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1326              		.loc 1 696 0
  1327 0036 0723     		movs	r3, #7
  1328 0038 0493     		str	r3, [sp, #16]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 51
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 51
 
 
  697:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1374              		.fpu fpv5-sp-d16
  1376              	BSP_AUDIO_OUT_Init:
  1377              	.LFB136:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 52
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 52
 
 
  180:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   uint8_t ret = AUDIO_ERROR;
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  203:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   {  
  1425              		.loc 1 203 0
  1426 0034 48F69413 		movw	r3, #35220
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 53
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 53
 
 
  1427 0038 9842     		cmp	r0, r3
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1473 006e B047     		blx	r6
  1474              	.LVL95:
  1475 0070 E6E7     		b	.L107
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 54
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 54
 
 
  1476              	.L114:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1527              	.LVL99:
  420:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** }
  1528              		.loc 1 420 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 55
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 55
 
 
  1529 0022 2268     		ldr	r2, [r4]
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1583              		.global	BSP_AUDIO_IN_Stop
  1584              		.syntax unified
  1585              		.thumb
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 56
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 56
 
 
  1586              		.thumb_func
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1633              	.L125:
 1001:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   }
  1634              		.loc 1 1001 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 57
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 57
 
 
  1635 002a 0120     		movs	r0, #1
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1689              		.loc 1 1032 0
  1690              		.cfi_startproc
  1691              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 58
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 58
 
 
  1692              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1743              		.loc 1 1054 0
  1744 0012 A4B2     		uxth	r4, r4
  1745 0014 034B     		ldr	r3, .L143+4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 59
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 59
 
 
  1746 0016 1C80     		strh	r4, [r3]	@ movhi
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1798              	.LCFI33:
  1799              		.cfi_def_cfa_offset 8
  1800              		.cfi_offset 3, -8
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 60
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 60
 
 
  1801              		.cfi_offset 14, -4
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1854              	.LFE169:
  1856              		.section	.text.BSP_AUDIO_IN_Error_CallBack,"ax",%progbits
  1857              		.align	1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 61
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 61
 
 
  1858              		.weak	BSP_AUDIO_IN_Error_CallBack
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1910              	.LVL128:
  496:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   {
  1911              		.loc 1 496 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 62
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 62
 
 
  1912 0012 122D     		cmp	r5, #18
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  1963              		.cfi_offset 5, -16
  1964              		.cfi_offset 6, -12
  1965              		.cfi_offset 7, -8
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 63
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 63
 
 
  1966              		.cfi_offset 14, -4
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2012              	.LVL135:
  2013              	.LBB9:
 1151:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****   /* Audio INT pin configuration: input */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 64
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 64
 
 
  2014              		.loc 1 1151 0
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2059              		.loc 1 1192 0
  2060 0092 4620     		movs	r0, #70
  2061 0094 FFF7FEFF 		bl	HAL_NVIC_EnableIRQ
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 65
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 65
 
 
  2062              	.LVL138:
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2105 00d0 2262     		str	r2, [r4, #32]
 1173:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     hdma_sai_rx.Init.FIFOThreshold       = DMA_FIFO_THRESHOLD_FULL;
  2106              		.loc 1 1173 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 66
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 66
 
 
  2107 00d2 6662     		str	r6, [r4, #36]
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2155              		@ frame_needed = 0, uses_anonymous_args = 0
  2156              	.LVL144:
  2157 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 67
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 67
 
 
  2158              	.LCFI40:
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2204 0038 21D0     		beq	.L177
  848:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     }
  2205              		.loc 1 848 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 68
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 68
 
 
  2206 003a 0521     		movs	r1, #5
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2252 0078 FFF7FEFF 		bl	BSP_AUDIO_IN_MspInit
  2253              	.LVL158:
  2254 007c DAE7     		b	.L168
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 69
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 69
 
 
  2255              	.L177:
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2305              		.loc 1 798 0
  2306 0002 1346     		mov	r3, r2
  2307 0004 0A46     		mov	r2, r1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 70
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 70
 
 
  2308              	.LVL164:
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2359 0016 0446     		mov	r4, r0
  900:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     SAIx_Out_DeInit();
  2360              		.loc 1 900 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 71
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 71
 
 
  2361 0018 FFF7FEFF 		bl	SAIx_In_DeInit
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2406 005a 9842     		cmp	r0, r3
  2407 005c 17D0     		beq	.L194
  951:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c ****     }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 72
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 72
 
 
  2408              		.loc 1 951 0
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2455 009a 0025     		movs	r5, #0
  2456 009c E0E7     		b	.L187
  2457              	.L196:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 73
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 73
 
 
  2458 009e 00BF     		.align	2
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2509 0022 FFF7FEFF 		bl	HAL_GPIO_DeInit
  2510              	.LVL192:
 1228:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 74
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 74
 
 
  2511              		.loc 1 1228 0
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2563              		.align	2
  2564              	.L205:
  2565 0010 00000000 		.word	.LANCHOR1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 75
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 75
 
 
  2566              		.cfi_endproc
@@ -4498,14 +4498,14 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2611              		.set	.LANCHOR3,. + 0
  2614              	AudioInVolume:
  2615 0000 4000     		.short	64
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 76
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 76
 
 
  2616              		.text
  2617              	.Letext0:
  2618              		.file 2 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\machine\\_default_types.h"
  2619              		.file 3 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\_stdint.h"
- 2620              		.file 4 "e:\\swprojekt\\7tmqqt_piesoc\\drivers\\bsp\\components\\common\\audio.h"
+ 2620              		.file 4 "Drivers/BSP/STM32746G-Discovery/../Components/wm8994/../Common/audio.h"
  2621              		.file 5 "Drivers/BSP/STM32746G-Discovery/../Components/wm8994/wm8994.h"
  2622              		.file 6 "Drivers/CMSIS/Include/core_cm7.h"
  2623              		.file 7 "Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h"
@@ -4523,142 +4523,142 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 1
  2635              		.file 19 "Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_audio.h"
  2636              		.file 20 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h"
  2637              		.file 21 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 77
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 77
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32746g_discovery_audio.c
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:18     .text.SAIx_Out_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:24     .text.SAIx_Out_DeInit:00000000 SAIx_Out_DeInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:51     .text.SAIx_Out_DeInit:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:57     .text.SAIx_In_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:63     .text.SAIx_In_DeInit:00000000 SAIx_In_DeInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:89     .text.SAIx_In_DeInit:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:95     .text.SAIx_Out_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:101    .text.SAIx_Out_Init:00000000 SAIx_Out_Init
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:183    .text.SAIx_Out_Init:00000064 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:189    .text.SAIx_In_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:195    .text.SAIx_In_Init:00000000 SAIx_In_Init
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:357    .text.SAIx_In_Init:000000d4 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:365    .text.BSP_AUDIO_OUT_Play:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:372    .text.BSP_AUDIO_OUT_Play:00000000 BSP_AUDIO_OUT_Play
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:428    .text.BSP_AUDIO_OUT_Play:00000038 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:18     .text.SAIx_Out_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:24     .text.SAIx_Out_DeInit:00000000 SAIx_Out_DeInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:51     .text.SAIx_Out_DeInit:00000018 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:57     .text.SAIx_In_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:63     .text.SAIx_In_DeInit:00000000 SAIx_In_DeInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:89     .text.SAIx_In_DeInit:00000018 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:95     .text.SAIx_Out_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:101    .text.SAIx_Out_Init:00000000 SAIx_Out_Init
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:183    .text.SAIx_Out_Init:00000064 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:189    .text.SAIx_In_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:195    .text.SAIx_In_Init:00000000 SAIx_In_Init
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:357    .text.SAIx_In_Init:000000d4 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:365    .text.BSP_AUDIO_OUT_Play:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:372    .text.BSP_AUDIO_OUT_Play:00000000 BSP_AUDIO_OUT_Play
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:428    .text.BSP_AUDIO_OUT_Play:00000038 $d
                             *COM*:00000004 audio_drv
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:434    .text.BSP_AUDIO_OUT_ChangeBuffer:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:441    .text.BSP_AUDIO_OUT_ChangeBuffer:00000000 BSP_AUDIO_OUT_ChangeBuffer
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:465    .text.BSP_AUDIO_OUT_ChangeBuffer:00000010 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:470    .text.BSP_AUDIO_OUT_Pause:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:477    .text.BSP_AUDIO_OUT_Pause:00000000 BSP_AUDIO_OUT_Pause
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:511    .text.BSP_AUDIO_OUT_Pause:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:517    .text.BSP_AUDIO_OUT_Resume:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:524    .text.BSP_AUDIO_OUT_Resume:00000000 BSP_AUDIO_OUT_Resume
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:558    .text.BSP_AUDIO_OUT_Resume:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:564    .text.BSP_AUDIO_OUT_Stop:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:571    .text.BSP_AUDIO_OUT_Stop:00000000 BSP_AUDIO_OUT_Stop
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:623    .text.BSP_AUDIO_OUT_Stop:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:629    .text.BSP_AUDIO_OUT_SetVolume:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:636    .text.BSP_AUDIO_OUT_SetVolume:00000000 BSP_AUDIO_OUT_SetVolume
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:669    .text.BSP_AUDIO_OUT_SetVolume:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:674    .text.BSP_AUDIO_OUT_SetMute:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:681    .text.BSP_AUDIO_OUT_SetMute:00000000 BSP_AUDIO_OUT_SetMute
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:714    .text.BSP_AUDIO_OUT_SetMute:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:719    .text.BSP_AUDIO_OUT_SetOutputMode:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:726    .text.BSP_AUDIO_OUT_SetOutputMode:00000000 BSP_AUDIO_OUT_SetOutputMode
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:759    .text.BSP_AUDIO_OUT_SetOutputMode:00000018 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:764    .text.BSP_AUDIO_OUT_SetAudioFrameSlot:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:771    .text.BSP_AUDIO_OUT_SetAudioFrameSlot:00000000 BSP_AUDIO_OUT_SetAudioFrameSlot
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:805    .text.BSP_AUDIO_OUT_SetAudioFrameSlot:00000024 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:810    .text.BSP_AUDIO_OUT_TransferComplete_CallBack:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:817    .text.BSP_AUDIO_OUT_TransferComplete_CallBack:00000000 BSP_AUDIO_OUT_TransferComplete_CallBack
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:829    .text.HAL_SAI_TxCpltCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:836    .text.HAL_SAI_TxCpltCallback:00000000 HAL_SAI_TxCpltCallback
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:857    .text.BSP_AUDIO_OUT_HalfTransfer_CallBack:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:864    .text.BSP_AUDIO_OUT_HalfTransfer_CallBack:00000000 BSP_AUDIO_OUT_HalfTransfer_CallBack
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:876    .text.HAL_SAI_TxHalfCpltCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:883    .text.HAL_SAI_TxHalfCpltCallback:00000000 HAL_SAI_TxHalfCpltCallback
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:904    .text.BSP_AUDIO_OUT_Error_CallBack:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:911    .text.BSP_AUDIO_OUT_Error_CallBack:00000000 BSP_AUDIO_OUT_Error_CallBack
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:923    .text.BSP_AUDIO_OUT_MspInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:930    .text.BSP_AUDIO_OUT_MspInit:00000000 BSP_AUDIO_OUT_MspInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1153   .text.BSP_AUDIO_OUT_MspInit:00000148 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1162   .text.BSP_AUDIO_OUT_MspDeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1169   .text.BSP_AUDIO_OUT_MspDeInit:00000000 BSP_AUDIO_OUT_MspDeInit
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 78
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:434    .text.BSP_AUDIO_OUT_ChangeBuffer:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:441    .text.BSP_AUDIO_OUT_ChangeBuffer:00000000 BSP_AUDIO_OUT_ChangeBuffer
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:465    .text.BSP_AUDIO_OUT_ChangeBuffer:00000010 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:470    .text.BSP_AUDIO_OUT_Pause:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:477    .text.BSP_AUDIO_OUT_Pause:00000000 BSP_AUDIO_OUT_Pause
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:511    .text.BSP_AUDIO_OUT_Pause:0000001c $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:517    .text.BSP_AUDIO_OUT_Resume:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:524    .text.BSP_AUDIO_OUT_Resume:00000000 BSP_AUDIO_OUT_Resume
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:558    .text.BSP_AUDIO_OUT_Resume:0000001c $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:564    .text.BSP_AUDIO_OUT_Stop:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:571    .text.BSP_AUDIO_OUT_Stop:00000000 BSP_AUDIO_OUT_Stop
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:623    .text.BSP_AUDIO_OUT_Stop:00000030 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:629    .text.BSP_AUDIO_OUT_SetVolume:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:636    .text.BSP_AUDIO_OUT_SetVolume:00000000 BSP_AUDIO_OUT_SetVolume
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:669    .text.BSP_AUDIO_OUT_SetVolume:00000018 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:674    .text.BSP_AUDIO_OUT_SetMute:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:681    .text.BSP_AUDIO_OUT_SetMute:00000000 BSP_AUDIO_OUT_SetMute
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:714    .text.BSP_AUDIO_OUT_SetMute:00000018 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:719    .text.BSP_AUDIO_OUT_SetOutputMode:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:726    .text.BSP_AUDIO_OUT_SetOutputMode:00000000 BSP_AUDIO_OUT_SetOutputMode
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:759    .text.BSP_AUDIO_OUT_SetOutputMode:00000018 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:764    .text.BSP_AUDIO_OUT_SetAudioFrameSlot:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:771    .text.BSP_AUDIO_OUT_SetAudioFrameSlot:00000000 BSP_AUDIO_OUT_SetAudioFrameSlot
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:805    .text.BSP_AUDIO_OUT_SetAudioFrameSlot:00000024 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:810    .text.BSP_AUDIO_OUT_TransferComplete_CallBack:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:817    .text.BSP_AUDIO_OUT_TransferComplete_CallBack:00000000 BSP_AUDIO_OUT_TransferComplete_CallBack
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:829    .text.HAL_SAI_TxCpltCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:836    .text.HAL_SAI_TxCpltCallback:00000000 HAL_SAI_TxCpltCallback
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:857    .text.BSP_AUDIO_OUT_HalfTransfer_CallBack:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:864    .text.BSP_AUDIO_OUT_HalfTransfer_CallBack:00000000 BSP_AUDIO_OUT_HalfTransfer_CallBack
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:876    .text.HAL_SAI_TxHalfCpltCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:883    .text.HAL_SAI_TxHalfCpltCallback:00000000 HAL_SAI_TxHalfCpltCallback
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:904    .text.BSP_AUDIO_OUT_Error_CallBack:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:911    .text.BSP_AUDIO_OUT_Error_CallBack:00000000 BSP_AUDIO_OUT_Error_CallBack
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:923    .text.BSP_AUDIO_OUT_MspInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:930    .text.BSP_AUDIO_OUT_MspInit:00000000 BSP_AUDIO_OUT_MspInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1153   .text.BSP_AUDIO_OUT_MspInit:00000148 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1162   .text.BSP_AUDIO_OUT_MspDeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1169   .text.BSP_AUDIO_OUT_MspDeInit:00000000 BSP_AUDIO_OUT_MspDeInit
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 78
 
 
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1236   .text.BSP_AUDIO_OUT_MspDeInit:00000054 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1243   .text.BSP_AUDIO_OUT_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1250   .text.BSP_AUDIO_OUT_DeInit:00000000 BSP_AUDIO_OUT_DeInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1273   .text.BSP_AUDIO_OUT_DeInit:00000010 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1278   .text.BSP_AUDIO_OUT_ClockConfig:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1285   .text.BSP_AUDIO_OUT_ClockConfig:00000000 BSP_AUDIO_OUT_ClockConfig
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1369   .text.BSP_AUDIO_OUT_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1376   .text.BSP_AUDIO_OUT_Init:00000000 BSP_AUDIO_OUT_Init
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1479   .text.BSP_AUDIO_OUT_Init:00000074 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1487   .text.BSP_AUDIO_OUT_SetFrequency:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1494   .text.BSP_AUDIO_OUT_SetFrequency:00000000 BSP_AUDIO_OUT_SetFrequency
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1538   .text.BSP_AUDIO_OUT_SetFrequency:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1543   .text.BSP_AUDIO_IN_Record:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1550   .text.BSP_AUDIO_IN_Record:00000000 BSP_AUDIO_IN_Record
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1577   .text.BSP_AUDIO_IN_Record:00000010 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1582   .text.BSP_AUDIO_IN_Stop:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1589   .text.BSP_AUDIO_IN_Stop:00000000 BSP_AUDIO_IN_Stop
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1641   .text.BSP_AUDIO_IN_Stop:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1647   .text.BSP_AUDIO_IN_Pause:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1654   .text.BSP_AUDIO_IN_Pause:00000000 BSP_AUDIO_IN_Pause
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1675   .text.BSP_AUDIO_IN_Pause:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1680   .text.BSP_AUDIO_IN_Resume:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1687   .text.BSP_AUDIO_IN_Resume:00000000 BSP_AUDIO_IN_Resume
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1708   .text.BSP_AUDIO_IN_Resume:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1713   .text.BSP_AUDIO_IN_SetVolume:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1720   .text.BSP_AUDIO_IN_SetVolume:00000000 BSP_AUDIO_IN_SetVolume
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1757   .text.BSP_AUDIO_IN_SetVolume:00000020 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1763   .text.BSP_AUDIO_IN_TransferComplete_CallBack:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1770   .text.BSP_AUDIO_IN_TransferComplete_CallBack:00000000 BSP_AUDIO_IN_TransferComplete_CallBack
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1782   .text.HAL_SAI_RxCpltCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1789   .text.HAL_SAI_RxCpltCallback:00000000 HAL_SAI_RxCpltCallback
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1810   .text.BSP_AUDIO_IN_HalfTransfer_CallBack:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1817   .text.BSP_AUDIO_IN_HalfTransfer_CallBack:00000000 BSP_AUDIO_IN_HalfTransfer_CallBack
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1829   .text.HAL_SAI_RxHalfCpltCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1836   .text.HAL_SAI_RxHalfCpltCallback:00000000 HAL_SAI_RxHalfCpltCallback
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1857   .text.BSP_AUDIO_IN_Error_CallBack:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1864   .text.BSP_AUDIO_IN_Error_CallBack:00000000 BSP_AUDIO_IN_Error_CallBack
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1876   .text.HAL_SAI_ErrorCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1883   .text.HAL_SAI_ErrorCallback:00000000 HAL_SAI_ErrorCallback
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1939   .text.HAL_SAI_ErrorCallback:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1945   .text.BSP_AUDIO_IN_MspInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:1952   .text.BSP_AUDIO_IN_MspInit:00000000 BSP_AUDIO_IN_MspInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2133   .text.BSP_AUDIO_IN_MspInit:000000f4 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2143   .text.BSP_AUDIO_IN_InitEx:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2150   .text.BSP_AUDIO_IN_InitEx:00000000 BSP_AUDIO_IN_InitEx
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2278   .text.BSP_AUDIO_IN_InitEx:00000094 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2286   .text.BSP_AUDIO_IN_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2293   .text.BSP_AUDIO_IN_Init:00000000 BSP_AUDIO_IN_Init
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2321   .text.BSP_AUDIO_IN_OUT_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2328   .text.BSP_AUDIO_IN_OUT_Init:00000000 BSP_AUDIO_IN_OUT_Init
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2460   .text.BSP_AUDIO_IN_OUT_Init:000000a0 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2470   .text.BSP_AUDIO_IN_MspDeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2477   .text.BSP_AUDIO_IN_MspDeInit:00000000 BSP_AUDIO_IN_MspDeInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2527   .text.BSP_AUDIO_IN_MspDeInit:0000003c $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2535   .text.BSP_AUDIO_IN_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2542   .text.BSP_AUDIO_IN_DeInit:00000000 BSP_AUDIO_IN_DeInit
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2565   .text.BSP_AUDIO_IN_DeInit:00000010 $d
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s 			page 79
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1236   .text.BSP_AUDIO_OUT_MspDeInit:00000054 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1243   .text.BSP_AUDIO_OUT_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1250   .text.BSP_AUDIO_OUT_DeInit:00000000 BSP_AUDIO_OUT_DeInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1273   .text.BSP_AUDIO_OUT_DeInit:00000010 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1278   .text.BSP_AUDIO_OUT_ClockConfig:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1285   .text.BSP_AUDIO_OUT_ClockConfig:00000000 BSP_AUDIO_OUT_ClockConfig
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1369   .text.BSP_AUDIO_OUT_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1376   .text.BSP_AUDIO_OUT_Init:00000000 BSP_AUDIO_OUT_Init
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1479   .text.BSP_AUDIO_OUT_Init:00000074 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1487   .text.BSP_AUDIO_OUT_SetFrequency:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1494   .text.BSP_AUDIO_OUT_SetFrequency:00000000 BSP_AUDIO_OUT_SetFrequency
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1538   .text.BSP_AUDIO_OUT_SetFrequency:00000030 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1543   .text.BSP_AUDIO_IN_Record:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1550   .text.BSP_AUDIO_IN_Record:00000000 BSP_AUDIO_IN_Record
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1577   .text.BSP_AUDIO_IN_Record:00000010 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1582   .text.BSP_AUDIO_IN_Stop:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1589   .text.BSP_AUDIO_IN_Stop:00000000 BSP_AUDIO_IN_Stop
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1641   .text.BSP_AUDIO_IN_Stop:00000030 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1647   .text.BSP_AUDIO_IN_Pause:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1654   .text.BSP_AUDIO_IN_Pause:00000000 BSP_AUDIO_IN_Pause
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1675   .text.BSP_AUDIO_IN_Pause:0000000c $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1680   .text.BSP_AUDIO_IN_Resume:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1687   .text.BSP_AUDIO_IN_Resume:00000000 BSP_AUDIO_IN_Resume
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1708   .text.BSP_AUDIO_IN_Resume:0000000c $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1713   .text.BSP_AUDIO_IN_SetVolume:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1720   .text.BSP_AUDIO_IN_SetVolume:00000000 BSP_AUDIO_IN_SetVolume
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1757   .text.BSP_AUDIO_IN_SetVolume:00000020 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1763   .text.BSP_AUDIO_IN_TransferComplete_CallBack:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1770   .text.BSP_AUDIO_IN_TransferComplete_CallBack:00000000 BSP_AUDIO_IN_TransferComplete_CallBack
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1782   .text.HAL_SAI_RxCpltCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1789   .text.HAL_SAI_RxCpltCallback:00000000 HAL_SAI_RxCpltCallback
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1810   .text.BSP_AUDIO_IN_HalfTransfer_CallBack:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1817   .text.BSP_AUDIO_IN_HalfTransfer_CallBack:00000000 BSP_AUDIO_IN_HalfTransfer_CallBack
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1829   .text.HAL_SAI_RxHalfCpltCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1836   .text.HAL_SAI_RxHalfCpltCallback:00000000 HAL_SAI_RxHalfCpltCallback
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1857   .text.BSP_AUDIO_IN_Error_CallBack:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1864   .text.BSP_AUDIO_IN_Error_CallBack:00000000 BSP_AUDIO_IN_Error_CallBack
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1876   .text.HAL_SAI_ErrorCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1883   .text.HAL_SAI_ErrorCallback:00000000 HAL_SAI_ErrorCallback
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1939   .text.HAL_SAI_ErrorCallback:00000030 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1945   .text.BSP_AUDIO_IN_MspInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:1952   .text.BSP_AUDIO_IN_MspInit:00000000 BSP_AUDIO_IN_MspInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2133   .text.BSP_AUDIO_IN_MspInit:000000f4 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2143   .text.BSP_AUDIO_IN_InitEx:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2150   .text.BSP_AUDIO_IN_InitEx:00000000 BSP_AUDIO_IN_InitEx
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2278   .text.BSP_AUDIO_IN_InitEx:00000094 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2286   .text.BSP_AUDIO_IN_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2293   .text.BSP_AUDIO_IN_Init:00000000 BSP_AUDIO_IN_Init
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2321   .text.BSP_AUDIO_IN_OUT_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2328   .text.BSP_AUDIO_IN_OUT_Init:00000000 BSP_AUDIO_IN_OUT_Init
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2460   .text.BSP_AUDIO_IN_OUT_Init:000000a0 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2470   .text.BSP_AUDIO_IN_MspDeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2477   .text.BSP_AUDIO_IN_MspDeInit:00000000 BSP_AUDIO_IN_MspDeInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2527   .text.BSP_AUDIO_IN_MspDeInit:0000003c $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2535   .text.BSP_AUDIO_IN_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2542   .text.BSP_AUDIO_IN_DeInit:00000000 BSP_AUDIO_IN_DeInit
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2565   .text.BSP_AUDIO_IN_DeInit:00000010 $d
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cccy4sXp.s 			page 79
 
 
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2614   .data.AudioInVolume:00000000 AudioInVolume
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2614   .data.AudioInVolume:00000000 AudioInVolume
                             *COM*:00000040 haudio_tim
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2579   .bss.haudio_in_sai:00000000 haudio_in_sai
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2586   .bss.haudio_out_sai:00000000 haudio_out_sai
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2575   .bss.haudio_in_sai:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2582   .bss.haudio_out_sai:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2589   .bss.hdma_sai_rx.12019:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2593   .bss.hdma_sai_rx.12019:00000000 hdma_sai_rx.12019
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2596   .bss.hdma_sai_rx.12030:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2600   .bss.hdma_sai_rx.12030:00000000 hdma_sai_rx.12030
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2603   .bss.hdma_sai_tx.11932:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2607   .bss.hdma_sai_tx.11932:00000000 hdma_sai_tx.11932
-C:\Users\Student\AppData\Local\Temp\ccgT58Lc.s:2610   .data.AudioInVolume:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2579   .bss.haudio_in_sai:00000000 haudio_in_sai
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2586   .bss.haudio_out_sai:00000000 haudio_out_sai
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2575   .bss.haudio_in_sai:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2582   .bss.haudio_out_sai:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2589   .bss.hdma_sai_rx.12019:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2593   .bss.hdma_sai_rx.12019:00000000 hdma_sai_rx.12019
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2596   .bss.hdma_sai_rx.12030:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2600   .bss.hdma_sai_rx.12030:00000000 hdma_sai_rx.12030
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2603   .bss.hdma_sai_tx.11932:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2607   .bss.hdma_sai_tx.11932:00000000 hdma_sai_tx.11932
+C:\Users\Student\AppData\Local\Temp\cccy4sXp.s:2610   .data.AudioInVolume:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS

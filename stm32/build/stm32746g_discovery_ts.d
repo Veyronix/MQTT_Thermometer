@@ -50,7 +50,7 @@ build/stm32746g_discovery_ts.o: \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_hcd.h \
  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h \
  Drivers/BSP/STM32746G-Discovery/../Components/ft5336/ft5336.h \
- e:\swprojekt\7tmqqt_piesoc\drivers\bsp\components\common\ts.h
+ Drivers/BSP/STM32746G-Discovery/../Components/ft5336/../Common/ts.h
 
 Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.h:
 
@@ -158,4 +158,4 @@ Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_usb.h:
 
 Drivers/BSP/STM32746G-Discovery/../Components/ft5336/ft5336.h:
 
-e:\swprojekt\7tmqqt_piesoc\drivers\bsp\components\common\ts.h:
+Drivers/BSP/STM32746G-Discovery/../Components/ft5336/../Common/ts.h:

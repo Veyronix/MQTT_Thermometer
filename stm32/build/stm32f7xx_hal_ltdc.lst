@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
   30:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****        
   31:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****      (#) Optionally, enable the Dither using HAL_LTDC_EnableDither().       
   32:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 2
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 2
 
 
   33:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****      (#) Optionally, configure and enable the Color keying using HAL_LTDC_ConfigColorKeying()
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
   87:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *   1. Redistributions of source code must retain the above copyright notice,
   88:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *      this list of conditions and the following disclaimer.
   89:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *   2. Redistributions in binary form must reproduce the above copyright notice,
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 3
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 3
 
 
   90:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *      this list of conditions and the following disclaimer in the documentation
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  144:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****     [..]  This section provides functions allowing to:
  145:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****       (+) Initialize and configure the LTDC
  146:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****       (+) De-initialize the LTDC 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 4
 
 
  147:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  201:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->Instance->SSCR &= ~(LTDC_SSCR_VSH | LTDC_SSCR_HSW);
  202:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   tmp = (hltdc->Init.HorizontalSync << 16);
  203:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->Instance->SSCR |= (tmp | hltdc->Init.VerticalSync);
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 5
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 5
 
 
  204:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  258:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->ErrorCode = HAL_LTDC_ERROR_NONE;
  259:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  260:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Initialize the LTDC state*/
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 6
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 6
 
 
  261:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->State = HAL_LTDC_STATE_RESET;
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  315:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** @endverbatim
  316:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @{
  317:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 7
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 7
 
 
  318:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** /**
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  372:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****     }
  373:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
  374:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Line Interrupt management ************************************************/
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 8
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 8
 
 
  375:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   if(__HAL_LTDC_GET_FLAG(hltdc, LTDC_FLAG_LI) != RESET)
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  429:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* NOTE : This function Should not be modified, when the callback is needed,
  430:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****             the HAL_LTDC_ErrorCallback could be implemented in the user file
  431:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****    */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 9
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 9
 
 
  432:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  486:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****       (+) Update pixel format on the fly. 
  487:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****       (+) Update transparency on the fly.
  488:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****       (+) Update address on the fly.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 10
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 10
 
 
  489:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  543:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
  544:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  545:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** /**
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 11
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 11
 
 
  546:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @brief  Configure the color keying.
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  600:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   __HAL_LOCK(hltdc);
  601:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  602:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Change LTDC peripheral state */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 12
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 12
 
 
  603:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->State = HAL_LTDC_STATE_BUSY;  
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  657:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Sets the Reload type */
  658:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->Instance->SRCR = LTDC_SRCR_IMR;
  659:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 13
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 13
 
 
  660:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Change the LTDC state*/
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  714:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** {
  715:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  716:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Process locked */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 14
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 14
 
 
  717:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   __HAL_LOCK(hltdc);
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  771:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   __HAL_UNLOCK(hltdc);
  772:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  773:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   return HAL_OK;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 15
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 15
 
 
  774:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  828:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
  829:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  830:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** /**
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 16
 
 
  831:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @brief  Set the LTDC window size.
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  885:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  886:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Process unlocked */
  887:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   __HAL_UNLOCK(hltdc);
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 17
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 17
 
 
  888:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  942:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  943:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   return HAL_OK;
  944:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 18
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 18
 
 
  945:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  999:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @retval  HAL status
 1000:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   */
 1001:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** HAL_StatusTypeDef HAL_LTDC_SetAlpha(LTDC_HandleTypeDef *hltdc, uint32_t Alpha, uint32_t LayerIdx)
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 19
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 19
 
 
 1002:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** {
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1056:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   assert_param(IS_LTDC_LAYER(LayerIdx));
 1057:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
 1058:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Get layer configuration from handle structure */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 20
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 20
 
 
 1059:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   pLayerCfg = &hltdc->LayerCfg[LayerIdx];
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1113:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
 1114:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   else if (pixelFormat == LTDC_PIXEL_FORMAT_RGB888)
 1115:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 21
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 21
 
 
 1116:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****     tmp = 3;
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1170:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
 1171:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Enable the Line interrupt */
 1172:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   __HAL_LTDC_ENABLE_IT(hltdc, LTDC_IT_LI);
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 22
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 22
 
 
 1173:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1227:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                    the configuration information for the Layer.
 1228:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @param  LayerIdx  LTDC Layer index.
 1229:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                    This parameter can be one of the following values:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 23
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 23
 
 
 1230:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                    0 or 1
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1284:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** {
 1285:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   LTDC_LayerCfgTypeDef *pLayerCfg;
 1286:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 24
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 24
 
 
 1287:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Process locked */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1341:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                         This parameter can be one of the following values:
 1342:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                         0 or 1
 1343:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @retval  HAL status
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 25
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 25
 
 
 1344:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   */
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1398:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** HAL_StatusTypeDef HAL_LTDC_SetPixelFormat_NoReload(LTDC_HandleTypeDef *hltdc, uint32_t Pixelformat,
 1399:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** {
 1400:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   LTDC_LayerCfgTypeDef *pLayerCfg;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 26
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 26
 
 
 1401:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1455:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   assert_param(IS_LTDC_LAYER(LayerIdx));
 1456:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
 1457:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Get layer configuration from handle structure */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 27
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 27
 
 
 1458:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   pLayerCfg = &hltdc->LayerCfg[LayerIdx];
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1512:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Change the LTDC state*/
 1513:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   hltdc->State = HAL_LTDC_STATE_READY;
 1514:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 28
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 28
 
 
 1515:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Process unlocked */
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1569:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   {
 1570:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****     tmp = 1;
 1571:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 29
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 29
 
 
 1572:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1626:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
 1627:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   return HAL_OK;
 1628:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 30
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 30
 
 
 1629:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1683:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Check the parameters */
 1684:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   assert_param(IS_LTDC_LAYER(LayerIdx));
 1685:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 31
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 31
 
 
 1686:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Disable LTDC color keying by setting COLKEN bit */
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1740:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                   the configuration information for the LTDC.
 1741:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   * @param  LayerIdx  LTDC Layer index.
 1742:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                   This parameter can be one of the following values:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 32
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 32
 
 
 1743:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   *                   0 or 1   
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1797:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   */
 1798:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** HAL_LTDC_StateTypeDef HAL_LTDC_GetState(LTDC_HandleTypeDef *hltdc)
 1799:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 33
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 33
 
 
 1800:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   return hltdc->State;
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
   46 000c 1D44     		add	r5, r5, r3
   47              	.LVL2:
 1835:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   LTDC_LAYER(hltdc, LayerIdx)->WHPCR &= ~(LTDC_LxWHPCR_WHSTPOS | LTDC_LxWHPCR_WHSPPOS);
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 34
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 34
 
 
   48              		.loc 1 1835 0
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
   93 0074 C3F89440 		str	r4, [r3, #148]
 1845:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   LTDC_LAYER(hltdc, LayerIdx)->PFCR = (pLayerCfg->PixelFormat);
   94              		.loc 1 1845 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 35
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 35
 
 
   95 0078 0368     		ldr	r3, [r0]
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  135 00ce 1344     		add	r3, r3, r2
  136 00d0 D3F8A060 		ldr	r6, [r3, #160]
  137              	.LVL9:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 36
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 36
 
 
  138 00d4 2C4D     		ldr	r5, .L10
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1877:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****         (pLayerCfg->PixelFormat == LTDC_PIXEL_FORMAT_AL88))
 1878:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   {
 1879:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****     tmp = 2;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 37
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 37
 
 
 1880:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  214 0160 0368     		ldr	r3, [r0]
  215 0162 1344     		add	r3, r3, r2
  216 0164 C96A     		ldr	r1, [r1, #44]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 38
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 38
 
 
  217              	.LVL12:
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  268              		.global	HAL_LTDC_Init
  269              		.syntax unified
  270              		.thumb
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 39
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 39
 
 
  271              		.thumb_func
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  198:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  317              		.loc 1 198 0
  318 002e 2069     		ldr	r0, [r4, #16]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 40
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 40
 
 
  319 0030 0343     		orrs	r3, r3, r0
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  363 0072 2068     		ldr	r0, [r4]
  364 0074 0269     		ldr	r2, [r0, #16]
  365 0076 A16A     		ldr	r1, [r4, #40]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 41
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 41
 
 
  366 0078 41EA0541 		orr	r1, r1, r5, lsl #16
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  411              		.loc 1 230 0
  412 00c8 2268     		ldr	r2, [r4]
  413 00ca 536B     		ldr	r3, [r2, #52]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 42
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 42
 
 
  414 00cc 43F00203 		orr	r3, r3, #2
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  462              		.fpu fpv5-sp-d16
  464              	HAL_LTDC_MspDeInit:
  465              	.LFB139:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 43
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 43
 
 
  292:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Prevent unused argument(s) compilation warning */
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  515              		.weak	HAL_LTDC_ErrorCallback
  516              		.syntax unified
  517              		.thumb
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 44
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 44
 
 
  518              		.thumb_func
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  575              		.global	HAL_LTDC_IRQHandler
  576              		.syntax unified
  577              		.thumb
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 45
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 45
 
 
  578              		.thumb_func
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  625              	.L33:
  396:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   {
  626              		.loc 1 396 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 46
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 46
 
 
  627 003a 2368     		ldr	r3, [r4]
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  671 008a 1343     		orrs	r3, r3, r2
  672 008c C4F8A430 		str	r3, [r4, #164]
  365:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 47
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 47
 
 
  673              		.loc 1 365 0
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  716 00d8 0023     		movs	r3, #0
  717 00da 84F8A030 		strb	r3, [r4, #160]
  413:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****     }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 48
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 48
 
 
  718              		.loc 1 413 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  768 001e 0223     		movs	r3, #2
  769 0020 80F8A130 		strb	r3, [r0, #161]
  528:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 49
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 49
 
 
  770              		.loc 1 528 0 discriminator 2
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  819              		.loc 1 558 0
  820 0000 90F8A030 		ldrb	r3, [r0, #160]	@ zero_extendqisi2
  821 0004 012B     		cmp	r3, #1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 50
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 50
 
 
  822 0006 1DD0     		beq	.L50
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  866              	.L50:
  558:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  867              		.loc 1 558 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 51
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 51
 
 
  868 0044 0220     		movs	r0, #2
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  918 0026 07F47F45 		and	r5, r7, #65280
  919 002a 2C43     		orrs	r4, r4, r5
  920 002c 07F47F07 		and	r7, r7, #16711680
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 52
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 52
 
 
  921 0030 3C43     		orrs	r4, r4, r7
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  966              	.L56:
  632:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  967              		.loc 1 632 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 53
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 53
 
 
  968 0074 F0BC     		pop	{r4, r5, r6, r7}
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1018 001a D1F88430 		ldr	r3, [r1, #132]
  1019 001e 43F00203 		orr	r3, r3, #2
  1020 0022 C1F88430 		str	r3, [r1, #132]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 54
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 54
 
 
  658:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1067 000e 0223     		movs	r3, #2
  1068 0010 80F8A130 		strb	r3, [r0, #161]
  690:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 55
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 55
 
 
  1069              		.loc 1 690 0 discriminator 2
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1117 0006 17D0     		beq	.L73
  717:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  1118              		.loc 1 717 0 is_stmt 0 discriminator 2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 56
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 56
 
 
  1119 0008 0122     		movs	r2, #1
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1166              		@ frame_needed = 0, uses_anonymous_args = 0
  1167              		@ link register save eliminated.
  1168              	.LVL79:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 57
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 57
 
 
  753:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1214              		.fpu fpv5-sp-d16
  1216              	HAL_LTDC_EnableDither:
  1217              	.LFB151:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 58
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 58
 
 
  784:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Process locked */
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1263              		.align	1
  1264              		.global	HAL_LTDC_DisableDither
  1265              		.syntax unified
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 59
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 59
 
 
  1266              		.thumb
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1311              	.L85:
  1312 0030 00680140 		.word	1073833984
  1313              		.cfi_endproc
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 60
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 60
 
 
  1314              	.LFE152:
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1363              		.loc 1 864 0 discriminator 2
  1364 0026 2544     		add	r5, r5, r4
  1365 0028 0026     		movs	r6, #0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 61
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 61
 
 
  1366 002a AE63     		str	r6, [r5, #56]
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1411              		@ frame_needed = 0, uses_anonymous_args = 0
  1412              	.LVL100:
  1413 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 62
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 62
 
 
  1414              	.LCFI12:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1459 0036 1544     		add	r5, r5, r2
  1460              	.LVL107:
  1461 0038 4564     		str	r5, [r0, #68]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 63
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 63
 
 
  932:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -3778,7 +3778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  989:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  1511              		.loc 1 989 0
  1512 000c 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 64
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 64
 
 
  1513              	.LVL113:
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1559              		.loc 1 1002 0
  1560              		.cfi_startproc
  1561              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 65
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 65
 
 
  1562              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -3898,7 +3898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1031:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  1607              		.loc 1 1031 0 discriminator 2
  1608 003a 0020     		movs	r0, #0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 66
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 66
 
 
  1609 003c 84F8A000 		strb	r0, [r4, #160]
@@ -3958,7 +3958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1658              	.LVL126:
 1062:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  1659              		.loc 1 1062 0 discriminator 2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 67
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 67
 
 
  1660 0026 2344     		add	r3, r3, r4
@@ -4018,7 +4018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1707              		.loc 1 1099 0 discriminator 2
  1708 000a 0123     		movs	r3, #1
  1709 000c 80F8A030 		strb	r3, [r0, #160]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 68
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 68
 
 
 1102:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   
@@ -4078,7 +4078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1753              		.loc 1 1130 0
  1754 0044 01FB03F1 		mul	r1, r1, r3
  1755              	.LVL136:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 69
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 69
 
 
 1133:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   
@@ -4138,7 +4138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1802              	.LCFI18:
  1803              		.cfi_restore_state
 1116:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 70
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 70
 
 
  1804              		.loc 1 1116 0
@@ -4198,7 +4198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1855              		.cfi_def_cfa_offset 4
  1856              		.cfi_offset 4, -4
 1163:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 71
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 71
 
 
  1857              		.loc 1 1163 0 discriminator 2
@@ -4258,7 +4258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1904              		.fpu fpv5-sp-d16
  1906              	HAL_LTDC_Reload:
  1907              	.LFB160:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 72
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 72
 
 
 1196:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   assert_param(IS_LTDC_RELAOD(ReloadType));
@@ -4318,7 +4318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  1951              	.LVL154:
  1952              	.L139:
 1200:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 73
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 73
 
 
  1953              		.loc 1 1200 0
@@ -4378,7 +4378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2003              		.loc 1 1255 0 discriminator 2
  2004 0024 3424     		movs	r4, #52
  2005 0026 04FB0204 		mla	r4, r4, r2, r0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 74
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 74
 
 
  2006 002a 3834     		adds	r4, r4, #56
@@ -4438,7 +4438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1288:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  2057              		.loc 1 1288 0
  2058 0002 90F8A040 		ldrb	r4, [r0, #160]	@ zero_extendqisi2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 75
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 75
 
 
  2059 0006 012C     		cmp	r4, #1
@@ -4498,7 +4498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1325:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  2102              		.loc 1 1325 0 discriminator 2
  2103 0040 84F8A170 		strb	r7, [r4, #161]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 76
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 76
 
 
 1328:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -4558,7 +4558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2153              	.LVL172:
  2154 001a 80F8A120 		strb	r2, [r0, #161]
 1356:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 77
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 77
 
 
  2155              		.loc 1 1356 0 discriminator 2
@@ -4618,7 +4618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2203              	.LFB164:
 1399:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   LTDC_LayerCfgTypeDef *pLayerCfg;
  2204              		.loc 1 1399 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 78
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 78
 
 
  2205              		.cfi_startproc
@@ -4678,7 +4678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2250 0036 0020     		movs	r0, #0
  2251 0038 84F8A000 		strb	r0, [r4, #160]
 1429:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** }
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 79
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 79
 
 
  2252              		.loc 1 1429 0 discriminator 2
@@ -4738,7 +4738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2301              		.loc 1 1461 0 discriminator 2
  2302 0026 2344     		add	r3, r3, r4
  2303 0028 D964     		str	r1, [r3, #76]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 80
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 80
 
 
 1464:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
@@ -4798,7 +4798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1493:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  2353              		.loc 1 1493 0 discriminator 2
  2354 0010 0125     		movs	r5, #1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 81
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 81
 
 
  2355 0012 80F8A050 		strb	r5, [r0, #160]
@@ -4858,7 +4858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2402 0006 3DD0     		beq	.L181
 1536:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   uint32_t tmp = 0;
  2403              		.loc 1 1536 0 discriminator 2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 82
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 82
 
 
  2404 0008 30B4     		push	{r4, r5}
@@ -4918,7 +4918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2448 0040 00E0     		b	.L179
  2449              	.LVL203:
  2450              	.L182:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 83
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 83
 
 
 1555:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
@@ -4978,7 +4978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1559:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   }
  2497              		.loc 1 1559 0
  2498 007c 0323     		movs	r3, #3
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 84
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 84
 
 
  2499              	.LVL212:
@@ -5038,7 +5038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1607:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  2550              		.loc 1 1607 0 discriminator 2
  2551 000a 0125     		movs	r5, #1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 85
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 85
 
 
  2552 000c 80F8A050 		strb	r5, [r0, #160]
@@ -5098,7 +5098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2600              	HAL_LTDC_EnableColorKeying_NoReload:
  2601              	.LFB169:
 1641:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c ****   /* Process locked */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 86
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 86
 
 
  2602              		.loc 1 1641 0
@@ -5158,7 +5158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2648              		.thumb
  2649              		.thumb_func
  2650              		.fpu fpv5-sp-d16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 87
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 87
 
 
  2652              	HAL_LTDC_DisableColorKeying_NoReload:
@@ -5218,7 +5218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2697              		.align	1
  2698              		.global	HAL_LTDC_EnableCLUT_NoReload
  2699              		.syntax unified
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 88
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 88
 
 
  2700              		.thumb
@@ -5278,7 +5278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2745              		.cfi_endproc
  2746              	.LFE171:
  2748              		.section	.text.HAL_LTDC_DisableCLUT_NoReload,"ax",%progbits
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 89
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 89
 
 
  2749              		.align	1
@@ -5338,7 +5338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
 1770:Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c **** 
  2795              		.loc 1 1770 0
  2796 0036 7047     		bx	lr
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 90
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 90
 
 
  2797              		.cfi_endproc
@@ -5398,7 +5398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2850              		.file 2 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\machine\\_default_types.h"
  2851              		.file 3 "c:\\gcc_toolchain\\6_2017-q1-update\\arm-none-eabi\\include\\sys\\_stdint.h"
  2852              		.file 4 "Drivers/CMSIS/Include/core_cm7.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 91
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 91
 
 
  2853              		.file 5 "Drivers/CMSIS/Device/ST/STM32F7xx/Include/system_stm32f7xx.h"
@@ -5410,101 +5410,101 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 1
  2859              		.file 11 "Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h"
  2860              		.file 12 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_def.h"
  2861              		.file 13 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_ltdc.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 92
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 92
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32f7xx_hal_ltdc.c
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:18     .text.LTDC_SetConfig:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:24     .text.LTDC_SetConfig:00000000 LTDC_SetConfig
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:241    .text.LTDC_SetConfig:00000188 $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:247    .text.HAL_LTDC_MspInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:254    .text.HAL_LTDC_MspInit:00000000 HAL_LTDC_MspInit
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:267    .text.HAL_LTDC_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:274    .text.HAL_LTDC_Init:00000000 HAL_LTDC_Init
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:452    .text.HAL_LTDC_Init:000000f8 $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:457    .text.HAL_LTDC_MspDeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:464    .text.HAL_LTDC_MspDeInit:00000000 HAL_LTDC_MspDeInit
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:477    .text.HAL_LTDC_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:484    .text.HAL_LTDC_DeInit:00000000 HAL_LTDC_DeInit
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:514    .text.HAL_LTDC_ErrorCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:521    .text.HAL_LTDC_ErrorCallback:00000000 HAL_LTDC_ErrorCallback
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:534    .text.HAL_LTDC_LineEventCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:541    .text.HAL_LTDC_LineEventCallback:00000000 HAL_LTDC_LineEventCallback
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:554    .text.HAL_LTDC_ReloadEventCallback:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:561    .text.HAL_LTDC_ReloadEventCallback:00000000 HAL_LTDC_ReloadEventCallback
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:574    .text.HAL_LTDC_IRQHandler:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:581    .text.HAL_LTDC_IRQHandler:00000000 HAL_LTDC_IRQHandler
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:728    .text.HAL_LTDC_ConfigLayer:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:735    .text.HAL_LTDC_ConfigLayer:00000000 HAL_LTDC_ConfigLayer
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:804    .text.HAL_LTDC_ConfigColorKeying:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:811    .text.HAL_LTDC_ConfigColorKeying:00000000 HAL_LTDC_ConfigColorKeying
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:875    .text.HAL_LTDC_ConfigCLUT:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:882    .text.HAL_LTDC_ConfigCLUT:00000000 HAL_LTDC_ConfigCLUT
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:989    .text.HAL_LTDC_EnableColorKeying:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:996    .text.HAL_LTDC_EnableColorKeying:00000000 HAL_LTDC_EnableColorKeying
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1044   .text.HAL_LTDC_DisableColorKeying:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1051   .text.HAL_LTDC_DisableColorKeying:00000000 HAL_LTDC_DisableColorKeying
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1099   .text.HAL_LTDC_EnableCLUT:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1106   .text.HAL_LTDC_EnableCLUT:00000000 HAL_LTDC_EnableCLUT
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1154   .text.HAL_LTDC_DisableCLUT:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1161   .text.HAL_LTDC_DisableCLUT:00000000 HAL_LTDC_DisableCLUT
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1209   .text.HAL_LTDC_EnableDither:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1216   .text.HAL_LTDC_EnableDither:00000000 HAL_LTDC_EnableDither
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1258   .text.HAL_LTDC_EnableDither:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1263   .text.HAL_LTDC_DisableDither:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1270   .text.HAL_LTDC_DisableDither:00000000 HAL_LTDC_DisableDither
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1312   .text.HAL_LTDC_DisableDither:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1317   .text.HAL_LTDC_SetWindowSize:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1324   .text.HAL_LTDC_SetWindowSize:00000000 HAL_LTDC_SetWindowSize
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1399   .text.HAL_LTDC_SetWindowPosition:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1406   .text.HAL_LTDC_SetWindowPosition:00000000 HAL_LTDC_SetWindowPosition
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1484   .text.HAL_LTDC_SetPixelFormat:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1491   .text.HAL_LTDC_SetPixelFormat:00000000 HAL_LTDC_SetPixelFormat
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1550   .text.HAL_LTDC_SetAlpha:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1557   .text.HAL_LTDC_SetAlpha:00000000 HAL_LTDC_SetAlpha
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1616   .text.HAL_LTDC_SetAddress:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1623   .text.HAL_LTDC_SetAddress:00000000 HAL_LTDC_SetAddress
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1682   .text.HAL_LTDC_SetPitch:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1689   .text.HAL_LTDC_SetPitch:00000000 HAL_LTDC_SetPitch
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1827   .text.HAL_LTDC_SetPitch:0000009c $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1833   .text.HAL_LTDC_ProgramLineEvent:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1840   .text.HAL_LTDC_ProgramLineEvent:00000000 HAL_LTDC_ProgramLineEvent
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s 			page 93
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:18     .text.LTDC_SetConfig:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:24     .text.LTDC_SetConfig:00000000 LTDC_SetConfig
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:241    .text.LTDC_SetConfig:00000188 $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:247    .text.HAL_LTDC_MspInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:254    .text.HAL_LTDC_MspInit:00000000 HAL_LTDC_MspInit
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:267    .text.HAL_LTDC_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:274    .text.HAL_LTDC_Init:00000000 HAL_LTDC_Init
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:452    .text.HAL_LTDC_Init:000000f8 $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:457    .text.HAL_LTDC_MspDeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:464    .text.HAL_LTDC_MspDeInit:00000000 HAL_LTDC_MspDeInit
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:477    .text.HAL_LTDC_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:484    .text.HAL_LTDC_DeInit:00000000 HAL_LTDC_DeInit
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:514    .text.HAL_LTDC_ErrorCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:521    .text.HAL_LTDC_ErrorCallback:00000000 HAL_LTDC_ErrorCallback
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:534    .text.HAL_LTDC_LineEventCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:541    .text.HAL_LTDC_LineEventCallback:00000000 HAL_LTDC_LineEventCallback
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:554    .text.HAL_LTDC_ReloadEventCallback:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:561    .text.HAL_LTDC_ReloadEventCallback:00000000 HAL_LTDC_ReloadEventCallback
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:574    .text.HAL_LTDC_IRQHandler:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:581    .text.HAL_LTDC_IRQHandler:00000000 HAL_LTDC_IRQHandler
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:728    .text.HAL_LTDC_ConfigLayer:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:735    .text.HAL_LTDC_ConfigLayer:00000000 HAL_LTDC_ConfigLayer
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:804    .text.HAL_LTDC_ConfigColorKeying:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:811    .text.HAL_LTDC_ConfigColorKeying:00000000 HAL_LTDC_ConfigColorKeying
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:875    .text.HAL_LTDC_ConfigCLUT:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:882    .text.HAL_LTDC_ConfigCLUT:00000000 HAL_LTDC_ConfigCLUT
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:989    .text.HAL_LTDC_EnableColorKeying:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:996    .text.HAL_LTDC_EnableColorKeying:00000000 HAL_LTDC_EnableColorKeying
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1044   .text.HAL_LTDC_DisableColorKeying:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1051   .text.HAL_LTDC_DisableColorKeying:00000000 HAL_LTDC_DisableColorKeying
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1099   .text.HAL_LTDC_EnableCLUT:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1106   .text.HAL_LTDC_EnableCLUT:00000000 HAL_LTDC_EnableCLUT
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1154   .text.HAL_LTDC_DisableCLUT:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1161   .text.HAL_LTDC_DisableCLUT:00000000 HAL_LTDC_DisableCLUT
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1209   .text.HAL_LTDC_EnableDither:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1216   .text.HAL_LTDC_EnableDither:00000000 HAL_LTDC_EnableDither
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1258   .text.HAL_LTDC_EnableDither:00000030 $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1263   .text.HAL_LTDC_DisableDither:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1270   .text.HAL_LTDC_DisableDither:00000000 HAL_LTDC_DisableDither
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1312   .text.HAL_LTDC_DisableDither:00000030 $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1317   .text.HAL_LTDC_SetWindowSize:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1324   .text.HAL_LTDC_SetWindowSize:00000000 HAL_LTDC_SetWindowSize
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1399   .text.HAL_LTDC_SetWindowPosition:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1406   .text.HAL_LTDC_SetWindowPosition:00000000 HAL_LTDC_SetWindowPosition
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1484   .text.HAL_LTDC_SetPixelFormat:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1491   .text.HAL_LTDC_SetPixelFormat:00000000 HAL_LTDC_SetPixelFormat
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1550   .text.HAL_LTDC_SetAlpha:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1557   .text.HAL_LTDC_SetAlpha:00000000 HAL_LTDC_SetAlpha
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1616   .text.HAL_LTDC_SetAddress:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1623   .text.HAL_LTDC_SetAddress:00000000 HAL_LTDC_SetAddress
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1682   .text.HAL_LTDC_SetPitch:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1689   .text.HAL_LTDC_SetPitch:00000000 HAL_LTDC_SetPitch
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1827   .text.HAL_LTDC_SetPitch:0000009c $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1833   .text.HAL_LTDC_ProgramLineEvent:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1840   .text.HAL_LTDC_ProgramLineEvent:00000000 HAL_LTDC_ProgramLineEvent
+ARM GAS  C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s 			page 93
 
 
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1894   .text.HAL_LTDC_ProgramLineEvent:00000038 $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1899   .text.HAL_LTDC_Reload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1906   .text.HAL_LTDC_Reload:00000000 HAL_LTDC_Reload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1961   .text.HAL_LTDC_ConfigLayer_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:1968   .text.HAL_LTDC_ConfigLayer_NoReload:00000000 HAL_LTDC_ConfigLayer_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2034   .text.HAL_LTDC_SetWindowSize_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2041   .text.HAL_LTDC_SetWindowSize_NoReload:00000000 HAL_LTDC_SetWindowSize_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2113   .text.HAL_LTDC_SetWindowPosition_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2120   .text.HAL_LTDC_SetWindowPosition_NoReload:00000000 HAL_LTDC_SetWindowPosition_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2195   .text.HAL_LTDC_SetPixelFormat_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2202   .text.HAL_LTDC_SetPixelFormat_NoReload:00000000 HAL_LTDC_SetPixelFormat_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2258   .text.HAL_LTDC_SetAlpha_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2265   .text.HAL_LTDC_SetAlpha_NoReload:00000000 HAL_LTDC_SetAlpha_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2321   .text.HAL_LTDC_SetAddress_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2328   .text.HAL_LTDC_SetAddress_NoReload:00000000 HAL_LTDC_SetAddress_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2384   .text.HAL_LTDC_SetPitch_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2391   .text.HAL_LTDC_SetPitch_NoReload:00000000 HAL_LTDC_SetPitch_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2520   .text.HAL_LTDC_SetPitch_NoReload:00000088 $d
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2525   .text.HAL_LTDC_ConfigColorKeying_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2532   .text.HAL_LTDC_ConfigColorKeying_NoReload:00000000 HAL_LTDC_ConfigColorKeying_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2593   .text.HAL_LTDC_EnableColorKeying_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2600   .text.HAL_LTDC_EnableColorKeying_NoReload:00000000 HAL_LTDC_EnableColorKeying_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2645   .text.HAL_LTDC_DisableColorKeying_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2652   .text.HAL_LTDC_DisableColorKeying_NoReload:00000000 HAL_LTDC_DisableColorKeying_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2697   .text.HAL_LTDC_EnableCLUT_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2704   .text.HAL_LTDC_EnableCLUT_NoReload:00000000 HAL_LTDC_EnableCLUT_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2749   .text.HAL_LTDC_DisableCLUT_NoReload:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2756   .text.HAL_LTDC_DisableCLUT_NoReload:00000000 HAL_LTDC_DisableCLUT_NoReload
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2801   .text.HAL_LTDC_GetState:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2808   .text.HAL_LTDC_GetState:00000000 HAL_LTDC_GetState
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2825   .text.HAL_LTDC_GetError:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccjzcnpn.s:2832   .text.HAL_LTDC_GetError:00000000 HAL_LTDC_GetError
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1894   .text.HAL_LTDC_ProgramLineEvent:00000038 $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1899   .text.HAL_LTDC_Reload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1906   .text.HAL_LTDC_Reload:00000000 HAL_LTDC_Reload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1961   .text.HAL_LTDC_ConfigLayer_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:1968   .text.HAL_LTDC_ConfigLayer_NoReload:00000000 HAL_LTDC_ConfigLayer_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2034   .text.HAL_LTDC_SetWindowSize_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2041   .text.HAL_LTDC_SetWindowSize_NoReload:00000000 HAL_LTDC_SetWindowSize_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2113   .text.HAL_LTDC_SetWindowPosition_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2120   .text.HAL_LTDC_SetWindowPosition_NoReload:00000000 HAL_LTDC_SetWindowPosition_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2195   .text.HAL_LTDC_SetPixelFormat_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2202   .text.HAL_LTDC_SetPixelFormat_NoReload:00000000 HAL_LTDC_SetPixelFormat_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2258   .text.HAL_LTDC_SetAlpha_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2265   .text.HAL_LTDC_SetAlpha_NoReload:00000000 HAL_LTDC_SetAlpha_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2321   .text.HAL_LTDC_SetAddress_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2328   .text.HAL_LTDC_SetAddress_NoReload:00000000 HAL_LTDC_SetAddress_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2384   .text.HAL_LTDC_SetPitch_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2391   .text.HAL_LTDC_SetPitch_NoReload:00000000 HAL_LTDC_SetPitch_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2520   .text.HAL_LTDC_SetPitch_NoReload:00000088 $d
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2525   .text.HAL_LTDC_ConfigColorKeying_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2532   .text.HAL_LTDC_ConfigColorKeying_NoReload:00000000 HAL_LTDC_ConfigColorKeying_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2593   .text.HAL_LTDC_EnableColorKeying_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2600   .text.HAL_LTDC_EnableColorKeying_NoReload:00000000 HAL_LTDC_EnableColorKeying_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2645   .text.HAL_LTDC_DisableColorKeying_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2652   .text.HAL_LTDC_DisableColorKeying_NoReload:00000000 HAL_LTDC_DisableColorKeying_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2697   .text.HAL_LTDC_EnableCLUT_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2704   .text.HAL_LTDC_EnableCLUT_NoReload:00000000 HAL_LTDC_EnableCLUT_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2749   .text.HAL_LTDC_DisableCLUT_NoReload:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2756   .text.HAL_LTDC_DisableCLUT_NoReload:00000000 HAL_LTDC_DisableCLUT_NoReload
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2801   .text.HAL_LTDC_GetState:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2808   .text.HAL_LTDC_GetState:00000000 HAL_LTDC_GetState
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2825   .text.HAL_LTDC_GetError:00000000 $t
+C:\Users\Student\AppData\Local\Temp\ccNNpNZe.s:2832   .text.HAL_LTDC_GetError:00000000 HAL_LTDC_GetError
                      .debug_frame:00000010 $d
 
 NO UNDEFINED SYMBOLS

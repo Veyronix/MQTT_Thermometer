@@ -103,11 +103,11 @@ build/main.o: Src/main.c Inc/main.h \
  Drivers/BSP/STM32746G-Discovery/../Components/rk043fn48h/rk043fn48h.h \
  Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h \
  Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h \
- e:\swprojekt\7tmqqt_piesoc\utilities\fonts\fonts.h \
+ Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h \
  Utilities/Fonts/fonts.h \
  Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.h \
  Drivers/BSP/STM32746G-Discovery/../Components/ft5336/ft5336.h \
- e:\swprojekt\7tmqqt_piesoc\drivers\bsp\components\common\ts.h \
+ Drivers/BSP/STM32746G-Discovery/../Components/ft5336/../Common/ts.h \
  Inc/term_io.h Inc/dbgu.h Inc/ansi.h Inc/dbgu.h Inc/ansi.h \
  Middlewares/Third_Party/LwIP/src/include/lwip/api.h \
  Middlewares/Third_Party/LwIP/src/include/lwip/netbuf.h \
@@ -344,7 +344,7 @@ Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_sdram.h:
 
 Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h:
 
-e:\swprojekt\7tmqqt_piesoc\utilities\fonts\fonts.h:
+Drivers/BSP/STM32746G-Discovery/../../../Utilities/Fonts/fonts.h:
 
 Utilities/Fonts/fonts.h:
 
@@ -352,7 +352,7 @@ Drivers/BSP/STM32746G-Discovery/stm32746g_discovery_ts.h:
 
 Drivers/BSP/STM32746G-Discovery/../Components/ft5336/ft5336.h:
 
-e:\swprojekt\7tmqqt_piesoc\drivers\bsp\components\common\ts.h:
+Drivers/BSP/STM32746G-Discovery/../Components/ft5336/../Common/ts.h:
 
 Inc/term_io.h:
 

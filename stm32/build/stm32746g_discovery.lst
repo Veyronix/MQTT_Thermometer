@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 1
 
 
    1              		.cpu cortex-m7
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
   30:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
   31:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
   32:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 2
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 2
 
 
   33:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
   87:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   */
   88:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** /**
   89:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @}
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 3
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 3
 
 
   90:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   */
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  144:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** void            AUDIO_IO_DeInit(void);
  145:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** void            AUDIO_IO_Write(uint8_t Addr, uint16_t Reg, uint16_t Value);
  146:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** uint16_t        AUDIO_IO_Read(uint8_t Addr, uint16_t Reg);
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 4
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 4
 
 
  147:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** void            AUDIO_IO_Delay(uint32_t Delay);
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  201:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     /* Configure the GPIO_LED pin */
  202:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     gpio_init_structure.Pin = GPIO_PIN[Led];
  203:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     gpio_init_structure.Mode = GPIO_MODE_OUTPUT_PP;
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 5
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 5
 
 
  204:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     gpio_init_structure.Pull = GPIO_PULLUP;
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  258:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  Led: LED to be set off
  259:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   *          This parameter can be one of the following values:
  260:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   *            @arg  LED1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 6
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 6
 
 
  261:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @retval None
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  315:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   
  316:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   if(ButtonMode == BUTTON_MODE_GPIO)
  317:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 7
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 7
 
 
  318:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     /* Configure Button pin as input */
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  372:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
  373:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** /**
  374:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @brief  Returns the selected button state.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 8
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 8
 
 
  375:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  Button: Button to be checked
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  429:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
  430:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** /**
  431:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @brief  DeInit COM port.
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 9
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 9
 
 
  432:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  COM: COM port to be configured.
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
   42              		.loc 1 470 0
   43 0004 444B     		ldr	r3, .L6
   44 0006 8342     		cmp	r3, r0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 10
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 10
 
 
   45 0008 43D0     		beq	.L5
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
   55 001c 039B     		ldr	r3, [sp, #12]
   56              	.LBE2:
  515:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 11
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 11
 
 
  516:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     /* Configure I2C Tx as alternate function */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
   96              	.LBE3:
  531:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
  532:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     /* Force the I2C peripheral clock reset */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 12
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 12
 
 
  533:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     DISCOVERY_EXT_I2Cx_FORCE_RESET();
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  137              	.LBB4:
  476:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
  138              		.loc 1 476 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 13
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 13
 
 
  139 0092 224C     		ldr	r4, .L6+4
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  184 00dc 03F40003 		and	r3, r3, #8388608
  185 00e0 0293     		str	r3, [sp, #8]
  186 00e2 029B     		ldr	r3, [sp, #8]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 14
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 14
 
 
  187              	.LBE5:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  548:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** /**
  549:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @brief  Initializes I2C HAL.
  550:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  i2c_handler : I2C handler
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 15
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 15
 
 
  551:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @retval None
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  571:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     i2c_handler->Init.OwnAddress2      = 0;
  270              		.loc 1 571 0
  271 0022 6361     		str	r3, [r4, #20]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 16
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 16
 
 
  572:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     i2c_handler->Init.GeneralCallMode  = I2C_GENERALCALL_DISABLE;
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  588:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  Length: Length of the data
  589:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @retval Number of read data
  590:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 17
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 17
 
 
  591:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** static HAL_StatusTypeDef I2Cx_ReadMultiple(I2C_HandleTypeDef *i2c_handler,
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  645:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  DevAddress: Target device address
  646:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  Trials: Number of trials
  647:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @retval HAL status
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 18
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 18
 
 
  648:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   */
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  347 0000 70B5     		push	{r4, r5, r6, lr}
  348              	.LCFI6:
  349              		.cfi_def_cfa_offset 16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 19
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 19
 
 
  350              		.cfi_offset 4, -16
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  401              		.thumb
  402              		.thumb_func
  403              		.fpu fpv5-sp-d16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 20
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 20
 
 
  405              	I2Cx_ReadMultiple:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  454 0028 2146     		mov	r1, r4
  455 002a 3046     		mov	r0, r6
  456              	.LVL38:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 21
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 21
 
 
  457 002c FFF7FEFF 		bl	I2Cx_Error
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  510              	.LFE136:
  512              		.section	.text.BSP_LED_Init,"ax",%progbits
  513              		.align	1
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 22
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 22
 
 
  514              		.global	BSP_LED_Init
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  561              		.loc 1 205 0
  562 0026 0323     		movs	r3, #3
  563 0028 0493     		str	r3, [sp, #16]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 23
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 23
 
 
  207:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  614              		.cfi_offset 4, -8
  615              		.cfi_offset 14, -4
  616              	.LVL48:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 24
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 24
 
 
  231:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     /* Configure the GPIO_LED pin */
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  667 000a 0248     		ldr	r0, .L54
  668              	.LVL54:
  669 000c FFF7FEFF 		bl	HAL_GPIO_WritePin
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 25
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 25
 
 
  670              	.LVL55:
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  723              		.syntax unified
  724              		.thumb
  725              		.thumb_func
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 26
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 26
 
 
  726              		.fpu fpv5-sp-d16
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  778              		.cfi_offset 4, -12
  779              		.cfi_offset 5, -8
  780              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 27
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 27
 
 
  781 0002 89B0     		sub	sp, sp, #36
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  828 0036 1B6B     		ldr	r3, [r3, #48]
  829 0038 03F48073 		and	r3, r3, #256
  830 003c 0293     		str	r3, [sp, #8]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 28
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 28
 
 
  831 003e 029B     		ldr	r3, [sp, #8]
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  331:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****     
  877              		.loc 1 331 0
  878 0084 0223     		movs	r3, #2
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 29
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 29
 
 
  879 0086 0693     		str	r3, [sp, #24]
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  927              		.thumb
  928              		.thumb_func
  929              		.fpu fpv5-sp-d16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 30
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 30
 
 
  931              	BSP_PB_DeInit:
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  982              		.cfi_startproc
  983              		@ args = 0, pretend = 0, frame = 0
  984              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 31
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 31
 
 
  985              	.LVL77:
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1037 0006 0446     		mov	r4, r0
  1038 0008 48B9     		cbnz	r0, .L97
  1039              	.LBB10:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 32
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 32
 
 
  405:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   DISCOVERY_COMx_RX_GPIO_CLK_ENABLE(COM);
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1086 0054 0695     		str	r5, [sp, #24]
  415:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   gpio_init_structure.Alternate = COM_TX_AF[COM];
  1087              		.loc 1 415 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 33
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 33
 
 
  1088 0056 0123     		movs	r3, #1
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1133 0094 00000000 		.word	.LANCHOR4
  1134 0098 00000000 		.word	.LANCHOR5
  1135 009c 00000000 		.word	.LANCHOR6
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 34
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 34
 
 
  1136              		.cfi_endproc
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1188              		.global	AUDIO_IO_Init
  1189              		.syntax unified
  1190              		.thumb
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 35
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 35
 
 
  1191              		.thumb_func
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  688:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** void AUDIO_IO_DeInit(void)
  689:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** {
  1227              		.loc 1 689 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 36
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 36
 
 
  1228              		.cfi_startproc
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  706:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   
  707:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   I2Cx_WriteMultiple(&hI2cAudioHandler, Addr, Reg, I2C_MEMADD_SIZE_16BIT,(uint8_t*)&Value, 2);
  1268              		.loc 1 707 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 37
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 37
 
 
  1269 0012 0223     		movs	r3, #2
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1314              		.loc 1 718 0
  1315 0004 04AA     		add	r2, sp, #16
  1316 0006 0023     		movs	r3, #0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 38
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 38
 
 
  1317 0008 22F8023D 		strh	r3, [r2, #-2]!	@ movhi
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  730:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
  731:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** /**
  732:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @brief  AUDIO Codec delay 
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 39
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 39
 
 
  733:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  Delay: Delay in ms
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1401              	.LVL106:
  1402 0008 08BD     		pop	{r3, pc}
  1403              	.L126:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 40
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 40
 
 
  1404 000a 00BF     		.align	2
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1447              		.loc 1 762 0
  1448 001a 04B0     		add	sp, sp, #16
  1449              	.LCFI43:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 41
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 41
 
 
  1450              		.cfi_def_cfa_offset 8
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1494              	.LVL114:
  1495 0018 FFF7FEFF 		bl	I2Cx_ReadMultiple
  1496              	.LVL115:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 42
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 42
 
 
  775:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** 
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1542              		.thumb
  1543              		.thumb_func
  1544              		.fpu fpv5-sp-d16
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 43
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 43
 
 
  1546              	EEPROM_IO_Init:
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1579              		.loc 1 809 0
  1580              		.cfi_startproc
  1581              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 44
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 44
 
 
  1582              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  820:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   */
  821:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** HAL_StatusTypeDef EEPROM_IO_ReadData(uint16_t DevAddress, uint16_t MemAddress, uint8_t* pBuffer, ui
  822:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** {
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 45
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 45
 
 
  1628              		.loc 1 822 0
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  830:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @param  Trials: Number of trials
  831:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   * @retval HAL status
  832:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   */
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 46
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 46
 
 
  833:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c **** HAL_StatusTypeDef EEPROM_IO_IsDeviceReady(uint16_t DevAddress, uint32_t Trials)
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1720              		.cfi_def_cfa_offset 8
  1721              		.cfi_offset 3, -8
  1722              		.cfi_offset 14, -4
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 47
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 47
 
 
  846:Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.c ****   I2Cx_Init(&hI2cAudioHandler);
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1766 0012 0146     		mov	r1, r0
  1767              	.LVL138:
  1768 0014 0248     		ldr	r0, .L159
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 48
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 48
 
 
  1769              	.LVL139:
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1812 000c 0123     		movs	r3, #1
  1813 000e 0193     		str	r3, [sp, #4]
  1814 0010 0092     		str	r2, [sp]
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 49
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 49
 
 
  1815 0012 0A46     		mov	r2, r1
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1859 0006 08BD     		pop	{r3, pc}
  1860              		.cfi_endproc
  1861              	.LFE169:
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 50
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 50
 
 
  1863              		.global	COM_RX_AF
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1923              	BUTTON_IRQn:
  1924 0000 2800     		.short	40
  1925 0002 2800     		.short	40
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 51
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 51
 
 
  1926 0004 2800     		.short	40
@@ -3048,136 +3048,136 @@ ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 1
  1982              		.file 16 "Drivers/BSP/STM32746G-Discovery/stm32746g_discovery.h"
  1983              		.file 17 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h"
  1984              		.file 18 "Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h"
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 52
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 52
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32746g_discovery.c
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:18     .text.I2Cx_MspInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:24     .text.I2Cx_MspInit:00000000 I2Cx_MspInit
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:220    .text.I2Cx_MspInit:00000118 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:228    .text.I2Cx_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:234    .text.I2Cx_Init:00000000 I2Cx_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:295    .text.I2Cx_Init:0000003c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:303    .text.I2Cx_Error:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:309    .text.I2Cx_Error:00000000 I2Cx_Error
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:334    .text.I2Cx_WriteMultiple:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:340    .text.I2Cx_WriteMultiple:00000000 I2Cx_WriteMultiple
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:399    .text.I2Cx_ReadMultiple:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:405    .text.I2Cx_ReadMultiple:00000000 I2Cx_ReadMultiple
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:464    .text.I2Cx_IsDeviceReady:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:470    .text.I2Cx_IsDeviceReady:00000000 I2Cx_IsDeviceReady
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:492    .text.BSP_GetVersion:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:499    .text.BSP_GetVersion:00000000 BSP_GetVersion
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:513    .text.BSP_LED_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:520    .text.BSP_LED_Init:00000000 BSP_LED_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:586    .text.BSP_LED_Init:00000044 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:592    .text.BSP_LED_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:599    .text.BSP_LED_DeInit:00000000 BSP_LED_DeInit
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:634    .text.BSP_LED_DeInit:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:639    .text.BSP_LED_On:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:646    .text.BSP_LED_On:00000000 BSP_LED_On
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:675    .text.BSP_LED_On:00000014 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:680    .text.BSP_LED_Off:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:687    .text.BSP_LED_Off:00000000 BSP_LED_Off
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:716    .text.BSP_LED_Off:00000014 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:721    .text.BSP_LED_Toggle:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:728    .text.BSP_LED_Toggle:00000000 BSP_LED_Toggle
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:756    .text.BSP_LED_Toggle:00000010 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:761    .text.BSP_PB_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:768    .text.BSP_PB_Init:00000000 BSP_PB_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:914    .text.BSP_PB_Init:000000b8 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:924    .text.BSP_PB_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:931    .text.BSP_PB_DeInit:00000000 BSP_PB_DeInit
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:965    .text.BSP_PB_DeInit:00000024 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:972    .text.BSP_PB_GetState:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:979    .text.BSP_PB_GetState:00000000 BSP_PB_GetState
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1004   .text.BSP_PB_GetState:00000014 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1010   .text.BSP_COM_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1017   .text.BSP_COM_Init:00000000 BSP_COM_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1132   .text.BSP_COM_Init:00000090 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1140   .text.BSP_COM_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1147   .text.BSP_COM_DeInit:00000000 BSP_COM_DeInit
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1181   .text.BSP_COM_DeInit:00000020 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1187   .text.AUDIO_IO_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1194   .text.AUDIO_IO_Init:00000000 AUDIO_IO_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1213   .text.AUDIO_IO_Init:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1218   .text.AUDIO_IO_DeInit:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1225   .text.AUDIO_IO_DeInit:00000000 AUDIO_IO_DeInit
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1237   .text.AUDIO_IO_Write:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1244   .text.AUDIO_IO_Write:00000000 AUDIO_IO_Write
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1288   .text.AUDIO_IO_Write:00000028 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1293   .text.AUDIO_IO_Read:00000000 $t
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 53
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:18     .text.I2Cx_MspInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:24     .text.I2Cx_MspInit:00000000 I2Cx_MspInit
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:220    .text.I2Cx_MspInit:00000118 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:228    .text.I2Cx_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:234    .text.I2Cx_Init:00000000 I2Cx_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:295    .text.I2Cx_Init:0000003c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:303    .text.I2Cx_Error:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:309    .text.I2Cx_Error:00000000 I2Cx_Error
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:334    .text.I2Cx_WriteMultiple:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:340    .text.I2Cx_WriteMultiple:00000000 I2Cx_WriteMultiple
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:399    .text.I2Cx_ReadMultiple:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:405    .text.I2Cx_ReadMultiple:00000000 I2Cx_ReadMultiple
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:464    .text.I2Cx_IsDeviceReady:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:470    .text.I2Cx_IsDeviceReady:00000000 I2Cx_IsDeviceReady
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:492    .text.BSP_GetVersion:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:499    .text.BSP_GetVersion:00000000 BSP_GetVersion
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:513    .text.BSP_LED_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:520    .text.BSP_LED_Init:00000000 BSP_LED_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:586    .text.BSP_LED_Init:00000044 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:592    .text.BSP_LED_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:599    .text.BSP_LED_DeInit:00000000 BSP_LED_DeInit
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:634    .text.BSP_LED_DeInit:0000001c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:639    .text.BSP_LED_On:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:646    .text.BSP_LED_On:00000000 BSP_LED_On
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:675    .text.BSP_LED_On:00000014 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:680    .text.BSP_LED_Off:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:687    .text.BSP_LED_Off:00000000 BSP_LED_Off
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:716    .text.BSP_LED_Off:00000014 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:721    .text.BSP_LED_Toggle:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:728    .text.BSP_LED_Toggle:00000000 BSP_LED_Toggle
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:756    .text.BSP_LED_Toggle:00000010 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:761    .text.BSP_PB_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:768    .text.BSP_PB_Init:00000000 BSP_PB_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:914    .text.BSP_PB_Init:000000b8 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:924    .text.BSP_PB_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:931    .text.BSP_PB_DeInit:00000000 BSP_PB_DeInit
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:965    .text.BSP_PB_DeInit:00000024 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:972    .text.BSP_PB_GetState:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:979    .text.BSP_PB_GetState:00000000 BSP_PB_GetState
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1004   .text.BSP_PB_GetState:00000014 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1010   .text.BSP_COM_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1017   .text.BSP_COM_Init:00000000 BSP_COM_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1132   .text.BSP_COM_Init:00000090 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1140   .text.BSP_COM_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1147   .text.BSP_COM_DeInit:00000000 BSP_COM_DeInit
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1181   .text.BSP_COM_DeInit:00000020 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1187   .text.AUDIO_IO_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1194   .text.AUDIO_IO_Init:00000000 AUDIO_IO_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1213   .text.AUDIO_IO_Init:0000000c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1218   .text.AUDIO_IO_DeInit:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1225   .text.AUDIO_IO_DeInit:00000000 AUDIO_IO_DeInit
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1237   .text.AUDIO_IO_Write:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1244   .text.AUDIO_IO_Write:00000000 AUDIO_IO_Write
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1288   .text.AUDIO_IO_Write:00000028 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1293   .text.AUDIO_IO_Read:00000000 $t
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 53
 
 
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1300   .text.AUDIO_IO_Read:00000000 AUDIO_IO_Read
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1348   .text.AUDIO_IO_Read:00000030 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1353   .text.AUDIO_IO_Delay:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1360   .text.AUDIO_IO_Delay:00000000 AUDIO_IO_Delay
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1380   .text.CAMERA_IO_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1387   .text.CAMERA_IO_Init:00000000 CAMERA_IO_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1406   .text.CAMERA_IO_Init:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1411   .text.CAMERA_IO_Write:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1418   .text.CAMERA_IO_Write:00000000 CAMERA_IO_Write
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1456   .text.CAMERA_IO_Write:00000020 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1461   .text.CAMERA_IO_Read:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1468   .text.CAMERA_IO_Read:00000000 CAMERA_IO_Read
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1507   .text.CAMERA_IO_Read:00000028 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1512   .text.CAMERA_Delay:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1519   .text.CAMERA_Delay:00000000 CAMERA_Delay
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1539   .text.EEPROM_IO_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1546   .text.EEPROM_IO_Init:00000000 EEPROM_IO_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1565   .text.EEPROM_IO_Init:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1570   .text.EEPROM_IO_WriteData:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1577   .text.EEPROM_IO_WriteData:00000000 EEPROM_IO_WriteData
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1614   .text.EEPROM_IO_WriteData:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1619   .text.EEPROM_IO_ReadData:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1626   .text.EEPROM_IO_ReadData:00000000 EEPROM_IO_ReadData
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1663   .text.EEPROM_IO_ReadData:0000001c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1668   .text.EEPROM_IO_IsDeviceReady:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1675   .text.EEPROM_IO_IsDeviceReady:00000000 EEPROM_IO_IsDeviceReady
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1700   .text.EEPROM_IO_IsDeviceReady:00000010 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1705   .text.TS_IO_Init:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1712   .text.TS_IO_Init:00000000 TS_IO_Init
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1731   .text.TS_IO_Init:0000000c $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1736   .text.TS_IO_Write:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1743   .text.TS_IO_Write:00000000 TS_IO_Write
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1781   .text.TS_IO_Write:00000020 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1786   .text.TS_IO_Read:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1793   .text.TS_IO_Read:00000000 TS_IO_Read
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1832   .text.TS_IO_Read:00000028 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1837   .text.TS_IO_Delay:00000000 $t
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1844   .text.TS_IO_Delay:00000000 TS_IO_Delay
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1940   .rodata.COM_RX_AF:00000000 COM_RX_AF
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1952   .rodata.COM_TX_AF:00000000 COM_TX_AF
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1946   .rodata.COM_RX_PIN:00000000 COM_RX_PIN
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1958   .rodata.COM_TX_PIN:00000000 COM_TX_PIN
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1902   .data.COM_RX_PORT:00000000 COM_RX_PORT
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1909   .data.COM_TX_PORT:00000000 COM_TX_PORT
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1916   .data.COM_USART:00000000 COM_USART
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1923   .rodata.BUTTON_IRQn:00000000 BUTTON_IRQn
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1932   .rodata.BUTTON_PIN:00000000 BUTTON_PIN
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1893   .data.BUTTON_PORT:00000000 BUTTON_PORT
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1964   .rodata.GPIO_PIN:00000000 GPIO_PIN
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1875   .bss.hI2cAudioHandler:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1879   .bss.hI2cAudioHandler:00000000 hI2cAudioHandler
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1882   .bss.hI2cExtHandler:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1886   .bss.hI2cExtHandler:00000000 hI2cExtHandler
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1889   .data.BUTTON_PORT:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1898   .data.COM_RX_PORT:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1905   .data.COM_TX_PORT:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1912   .data.COM_USART:00000000 $d
-ARM GAS  C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s 			page 54
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1300   .text.AUDIO_IO_Read:00000000 AUDIO_IO_Read
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1348   .text.AUDIO_IO_Read:00000030 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1353   .text.AUDIO_IO_Delay:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1360   .text.AUDIO_IO_Delay:00000000 AUDIO_IO_Delay
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1380   .text.CAMERA_IO_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1387   .text.CAMERA_IO_Init:00000000 CAMERA_IO_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1406   .text.CAMERA_IO_Init:0000000c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1411   .text.CAMERA_IO_Write:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1418   .text.CAMERA_IO_Write:00000000 CAMERA_IO_Write
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1456   .text.CAMERA_IO_Write:00000020 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1461   .text.CAMERA_IO_Read:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1468   .text.CAMERA_IO_Read:00000000 CAMERA_IO_Read
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1507   .text.CAMERA_IO_Read:00000028 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1512   .text.CAMERA_Delay:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1519   .text.CAMERA_Delay:00000000 CAMERA_Delay
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1539   .text.EEPROM_IO_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1546   .text.EEPROM_IO_Init:00000000 EEPROM_IO_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1565   .text.EEPROM_IO_Init:0000000c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1570   .text.EEPROM_IO_WriteData:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1577   .text.EEPROM_IO_WriteData:00000000 EEPROM_IO_WriteData
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1614   .text.EEPROM_IO_WriteData:0000001c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1619   .text.EEPROM_IO_ReadData:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1626   .text.EEPROM_IO_ReadData:00000000 EEPROM_IO_ReadData
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1663   .text.EEPROM_IO_ReadData:0000001c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1668   .text.EEPROM_IO_IsDeviceReady:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1675   .text.EEPROM_IO_IsDeviceReady:00000000 EEPROM_IO_IsDeviceReady
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1700   .text.EEPROM_IO_IsDeviceReady:00000010 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1705   .text.TS_IO_Init:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1712   .text.TS_IO_Init:00000000 TS_IO_Init
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1731   .text.TS_IO_Init:0000000c $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1736   .text.TS_IO_Write:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1743   .text.TS_IO_Write:00000000 TS_IO_Write
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1781   .text.TS_IO_Write:00000020 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1786   .text.TS_IO_Read:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1793   .text.TS_IO_Read:00000000 TS_IO_Read
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1832   .text.TS_IO_Read:00000028 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1837   .text.TS_IO_Delay:00000000 $t
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1844   .text.TS_IO_Delay:00000000 TS_IO_Delay
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1940   .rodata.COM_RX_AF:00000000 COM_RX_AF
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1952   .rodata.COM_TX_AF:00000000 COM_TX_AF
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1946   .rodata.COM_RX_PIN:00000000 COM_RX_PIN
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1958   .rodata.COM_TX_PIN:00000000 COM_TX_PIN
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1902   .data.COM_RX_PORT:00000000 COM_RX_PORT
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1909   .data.COM_TX_PORT:00000000 COM_TX_PORT
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1916   .data.COM_USART:00000000 COM_USART
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1923   .rodata.BUTTON_IRQn:00000000 BUTTON_IRQn
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1932   .rodata.BUTTON_PIN:00000000 BUTTON_PIN
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1893   .data.BUTTON_PORT:00000000 BUTTON_PORT
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1964   .rodata.GPIO_PIN:00000000 GPIO_PIN
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1875   .bss.hI2cAudioHandler:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1879   .bss.hI2cAudioHandler:00000000 hI2cAudioHandler
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1882   .bss.hI2cExtHandler:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1886   .bss.hI2cExtHandler:00000000 hI2cExtHandler
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1889   .data.BUTTON_PORT:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1898   .data.COM_RX_PORT:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1905   .data.COM_TX_PORT:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1912   .data.COM_USART:00000000 $d
+ARM GAS  C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s 			page 54
 
 
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1919   .rodata.BUTTON_IRQn:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1928   .rodata.BUTTON_PIN:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1937   .rodata.COM_RX_AF:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1943   .rodata.COM_RX_PIN:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1949   .rodata.COM_TX_AF:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1955   .rodata.COM_TX_PIN:00000000 $d
-C:\Users\Student\AppData\Local\Temp\ccBuDZhc.s:1961   .rodata.GPIO_PIN:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1919   .rodata.BUTTON_IRQn:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1928   .rodata.BUTTON_PIN:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1937   .rodata.COM_RX_AF:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1943   .rodata.COM_RX_PIN:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1949   .rodata.COM_TX_AF:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1955   .rodata.COM_TX_PIN:00000000 $d
+C:\Users\Student\AppData\Local\Temp\cciYJ1rd.s:1961   .rodata.GPIO_PIN:00000000 $d
                      .debug_frame:00000010 $d
 
 UNDEFINED SYMBOLS
